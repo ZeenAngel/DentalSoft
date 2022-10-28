@@ -15,11 +15,13 @@ namespace DentalSoft
     public partial class Pacientes : Form
     {
         // Variables
+        #region -> Variables
         public Empleado empleado;
         private MenuPrincipal formPadre;
         const int anchoMinimoDniDgv = 125;
-        Clases.ConexionBD conexion = new Clases.ConexionBD();
-
+        private ConexionBD conexion = new ConexionBD();
+        private DatosGlobales datosGlobales = new DatosGlobales();
+        #endregion
 
         // Constructores
         #region -> Constructores
@@ -71,7 +73,7 @@ namespace DentalSoft
             }
             else
             {
-                DialogResult mensaje = MessageBoxPersonalizadoControl.Show("No se ha podido conectar a la base de datos", "DentalSoft", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                DialogResult mensaje = MessageBoxPersonalizadoControl.Show("No se ha podido conectar a la base de datos", datosGlobales.TituloAplicacion, MessageBoxButtons.OK, MessageBoxIcon.Warning);
             }
         }
 
@@ -90,7 +92,7 @@ namespace DentalSoft
             }
             else
             {
-                DialogResult mensaje = MessageBoxPersonalizadoControl.Show("No se ha podido conectar a la base de datos", "DentalSoft", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                DialogResult mensaje = MessageBoxPersonalizadoControl.Show("No se ha podido conectar a la base de datos", datosGlobales.TituloAplicacion, MessageBoxButtons.OK, MessageBoxIcon.Warning);
             }
         }
 
@@ -140,9 +142,16 @@ namespace DentalSoft
 
         private void btnHistorialPacientes_Click(object sender, EventArgs e)
         {
-            /* TODO: Abrir el Formulario con el Historial del paciente, pasándo como argumento el DNI del paciente
-             * y el formulario padre. Habrá que hacer un informe donde se vea según la fecha el tratamiento que se ha
-             * realizado y los datos del Episodio Clínico */
+            if (dgvPacientes.SelectedRows.Count > 0)
+            {
+                string dni = dgvPacientes.Rows[dgvPacientes.CurrentRow.Index].Cells[0].Value.ToString();
+                MenuPrincipalPaciente menuPaciente = new MenuPrincipalPaciente(dni);
+                menuPaciente.Show();
+            }
+            else
+            {
+                DialogResult mensaje = MessageBoxPersonalizadoControl.Show("Debe seleccionar un paciente de la lista", datosGlobales.TituloAplicacion, MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
         }
 
         private void btnNuevoPaciente_Click(object sender, EventArgs e)
@@ -163,11 +172,9 @@ namespace DentalSoft
             }
             else
             {
-                DialogResult mensaje = MessageBoxPersonalizadoControl.Show("Debe seleccionar un paciente de la lista", "DentalSoft", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                DialogResult mensaje = MessageBoxPersonalizadoControl.Show("Debe seleccionar un paciente de la lista", datosGlobales.TituloAplicacion, MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
         }
-
-        #endregion
 
         private void btnEliminarPacientes_Click(object sender, EventArgs e)
         {
@@ -175,7 +182,7 @@ namespace DentalSoft
             if (dgvPacientes.SelectedRows.Count > 0) // Comprobar si hay seleccionada alguna fila
             {
                 string dni = dgvPacientes.Rows[dgvPacientes.CurrentRow.Index].Cells[0].Value.ToString();
-                mensaje = MessageBoxPersonalizadoControl.Show("¿Seguro que quiere eliminar este paciente?", "DentalSoft", MessageBoxButtons.YesNo, MessageBoxIcon.Warning);
+                mensaje = MessageBoxPersonalizadoControl.Show("¿Seguro que quiere eliminar este paciente?", datosGlobales.TituloAplicacion, MessageBoxButtons.YesNo, MessageBoxIcon.Warning);
                 if (mensaje == DialogResult.Yes)
                 {
                     if (conexion.EstablecerConexion())
@@ -188,14 +195,15 @@ namespace DentalSoft
                     }
                     else
                     {
-                        mensaje = MessageBoxPersonalizadoControl.Show("No se ha podido establecer la conexión con la base de datos", "DentalSoft", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                        mensaje = MessageBoxPersonalizadoControl.Show("No se ha podido establecer la conexión con la base de datos", datosGlobales.TituloAplicacion, MessageBoxButtons.OK, MessageBoxIcon.Warning);
                     }
                 }
             }
             else
             {
-                mensaje = MessageBoxPersonalizadoControl.Show("Debe seleccionar un paciente de la lista", "DentalSoft", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                mensaje = MessageBoxPersonalizadoControl.Show("Debe seleccionar un paciente de la lista", datosGlobales.TituloAplicacion, MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
         }
+        #endregion
     }
 }

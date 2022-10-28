@@ -9,11 +9,15 @@ using System.Threading.Tasks;
 using System.Windows.Forms;
 using System.Runtime.InteropServices;
 using MySql.Data.MySqlClient;
+using DentalSoft.Clases;
 
 namespace DentalSoft
 {
     public partial class Login : Form
     {
+        // Variables
+        DatosGlobales datosGlobales = new DatosGlobales();
+
         // Constructor
         public Login()
         {
@@ -115,7 +119,7 @@ namespace DentalSoft
                             }
                             else
                             {
-                                DialogResult mensaje = MessageBoxPersonalizadoControl.Show("Ha superado el límite de intentos, por favor pongase en contacto con el administrador", "DentalSoft", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
+                                DialogResult mensaje = MessageBoxPersonalizadoControl.Show("Ha superado el límite de intentos, por favor pongase en contacto con el administrador", datosGlobales.TituloAplicacion, MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
                                 // MessageBox.Show("Ha superado el límite de intentos, por favor pongase en contacto con el administrador", "DentalSoft", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
                                 Application.Exit();
                             }

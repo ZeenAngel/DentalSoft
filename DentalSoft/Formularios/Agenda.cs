@@ -18,7 +18,8 @@ namespace DentalSoft
         // Variables
         public Empleado empleado;
         private MenuPrincipal formPadre;
-        Clases.ConexionBD conexion = new Clases.ConexionBD();
+        ConexionBD conexion = new Clases.ConexionBD();
+        DatosGlobales datosGlobales = new DatosGlobales();
 
         // Constructores
         #region -> Constructores
@@ -51,10 +52,10 @@ namespace DentalSoft
                 string fecha = selectorFecha1.Value.ToString("yyyy-MM-dd");
                 string sentencia;
                 if (empleado.Puesto == 3) // Si es Odontologo ve solo sus reservas
-                    sentencia = "SELECT r.Id, r.Hora, p.Nombre, p.Apellido1, p.Apellido2, r.Tratamiento FROM Reserva AS r INNER JOIN Paciente AS p " +
+                    sentencia = "SELECT r.Id, r.Hora, p.Nombre, p.Apellido1, p.Apellido2 FROM Reserva AS r INNER JOIN Paciente AS p " +
                         "ON p.Dni=r.Paciente AND r.Odontologo='" + empleado.Dni + "' AND r.Fecha='" + fecha + "' ORDER BY r.Hora";
                 else // Como los auxiliares no está ligados a un único Odontologo, pueden ver todas las Reservas pero no editarlas ni crear nuevas
-                    sentencia = "SELECT r.Id, r.Hora, p.Nombre, p.Apellido1, p.Apellido2, r.Tratamiento FROM Reserva AS r INNER JOIN Paciente AS p ON p.Dni=r.Paciente AND r.Fecha='" + fecha + "' ORDER BY r.Hora";
+                    sentencia = "SELECT r.Id, r.Hora, p.Nombre, p.Apellido1, p.Apellido2 FROM Reserva AS r INNER JOIN Paciente AS p ON p.Dni=r.Paciente AND r.Fecha='" + fecha + "' ORDER BY r.Hora";
                 MySqlCommand comando = new MySqlCommand(sentencia, conexion.conexionSql);
                 MySqlDataAdapter datos = new MySqlDataAdapter(comando);
                 DataTable tabla = new DataTable();
@@ -65,7 +66,7 @@ namespace DentalSoft
             }
             else
             {
-                DialogResult mensaje = MessageBoxPersonalizadoControl.Show("No se ha podido conectar a la base de datos", "DentalSoft", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                DialogResult mensaje = MessageBoxPersonalizadoControl.Show("No se ha podido conectar a la base de datos", datosGlobales.TituloAplicacion, MessageBoxButtons.OK, MessageBoxIcon.Warning);
             }
         }
 
@@ -93,7 +94,7 @@ namespace DentalSoft
         private void Agenda_Load(object sender, EventArgs e)
         {
             ConectarBd();
-            Clases.Estilo estilo = new Estilo();
+            Estilo estilo = new Estilo();
             estilo.EstiloDataGridView(dgvReservas);
             selectorFecha1.MinDate = DateTime.Now;
             AsignarPrivilegios();
@@ -118,7 +119,7 @@ namespace DentalSoft
             if (dgvReservas.SelectedRows.Count > 0) // Comprobar si hay seleccionada alguna fila
             {
                 int reserva = int.Parse(dgvReservas.Rows[dgvReservas.CurrentRow.Index].Cells[0].Value.ToString());
-                mensaje = MessageBoxPersonalizadoControl.Show("¿Seguro que quiere eliminar esta reserva?", "DentalSoft", MessageBoxButtons.YesNo, MessageBoxIcon.Warning);
+                mensaje = MessageBoxPersonalizadoControl.Show("¿Seguro que quiere eliminar esta reserva?", datosGlobales.TituloAplicacion, MessageBoxButtons.YesNo, MessageBoxIcon.Warning);
                 if (mensaje == DialogResult.Yes)
                 {
                     if (conexion.EstablecerConexion())
@@ -131,13 +132,13 @@ namespace DentalSoft
                     }
                     else
                     {
-                        mensaje = MessageBoxPersonalizadoControl.Show("No se ha podido establecer la conexión con la base de datos", "DentalSoft", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                        mensaje = MessageBoxPersonalizadoControl.Show("No se ha podido establecer la conexión con la base de datos", datosGlobales.TituloAplicacion, MessageBoxButtons.OK, MessageBoxIcon.Warning);
                     }
                 }
             }
             else
             {
-                mensaje = MessageBoxPersonalizadoControl.Show("Debe seleccionar una reserva de la lista", "DentalSoft", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                mensaje = MessageBoxPersonalizadoControl.Show("Debe seleccionar una reserva de la lista", datosGlobales.TituloAplicacion, MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
         }
 
@@ -152,7 +153,7 @@ namespace DentalSoft
             }
             else
             {
-                DialogResult mensaje = MessageBoxPersonalizadoControl.Show("Debe seleccionar una reserva de la lista", "DentalSoft", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                DialogResult mensaje = MessageBoxPersonalizadoControl.Show("Debe seleccionar una reserva de la lista", datosGlobales.TituloAplicacion, MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
         }
         #endregion

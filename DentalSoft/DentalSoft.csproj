@@ -22,6 +22,7 @@
     <DefineConstants>DEBUG;TRACE</DefineConstants>
     <ErrorReport>prompt</ErrorReport>
     <WarningLevel>4</WarningLevel>
+    <Prefer32Bit>true</Prefer32Bit>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
     <PlatformTarget>AnyCPU</PlatformTarget>
@@ -36,6 +37,7 @@
     <Reference Include="MySql.Data, Version=8.0.30.0, Culture=neutral, PublicKeyToken=c5687fc88969c44d, processorArchitecture=MSIL" />
     <Reference Include="System" />
     <Reference Include="System.Core" />
+    <Reference Include="System.DirectoryServices" />
     <Reference Include="System.Xml.Linq" />
     <Reference Include="System.Data.DataSetExtensions" />
     <Reference Include="Microsoft.CSharp" />
@@ -47,27 +49,13 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Agenda.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="Agenda.Designer.cs">
-      <DependentUpon>Agenda.cs</DependentUpon>
-    </Compile>
-    <Compile Include="BuscarOdontologo.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="BuscarOdontologo.Designer.cs">
-      <DependentUpon>BuscarOdontologo.cs</DependentUpon>
-    </Compile>
-    <Compile Include="BuscarPaciente.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="BuscarPaciente.Designer.cs">
-      <DependentUpon>BuscarPaciente.cs</DependentUpon>
-    </Compile>
+    <Compile Include="Clases\DatosGlobales.cs" />
+    <Compile Include="Clases\Fichero.cs" />
     <Compile Include="Clases\ConexionBD.cs" />
+    <Compile Include="Clases\ConexionFtp.cs" />
     <Compile Include="Clases\Empleado.cs" />
     <Compile Include="Clases\Estilo.cs" />
+    <Compile Include="Clases\Historial.cs" />
     <Compile Include="Clases\Paciente.cs" />
     <Compile Include="ControlesPersonalizados\BotonPersonalizado.cs">
       <SubType>Component</SubType>
@@ -85,47 +73,107 @@
     <Compile Include="ControlesPersonalizados\SelectorFecha.cs">
       <SubType>Component</SubType>
     </Compile>
-    <Compile Include="EditarReserva.cs">
+    <Compile Include="Formularios\Agenda.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="EditarReserva.Designer.cs">
+    <Compile Include="Formularios\Agenda.designer.cs">
+      <DependentUpon>Agenda.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Formularios\ArchivosPaciente.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Formularios\ArchivosPaciente.designer.cs">
+      <DependentUpon>ArchivosPaciente.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Formularios\BuscarOdontologo.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Formularios\BuscarOdontologo.designer.cs">
+      <DependentUpon>BuscarOdontologo.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Formularios\BuscarPaciente.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Formularios\BuscarPaciente.designer.cs">
+      <DependentUpon>BuscarPaciente.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Formularios\DatosPaciente.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Formularios\DatosPaciente.designer.cs">
+      <DependentUpon>DatosPaciente.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Formularios\EditarReserva.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Formularios\EditarReserva.designer.cs">
       <DependentUpon>EditarReserva.cs</DependentUpon>
     </Compile>
-    <Compile Include="Login.cs">
+    <Compile Include="Formularios\EpisodiosClinicos.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Login.Designer.cs">
+    <Compile Include="Formularios\EpisodiosClinicos.designer.cs">
+      <DependentUpon>EpisodiosClinicos.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Formularios\HistorialPaciente.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Formularios\HistorialPaciente.designer.cs">
+      <DependentUpon>HistorialPaciente.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Formularios\Login.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Formularios\Login.designer.cs">
       <DependentUpon>Login.cs</DependentUpon>
     </Compile>
-    <Compile Include="LoginCambioContraseña.cs">
+    <Compile Include="Formularios\LoginCambioContraseña.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="LoginCambioContraseña.Designer.cs">
+    <Compile Include="Formularios\LoginCambioContraseña.designer.cs">
       <DependentUpon>LoginCambioContraseña.cs</DependentUpon>
     </Compile>
-    <Compile Include="MenuPrincipal.cs">
+    <Compile Include="Formularios\MenuPrincipal.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="MenuPrincipal.Designer.cs">
+    <Compile Include="Formularios\MenuPrincipal.designer.cs">
       <DependentUpon>MenuPrincipal.cs</DependentUpon>
     </Compile>
-    <Compile Include="NuevaReserva.cs">
+    <Compile Include="Formularios\MenuPrincipalPaciente.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="NuevaReserva.Designer.cs">
+    <Compile Include="Formularios\MenuPrincipalPaciente.designer.cs">
+      <DependentUpon>MenuPrincipalPaciente.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Formularios\NuevaReserva.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Formularios\NuevaReserva.designer.cs">
       <DependentUpon>NuevaReserva.cs</DependentUpon>
     </Compile>
-    <Compile Include="NuevoPaciente.cs">
+    <Compile Include="Formularios\NuevoPaciente.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="NuevoPaciente.Designer.cs">
+    <Compile Include="Formularios\NuevoPaciente.designer.cs">
       <DependentUpon>NuevoPaciente.cs</DependentUpon>
     </Compile>
-    <Compile Include="Pacientes.cs">
+    <Compile Include="Formularios\Pacientes.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Pacientes.Designer.cs">
+    <Compile Include="Formularios\Pacientes.designer.cs">
       <DependentUpon>Pacientes.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Formularios\ReservasPaciente.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Formularios\ReservasPaciente.designer.cs">
+      <DependentUpon>ReservasPaciente.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Formularios\VisualizadorImagenes.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Formularios\VisualizadorImagenes.Designer.cs">
+      <DependentUpon>VisualizadorImagenes.cs</DependentUpon>
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
@@ -135,38 +183,59 @@
     <Compile Include="ControlesPersonalizados\TextboxPersonalizado.Designer.cs">
       <DependentUpon>TextboxPersonalizado.cs</DependentUpon>
     </Compile>
-    <EmbeddedResource Include="Agenda.resx">
-      <DependentUpon>Agenda.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="BuscarOdontologo.resx">
-      <DependentUpon>BuscarOdontologo.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="BuscarPaciente.resx">
-      <DependentUpon>BuscarPaciente.cs</DependentUpon>
-    </EmbeddedResource>
     <EmbeddedResource Include="ControlesPersonalizados\MessageBoxPersonalizado.resx">
       <DependentUpon>MessageBoxPersonalizado.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="EditarReserva.resx">
+    <EmbeddedResource Include="Formularios\Agenda.resx">
+      <DependentUpon>Agenda.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Formularios\ArchivosPaciente.resx">
+      <DependentUpon>ArchivosPaciente.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Formularios\BuscarOdontologo.resx">
+      <DependentUpon>BuscarOdontologo.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Formularios\BuscarPaciente.resx">
+      <DependentUpon>BuscarPaciente.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Formularios\DatosPaciente.resx">
+      <DependentUpon>DatosPaciente.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Formularios\EditarReserva.resx">
       <DependentUpon>EditarReserva.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Login.resx">
+    <EmbeddedResource Include="Formularios\EpisodiosClinicos.resx">
+      <DependentUpon>EpisodiosClinicos.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Formularios\HistorialPaciente.resx">
+      <DependentUpon>HistorialPaciente.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Formularios\Login.resx">
       <DependentUpon>Login.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="LoginCambioContraseña.resx">
+    <EmbeddedResource Include="Formularios\LoginCambioContraseña.resx">
       <DependentUpon>LoginCambioContraseña.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="MenuPrincipal.resx">
+    <EmbeddedResource Include="Formularios\MenuPrincipal.resx">
       <DependentUpon>MenuPrincipal.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="NuevaReserva.resx">
+    <EmbeddedResource Include="Formularios\MenuPrincipalPaciente.resx">
+      <DependentUpon>MenuPrincipalPaciente.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Formularios\NuevaReserva.resx">
       <DependentUpon>NuevaReserva.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="NuevoPaciente.resx">
+    <EmbeddedResource Include="Formularios\NuevoPaciente.resx">
       <DependentUpon>NuevoPaciente.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Pacientes.resx">
+    <EmbeddedResource Include="Formularios\Pacientes.resx">
       <DependentUpon>Pacientes.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Formularios\ReservasPaciente.resx">
+      <DependentUpon>ReservasPaciente.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Formularios\VisualizadorImagenes.resx">
+      <DependentUpon>VisualizadorImagenes.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
@@ -332,5 +401,6 @@
   <ItemGroup>
     <None Include="Resources\question.png" />
   </ItemGroup>
+  <ItemGroup />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
