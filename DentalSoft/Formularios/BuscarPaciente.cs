@@ -18,7 +18,8 @@ namespace DentalSoft
     {
         // Variables
         const int anchoMinimoDniDgv = 125;
-        Clases.ConexionBD conexion = new Clases.ConexionBD();
+        private ConexionBD conexion = new ConexionBD();
+        private DatosGlobales datosGlobales = new DatosGlobales();
         private TextboxPersonalizado txtPaciente;
 
         // Constructores
@@ -76,7 +77,7 @@ namespace DentalSoft
             }
             else
             {
-                DialogResult mensaje = MessageBoxPersonalizadoControl.Show("No se ha podido conectar a la base de datos", "DentalSoft", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                DialogResult mensaje = MessageBoxPersonalizadoControl.Show("No se ha podido conectar a la base de datos", datosGlobales.TituloAplicacion, MessageBoxButtons.OK, MessageBoxIcon.Warning);
             }
         }
 
@@ -95,7 +96,7 @@ namespace DentalSoft
             }
             else
             {
-                DialogResult mensaje = MessageBoxPersonalizadoControl.Show("No se ha podido conectar a la base de datos", "DentalSoft", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                DialogResult mensaje = MessageBoxPersonalizadoControl.Show("No se ha podido conectar a la base de datos", datosGlobales.TituloAplicacion, MessageBoxButtons.OK, MessageBoxIcon.Warning);
             }
         }
         #endregion
@@ -154,12 +155,12 @@ namespace DentalSoft
             if (this.WindowState == FormWindowState.Normal)
             {
                 this.WindowState ^= FormWindowState.Maximized;
-                btnRedimensionar.Image = System.Drawing.Image.FromFile("imagenes/botones/boton_redimensionar_blanco.png");
+                btnRedimensionar.Image = System.Drawing.Image.FromFile(datosGlobales.PathBotonRedimensionar);
             }
             else
             {
                 this.WindowState = FormWindowState.Normal;
-                btnRedimensionar.Image = System.Drawing.Image.FromFile("imagenes/botones/boton_maximizar_blanco.png");
+                btnRedimensionar.Image = System.Drawing.Image.FromFile(datosGlobales.PathBotonMaximizar);
             }
         }
 

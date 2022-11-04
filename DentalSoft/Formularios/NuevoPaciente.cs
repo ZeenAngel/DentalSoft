@@ -9,6 +9,7 @@ using System.Linq;
 using System.Net;
 using System.Runtime.InteropServices;
 using System.Text;
+using System.Text.RegularExpressions;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
@@ -18,6 +19,7 @@ namespace DentalSoft
     {
         // Variables
         private Paciente pa;
+        private DatosGlobales datosGlobales = new DatosGlobales();
         private TextboxPersonalizado paciente;
         private bool isDesdeReserva = false;
         private bool isDesdeEditar = false;
@@ -56,6 +58,15 @@ namespace DentalSoft
 
         // Métodos privados
         #region -> Métodos privados
+        private int ComprobarEdad()
+        {
+            bool isNumero = int.TryParse(txtEdad.Texto, out int edad);
+            if (isNumero)
+                return edad;
+            else
+                return 0; // Devuelvo cero que es como false
+        }
+
         private void LimpiarCampos()
         {
             txtNombre.Texto = "";
@@ -66,20 +77,53 @@ namespace DentalSoft
             txtTelefono.Texto = "";
             txtEmail.Texto = "";
             txtCp.Texto = "";
+            txtDireccion.Texto = "";
+            txtEdad.Texto = "";
+            this.gbGenero.Controls.OfType<RadioButton>().ToList().ForEach((radiobutton) => // Lambda con bucle foreach para desmarcar todos los RadioButtons
+            {
+                radiobutton.AutoCheck = false;
+                radiobutton.Checked = false;
+                radiobutton.AutoCheck = true;
+            });
             chConsentimiento.Checked = false;
+        }
+
+        private bool ComprobarEmail()
+        {
+            bool sw = false;
+            string expRegular = "\\w+([-+.']\\w+)*@\\w+([-.]\\w+)*\\.\\w+([-.]\\w+)*";
+            if (Regex.IsMatch(txtEmail.Texto, expRegular))
+                if (Regex.Replace(txtEmail.Texto, expRegular, String.Empty).Length == 0)
+                    sw = true;
+            return sw;
         }
 
         private bool ComprobarNulos()
         {
             bool sw = false;
-            if (! txtNombre.Texto.Equals(""))
-                if (! txtDni.Texto.Equals("") || isDesdeReserva)
-                    if(!txtApellido1.Texto.Equals(""))
+            if (!txtNombre.Texto.Equals(""))
+                if (!txtDni.Texto.Equals("") || isDesdeReserva)
+                    if (!txtApellido1.Texto.Equals(""))
                         if (!txtTelefono.Texto.Equals(""))
-                            if (!txtCp.Texto.Equals(""))
-                                sw = true;
+                            if (!txtEmail.Texto.Equals("") && ComprobarEmail())
+                                if (!txtCp.Texto.Equals(""))
+                                    if (!txtDireccion.Texto.Equals(""))
+                                        if (!txtEdad.Texto.Equals(""))
+                                            if (ComprobarEdad() > 0)
+                                                if (rbMasculino.Checked || rbFemenino.Checked)
+                                                    sw = true;
+                                                else
+                                                    MostrarMensajeError("Debe seleccionar un género", "genero");
+                                            else
+                                                MostrarMensajeError("Debe introducir una edad válida", "edad");
+                                        else
+                                            MostrarMensajeError("El campo Edad no puede estar vacío", "edad");
+                                    else
+                                        MostrarMensajeError("El campo Dirección no puede estar vacío", "direccion");
+                                else
+                                    MostrarMensajeError("El campo Código Postal no puede estar vacío", "cp");
                             else
-                                MostrarMensajeError("El campo Código Postal no puede estar vacío", "nombre");
+                                MostrarMensajeError("El Email introducido no tiene un formato válido", "email");
                         else
                             MostrarMensajeError("El campo Teléfono no puede estar vacío", "telefono");
                     else
@@ -89,6 +133,19 @@ namespace DentalSoft
             else
                 MostrarMensajeError("El campo Nombre no puede estar vacío", "nombre");
             return sw;
+        }
+
+        private void OcultarMensajeError()
+        {
+            lblErrorDni.Visible = false;
+            lblErrorNombre.Visible = false;
+            lblErrorApellido.Visible = false;
+            lblErrorTelefono.Visible = false;
+            lblErrorEmail.Visible = true;
+            lblErrorCp.Visible = false;
+            lblErrorDireccion.Visible = false;
+            lblErrorEdad.Visible = false;
+            lblErrorGenero.Visible = false;
         }
 
         private void MostrarMensajeError(string cadena, string etiqueta)
@@ -111,9 +168,25 @@ namespace DentalSoft
                     lblErrorTelefono.Text = "      " + cadena;
                     lblErrorTelefono.Visible = true;
                     break;
+                case "email":
+                    lblErrorEmail.Text = "      " + cadena;
+                    lblErrorEmail.Visible = true;
+                    break;
                 case "cp":
                     lblErrorCp.Text = "      " + cadena;
                     lblErrorCp.Visible = true;
+                    break;
+                case "direccion":
+                    lblErrorDireccion.Text = "      " + cadena;
+                    lblErrorDireccion.Visible = true;
+                    break;
+                case "edad":
+                    lblErrorEdad.Text = "      " + cadena;
+                    lblErrorEdad.Visible = true;
+                    break;
+                case "genero":
+                    lblErrorGenero.Text = "      " + cadena;
+                    lblErrorGenero.Visible = true;
                     break;
             }
         }
@@ -180,12 +253,12 @@ namespace DentalSoft
             if (this.WindowState == FormWindowState.Normal)
             {
                 this.WindowState ^= FormWindowState.Maximized;
-                btnRedimensionar.Image = System.Drawing.Image.FromFile("imagenes/botones/boton_redimensionar_blanco.png");
+                btnRedimensionar.Image = System.Drawing.Image.FromFile(datosGlobales.PathBotonRedimensionar);
             }
             else
             {
                 this.WindowState = FormWindowState.Normal;
-                btnRedimensionar.Image = System.Drawing.Image.FromFile("imagenes/botones/boton_maximizar_blanco.png");
+                btnRedimensionar.Image = System.Drawing.Image.FromFile(datosGlobales.PathBotonMaximizar);
             }
         }
 
@@ -213,6 +286,7 @@ namespace DentalSoft
 
         private void btnGuardarPaciente_Click(object sender, EventArgs e)
         {
+            OcultarMensajeError();
             DialogResult mensaje;
             bool sw = false;
             if (ComprobarNulos())
@@ -240,6 +314,12 @@ namespace DentalSoft
                         else
                             sentencia += "'" + txtEmail.Texto + "', ";
                         sentencia += "'" + txtCp.Texto + "', "; // CÓDIGO POSTAL
+                        sentencia += "'" + txtDireccion.Texto + "', "; // DIRECCIÓN
+                        sentencia += txtEdad.Texto + ", "; // EDAD
+                        if (rbMasculino.Checked) // GÉNERO
+                            sentencia += "'M', ";
+                        else
+                            sentencia += "'F', ";
                         if (chConsentimiento.Checked) // CONSENTIMIENTO
                             sentencia += "1)";
                         else
@@ -249,16 +329,16 @@ namespace DentalSoft
                         if (resultado > 0)
                         {
                             LimpiarCampos();
-                            mensaje = MessageBoxPersonalizadoControl.Show("Paciente creado correctamente", "DentalSoft", MessageBoxButtons.OK);
+                            mensaje = MessageBoxPersonalizadoControl.Show("Paciente creado correctamente", datosGlobales.TituloAplicacion, MessageBoxButtons.OK);
                         }
                         else
-                            mensaje = MessageBoxPersonalizadoControl.Show("No se ha guardado el paciente", "DentalSoft", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                            mensaje = MessageBoxPersonalizadoControl.Show("No se ha guardado el paciente", datosGlobales.TituloAplicacion, MessageBoxButtons.OK, MessageBoxIcon.Warning);
                         conexion.CerrarConexion();
                         if (isDesdeReserva || isDesdeEditar)
                             this.Close();
                     }
                     else
-                        mensaje = MessageBoxPersonalizadoControl.Show("No se ha podido conectar a la base de datos", "DentalSoft", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                        mensaje = MessageBoxPersonalizadoControl.Show("No se ha podido conectar a la base de datos", datosGlobales.TituloAplicacion, MessageBoxButtons.OK, MessageBoxIcon.Warning);
                 }
                 else // Es porque la ventana se creo para EDITAR al paciente
                 {
@@ -271,21 +351,27 @@ namespace DentalSoft
                         sentencia += ", Telefono='" + txtTelefono.Texto + "'"; // TELÉFONO
                         if (!txtEmail.Texto.Equals("")) // EMAIL
                             sentencia += ", Email='" + txtEmail.Texto + "'";
-                        sentencia += ", CP='" + txtCp.Texto + "', CONSENTIMIENTO="; // CÓDIGO POSTAL
-                        if (chConsentimiento.Checked) // CONSENTIMIENTO
-                            sentencia += "1";
+                        sentencia += ", CP='" + txtCp.Texto + "', "; // CÓDIGO POSTAL
+                        sentencia += ", Direccion='" + txtDireccion.Texto + "'"; // DIRECCIÓN
+                        sentencia += ", Edad=" + txtEdad.Texto; // EDAD
+                        if (rbMasculino.Checked) // GENERO
+                            sentencia += ", Genero='M'";
                         else
-                            sentencia += "0";
+                            sentencia += ", Genero='F'";
+                        if (chConsentimiento.Checked) // CONSENTIMIENTO
+                            sentencia += "', CONSENTIMIENTO=1";
+                        else
+                            sentencia += "', CONSENTIMIENTO=0";
                         sentencia += " WHERE Dni='" + this.dni + "'";
                         MySqlCommand comando = new MySqlCommand(sentencia, conexion.conexionSql);
                         int resultado = comando.ExecuteNonQuery();
                         if (resultado > 0)
                         {
                             LimpiarCampos();
-                            mensaje = MessageBoxPersonalizadoControl.Show("Paciente editado correctamente", "DentalSoft", MessageBoxButtons.OK);
+                            mensaje = MessageBoxPersonalizadoControl.Show("Paciente editado correctamente", datosGlobales.TituloAplicacion, MessageBoxButtons.OK);
                         }
                         else
-                            mensaje = MessageBoxPersonalizadoControl.Show("No se ha podido editar el paciente", "DentalSoft", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                            mensaje = MessageBoxPersonalizadoControl.Show("No se ha podido editar el paciente", datosGlobales.TituloAplicacion, MessageBoxButtons.OK, MessageBoxIcon.Warning);
                         conexion.CerrarConexion();
                         if (isDesdeReserva)
                             this.Close();

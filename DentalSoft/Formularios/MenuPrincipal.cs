@@ -5,6 +5,7 @@ using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
 using System.Drawing;
+using System.IO;
 using System.Linq;
 using System.Runtime.InteropServices;
 using System.Text;
@@ -19,7 +20,8 @@ namespace DentalSoft
         private Form formularioActivo = null;
         public string dniEmpleado;
         public Empleado empleado = new Empleado();
-        Clases.ConexionBD conexion = new Clases.ConexionBD();
+        private ConexionBD conexion = new ConexionBD();
+        private DatosGlobales datosGlobales = new DatosGlobales();
         #endregion
 
         #region -> Funcionalidades
@@ -65,10 +67,10 @@ namespace DentalSoft
                 else
                 {
                     // ¿SI YA TENGO CARGADO EL DNI, SERÍA RARO NO ENCONTRAR EL PUESTO, PERO POR SI ACASO LO DEJO?
-                    DialogResult mensaje = MessageBoxPersonalizadoControl.Show("No se ha encontrado ningún usuario con ese DNI", "DentalSoft", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                    DialogResult mensaje = MessageBoxPersonalizadoControl.Show("No se ha encontrado ningún usuario con ese DNI", datosGlobales.TituloAplicacion, MessageBoxButtons.OK, MessageBoxIcon.Warning);
                 }
                 reader.Close();
-                sentencia = "SELECT Nombre FROM Centro WHERE Id=" + empleado.Centro;
+                sentencia = "SELECT Nombre FROM Centro WHERE Cif='" + empleado.Centro + "'";
                 comando = new MySqlCommand(sentencia, conexion.conexionSql);
                 reader = comando.ExecuteReader();
                 if (reader.HasRows)
@@ -79,7 +81,7 @@ namespace DentalSoft
                 else
                 {
                     // ¿SI YA TENGO CARGADO EL DNI, SERÍA RARO NO ENCONTRAR EL CENTRO, PERO POR SI ACASO LO DEJO?
-                    DialogResult mensaje = MessageBoxPersonalizadoControl.Show("No se ha encontrado ningún usuario con ese DNI", "DentalSoft", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                    DialogResult mensaje = MessageBoxPersonalizadoControl.Show("No se ha encontrado ningún usuario con ese DNI", datosGlobales.TituloAplicacion, MessageBoxButtons.OK, MessageBoxIcon.Warning);
                 }
                 reader.Close();
                 conexion.CerrarConexion();
@@ -88,7 +90,7 @@ namespace DentalSoft
             }
             else
             {
-                DialogResult mensaje = MessageBoxPersonalizadoControl.Show("No se ha podido establecer conexión con la base de datos", "DentalSoft", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                DialogResult mensaje = MessageBoxPersonalizadoControl.Show("No se ha podido establecer conexión con la base de datos", datosGlobales.TituloAplicacion, MessageBoxButtons.OK, MessageBoxIcon.Warning);
             }
         }
 
@@ -109,6 +111,13 @@ namespace DentalSoft
 
         private void btnCerrarLogin_Click(object sender, EventArgs e)
         {
+            try // Eliminar el directorio temporal
+            {
+                DirectoryInfo dirTemporal = new DirectoryInfo(datosGlobales.DirectorioTemporal);
+                if(dirTemporal.Exists)
+                    dirTemporal.Delete(true);
+            }
+            catch { }
             Application.Exit();
         }
 
@@ -122,12 +131,12 @@ namespace DentalSoft
             if (this.WindowState == FormWindowState.Normal)
             {
                 this.WindowState ^= FormWindowState.Maximized;
-                btnRedimensionarMenuPrincipal.Image = System.Drawing.Image.FromFile("imagenes/botones/boton_redimensionar_blanco.png");
+                btnRedimensionarMenuPrincipal.Image = System.Drawing.Image.FromFile(datosGlobales.PathBotonRedimensionar);
             }
             else
             {
                 this.WindowState = FormWindowState.Normal;
-                btnRedimensionarMenuPrincipal.Image = System.Drawing.Image.FromFile("imagenes/botones/boton_maximizar_blanco.png");
+                btnRedimensionarMenuPrincipal.Image = System.Drawing.Image.FromFile(datosGlobales.PathBotonMaximizar);
             }
         }
 

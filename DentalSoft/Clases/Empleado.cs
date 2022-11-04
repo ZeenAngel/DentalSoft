@@ -46,7 +46,7 @@ namespace DentalSoft.Clases
         private int puesto;
         private int especialidad;
         private string numColegiado;
-        private int centro;
+        private string centro;
         private bool estadoFichaje;
 
         #endregion
@@ -66,7 +66,7 @@ namespace DentalSoft.Clases
         public int Puesto { get => puesto; set => puesto = value; }
         public int Especialidad { get => especialidad; set => especialidad = value; }
         public string NumColegiado { get => numColegiado; set => numColegiado = value; }
-        public int Centro { get => centro; set => centro = value; }
+        public string Centro { get => centro; set => centro = value; }
         public bool EstadoFichaje { get => estadoFichaje; set => estadoFichaje = value; }
 
         #endregion
@@ -96,7 +96,7 @@ namespace DentalSoft.Clases
                         especialidad = reader.GetInt32(8);
                     if (!reader.IsDBNull(9))
                         numColegiado = reader.GetString(9);
-                    this.centro = reader.GetInt32(10);
+                    this.centro = reader.GetString(10);
                     this.estadoFichaje = reader.GetBoolean(11);
                     reader.Close();
                     conexion.CerrarConexion();

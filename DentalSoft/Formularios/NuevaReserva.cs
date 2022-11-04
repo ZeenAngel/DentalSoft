@@ -18,7 +18,8 @@ namespace DentalSoft
         // Variables
         public Empleado empleado;
         private MenuPrincipal formPadre;
-        Clases.ConexionBD conexion = new Clases.ConexionBD();
+        private ConexionBD conexion = new ConexionBD();
+        private DatosGlobales datosGlobales = new DatosGlobales();
         const string txtPaciente = "paciente";
         const string txtOdontologo = "odontologo";
 
@@ -55,7 +56,7 @@ namespace DentalSoft
             }
             else
             {
-                DialogResult mensaje = MessageBoxPersonalizadoControl.Show("No se ha podido conectar a la base de datos", "DentalSoft", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                DialogResult mensaje = MessageBoxPersonalizadoControl.Show("No se ha podido conectar a la base de datos", datosGlobales.TituloAplicacion, MessageBoxButtons.OK, MessageBoxIcon.Warning);
             }
         }
 
@@ -194,19 +195,19 @@ namespace DentalSoft
                 if (resultado > 0)
                 {
                     LimpiarCampos();
-                    mensaje = MessageBoxPersonalizadoControl.Show("Reserva creada correctamente", "DentalSoft", MessageBoxButtons.OK);
+                    mensaje = MessageBoxPersonalizadoControl.Show("Reserva creada correctamente", datosGlobales.TituloAplicacion, MessageBoxButtons.OK);
                     Agenda agenda = new Agenda(formPadre);
                     agenda.MdiParent = this.MdiParent;
                     formPadre.AbrirFormularioHijo(agenda);
                     this.Close();
                 }
                 else
-                    mensaje = MessageBoxPersonalizadoControl.Show("No se ha guardado la reserva", "DentalSoft", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                    mensaje = MessageBoxPersonalizadoControl.Show("No se ha guardado la reserva", datosGlobales.TituloAplicacion, MessageBoxButtons.OK, MessageBoxIcon.Warning);
                 conexion.CerrarConexion();
             }
             else
             {
-                mensaje = MessageBoxPersonalizadoControl.Show("No se ha podido conectar a la base de datos", "DentalSoft", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                mensaje = MessageBoxPersonalizadoControl.Show("No se ha podido conectar a la base de datos", datosGlobales.TituloAplicacion, MessageBoxButtons.OK, MessageBoxIcon.Warning);
             }
         }
         #endregion
@@ -258,7 +259,7 @@ namespace DentalSoft
                     }
                     else
                     {
-                        mensaje = MessageBoxPersonalizadoControl.Show("El paciente introducido no existe, ¿Quiere crear un nuevo paciente?", "DentalSoft", MessageBoxButtons.YesNo, MessageBoxIcon.Information);
+                        mensaje = MessageBoxPersonalizadoControl.Show("El paciente introducido no existe, ¿Quiere crear un nuevo paciente?", datosGlobales.TituloAplicacion, MessageBoxButtons.YesNo, MessageBoxIcon.Information);
                         if (mensaje == DialogResult.Yes)
                         {
                             NuevoPaciente nuevoPaciente = new NuevoPaciente(ref this.txtPacienteNuevaReserva);

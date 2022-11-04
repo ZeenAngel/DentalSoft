@@ -38,7 +38,6 @@
             this.btnCerrarSesionMenuLateral = new System.Windows.Forms.PictureBox();
             this.btnAjustesMenuLateral = new System.Windows.Forms.Button();
             this.btnCajaMenuLateral = new System.Windows.Forms.Button();
-            this.btnProveedoresMenuLateral = new System.Windows.Forms.Button();
             this.btnAlmacenMenuLateral = new System.Windows.Forms.Button();
             this.btnFacturasMenuLateral = new System.Windows.Forms.Button();
             this.btnEmpleadosMenuLateral = new System.Windows.Forms.Button();
@@ -135,7 +134,6 @@
             this.pnlMenuLateral.Controls.Add(this.btnCerrarSesionMenuLateral);
             this.pnlMenuLateral.Controls.Add(this.btnAjustesMenuLateral);
             this.pnlMenuLateral.Controls.Add(this.btnCajaMenuLateral);
-            this.pnlMenuLateral.Controls.Add(this.btnProveedoresMenuLateral);
             this.pnlMenuLateral.Controls.Add(this.btnAlmacenMenuLateral);
             this.pnlMenuLateral.Controls.Add(this.btnFacturasMenuLateral);
             this.pnlMenuLateral.Controls.Add(this.btnEmpleadosMenuLateral);
@@ -172,7 +170,7 @@
             this.btnAjustesMenuLateral.ForeColor = System.Drawing.Color.White;
             this.btnAjustesMenuLateral.Image = ((System.Drawing.Image)(resources.GetObject("btnAjustesMenuLateral.Image")));
             this.btnAjustesMenuLateral.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnAjustesMenuLateral.Location = new System.Drawing.Point(0, 480);
+            this.btnAjustesMenuLateral.Location = new System.Drawing.Point(0, 430);
             this.btnAjustesMenuLateral.Name = "btnAjustesMenuLateral";
             this.btnAjustesMenuLateral.Padding = new System.Windows.Forms.Padding(35, 0, 0, 0);
             this.btnAjustesMenuLateral.Size = new System.Drawing.Size(250, 50);
@@ -192,7 +190,7 @@
             this.btnCajaMenuLateral.ForeColor = System.Drawing.Color.White;
             this.btnCajaMenuLateral.Image = ((System.Drawing.Image)(resources.GetObject("btnCajaMenuLateral.Image")));
             this.btnCajaMenuLateral.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnCajaMenuLateral.Location = new System.Drawing.Point(0, 430);
+            this.btnCajaMenuLateral.Location = new System.Drawing.Point(0, 380);
             this.btnCajaMenuLateral.Name = "btnCajaMenuLateral";
             this.btnCajaMenuLateral.Padding = new System.Windows.Forms.Padding(35, 0, 0, 0);
             this.btnCajaMenuLateral.Size = new System.Drawing.Size(250, 50);
@@ -200,26 +198,6 @@
             this.btnCajaMenuLateral.Text = "   Caja";
             this.btnCajaMenuLateral.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.btnCajaMenuLateral.UseVisualStyleBackColor = false;
-            // 
-            // btnProveedoresMenuLateral
-            // 
-            this.btnProveedoresMenuLateral.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(16)))), ((int)(((byte)(110)))), ((int)(((byte)(196)))));
-            this.btnProveedoresMenuLateral.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.btnProveedoresMenuLateral.Dock = System.Windows.Forms.DockStyle.Top;
-            this.btnProveedoresMenuLateral.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(195)))), ((int)(((byte)(165)))));
-            this.btnProveedoresMenuLateral.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnProveedoresMenuLateral.Font = new System.Drawing.Font("Roboto", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnProveedoresMenuLateral.ForeColor = System.Drawing.Color.White;
-            this.btnProveedoresMenuLateral.Image = ((System.Drawing.Image)(resources.GetObject("btnProveedoresMenuLateral.Image")));
-            this.btnProveedoresMenuLateral.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnProveedoresMenuLateral.Location = new System.Drawing.Point(0, 380);
-            this.btnProveedoresMenuLateral.Name = "btnProveedoresMenuLateral";
-            this.btnProveedoresMenuLateral.Padding = new System.Windows.Forms.Padding(35, 0, 0, 0);
-            this.btnProveedoresMenuLateral.Size = new System.Drawing.Size(250, 50);
-            this.btnProveedoresMenuLateral.TabIndex = 30;
-            this.btnProveedoresMenuLateral.Text = "   Proveedores";
-            this.btnProveedoresMenuLateral.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
-            this.btnProveedoresMenuLateral.UseVisualStyleBackColor = false;
             // 
             // btnAlmacenMenuLateral
             // 
@@ -451,7 +429,6 @@
         private System.Windows.Forms.PictureBox btnCerrarSesionMenuLateral;
         private System.Windows.Forms.Button btnAjustesMenuLateral;
         private System.Windows.Forms.Button btnCajaMenuLateral;
-        private System.Windows.Forms.Button btnProveedoresMenuLateral;
         private System.Windows.Forms.Button btnAlmacenMenuLateral;
         private System.Windows.Forms.Button btnFacturasMenuLateral;
         private System.Windows.Forms.Button btnEmpleadosMenuLateral;

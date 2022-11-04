@@ -19,11 +19,19 @@ namespace DentalSoft.Clases
         string telefono;
         string email;
         string cp;
+        string direccion;
+        int edad;
+        string genero;
         bool consentimiento;
         #endregion
 
         // Constructores
         public Paciente() { }
+
+        public Paciente(string dni)
+        {
+            this.dni = dni;
+        }
 
         // Getters y Setters
         #region -> Getters y Setters
@@ -33,11 +41,19 @@ namespace DentalSoft.Clases
         public string Apellido2 { get => apellido2; set => apellido2 = value; }
         public string Telefono { get => telefono; set => telefono = value; }
         public string Email { get => email; set => email = value; }
-        public string Cp { get => cp; set => cp = value; }
+        public string Cp { get => cp; set => cp = value; }   
+        public string Direccion { get => direccion; set => direccion = value; }
+        public int Edad { get => edad; set => edad = value; }
+        public string Genero { get => genero; set => genero = value; }
         public bool Consentimiento { get => consentimiento; set => consentimiento = value; }
         #endregion
 
         // Métodos públicos
+        public bool CargarPaciente()
+        {
+            return CargarPaciente(this.dni);
+        }
+
         #region -> Métodos públicos
         public bool CargarPaciente(string dni)
         {
@@ -59,7 +75,10 @@ namespace DentalSoft.Clases
                     if (!reader.IsDBNull(5))
                         this.email = reader.GetString(5);
                     this.cp = reader.GetString(6);
-                    this.consentimiento = reader.GetBoolean(7);
+                    this.direccion = reader.GetString(7);
+                    this.edad = reader.GetInt32(8);
+                    this.genero = reader.GetString(9);
+                    this.consentimiento = reader.GetBoolean(10);
                     reader.Close();
                     conexion.CerrarConexion();
                     return true; // Todo OK

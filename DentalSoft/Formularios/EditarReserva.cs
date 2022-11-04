@@ -16,7 +16,8 @@ namespace DentalSoft
     public partial class EditarReserva : Form
     {
         // Variables
-        Clases.ConexionBD conexion = new Clases.ConexionBD();
+        private ConexionBD conexion = new ConexionBD();
+        private DatosGlobales datosGlobales = new DatosGlobales();
         int idReserva;
         string fecha = "";
         string hora = "";
@@ -72,7 +73,7 @@ namespace DentalSoft
             }
             else
             {
-                DialogResult mensaje = MessageBoxPersonalizadoControl.Show("No se ha podido conectar a la base de datos", "DentalSoft", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                DialogResult mensaje = MessageBoxPersonalizadoControl.Show("No se ha podido conectar a la base de datos", datosGlobales.TituloAplicacion, MessageBoxButtons.OK, MessageBoxIcon.Warning);
             }
         }
 
@@ -95,12 +96,12 @@ namespace DentalSoft
             if (this.WindowState == FormWindowState.Normal)
             {
                 this.WindowState ^= FormWindowState.Maximized;
-                btnRedimensionar.Image = System.Drawing.Image.FromFile("imagenes/botones/boton_redimensionar_blanco.png");
+                btnRedimensionar.Image = System.Drawing.Image.FromFile(datosGlobales.PathBotonRedimensionar);
             }
             else
             {
                 this.WindowState = FormWindowState.Normal;
-                btnRedimensionar.Image = System.Drawing.Image.FromFile("imagenes/botones/boton_maximizar_blanco.png");
+                btnRedimensionar.Image = System.Drawing.Image.FromFile(datosGlobales.PathBotonMaximizar);
             }
         }
 
@@ -146,7 +147,7 @@ namespace DentalSoft
             }
             else
             {
-                DialogResult mensaje = MessageBoxPersonalizadoControl.Show("No se ha podido establecer la conexión con la base de datos", "DentalSoft", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                DialogResult mensaje = MessageBoxPersonalizadoControl.Show("No se ha podido establecer la conexión con la base de datos", datosGlobales.TituloAplicacion, MessageBoxButtons.OK, MessageBoxIcon.Warning);
             }
         }
 
@@ -162,7 +163,7 @@ namespace DentalSoft
             }
             else
             {
-                DialogResult mensaje = MessageBoxPersonalizadoControl.Show("No se ha podido conectar a la base de datos", "DentalSoft", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                DialogResult mensaje = MessageBoxPersonalizadoControl.Show("No se ha podido conectar a la base de datos", datosGlobales.TituloAplicacion, MessageBoxButtons.OK, MessageBoxIcon.Warning);
             }
         }
         #endregion
