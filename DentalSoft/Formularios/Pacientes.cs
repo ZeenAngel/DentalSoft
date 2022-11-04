@@ -204,6 +204,11 @@ namespace DentalSoft
                 mensaje = MessageBoxPersonalizadoControl.Show("Debe seleccionar un paciente de la lista", datosGlobales.TituloAplicacion, MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
         }
+
+        private void pbAtras_Click(object sender, EventArgs e)
+        {
+            this.Close();
+        }
         #endregion
     }
 }

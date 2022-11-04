@@ -33,7 +33,45 @@
     <ErrorReport>prompt</ErrorReport>
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Debug|x64'">
+    <DebugSymbols>true</DebugSymbols>
+    <OutputPath>bin\x64\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <DebugType>full</DebugType>
+    <PlatformTarget>x64</PlatformTarget>
+    <LangVersion>7.3</LangVersion>
+    <ErrorReport>prompt</ErrorReport>
+    <Prefer32Bit>true</Prefer32Bit>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Release|x64'">
+    <OutputPath>bin\x64\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <Optimize>true</Optimize>
+    <DebugType>pdbonly</DebugType>
+    <PlatformTarget>x64</PlatformTarget>
+    <LangVersion>7.3</LangVersion>
+    <ErrorReport>prompt</ErrorReport>
+    <Prefer32Bit>true</Prefer32Bit>
+  </PropertyGroup>
   <ItemGroup>
+    <Reference Include="Microsoft.ReportViewer.Common, Version=15.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.ReportingServices.ReportViewerControl.Winforms.150.1537.0\lib\net40\Microsoft.ReportViewer.Common.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.ReportViewer.DataVisualization, Version=15.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.ReportingServices.ReportViewerControl.Winforms.150.1537.0\lib\net40\Microsoft.ReportViewer.DataVisualization.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.ReportViewer.Design, Version=15.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.ReportingServices.ReportViewerControl.Winforms.150.1537.0\lib\net40\Microsoft.ReportViewer.Design.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.ReportViewer.ProcessingObjectModel, Version=15.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.ReportingServices.ReportViewerControl.Winforms.150.1537.0\lib\net40\Microsoft.ReportViewer.ProcessingObjectModel.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.ReportViewer.WinForms, Version=15.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.ReportingServices.ReportViewerControl.Winforms.150.1537.0\lib\net40\Microsoft.ReportViewer.WinForms.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.SqlServer.Types, Version=14.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.SqlServer.Types.14.0.314.76\lib\net40\Microsoft.SqlServer.Types.dll</HintPath>
+    </Reference>
     <Reference Include="MySql.Data, Version=8.0.30.0, Culture=neutral, PublicKeyToken=c5687fc88969c44d, processorArchitecture=MSIL" />
     <Reference Include="System" />
     <Reference Include="System.Core" />
@@ -57,6 +95,7 @@
     <Compile Include="Clases\Estilo.cs" />
     <Compile Include="Clases\Historial.cs" />
     <Compile Include="Clases\Paciente.cs" />
+    <Compile Include="Clases\Pieza.cs" />
     <Compile Include="ControlesPersonalizados\BotonPersonalizado.cs">
       <SubType>Component</SubType>
     </Compile>
@@ -72,6 +111,11 @@
     <Compile Include="ControlesPersonalizados\MessageBoxPersonalizadoControl.cs" />
     <Compile Include="ControlesPersonalizados\SelectorFecha.cs">
       <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Datos\DataSetEpisodioClinico.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>DataSetEpisodioClinico.xsd</DependentUpon>
     </Compile>
     <Compile Include="Formularios\Agenda.cs">
       <SubType>Form</SubType>
@@ -157,6 +201,12 @@
     <Compile Include="Formularios\NuevoPaciente.designer.cs">
       <DependentUpon>NuevoPaciente.cs</DependentUpon>
     </Compile>
+    <Compile Include="Formularios\Odontograma.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Formularios\Odontograma.Designer.cs">
+      <DependentUpon>Odontograma.cs</DependentUpon>
+    </Compile>
     <Compile Include="Formularios\Pacientes.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -168,6 +218,12 @@
     </Compile>
     <Compile Include="Formularios\ReservasPaciente.designer.cs">
       <DependentUpon>ReservasPaciente.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Formularios\TratamientoPaciente.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Formularios\TratamientoPaciente.Designer.cs">
+      <DependentUpon>TratamientoPaciente.cs</DependentUpon>
     </Compile>
     <Compile Include="Formularios\VisualizadorImagenes.cs">
       <SubType>Form</SubType>
@@ -183,6 +239,7 @@
     <Compile Include="ControlesPersonalizados\TextboxPersonalizado.Designer.cs">
       <DependentUpon>TextboxPersonalizado.cs</DependentUpon>
     </Compile>
+    <Compile Include="SqlServerTypes\Loader.cs" />
     <EmbeddedResource Include="ControlesPersonalizados\MessageBoxPersonalizado.resx">
       <DependentUpon>MessageBoxPersonalizado.cs</DependentUpon>
     </EmbeddedResource>
@@ -228,15 +285,22 @@
     <EmbeddedResource Include="Formularios\NuevoPaciente.resx">
       <DependentUpon>NuevoPaciente.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Formularios\Odontograma.resx">
+      <DependentUpon>Odontograma.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Formularios\Pacientes.resx">
       <DependentUpon>Pacientes.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Formularios\ReservasPaciente.resx">
       <DependentUpon>ReservasPaciente.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Formularios\TratamientoPaciente.resx">
+      <DependentUpon>TratamientoPaciente.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Formularios\VisualizadorImagenes.resx">
       <DependentUpon>VisualizadorImagenes.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Informes\InformeEpisodiosCompletos.rdlc" />
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
       <LastGenOutput>Resources.Designer.cs</LastGenOutput>
@@ -250,6 +314,18 @@
     <EmbeddedResource Include="ControlesPersonalizados\TextboxPersonalizado.resx">
       <DependentUpon>TextboxPersonalizado.cs</DependentUpon>
     </EmbeddedResource>
+    <None Include="Datos\DataSetEpisodioClinico.xsc">
+      <DependentUpon>DataSetEpisodioClinico.xsd</DependentUpon>
+    </None>
+    <None Include="Datos\DataSetEpisodioClinico.xsd">
+      <SubType>Designer</SubType>
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>DataSetEpisodioClinico.Designer.cs</LastGenOutput>
+    </None>
+    <None Include="Datos\DataSetEpisodioClinico.xss">
+      <DependentUpon>DataSetEpisodioClinico.xsd</DependentUpon>
+    </None>
+    <None Include="packages.config" />
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
       <LastGenOutput>Settings.Designer.cs</LastGenOutput>
@@ -400,6 +476,21 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\question.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="SqlServerTypes\readme.htm" />
+    <Content Include="SqlServerTypes\x64\msvcr120.dll">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="SqlServerTypes\x64\SqlServerSpatial140.dll">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="SqlServerTypes\x86\msvcr120.dll">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="SqlServerTypes\x86\SqlServerSpatial140.dll">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
   </ItemGroup>
   <ItemGroup />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

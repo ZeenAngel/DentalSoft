@@ -1,4 +1,5 @@
 ﻿using DentalSoft.Clases;
+using DentalSoft.Formularios;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -128,7 +129,8 @@ namespace DentalSoft
 
         private void btnOdontograma_Click(object sender, EventArgs e)
         {
-            // TODO: Crear formulario OdontogramaPaciente, pasarle el dni como argumento y abrirlo en AbrirFormularioHijo
+            Odontograma odontograma = new Odontograma(paciente);
+            AbrirFormularioHijo(odontograma);
         }
     }
 }

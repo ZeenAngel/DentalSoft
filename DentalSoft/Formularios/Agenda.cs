@@ -10,6 +10,7 @@ using System.Windows.Forms;
 using System.Runtime.InteropServices;
 using MySql.Data.MySqlClient;
 using DentalSoft.Clases;
+using DentalSoft.Formularios;
 
 namespace DentalSoft
 {
@@ -156,8 +157,13 @@ namespace DentalSoft
                 DialogResult mensaje = MessageBoxPersonalizadoControl.Show("Debe seleccionar una reserva de la lista", datosGlobales.TituloAplicacion, MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
         }
+
         #endregion
 
-
+        private void dgvReservas_CellContentDoubleClick(object sender, DataGridViewCellEventArgs e)
+        {
+            TratamientoPaciente tratamientoPaciente = new TratamientoPaciente(int.Parse(dgvReservas.CurrentRow.Cells[0].Value.ToString()));
+            tratamientoPaciente.ShowDialog();
+        }
     }
 }

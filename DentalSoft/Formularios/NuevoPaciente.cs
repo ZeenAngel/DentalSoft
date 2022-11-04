@@ -236,6 +236,12 @@ namespace DentalSoft
             if (pa.Email != null)
                 txtEmail.Texto = pa.Email;
             txtCp.Texto = pa.Cp;
+            txtDireccion.Texto = pa.Direccion;
+            txtEdad.Texto = pa.Edad.ToString();
+            if (pa.Genero.Equals("M"))
+                rbMasculino.Checked = true;
+            else
+                rbFemenino.Checked = true;
             if (pa.Consentimiento)
                 chConsentimiento.Checked = true;
         }

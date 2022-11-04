@@ -32,15 +32,15 @@
             this.lblSeleccionarAgenda = new System.Windows.Forms.Label();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.gbFechaReserva = new System.Windows.Forms.GroupBox();
+            this.btnEliminarAgenda = new DentalSoft.ControlesPersonalizados.BotonPersonalizado();
+            this.btnEditarAgenda = new DentalSoft.ControlesPersonalizados.BotonPersonalizado();
+            this.btnNuevaAgenda = new DentalSoft.ControlesPersonalizados.BotonPersonalizado();
+            this.selectorFecha1 = new DentalSoft.ControlesPersonalizados.SelectorFecha();
             this.dgvReservas = new System.Windows.Forms.DataGridView();
             this.lblErrorModificarCita = new System.Windows.Forms.Label();
             this.pnlDgv = new System.Windows.Forms.Panel();
             this.gbDatosReserva = new System.Windows.Forms.GroupBox();
             this.backgroundWorker1 = new System.ComponentModel.BackgroundWorker();
-            this.btnEliminarAgenda = new DentalSoft.ControlesPersonalizados.BotonPersonalizado();
-            this.btnEditarAgenda = new DentalSoft.ControlesPersonalizados.BotonPersonalizado();
-            this.btnNuevaAgenda = new DentalSoft.ControlesPersonalizados.BotonPersonalizado();
-            this.selectorFecha1 = new DentalSoft.ControlesPersonalizados.SelectorFecha();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.gbFechaReserva.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvReservas)).BeginInit();
@@ -92,54 +92,6 @@
             this.gbFechaReserva.TabIndex = 38;
             this.gbFechaReserva.TabStop = false;
             this.gbFechaReserva.Text = "Fecha Reserva";
-            // 
-            // dgvReservas
-            // 
-            this.dgvReservas.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(236)))), ((int)(((byte)(236)))), ((int)(((byte)(236)))));
-            this.dgvReservas.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.dgvReservas.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.Sunken;
-            this.dgvReservas.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dgvReservas.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.dgvReservas.Location = new System.Drawing.Point(0, 0);
-            this.dgvReservas.Name = "dgvReservas";
-            this.dgvReservas.Size = new System.Drawing.Size(743, 577);
-            this.dgvReservas.TabIndex = 17;
-            // 
-            // lblErrorModificarCita
-            // 
-            this.lblErrorModificarCita.AutoSize = true;
-            this.lblErrorModificarCita.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
-            this.lblErrorModificarCita.ForeColor = System.Drawing.Color.White;
-            this.lblErrorModificarCita.Location = new System.Drawing.Point(40, 287);
-            this.lblErrorModificarCita.Name = "lblErrorModificarCita";
-            this.lblErrorModificarCita.Size = new System.Drawing.Size(0, 20);
-            this.lblErrorModificarCita.TabIndex = 34;
-            // 
-            // pnlDgv
-            // 
-            this.pnlDgv.Controls.Add(this.dgvReservas);
-            this.pnlDgv.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.pnlDgv.Location = new System.Drawing.Point(3, 26);
-            this.pnlDgv.Name = "pnlDgv";
-            this.pnlDgv.Size = new System.Drawing.Size(743, 577);
-            this.pnlDgv.TabIndex = 35;
-            // 
-            // gbDatosReserva
-            // 
-            this.gbDatosReserva.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.gbDatosReserva.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
-            this.gbDatosReserva.Controls.Add(this.pnlDgv);
-            this.gbDatosReserva.Controls.Add(this.lblErrorModificarCita);
-            this.gbDatosReserva.Font = new System.Drawing.Font("Roboto", 14F);
-            this.gbDatosReserva.ForeColor = System.Drawing.Color.Black;
-            this.gbDatosReserva.Location = new System.Drawing.Point(389, 97);
-            this.gbDatosReserva.Name = "gbDatosReserva";
-            this.gbDatosReserva.Size = new System.Drawing.Size(749, 606);
-            this.gbDatosReserva.TabIndex = 39;
-            this.gbDatosReserva.TabStop = false;
-            this.gbDatosReserva.Text = "Datos Reserva";
             // 
             // btnEliminarAgenda
             // 
@@ -222,6 +174,55 @@
             this.selectorFecha1.TextoColor = System.Drawing.Color.White;
             this.selectorFecha1.Value = new System.DateTime(2022, 10, 9, 17, 56, 50, 302);
             this.selectorFecha1.CloseUp += new System.EventHandler(this.selectorFecha1_CloseUp);
+            // 
+            // dgvReservas
+            // 
+            this.dgvReservas.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(236)))), ((int)(((byte)(236)))), ((int)(((byte)(236)))));
+            this.dgvReservas.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.dgvReservas.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.Sunken;
+            this.dgvReservas.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dgvReservas.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.dgvReservas.Location = new System.Drawing.Point(0, 0);
+            this.dgvReservas.Name = "dgvReservas";
+            this.dgvReservas.Size = new System.Drawing.Size(743, 577);
+            this.dgvReservas.TabIndex = 17;
+            this.dgvReservas.CellContentDoubleClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvReservas_CellContentDoubleClick);
+            // 
+            // lblErrorModificarCita
+            // 
+            this.lblErrorModificarCita.AutoSize = true;
+            this.lblErrorModificarCita.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
+            this.lblErrorModificarCita.ForeColor = System.Drawing.Color.White;
+            this.lblErrorModificarCita.Location = new System.Drawing.Point(40, 287);
+            this.lblErrorModificarCita.Name = "lblErrorModificarCita";
+            this.lblErrorModificarCita.Size = new System.Drawing.Size(0, 20);
+            this.lblErrorModificarCita.TabIndex = 34;
+            // 
+            // pnlDgv
+            // 
+            this.pnlDgv.Controls.Add(this.dgvReservas);
+            this.pnlDgv.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.pnlDgv.Location = new System.Drawing.Point(3, 26);
+            this.pnlDgv.Name = "pnlDgv";
+            this.pnlDgv.Size = new System.Drawing.Size(743, 577);
+            this.pnlDgv.TabIndex = 35;
+            // 
+            // gbDatosReserva
+            // 
+            this.gbDatosReserva.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.gbDatosReserva.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
+            this.gbDatosReserva.Controls.Add(this.pnlDgv);
+            this.gbDatosReserva.Controls.Add(this.lblErrorModificarCita);
+            this.gbDatosReserva.Font = new System.Drawing.Font("Roboto", 14F);
+            this.gbDatosReserva.ForeColor = System.Drawing.Color.Black;
+            this.gbDatosReserva.Location = new System.Drawing.Point(389, 97);
+            this.gbDatosReserva.Name = "gbDatosReserva";
+            this.gbDatosReserva.Size = new System.Drawing.Size(749, 606);
+            this.gbDatosReserva.TabIndex = 39;
+            this.gbDatosReserva.TabStop = false;
+            this.gbDatosReserva.Text = "Datos Reserva";
             // 
             // Agenda
             // 

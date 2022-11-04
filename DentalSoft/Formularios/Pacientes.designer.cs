@@ -86,6 +86,7 @@
             this.pbAtras.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.pbAtras.TabIndex = 12;
             this.pbAtras.TabStop = false;
+            this.pbAtras.Click += new System.EventHandler(this.pbAtras_Click);
             // 
             // btnHistorialPacientes
             // 

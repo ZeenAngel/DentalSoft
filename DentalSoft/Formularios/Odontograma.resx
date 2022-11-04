@@ -117,15 +117,6 @@
   <resheader name="writer">
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
-  <metadata name="episodioclinicoBindingSource.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
-    <value>193, 17</value>
-  </metadata>
-  <metadata name="dataSetEpisodioClinico.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
-    <value>17, 17</value>
-  </metadata>
-  <metadata name="dataSetEpisodioClinico.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
-    <value>17, 17</value>
-  </metadata>
   <assembly alias="System.Drawing" name="System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
   <data name="btnAtras.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
@@ -138,7 +129,16 @@
         AwaCzcEspwGBcHk9O/0k+zU0UN5HaUVFcQTBFrWiShUUyQJQAAAAAElFTkSuQmCC
 </value>
   </data>
-  <metadata name="episodio_clinicoTableAdapter.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
-    <value>405, 17</value>
-  </metadata>
+  <data name="lblError.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+    <value>
+        iVBORw0KGgoAAAANSUhEUgAAAA4AAAAOCAYAAAAfSC3RAAAABGdBTUEAALGPC/xhBQAAACBjSFJNAAB6
+        JgAAgIQAAPoAAACA6AAAdTAAAOpgAAA6mAAAF3CculE8AAAACXBIWXMAAA68AAAOvAGVvHJJAAAAB3RJ
+        TUUH5goGBy8tMZ5n3wAAATFJREFUOE+F0tsqRGEYh/GlEIMj+2tA2Z4qd0HNAQ7mFnBCoRxwAXYRrkMp
+        DmQ3UvaFA5vb8DzL901fQ5n6NWv9p3e9a97vzfxcFouqQx8WcYp3fOAcK+hHPfKaWNSACZzhBruYC7Zx
+        jTIm0Yi8sBbjuMcefLLZMEZgl15s4hHTZhYa2mkf3TAr4BBHaA1ZOzZg90GDBfh6dvBeTXjGCzpDph5c
+        YdWbYxygBv8Vyq5lL16xbJgM61dh8tsMvrx4w1+Ft3hAh1nyW6XwBNWv6iT9755pc8iideSvOo/q4Vjo
+        2EvIzy2Iw1mLN26HZ9gFsxZcwAe2hcxvu3kcQwaumltzh3QBRjEWrn2403xCZQEUV87OdtnBLBzEFlw3
+        TeFn5ZJpxSVfQlzyT8QlH0BY8iz7BucOYV0SO6+vAAAAAElFTkSuQmCC
+</value>
+  </data>
 </root>

@@ -49,12 +49,18 @@ namespace DentalSoft.Clases
                     this.fecha = reader.GetString(1);
                     this.alergias = reader.GetString(2);
                     this.medicacion = reader.GetString(3);
-                    if (! reader.IsDBNull(4))
+                    if (!reader.IsDBNull(4))
                         this.observaciones = reader.GetString(4);
+                    reader.Close();
+                    conexion.CerrarConexion();
                     return true;
                 }
                 else
+                {
+                    reader.Close();
+                    conexion.CerrarConexion();
                     return false;
+                }
             }
             else
             {

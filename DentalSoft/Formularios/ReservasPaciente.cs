@@ -38,12 +38,11 @@ namespace DentalSoft
         #region -> Métodos privados
         private void AjustarColumnasDgv()
         {
-            dgvReservas.Columns[0].MinimumWidth = 60;
+            dgvReservas.Columns[0].MinimumWidth = anchoMinimo;
             dgvReservas.Columns[1].MinimumWidth = anchoMinimo;
             dgvReservas.Columns[2].MinimumWidth = anchoMinimo;
             dgvReservas.Columns[3].MinimumWidth = anchoMinimo;
             dgvReservas.Columns[4].MinimumWidth = anchoMinimo;
-            dgvReservas.Columns[5].MinimumWidth = anchoMinimo;
             dgvReservas.Columns[dgvReservas.ColumnCount - 1].AutoSizeMode = DataGridViewAutoSizeColumnMode.Fill; // Hacer que la última columna rellene todo el contenedor
             for (int i = 0; i < dgvReservas.ColumnCount; i++) // No permitir editar las columnas
                 dgvReservas.Columns[i].ReadOnly = true;
@@ -57,9 +56,9 @@ namespace DentalSoft
                 string fecha = mcFiltroFecha.Value.ToString("yyyy-MM-dd");
                 string sentencia;
                 if(origen) // Cargar todas las reservas
-                    sentencia = "SELECT r.Id, r.Fecha, r.Hora, p.Nombre, p.Apellido1, p.Apellido2 FROM Reserva AS r INNER JOIN Paciente AS p ON r.Paciente='" + paciente.Dni + "' AND p.Dni='" + paciente.Dni + "' ORDER BY r.Hora";
+                    sentencia = "SELECT r.Fecha, r.Hora, p.Nombre, p.Apellido1, p.Apellido2 FROM Reserva AS r INNER JOIN Paciente AS p ON r.Paciente='" + paciente.Dni + "' AND p.Dni='" + paciente.Dni + "' ORDER BY r.Hora";
                 else
-                    sentencia = "SELECT r.Id, r.Fecha, r.Hora, p.Nombre, p.Apellido1, p.Apellido2 FROM Reserva AS r INNER JOIN Paciente AS p ON r.Paciente='" + paciente.Dni + "' AND p.Dni='" + paciente.Dni + "' AND r.Fecha='" + fecha + "' ORDER BY r.Hora";
+                    sentencia = "SELECT r.Fecha, r.Hora, p.Nombre, p.Apellido1, p.Apellido2 FROM Reserva AS r INNER JOIN Paciente AS p ON r.Paciente='" + paciente.Dni + "' AND p.Dni='" + paciente.Dni + "' AND r.Fecha='" + fecha + "' ORDER BY r.Hora";
                 MySqlCommand comando = new MySqlCommand(sentencia, conexion.conexionSql);
                 MySqlDataAdapter datos = new MySqlDataAdapter(comando);
                 DataTable tabla = new DataTable();

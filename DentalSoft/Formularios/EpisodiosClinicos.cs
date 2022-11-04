@@ -36,5 +36,23 @@ namespace DentalSoft.Formularios
             HistorialPaciente historialPaciente = new HistorialPaciente(this.dni, this.formPadre);
             this.Close();
         }
+
+        private void EpisodiosClinicos_Load(object sender, EventArgs e)
+        {
+            this.episodio_clinicoTableAdapter.FillTodosEpisodios(this.dataSetEpisodioClinico.episodio_clinico, this.dni);
+            this.reportViewer1.RefreshReport();
+        }
+
+        private void btnFiltrarTodos_Click(object sender, EventArgs e)
+        {
+            this.episodio_clinicoTableAdapter.FillTodosEpisodios(this.dataSetEpisodioClinico.episodio_clinico, this.dni);
+            this.reportViewer1.RefreshReport();
+        }
+
+        private void mcFiltrarFecha_CloseUp(object sender, EventArgs e)
+        {
+            this.episodio_clinicoTableAdapter.FillEpisodiosByFecha(this.dataSetEpisodioClinico.episodio_clinico, this.dni, mcFiltrarFecha.Value);
+            this.reportViewer1.RefreshReport();
+        }
     }
 }
