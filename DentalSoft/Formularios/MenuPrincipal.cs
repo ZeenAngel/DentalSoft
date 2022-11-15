@@ -1,4 +1,5 @@
 ﻿using DentalSoft.Clases;
+using DentalSoft.Formularios;
 using MySql.Data.MySqlClient;
 using System;
 using System.Collections.Generic;
@@ -170,6 +171,24 @@ namespace DentalSoft
             Pacientes pacientes = new Pacientes(this);
             pacientes.empleado = empleado;
             AbrirFormularioHijo(pacientes);
+        }
+
+        private void btnEmpleadosMenuLateral_Click(object sender, EventArgs e)
+        {
+            Empleados empleados = new Empleados(empleado);
+            AbrirFormularioHijo(empleados);
+        }
+
+        private void btnPresupuestosMenuLateral_Click(object sender, EventArgs e)
+        {
+            Presupuestos presupuestos = new Presupuestos();
+            AbrirFormularioHijo(presupuestos);
+        }
+
+        private void btnAlmacenMenuLateral_Click(object sender, EventArgs e)
+        {
+            Almacen almacen = new Almacen(this);
+            AbrirFormularioHijo(almacen);
         }
 
         #endregion

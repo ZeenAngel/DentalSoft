@@ -154,47 +154,6 @@ namespace DentalSoft.Clases
                 MostrarMensaje("Error en la descarga del fichero: " + e.Message);
                 return false;
             }
-
-            /*
-            try
-            {
-                FtpWebRequest clienteRequest = (FtpWebRequest)FtpWebRequest.Create(this.servidor + "/" + nombre);
-                clienteRequest.Method = WebRequestMethods.Ftp.DownloadFile;
-                clienteRequest.Credentials = new NetworkCredential(this.usuario, this.password); // Crear y cargar las credenciales
-                using(StreamReader reader = new StreamReader(clienteRequest.GetResponse().GetResponseStream()))
-                {
-                    string resultado = reader.ReadToEnd();
-                    try
-                    {
-                        if (!Directory.Exists(directorioTemporal))
-                        {
-                            DirectoryInfo directorio = Directory.CreateDirectory(directorioTemporal);
-                        }
-                    }
-                    catch(Exception e)
-                    {
-                        MostrarMensaje("Error en el acceso a la carpeta temporal: " + e.Message);
-                        return false;
-                    }
-                    string temporal = Path.Combine(directorioTemporal, nombre);
-                    using(StreamWriter writer = new StreamWriter(temporal, false))
-                    {
-                        writer.Write(resultado);
-                        writer.Flush();
-                        writer.Close();
-                    }
-                    reader.Close();
-                }
-                VisualizadorImagenes vi = new VisualizadorImagenes(directorioTemporal + "\\" + nombre);
-                vi.ShowDialog();
-                // Process.Start(directorioTemporal + "\\" + nombre); // No visualiza la imagen correctamente curiosamente
-                return true;
-            }catch(Exception e)
-            {
-                MostrarMensaje("Error en la descarga del fichero: " + e.Message);
-                return false;
-            }
-            */
         }
 
         private bool ComprobarExtension(string nombre)

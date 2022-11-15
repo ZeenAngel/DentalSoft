@@ -54,6 +54,12 @@
     <Prefer32Bit>true</Prefer32Bit>
   </PropertyGroup>
   <ItemGroup>
+    <Reference Include="Flurl, Version=3.0.6.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\Flurl.3.0.6\lib\net472\Flurl.dll</HintPath>
+    </Reference>
+    <Reference Include="Flurl.Http, Version=3.2.4.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\Flurl.Http.3.2.4\lib\net472\Flurl.Http.dll</HintPath>
+    </Reference>
     <Reference Include="Microsoft.ReportViewer.Common, Version=15.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91, processorArchitecture=MSIL">
       <HintPath>..\packages\Microsoft.ReportingServices.ReportViewerControl.Winforms.150.1537.0\lib\net40\Microsoft.ReportViewer.Common.dll</HintPath>
     </Reference>
@@ -73,6 +79,9 @@
       <HintPath>..\packages\Microsoft.SqlServer.Types.14.0.314.76\lib\net40\Microsoft.SqlServer.Types.dll</HintPath>
     </Reference>
     <Reference Include="MySql.Data, Version=8.0.30.0, Culture=neutral, PublicKeyToken=c5687fc88969c44d, processorArchitecture=MSIL" />
+    <Reference Include="Newtonsoft.Json, Version=12.0.0.0, Culture=neutral, PublicKeyToken=30ad4fe6b2a6aeed, processorArchitecture=MSIL">
+      <HintPath>..\packages\Newtonsoft.Json.12.0.2\lib\net45\Newtonsoft.Json.dll</HintPath>
+    </Reference>
     <Reference Include="System" />
     <Reference Include="System.Core" />
     <Reference Include="System.DirectoryServices" />
@@ -96,6 +105,8 @@
     <Compile Include="Clases\Historial.cs" />
     <Compile Include="Clases\Paciente.cs" />
     <Compile Include="Clases\Pieza.cs" />
+    <Compile Include="Clases\Presupuesto.cs" />
+    <Compile Include="Clases\Producto.cs" />
     <Compile Include="ControlesPersonalizados\BotonPersonalizado.cs">
       <SubType>Component</SubType>
     </Compile>
@@ -117,11 +128,22 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>DataSetEpisodioClinico.xsd</DependentUpon>
     </Compile>
+    <Compile Include="Datos\DataSetPresupuestos.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>DataSetPresupuestos.xsd</DependentUpon>
+    </Compile>
     <Compile Include="Formularios\Agenda.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="Formularios\Agenda.designer.cs">
       <DependentUpon>Agenda.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Formularios\Almacen.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Formularios\Almacen.Designer.cs">
+      <DependentUpon>Almacen.cs</DependentUpon>
     </Compile>
     <Compile Include="Formularios\ArchivosPaciente.cs">
       <SubType>Form</SubType>
@@ -141,17 +163,65 @@
     <Compile Include="Formularios\BuscarPaciente.designer.cs">
       <DependentUpon>BuscarPaciente.cs</DependentUpon>
     </Compile>
+    <Compile Include="Formularios\ControlHorario.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Formularios\ControlHorario.Designer.cs">
+      <DependentUpon>ControlHorario.cs</DependentUpon>
+    </Compile>
     <Compile Include="Formularios\DatosPaciente.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="Formularios\DatosPaciente.designer.cs">
       <DependentUpon>DatosPaciente.cs</DependentUpon>
     </Compile>
+    <Compile Include="Formularios\GestionarAlmacen.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Formularios\GestionarAlmacen.Designer.cs">
+      <DependentUpon>GestionarAlmacen.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Formularios\NuevoAlmacen.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Formularios\NuevoAlmacen.Designer.cs">
+      <DependentUpon>NuevoAlmacen.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Formularios\NuevoPresupuesto.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Formularios\NuevoPresupuesto.Designer.cs">
+      <DependentUpon>NuevoPresupuesto.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Formularios\NuevoProducto.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Formularios\NuevoProducto.Designer.cs">
+      <DependentUpon>NuevoProducto.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Formularios\Presupuestos.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Formularios\Presupuestos.Designer.cs">
+      <DependentUpon>Presupuestos.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Formularios\NuevoEmpleado.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Formularios\NuevoEmpleado.Designer.cs">
+      <DependentUpon>NuevoEmpleado.cs</DependentUpon>
+    </Compile>
     <Compile Include="Formularios\EditarReserva.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="Formularios\EditarReserva.designer.cs">
       <DependentUpon>EditarReserva.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Formularios\Empleados.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Formularios\Empleados.Designer.cs">
+      <DependentUpon>Empleados.cs</DependentUpon>
     </Compile>
     <Compile Include="Formularios\EpisodiosClinicos.cs">
       <SubType>Form</SubType>
@@ -246,6 +316,9 @@
     <EmbeddedResource Include="Formularios\Agenda.resx">
       <DependentUpon>Agenda.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Formularios\Almacen.resx">
+      <DependentUpon>Almacen.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Formularios\ArchivosPaciente.resx">
       <DependentUpon>ArchivosPaciente.cs</DependentUpon>
     </EmbeddedResource>
@@ -255,11 +328,35 @@
     <EmbeddedResource Include="Formularios\BuscarPaciente.resx">
       <DependentUpon>BuscarPaciente.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Formularios\ControlHorario.resx">
+      <DependentUpon>ControlHorario.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Formularios\DatosPaciente.resx">
       <DependentUpon>DatosPaciente.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Formularios\GestionarAlmacen.resx">
+      <DependentUpon>GestionarAlmacen.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Formularios\NuevoAlmacen.resx">
+      <DependentUpon>NuevoAlmacen.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Formularios\NuevoPresupuesto.resx">
+      <DependentUpon>NuevoPresupuesto.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Formularios\NuevoProducto.resx">
+      <DependentUpon>NuevoProducto.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Formularios\Presupuestos.resx">
+      <DependentUpon>Presupuestos.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Formularios\NuevoEmpleado.resx">
+      <DependentUpon>NuevoEmpleado.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Formularios\EditarReserva.resx">
       <DependentUpon>EditarReserva.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Formularios\Empleados.resx">
+      <DependentUpon>Empleados.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Formularios\EpisodiosClinicos.resx">
       <DependentUpon>EpisodiosClinicos.cs</DependentUpon>
@@ -301,6 +398,7 @@
       <DependentUpon>VisualizadorImagenes.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Informes\InformeEpisodiosCompletos.rdlc" />
+    <EmbeddedResource Include="Informes\InformePresupuestos.rdlc" />
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
       <LastGenOutput>Resources.Designer.cs</LastGenOutput>
@@ -324,6 +422,17 @@
     </None>
     <None Include="Datos\DataSetEpisodioClinico.xss">
       <DependentUpon>DataSetEpisodioClinico.xsd</DependentUpon>
+    </None>
+    <None Include="Datos\DataSetPresupuestos.xsc">
+      <DependentUpon>DataSetPresupuestos.xsd</DependentUpon>
+    </None>
+    <None Include="Datos\DataSetPresupuestos.xsd">
+      <SubType>Designer</SubType>
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>DataSetPresupuestos.Designer.cs</LastGenOutput>
+    </None>
+    <None Include="Datos\DataSetPresupuestos.xss">
+      <DependentUpon>DataSetPresupuestos.xsd</DependentUpon>
     </None>
     <None Include="packages.config" />
     <None Include="Properties\Settings.settings">

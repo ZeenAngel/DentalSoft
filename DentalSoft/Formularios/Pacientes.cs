@@ -71,10 +71,6 @@ namespace DentalSoft
                 conexion.CerrarConexion();
                 AjustarColumnasDgv();
             }
-            else
-            {
-                DialogResult mensaje = MessageBoxPersonalizadoControl.Show("No se ha podido conectar a la base de datos", datosGlobales.TituloAplicacion, MessageBoxButtons.OK, MessageBoxIcon.Warning);
-            }
         }
 
         private void FiltrarPacientes()
@@ -90,10 +86,6 @@ namespace DentalSoft
                 conexion.CerrarConexion();
                 AjustarColumnasDgv();
             }
-            else
-            {
-                DialogResult mensaje = MessageBoxPersonalizadoControl.Show("No se ha podido conectar a la base de datos", datosGlobales.TituloAplicacion, MessageBoxButtons.OK, MessageBoxIcon.Warning);
-            }
         }
 
         private void AsignarPrivilegios()
@@ -101,14 +93,11 @@ namespace DentalSoft
             if (empleado.Puesto == 3 || empleado.Puesto == 4)
             {
                 btnNuevoPaciente.Enabled = false;
-                btnNuevoPaciente.BackColor = Color.DarkGray;
-                btnNuevoPaciente.ForeColor = Color.White;
+                btnNuevoPaciente.Visible = false;
                 btnEditarPacientes.Enabled = false;
-                btnEditarPacientes.BackColor = Color.DarkGray;
-                btnEditarPacientes.ForeColor = Color.White;
+                btnEditarPacientes.Enabled = false;
                 btnEliminarPacientes.Enabled = false;
-                btnEliminarPacientes.BackColor = Color.DarkGray;
-                btnEliminarPacientes.ForeColor = Color.White;
+                btnEliminarPacientes.Enabled = false;
             }
         }
         #endregion
@@ -192,10 +181,6 @@ namespace DentalSoft
                         comando.ExecuteNonQuery();
                         conexion.CerrarConexion();
                         CargarDgv();
-                    }
-                    else
-                    {
-                        mensaje = MessageBoxPersonalizadoControl.Show("No se ha podido establecer la conexión con la base de datos", datosGlobales.TituloAplicacion, MessageBoxButtons.OK, MessageBoxIcon.Warning);
                     }
                 }
             }

@@ -75,12 +75,13 @@ namespace DentalSoft
         {
             if (empleado.Puesto == 3 || empleado.Puesto == 4)
             {
-                btnEliminarAgenda.Enabled = false;
-                btnEliminarAgenda.BackColor = Color.DarkGray;
-                btnEliminarAgenda.ForeColor = Color.White;
                 btnNuevaAgenda.Enabled = false;
-                btnNuevaAgenda.BackColor = Color.DarkGray;
-                btnNuevaAgenda.ForeColor = Color.White;
+                btnNuevaAgenda.Visible = false;
+                btnEditarAgenda.Enabled = false;
+                btnEditarAgenda.Enabled = false;
+                btnEliminarAgenda.Enabled = false;
+                btnEliminarAgenda.Enabled = false;
+
             }
         }
         #endregion

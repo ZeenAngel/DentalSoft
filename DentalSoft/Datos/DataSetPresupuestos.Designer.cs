@@ -20,17 +20,17 @@ namespace DentalSoft.Datos {
     [global::System.ComponentModel.DesignerCategoryAttribute("code")]
     [global::System.ComponentModel.ToolboxItem(true)]
     [global::System.Xml.Serialization.XmlSchemaProviderAttribute("GetTypedDataSetSchema")]
-    [global::System.Xml.Serialization.XmlRootAttribute("DataSetEpisodioClinico")]
+    [global::System.Xml.Serialization.XmlRootAttribute("DataSetPresupuestos")]
     [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.DataSet")]
-    public partial class DataSetEpisodioClinico : global::System.Data.DataSet {
+    public partial class DataSetPresupuestos : global::System.Data.DataSet {
         
-        private episodio_clinicoDataTable tableepisodio_clinico;
+        private DetallePresupuestoDataTable tableDetallePresupuesto;
         
         private global::System.Data.SchemaSerializationMode _schemaSerializationMode = global::System.Data.SchemaSerializationMode.IncludeSchema;
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-        public DataSetEpisodioClinico() {
+        public DataSetPresupuestos() {
             this.BeginInit();
             this.InitClass();
             global::System.ComponentModel.CollectionChangeEventHandler schemaChangedHandler = new global::System.ComponentModel.CollectionChangeEventHandler(this.SchemaChanged);
@@ -41,7 +41,7 @@ namespace DentalSoft.Datos {
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-        protected DataSetEpisodioClinico(global::System.Runtime.Serialization.SerializationInfo info, global::System.Runtime.Serialization.StreamingContext context) : 
+        protected DataSetPresupuestos(global::System.Runtime.Serialization.SerializationInfo info, global::System.Runtime.Serialization.StreamingContext context) : 
                 base(info, context, false) {
             if ((this.IsBinarySerialized(info, context) == true)) {
                 this.InitVars(false);
@@ -54,8 +54,8 @@ namespace DentalSoft.Datos {
             if ((this.DetermineSchemaSerializationMode(info, context) == global::System.Data.SchemaSerializationMode.IncludeSchema)) {
                 global::System.Data.DataSet ds = new global::System.Data.DataSet();
                 ds.ReadXmlSchema(new global::System.Xml.XmlTextReader(new global::System.IO.StringReader(strSchema)));
-                if ((ds.Tables["episodio_clinico"] != null)) {
-                    base.Tables.Add(new episodio_clinicoDataTable(ds.Tables["episodio_clinico"]));
+                if ((ds.Tables["DetallePresupuesto"] != null)) {
+                    base.Tables.Add(new DetallePresupuestoDataTable(ds.Tables["DetallePresupuesto"]));
                 }
                 this.DataSetName = ds.DataSetName;
                 this.Prefix = ds.Prefix;
@@ -79,9 +79,9 @@ namespace DentalSoft.Datos {
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
         [global::System.ComponentModel.Browsable(false)]
         [global::System.ComponentModel.DesignerSerializationVisibility(global::System.ComponentModel.DesignerSerializationVisibility.Content)]
-        public episodio_clinicoDataTable episodio_clinico {
+        public DetallePresupuestoDataTable DetallePresupuesto {
             get {
-                return this.tableepisodio_clinico;
+                return this.tableDetallePresupuesto;
             }
         }
         
@@ -127,7 +127,7 @@ namespace DentalSoft.Datos {
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
         public override global::System.Data.DataSet Clone() {
-            DataSetEpisodioClinico cln = ((DataSetEpisodioClinico)(base.Clone()));
+            DataSetPresupuestos cln = ((DataSetPresupuestos)(base.Clone()));
             cln.InitVars();
             cln.SchemaSerializationMode = this.SchemaSerializationMode;
             return cln;
@@ -152,8 +152,8 @@ namespace DentalSoft.Datos {
                 this.Reset();
                 global::System.Data.DataSet ds = new global::System.Data.DataSet();
                 ds.ReadXml(reader);
-                if ((ds.Tables["episodio_clinico"] != null)) {
-                    base.Tables.Add(new episodio_clinicoDataTable(ds.Tables["episodio_clinico"]));
+                if ((ds.Tables["DetallePresupuesto"] != null)) {
+                    base.Tables.Add(new DetallePresupuestoDataTable(ds.Tables["DetallePresupuesto"]));
                 }
                 this.DataSetName = ds.DataSetName;
                 this.Prefix = ds.Prefix;
@@ -188,10 +188,10 @@ namespace DentalSoft.Datos {
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
         internal void InitVars(bool initTable) {
-            this.tableepisodio_clinico = ((episodio_clinicoDataTable)(base.Tables["episodio_clinico"]));
+            this.tableDetallePresupuesto = ((DetallePresupuestoDataTable)(base.Tables["DetallePresupuesto"]));
             if ((initTable == true)) {
-                if ((this.tableepisodio_clinico != null)) {
-                    this.tableepisodio_clinico.InitVars();
+                if ((this.tableDetallePresupuesto != null)) {
+                    this.tableDetallePresupuesto.InitVars();
                 }
             }
         }
@@ -199,18 +199,18 @@ namespace DentalSoft.Datos {
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
         private void InitClass() {
-            this.DataSetName = "DataSetEpisodioClinico";
+            this.DataSetName = "DataSetPresupuestos";
             this.Prefix = "";
-            this.Namespace = "http://tempuri.org/DataSetEpisodioClinico.xsd";
+            this.Namespace = "http://tempuri.org/DataSetPresupuestos.xsd";
             this.EnforceConstraints = true;
             this.SchemaSerializationMode = global::System.Data.SchemaSerializationMode.IncludeSchema;
-            this.tableepisodio_clinico = new episodio_clinicoDataTable();
-            base.Tables.Add(this.tableepisodio_clinico);
+            this.tableDetallePresupuesto = new DetallePresupuestoDataTable();
+            base.Tables.Add(this.tableDetallePresupuesto);
         }
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-        private bool ShouldSerializeepisodio_clinico() {
+        private bool ShouldSerializeDetallePresupuesto() {
             return false;
         }
         
@@ -225,7 +225,7 @@ namespace DentalSoft.Datos {
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
         public static global::System.Xml.Schema.XmlSchemaComplexType GetTypedDataSetSchema(global::System.Xml.Schema.XmlSchemaSet xs) {
-            DataSetEpisodioClinico ds = new DataSetEpisodioClinico();
+            DataSetPresupuestos ds = new DataSetPresupuestos();
             global::System.Xml.Schema.XmlSchemaComplexType type = new global::System.Xml.Schema.XmlSchemaComplexType();
             global::System.Xml.Schema.XmlSchemaSequence sequence = new global::System.Xml.Schema.XmlSchemaSequence();
             global::System.Xml.Schema.XmlSchemaAny any = new global::System.Xml.Schema.XmlSchemaAny();
@@ -270,18 +270,34 @@ namespace DentalSoft.Datos {
         }
         
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-        public delegate void episodio_clinicoRowChangeEventHandler(object sender, episodio_clinicoRowChangeEvent e);
+        public delegate void DetallePresupuestoRowChangeEventHandler(object sender, DetallePresupuestoRowChangeEvent e);
         
         /// <summary>
         ///Represents the strongly named DataTable class.
         ///</summary>
         [global::System.Serializable()]
         [global::System.Xml.Serialization.XmlSchemaProviderAttribute("GetTypedTableSchema")]
-        public partial class episodio_clinicoDataTable : global::System.Data.TypedTableBase<episodio_clinicoRow> {
+        public partial class DetallePresupuestoDataTable : global::System.Data.TypedTableBase<DetallePresupuestoRow> {
+            
+            private global::System.Data.DataColumn columnId;
+            
+            private global::System.Data.DataColumn columnCantidad;
+            
+            private global::System.Data.DataColumn columnNum_presupuesto;
             
             private global::System.Data.DataColumn columnFecha;
             
-            private global::System.Data.DataColumn columnPieza;
+            private global::System.Data.DataColumn columnCentro;
+            
+            private global::System.Data.DataColumn columnDireccion;
+            
+            private global::System.Data.DataColumn columnLocalidad;
+            
+            private global::System.Data.DataColumn columnCP;
+            
+            private global::System.Data.DataColumn columnTelefono;
+            
+            private global::System.Data.DataColumn columnDNI;
             
             private global::System.Data.DataColumn columnNombre;
             
@@ -289,20 +305,16 @@ namespace DentalSoft.Datos {
             
             private global::System.Data.DataColumn columnApellido2;
             
-            private global::System.Data.DataColumn columnSección;
-            
-            private global::System.Data.DataColumn columnDiagnóstico;
-            
             private global::System.Data.DataColumn columnTratamiento;
             
-            private global::System.Data.DataColumn columnEspecialidad;
+            private global::System.Data.DataColumn columnPrecio;
             
-            private global::System.Data.DataColumn columnPaciente;
+            private global::System.Data.DataColumn columnSubtotal;
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-            public episodio_clinicoDataTable() {
-                this.TableName = "episodio_clinico";
+            public DetallePresupuestoDataTable() {
+                this.TableName = "DetallePresupuesto";
                 this.BeginInit();
                 this.InitClass();
                 this.EndInit();
@@ -310,7 +322,7 @@ namespace DentalSoft.Datos {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-            internal episodio_clinicoDataTable(global::System.Data.DataTable table) {
+            internal DetallePresupuestoDataTable(global::System.Data.DataTable table) {
                 this.TableName = table.TableName;
                 if ((table.CaseSensitive != table.DataSet.CaseSensitive)) {
                     this.CaseSensitive = table.CaseSensitive;
@@ -327,9 +339,33 @@ namespace DentalSoft.Datos {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-            protected episodio_clinicoDataTable(global::System.Runtime.Serialization.SerializationInfo info, global::System.Runtime.Serialization.StreamingContext context) : 
+            protected DetallePresupuestoDataTable(global::System.Runtime.Serialization.SerializationInfo info, global::System.Runtime.Serialization.StreamingContext context) : 
                     base(info, context) {
                 this.InitVars();
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            public global::System.Data.DataColumn IdColumn {
+                get {
+                    return this.columnId;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            public global::System.Data.DataColumn CantidadColumn {
+                get {
+                    return this.columnCantidad;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            public global::System.Data.DataColumn Num_presupuestoColumn {
+                get {
+                    return this.columnNum_presupuesto;
+                }
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -342,9 +378,49 @@ namespace DentalSoft.Datos {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-            public global::System.Data.DataColumn PiezaColumn {
+            public global::System.Data.DataColumn CentroColumn {
                 get {
-                    return this.columnPieza;
+                    return this.columnCentro;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            public global::System.Data.DataColumn DireccionColumn {
+                get {
+                    return this.columnDireccion;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            public global::System.Data.DataColumn LocalidadColumn {
+                get {
+                    return this.columnLocalidad;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            public global::System.Data.DataColumn CPColumn {
+                get {
+                    return this.columnCP;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            public global::System.Data.DataColumn TelefonoColumn {
+                get {
+                    return this.columnTelefono;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            public global::System.Data.DataColumn DNIColumn {
+                get {
+                    return this.columnDNI;
                 }
             }
             
@@ -374,22 +450,6 @@ namespace DentalSoft.Datos {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-            public global::System.Data.DataColumn SecciónColumn {
-                get {
-                    return this.columnSección;
-                }
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-            public global::System.Data.DataColumn DiagnósticoColumn {
-                get {
-                    return this.columnDiagnóstico;
-                }
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
             public global::System.Data.DataColumn TratamientoColumn {
                 get {
                     return this.columnTratamiento;
@@ -398,17 +458,17 @@ namespace DentalSoft.Datos {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-            public global::System.Data.DataColumn EspecialidadColumn {
+            public global::System.Data.DataColumn PrecioColumn {
                 get {
-                    return this.columnEspecialidad;
+                    return this.columnPrecio;
                 }
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-            public global::System.Data.DataColumn PacienteColumn {
+            public global::System.Data.DataColumn SubtotalColumn {
                 get {
-                    return this.columnPaciente;
+                    return this.columnSubtotal;
                 }
             }
             
@@ -423,54 +483,60 @@ namespace DentalSoft.Datos {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-            public episodio_clinicoRow this[int index] {
+            public DetallePresupuestoRow this[int index] {
                 get {
-                    return ((episodio_clinicoRow)(this.Rows[index]));
+                    return ((DetallePresupuestoRow)(this.Rows[index]));
                 }
             }
             
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-            public event episodio_clinicoRowChangeEventHandler episodio_clinicoRowChanging;
+            public event DetallePresupuestoRowChangeEventHandler DetallePresupuestoRowChanging;
             
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-            public event episodio_clinicoRowChangeEventHandler episodio_clinicoRowChanged;
+            public event DetallePresupuestoRowChangeEventHandler DetallePresupuestoRowChanged;
             
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-            public event episodio_clinicoRowChangeEventHandler episodio_clinicoRowDeleting;
+            public event DetallePresupuestoRowChangeEventHandler DetallePresupuestoRowDeleting;
             
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-            public event episodio_clinicoRowChangeEventHandler episodio_clinicoRowDeleted;
+            public event DetallePresupuestoRowChangeEventHandler DetallePresupuestoRowDeleted;
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-            public void Addepisodio_clinicoRow(episodio_clinicoRow row) {
+            public void AddDetallePresupuestoRow(DetallePresupuestoRow row) {
                 this.Rows.Add(row);
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-            public episodio_clinicoRow Addepisodio_clinicoRow(System.DateTime Fecha, int Pieza, string Nombre, string Apellido1, string Apellido2, string Sección, string Diagnóstico, string Tratamiento, string Especialidad, string Paciente) {
-                episodio_clinicoRow rowepisodio_clinicoRow = ((episodio_clinicoRow)(this.NewRow()));
+            public DetallePresupuestoRow AddDetallePresupuestoRow(int Cantidad, string Num_presupuesto, System.DateTime Fecha, string Centro, string Direccion, string Localidad, string CP, string Telefono, string DNI, string Nombre, string Apellido1, string Apellido2, string Tratamiento, float Precio, double Subtotal) {
+                DetallePresupuestoRow rowDetallePresupuestoRow = ((DetallePresupuestoRow)(this.NewRow()));
                 object[] columnValuesArray = new object[] {
+                        null,
+                        Cantidad,
+                        Num_presupuesto,
                         Fecha,
-                        Pieza,
+                        Centro,
+                        Direccion,
+                        Localidad,
+                        CP,
+                        Telefono,
+                        DNI,
                         Nombre,
                         Apellido1,
                         Apellido2,
-                        Sección,
-                        Diagnóstico,
                         Tratamiento,
-                        Especialidad,
-                        Paciente};
-                rowepisodio_clinicoRow.ItemArray = columnValuesArray;
-                this.Rows.Add(rowepisodio_clinicoRow);
-                return rowepisodio_clinicoRow;
+                        Precio,
+                        Subtotal};
+                rowDetallePresupuestoRow.ItemArray = columnValuesArray;
+                this.Rows.Add(rowDetallePresupuestoRow);
+                return rowDetallePresupuestoRow;
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
             public override global::System.Data.DataTable Clone() {
-                episodio_clinicoDataTable cln = ((episodio_clinicoDataTable)(base.Clone()));
+                DetallePresupuestoDataTable cln = ((DetallePresupuestoDataTable)(base.Clone()));
                 cln.InitVars();
                 return cln;
             }
@@ -478,88 +544,123 @@ namespace DentalSoft.Datos {
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
             protected override global::System.Data.DataTable CreateInstance() {
-                return new episodio_clinicoDataTable();
+                return new DetallePresupuestoDataTable();
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
             internal void InitVars() {
+                this.columnId = base.Columns["Id"];
+                this.columnCantidad = base.Columns["Cantidad"];
+                this.columnNum_presupuesto = base.Columns["Num_presupuesto"];
                 this.columnFecha = base.Columns["Fecha"];
-                this.columnPieza = base.Columns["Pieza"];
+                this.columnCentro = base.Columns["Centro"];
+                this.columnDireccion = base.Columns["Direccion"];
+                this.columnLocalidad = base.Columns["Localidad"];
+                this.columnCP = base.Columns["CP"];
+                this.columnTelefono = base.Columns["Telefono"];
+                this.columnDNI = base.Columns["DNI"];
                 this.columnNombre = base.Columns["Nombre"];
                 this.columnApellido1 = base.Columns["Apellido1"];
                 this.columnApellido2 = base.Columns["Apellido2"];
-                this.columnSección = base.Columns["Sección"];
-                this.columnDiagnóstico = base.Columns["Diagnóstico"];
                 this.columnTratamiento = base.Columns["Tratamiento"];
-                this.columnEspecialidad = base.Columns["Especialidad"];
-                this.columnPaciente = base.Columns["Paciente"];
+                this.columnPrecio = base.Columns["Precio"];
+                this.columnSubtotal = base.Columns["Subtotal"];
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
             private void InitClass() {
+                this.columnId = new global::System.Data.DataColumn("Id", typeof(int), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnId);
+                this.columnCantidad = new global::System.Data.DataColumn("Cantidad", typeof(int), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnCantidad);
+                this.columnNum_presupuesto = new global::System.Data.DataColumn("Num_presupuesto", typeof(string), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnNum_presupuesto);
                 this.columnFecha = new global::System.Data.DataColumn("Fecha", typeof(global::System.DateTime), null, global::System.Data.MappingType.Element);
                 base.Columns.Add(this.columnFecha);
-                this.columnPieza = new global::System.Data.DataColumn("Pieza", typeof(int), null, global::System.Data.MappingType.Element);
-                base.Columns.Add(this.columnPieza);
+                this.columnCentro = new global::System.Data.DataColumn("Centro", typeof(string), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnCentro);
+                this.columnDireccion = new global::System.Data.DataColumn("Direccion", typeof(string), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnDireccion);
+                this.columnLocalidad = new global::System.Data.DataColumn("Localidad", typeof(string), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnLocalidad);
+                this.columnCP = new global::System.Data.DataColumn("CP", typeof(string), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnCP);
+                this.columnTelefono = new global::System.Data.DataColumn("Telefono", typeof(string), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnTelefono);
+                this.columnDNI = new global::System.Data.DataColumn("DNI", typeof(string), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnDNI);
                 this.columnNombre = new global::System.Data.DataColumn("Nombre", typeof(string), null, global::System.Data.MappingType.Element);
                 base.Columns.Add(this.columnNombre);
                 this.columnApellido1 = new global::System.Data.DataColumn("Apellido1", typeof(string), null, global::System.Data.MappingType.Element);
                 base.Columns.Add(this.columnApellido1);
                 this.columnApellido2 = new global::System.Data.DataColumn("Apellido2", typeof(string), null, global::System.Data.MappingType.Element);
                 base.Columns.Add(this.columnApellido2);
-                this.columnSección = new global::System.Data.DataColumn("Sección", typeof(string), null, global::System.Data.MappingType.Element);
-                base.Columns.Add(this.columnSección);
-                this.columnDiagnóstico = new global::System.Data.DataColumn("Diagnóstico", typeof(string), null, global::System.Data.MappingType.Element);
-                base.Columns.Add(this.columnDiagnóstico);
                 this.columnTratamiento = new global::System.Data.DataColumn("Tratamiento", typeof(string), null, global::System.Data.MappingType.Element);
                 base.Columns.Add(this.columnTratamiento);
-                this.columnEspecialidad = new global::System.Data.DataColumn("Especialidad", typeof(string), null, global::System.Data.MappingType.Element);
-                base.Columns.Add(this.columnEspecialidad);
-                this.columnPaciente = new global::System.Data.DataColumn("Paciente", typeof(string), null, global::System.Data.MappingType.Element);
-                base.Columns.Add(this.columnPaciente);
-                this.columnPieza.AllowDBNull = false;
+                this.columnPrecio = new global::System.Data.DataColumn("Precio", typeof(float), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnPrecio);
+                this.columnSubtotal = new global::System.Data.DataColumn("Subtotal", typeof(double), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnSubtotal);
+                this.Constraints.Add(new global::System.Data.UniqueConstraint("Constraint1", new global::System.Data.DataColumn[] {
+                                this.columnId}, false));
+                this.columnId.AutoIncrement = true;
+                this.columnId.AutoIncrementSeed = -1;
+                this.columnId.AutoIncrementStep = -1;
+                this.columnId.Unique = true;
+                this.columnCantidad.AllowDBNull = false;
+                this.columnNum_presupuesto.AllowDBNull = false;
+                this.columnNum_presupuesto.MaxLength = 16;
+                this.columnFecha.AllowDBNull = false;
+                this.columnFecha.DateTimeMode = global::System.Data.DataSetDateTime.Local;
+                this.columnCentro.AllowDBNull = false;
+                this.columnCentro.MaxLength = 90;
+                this.columnDireccion.AllowDBNull = false;
+                this.columnDireccion.MaxLength = 150;
+                this.columnLocalidad.AllowDBNull = false;
+                this.columnLocalidad.MaxLength = 90;
+                this.columnCP.AllowDBNull = false;
+                this.columnCP.MaxLength = 7;
+                this.columnTelefono.AllowDBNull = false;
+                this.columnTelefono.MaxLength = 13;
+                this.columnDNI.AllowDBNull = false;
+                this.columnDNI.MaxLength = 13;
                 this.columnNombre.AllowDBNull = false;
                 this.columnNombre.MaxLength = 60;
                 this.columnApellido1.AllowDBNull = false;
                 this.columnApellido1.MaxLength = 60;
                 this.columnApellido2.MaxLength = 60;
-                this.columnSección.MaxLength = 30;
-                this.columnDiagnóstico.AllowDBNull = false;
-                this.columnDiagnóstico.MaxLength = 120;
                 this.columnTratamiento.AllowDBNull = false;
                 this.columnTratamiento.MaxLength = 120;
-                this.columnEspecialidad.AllowDBNull = false;
-                this.columnEspecialidad.MaxLength = 90;
-                this.columnPaciente.AllowDBNull = false;
-                this.columnPaciente.MaxLength = 13;
+                this.columnPrecio.AllowDBNull = false;
+                this.columnSubtotal.ReadOnly = true;
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-            public episodio_clinicoRow Newepisodio_clinicoRow() {
-                return ((episodio_clinicoRow)(this.NewRow()));
+            public DetallePresupuestoRow NewDetallePresupuestoRow() {
+                return ((DetallePresupuestoRow)(this.NewRow()));
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
             protected override global::System.Data.DataRow NewRowFromBuilder(global::System.Data.DataRowBuilder builder) {
-                return new episodio_clinicoRow(builder);
+                return new DetallePresupuestoRow(builder);
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
             protected override global::System.Type GetRowType() {
-                return typeof(episodio_clinicoRow);
+                return typeof(DetallePresupuestoRow);
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
             protected override void OnRowChanged(global::System.Data.DataRowChangeEventArgs e) {
                 base.OnRowChanged(e);
-                if ((this.episodio_clinicoRowChanged != null)) {
-                    this.episodio_clinicoRowChanged(this, new episodio_clinicoRowChangeEvent(((episodio_clinicoRow)(e.Row)), e.Action));
+                if ((this.DetallePresupuestoRowChanged != null)) {
+                    this.DetallePresupuestoRowChanged(this, new DetallePresupuestoRowChangeEvent(((DetallePresupuestoRow)(e.Row)), e.Action));
                 }
             }
             
@@ -567,8 +668,8 @@ namespace DentalSoft.Datos {
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
             protected override void OnRowChanging(global::System.Data.DataRowChangeEventArgs e) {
                 base.OnRowChanging(e);
-                if ((this.episodio_clinicoRowChanging != null)) {
-                    this.episodio_clinicoRowChanging(this, new episodio_clinicoRowChangeEvent(((episodio_clinicoRow)(e.Row)), e.Action));
+                if ((this.DetallePresupuestoRowChanging != null)) {
+                    this.DetallePresupuestoRowChanging(this, new DetallePresupuestoRowChangeEvent(((DetallePresupuestoRow)(e.Row)), e.Action));
                 }
             }
             
@@ -576,8 +677,8 @@ namespace DentalSoft.Datos {
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
             protected override void OnRowDeleted(global::System.Data.DataRowChangeEventArgs e) {
                 base.OnRowDeleted(e);
-                if ((this.episodio_clinicoRowDeleted != null)) {
-                    this.episodio_clinicoRowDeleted(this, new episodio_clinicoRowChangeEvent(((episodio_clinicoRow)(e.Row)), e.Action));
+                if ((this.DetallePresupuestoRowDeleted != null)) {
+                    this.DetallePresupuestoRowDeleted(this, new DetallePresupuestoRowChangeEvent(((DetallePresupuestoRow)(e.Row)), e.Action));
                 }
             }
             
@@ -585,14 +686,14 @@ namespace DentalSoft.Datos {
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
             protected override void OnRowDeleting(global::System.Data.DataRowChangeEventArgs e) {
                 base.OnRowDeleting(e);
-                if ((this.episodio_clinicoRowDeleting != null)) {
-                    this.episodio_clinicoRowDeleting(this, new episodio_clinicoRowChangeEvent(((episodio_clinicoRow)(e.Row)), e.Action));
+                if ((this.DetallePresupuestoRowDeleting != null)) {
+                    this.DetallePresupuestoRowDeleting(this, new DetallePresupuestoRowChangeEvent(((DetallePresupuestoRow)(e.Row)), e.Action));
                 }
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-            public void Removeepisodio_clinicoRow(episodio_clinicoRow row) {
+            public void RemoveDetallePresupuestoRow(DetallePresupuestoRow row) {
                 this.Rows.Remove(row);
             }
             
@@ -601,7 +702,7 @@ namespace DentalSoft.Datos {
             public static global::System.Xml.Schema.XmlSchemaComplexType GetTypedTableSchema(global::System.Xml.Schema.XmlSchemaSet xs) {
                 global::System.Xml.Schema.XmlSchemaComplexType type = new global::System.Xml.Schema.XmlSchemaComplexType();
                 global::System.Xml.Schema.XmlSchemaSequence sequence = new global::System.Xml.Schema.XmlSchemaSequence();
-                DataSetEpisodioClinico ds = new DataSetEpisodioClinico();
+                DataSetPresupuestos ds = new DataSetPresupuestos();
                 global::System.Xml.Schema.XmlSchemaAny any1 = new global::System.Xml.Schema.XmlSchemaAny();
                 any1.Namespace = "http://www.w3.org/2001/XMLSchema";
                 any1.MinOccurs = new decimal(0);
@@ -619,7 +720,7 @@ namespace DentalSoft.Datos {
                 type.Attributes.Add(attribute1);
                 global::System.Xml.Schema.XmlSchemaAttribute attribute2 = new global::System.Xml.Schema.XmlSchemaAttribute();
                 attribute2.Name = "tableTypeName";
-                attribute2.FixedValue = "episodio_clinicoDataTable";
+                attribute2.FixedValue = "DetallePresupuestoDataTable";
                 type.Attributes.Add(attribute2);
                 type.Particle = sequence;
                 global::System.Xml.Schema.XmlSchema dsSchema = ds.GetSchemaSerializable();
@@ -663,41 +764,129 @@ namespace DentalSoft.Datos {
         /// <summary>
         ///Represents strongly named DataRow class.
         ///</summary>
-        public partial class episodio_clinicoRow : global::System.Data.DataRow {
+        public partial class DetallePresupuestoRow : global::System.Data.DataRow {
             
-            private episodio_clinicoDataTable tableepisodio_clinico;
+            private DetallePresupuestoDataTable tableDetallePresupuesto;
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-            internal episodio_clinicoRow(global::System.Data.DataRowBuilder rb) : 
+            internal DetallePresupuestoRow(global::System.Data.DataRowBuilder rb) : 
                     base(rb) {
-                this.tableepisodio_clinico = ((episodio_clinicoDataTable)(this.Table));
+                this.tableDetallePresupuesto = ((DetallePresupuestoDataTable)(this.Table));
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            public int Id {
+                get {
+                    try {
+                        return ((int)(this[this.tableDetallePresupuesto.IdColumn]));
+                    }
+                    catch (global::System.InvalidCastException e) {
+                        throw new global::System.Data.StrongTypingException("El valor de la columna \'Id\' de la tabla \'DetallePresupuesto\' es DBNull.", e);
+                    }
+                }
+                set {
+                    this[this.tableDetallePresupuesto.IdColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            public int Cantidad {
+                get {
+                    return ((int)(this[this.tableDetallePresupuesto.CantidadColumn]));
+                }
+                set {
+                    this[this.tableDetallePresupuesto.CantidadColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            public string Num_presupuesto {
+                get {
+                    return ((string)(this[this.tableDetallePresupuesto.Num_presupuestoColumn]));
+                }
+                set {
+                    this[this.tableDetallePresupuesto.Num_presupuestoColumn] = value;
+                }
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
             public System.DateTime Fecha {
                 get {
-                    try {
-                        return ((global::System.DateTime)(this[this.tableepisodio_clinico.FechaColumn]));
-                    }
-                    catch (global::System.InvalidCastException e) {
-                        throw new global::System.Data.StrongTypingException("El valor de la columna \'Fecha\' de la tabla \'episodio_clinico\' es DBNull.", e);
-                    }
+                    return ((global::System.DateTime)(this[this.tableDetallePresupuesto.FechaColumn]));
                 }
                 set {
-                    this[this.tableepisodio_clinico.FechaColumn] = value;
+                    this[this.tableDetallePresupuesto.FechaColumn] = value;
                 }
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-            public int Pieza {
+            public string Centro {
                 get {
-                    return ((int)(this[this.tableepisodio_clinico.PiezaColumn]));
+                    return ((string)(this[this.tableDetallePresupuesto.CentroColumn]));
                 }
                 set {
-                    this[this.tableepisodio_clinico.PiezaColumn] = value;
+                    this[this.tableDetallePresupuesto.CentroColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            public string Direccion {
+                get {
+                    return ((string)(this[this.tableDetallePresupuesto.DireccionColumn]));
+                }
+                set {
+                    this[this.tableDetallePresupuesto.DireccionColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            public string Localidad {
+                get {
+                    return ((string)(this[this.tableDetallePresupuesto.LocalidadColumn]));
+                }
+                set {
+                    this[this.tableDetallePresupuesto.LocalidadColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            public string CP {
+                get {
+                    return ((string)(this[this.tableDetallePresupuesto.CPColumn]));
+                }
+                set {
+                    this[this.tableDetallePresupuesto.CPColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            public string Telefono {
+                get {
+                    return ((string)(this[this.tableDetallePresupuesto.TelefonoColumn]));
+                }
+                set {
+                    this[this.tableDetallePresupuesto.TelefonoColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            public string DNI {
+                get {
+                    return ((string)(this[this.tableDetallePresupuesto.DNIColumn]));
+                }
+                set {
+                    this[this.tableDetallePresupuesto.DNIColumn] = value;
                 }
             }
             
@@ -705,10 +894,10 @@ namespace DentalSoft.Datos {
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
             public string Nombre {
                 get {
-                    return ((string)(this[this.tableepisodio_clinico.NombreColumn]));
+                    return ((string)(this[this.tableDetallePresupuesto.NombreColumn]));
                 }
                 set {
-                    this[this.tableepisodio_clinico.NombreColumn] = value;
+                    this[this.tableDetallePresupuesto.NombreColumn] = value;
                 }
             }
             
@@ -716,10 +905,10 @@ namespace DentalSoft.Datos {
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
             public string Apellido1 {
                 get {
-                    return ((string)(this[this.tableepisodio_clinico.Apellido1Column]));
+                    return ((string)(this[this.tableDetallePresupuesto.Apellido1Column]));
                 }
                 set {
-                    this[this.tableepisodio_clinico.Apellido1Column] = value;
+                    this[this.tableDetallePresupuesto.Apellido1Column] = value;
                 }
             }
             
@@ -731,38 +920,11 @@ namespace DentalSoft.Datos {
                         return string.Empty;
                     }
                     else {
-                        return ((string)(this[this.tableepisodio_clinico.Apellido2Column]));
+                        return ((string)(this[this.tableDetallePresupuesto.Apellido2Column]));
                     }
                 }
                 set {
-                    this[this.tableepisodio_clinico.Apellido2Column] = value;
-                }
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-            public string Sección {
-                get {
-                    try {
-                        return ((string)(this[this.tableepisodio_clinico.SecciónColumn]));
-                    }
-                    catch (global::System.InvalidCastException e) {
-                        throw new global::System.Data.StrongTypingException("El valor de la columna \'Sección\' de la tabla \'episodio_clinico\' es DBNull.", e);
-                    }
-                }
-                set {
-                    this[this.tableepisodio_clinico.SecciónColumn] = value;
-                }
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-            public string Diagnóstico {
-                get {
-                    return ((string)(this[this.tableepisodio_clinico.DiagnósticoColumn]));
-                }
-                set {
-                    this[this.tableepisodio_clinico.DiagnósticoColumn] = value;
+                    this[this.tableDetallePresupuesto.Apellido2Column] = value;
                 }
             }
             
@@ -770,69 +932,74 @@ namespace DentalSoft.Datos {
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
             public string Tratamiento {
                 get {
-                    return ((string)(this[this.tableepisodio_clinico.TratamientoColumn]));
+                    return ((string)(this[this.tableDetallePresupuesto.TratamientoColumn]));
                 }
                 set {
-                    this[this.tableepisodio_clinico.TratamientoColumn] = value;
+                    this[this.tableDetallePresupuesto.TratamientoColumn] = value;
                 }
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-            public string Especialidad {
+            public float Precio {
                 get {
-                    return ((string)(this[this.tableepisodio_clinico.EspecialidadColumn]));
+                    return ((float)(this[this.tableDetallePresupuesto.PrecioColumn]));
                 }
                 set {
-                    this[this.tableepisodio_clinico.EspecialidadColumn] = value;
+                    this[this.tableDetallePresupuesto.PrecioColumn] = value;
                 }
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-            public string Paciente {
+            public double Subtotal {
                 get {
-                    return ((string)(this[this.tableepisodio_clinico.PacienteColumn]));
+                    try {
+                        return ((double)(this[this.tableDetallePresupuesto.SubtotalColumn]));
+                    }
+                    catch (global::System.InvalidCastException e) {
+                        throw new global::System.Data.StrongTypingException("El valor de la columna \'Subtotal\' de la tabla \'DetallePresupuesto\' es DBNull.", e);
+                    }
                 }
                 set {
-                    this[this.tableepisodio_clinico.PacienteColumn] = value;
+                    this[this.tableDetallePresupuesto.SubtotalColumn] = value;
                 }
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-            public bool IsFechaNull() {
-                return this.IsNull(this.tableepisodio_clinico.FechaColumn);
+            public bool IsIdNull() {
+                return this.IsNull(this.tableDetallePresupuesto.IdColumn);
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-            public void SetFechaNull() {
-                this[this.tableepisodio_clinico.FechaColumn] = global::System.Convert.DBNull;
+            public void SetIdNull() {
+                this[this.tableDetallePresupuesto.IdColumn] = global::System.Convert.DBNull;
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
             public bool IsApellido2Null() {
-                return this.IsNull(this.tableepisodio_clinico.Apellido2Column);
+                return this.IsNull(this.tableDetallePresupuesto.Apellido2Column);
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
             public void SetApellido2Null() {
-                this[this.tableepisodio_clinico.Apellido2Column] = global::System.Convert.DBNull;
+                this[this.tableDetallePresupuesto.Apellido2Column] = global::System.Convert.DBNull;
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-            public bool IsSecciónNull() {
-                return this.IsNull(this.tableepisodio_clinico.SecciónColumn);
+            public bool IsSubtotalNull() {
+                return this.IsNull(this.tableDetallePresupuesto.SubtotalColumn);
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-            public void SetSecciónNull() {
-                this[this.tableepisodio_clinico.SecciónColumn] = global::System.Convert.DBNull;
+            public void SetSubtotalNull() {
+                this[this.tableDetallePresupuesto.SubtotalColumn] = global::System.Convert.DBNull;
             }
         }
         
@@ -840,22 +1007,22 @@ namespace DentalSoft.Datos {
         ///Row event argument class
         ///</summary>
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-        public class episodio_clinicoRowChangeEvent : global::System.EventArgs {
+        public class DetallePresupuestoRowChangeEvent : global::System.EventArgs {
             
-            private episodio_clinicoRow eventRow;
+            private DetallePresupuestoRow eventRow;
             
             private global::System.Data.DataRowAction eventAction;
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-            public episodio_clinicoRowChangeEvent(episodio_clinicoRow row, global::System.Data.DataRowAction action) {
+            public DetallePresupuestoRowChangeEvent(DetallePresupuestoRow row, global::System.Data.DataRowAction action) {
                 this.eventRow = row;
                 this.eventAction = action;
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-            public episodio_clinicoRow Row {
+            public DetallePresupuestoRow Row {
                 get {
                     return this.eventRow;
                 }
@@ -871,7 +1038,7 @@ namespace DentalSoft.Datos {
         }
     }
 }
-namespace DentalSoft.Datos.DataSetEpisodioClinicoTableAdapters {
+namespace DentalSoft.Datos.DataSetPresupuestosTableAdapters {
     
     
     /// <summary>
@@ -883,7 +1050,7 @@ namespace DentalSoft.Datos.DataSetEpisodioClinicoTableAdapters {
     [global::System.ComponentModel.DesignerAttribute("Microsoft.VSDesigner.DataSource.Design.TableAdapterDesigner, Microsoft.VSDesigner" +
         ", Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a")]
     [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
-    public partial class episodio_clinicoTableAdapter : global::System.ComponentModel.Component {
+    public partial class DetallePresupuestoTableAdapter : global::System.ComponentModel.Component {
         
         private global::System.Data.Odbc.OdbcDataAdapter _adapter;
         
@@ -897,7 +1064,7 @@ namespace DentalSoft.Datos.DataSetEpisodioClinicoTableAdapters {
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-        public episodio_clinicoTableAdapter() {
+        public DetallePresupuestoTableAdapter() {
             this.ClearBeforeFill = true;
         }
         
@@ -994,17 +1161,23 @@ namespace DentalSoft.Datos.DataSetEpisodioClinicoTableAdapters {
             this._adapter = new global::System.Data.Odbc.OdbcDataAdapter();
             global::System.Data.Common.DataTableMapping tableMapping = new global::System.Data.Common.DataTableMapping();
             tableMapping.SourceTable = "Table";
-            tableMapping.DataSetTable = "episodio_clinico";
+            tableMapping.DataSetTable = "DetallePresupuesto";
+            tableMapping.ColumnMappings.Add("Id", "Id");
+            tableMapping.ColumnMappings.Add("Cantidad", "Cantidad");
+            tableMapping.ColumnMappings.Add("Num_presupuesto", "Num_presupuesto");
             tableMapping.ColumnMappings.Add("Fecha", "Fecha");
-            tableMapping.ColumnMappings.Add("Pieza", "Pieza");
+            tableMapping.ColumnMappings.Add("Centro", "Centro");
+            tableMapping.ColumnMappings.Add("Direccion", "Direccion");
+            tableMapping.ColumnMappings.Add("Localidad", "Localidad");
+            tableMapping.ColumnMappings.Add("CP", "CP");
+            tableMapping.ColumnMappings.Add("Telefono", "Telefono");
+            tableMapping.ColumnMappings.Add("DNI", "DNI");
             tableMapping.ColumnMappings.Add("Nombre", "Nombre");
             tableMapping.ColumnMappings.Add("Apellido1", "Apellido1");
             tableMapping.ColumnMappings.Add("Apellido2", "Apellido2");
-            tableMapping.ColumnMappings.Add("Sección", "Sección");
-            tableMapping.ColumnMappings.Add("Diagnóstico", "Diagnóstico");
             tableMapping.ColumnMappings.Add("Tratamiento", "Tratamiento");
-            tableMapping.ColumnMappings.Add("Especialidad", "Especialidad");
-            tableMapping.ColumnMappings.Add("Paciente", "Paciente");
+            tableMapping.ColumnMappings.Add("Precio", "Precio");
+            tableMapping.ColumnMappings.Add("Subtotal", "Subtotal");
             this._adapter.TableMappings.Add(tableMapping);
         }
         
@@ -1018,40 +1191,59 @@ namespace DentalSoft.Datos.DataSetEpisodioClinicoTableAdapters {
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
         private void InitCommandCollection() {
-            this._commandCollection = new global::System.Data.Odbc.OdbcCommand[2];
+            this._commandCollection = new global::System.Data.Odbc.OdbcCommand[5];
             this._commandCollection[0] = new global::System.Data.Odbc.OdbcCommand();
             this._commandCollection[0].Connection = this.Connection;
-            this._commandCollection[0].CommandText = @"SELECT        episodio_clinico.Fecha, paciente.Nombre, paciente.Apellido1, paciente.Apellido2, pieza.Id AS Pieza, seccion.Nombre AS Sección, diagnostico.Nombre AS Diagnóstico, tratamiento.Nombre AS Tratamiento, 
-                         especialidad.Descripcion AS Especialidad, historial_clinico.Paciente
-FROM            paciente, historial_clinico, episodio_clinico, pieza, seccion, diagnostico, tratamiento, especialidad
-WHERE        paciente.Dni = historial_clinico.Paciente AND episodio_clinico.Historial = historial_clinico.Paciente AND pieza.Id = episodio_clinico.Pieza AND seccion.Id = episodio_clinico.Seccion AND 
-                         diagnostico.Id = episodio_clinico.Diagnostico AND tratamiento.Id = episodio_clinico.Tratamiento AND especialidad.Id = tratamiento.Especialidad AND (paciente.Dni = ?)";
+            this._commandCollection[0].CommandText = @"SELECT        detalle_presupuesto.Id, presupuesto.Num_presupuesto, presupuesto.Fecha, centro.Nombre AS Centro, centro.Direccion, centro.Localidad, centro.CP, centro.Telefono, presupuesto.Paciente AS DNI, paciente.Nombre, 
+                         paciente.Apellido1, paciente.Apellido2, tratamiento.Nombre AS Tratamiento, detalle_presupuesto.Cantidad, tratamiento.Precio, tratamiento.Precio * detalle_presupuesto.Cantidad AS Subtotal
+FROM            presupuesto, detalle_presupuesto, Centro, Paciente, Tratamiento
+WHERE        presupuesto.Num_presupuesto = detalle_presupuesto.Presupuesto AND presupuesto.Centro = Centro.Cif AND presupuesto.Paciente = Paciente.Dni AND detalle_presupuesto.Tratamiento = Tratamiento.Id";
             this._commandCollection[0].CommandType = global::System.Data.CommandType.Text;
-            this._commandCollection[0].Parameters.Add(new global::System.Data.Odbc.OdbcParameter("Dni", global::System.Data.Odbc.OdbcType.NVarChar, 1024, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "Dni", global::System.Data.DataRowVersion.Current, false, null));
             this._commandCollection[1] = new global::System.Data.Odbc.OdbcCommand();
             this._commandCollection[1].Connection = this.Connection;
-            this._commandCollection[1].CommandText = @"SELECT        episodio_clinico.Fecha, paciente.Nombre, paciente.Apellido1, paciente.Apellido2, pieza.Id AS Pieza, seccion.Nombre AS Sección, diagnostico.Nombre AS Diagnóstico, tratamiento.Nombre AS Tratamiento, 
-                         especialidad.Descripcion AS Especialidad, historial_clinico.Paciente
-FROM            paciente, historial_clinico, episodio_clinico, pieza, seccion, diagnostico, tratamiento, especialidad
-WHERE        paciente.Dni = historial_clinico.Paciente AND episodio_clinico.Historial = historial_clinico.Paciente AND pieza.Id = episodio_clinico.Pieza AND seccion.Id = episodio_clinico.Seccion AND 
-                         diagnostico.Id = episodio_clinico.Diagnostico AND tratamiento.Id = episodio_clinico.Tratamiento AND especialidad.Id = tratamiento.Especialidad AND (paciente.Dni = ?) AND (episodio_clinico.Fecha = ?)";
+            this._commandCollection[1].CommandText = @"SELECT        detalle_presupuesto.Id, presupuesto.Num_presupuesto, presupuesto.Fecha, centro.Nombre AS Centro, centro.Direccion, centro.Localidad, centro.CP, centro.Telefono, presupuesto.Paciente AS DNI, paciente.Nombre, 
+                         paciente.Apellido1, paciente.Apellido2, tratamiento.Nombre AS Tratamiento, detalle_presupuesto.Cantidad, tratamiento.Precio, tratamiento.Precio * detalle_presupuesto.Cantidad AS Subtotal
+FROM            presupuesto, detalle_presupuesto, Centro, Paciente, Tratamiento
+WHERE        presupuesto.Num_presupuesto = detalle_presupuesto.Presupuesto AND presupuesto.Centro = Centro.Cif AND presupuesto.Paciente = Paciente.Dni AND detalle_presupuesto.Tratamiento = Tratamiento.Id AND 
+                         (presupuesto.Paciente = ?)";
             this._commandCollection[1].CommandType = global::System.Data.CommandType.Text;
-            this._commandCollection[1].Parameters.Add(new global::System.Data.Odbc.OdbcParameter("Dni", global::System.Data.Odbc.OdbcType.NVarChar, 1024, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "Dni", global::System.Data.DataRowVersion.Current, false, null));
-            this._commandCollection[1].Parameters.Add(new global::System.Data.Odbc.OdbcParameter("Fecha", global::System.Data.Odbc.OdbcType.Date, 0, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "Fecha", global::System.Data.DataRowVersion.Current, false, null));
+            this._commandCollection[1].Parameters.Add(new global::System.Data.Odbc.OdbcParameter("Paciente", global::System.Data.Odbc.OdbcType.NVarChar, 1024, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "DNI", global::System.Data.DataRowVersion.Current, false, null));
+            this._commandCollection[2] = new global::System.Data.Odbc.OdbcCommand();
+            this._commandCollection[2].Connection = this.Connection;
+            this._commandCollection[2].CommandText = @"SELECT        detalle_presupuesto.Id, presupuesto.Num_presupuesto, presupuesto.Fecha, centro.Nombre AS Centro, centro.Direccion, centro.Localidad, centro.CP, centro.Telefono, presupuesto.Paciente AS DNI, paciente.Nombre, 
+                         paciente.Apellido1, paciente.Apellido2, tratamiento.Nombre AS Tratamiento, detalle_presupuesto.Cantidad, tratamiento.Precio, tratamiento.Precio * detalle_presupuesto.Cantidad AS Subtotal
+FROM            presupuesto, detalle_presupuesto, Centro, Paciente, Tratamiento
+WHERE        presupuesto.Num_presupuesto = detalle_presupuesto.Presupuesto AND presupuesto.Centro = Centro.Cif AND presupuesto.Paciente = Paciente.Dni AND detalle_presupuesto.Tratamiento = Tratamiento.Id AND 
+                         (presupuesto.Paciente = ?) AND (presupuesto.Fecha = ?)";
+            this._commandCollection[2].CommandType = global::System.Data.CommandType.Text;
+            this._commandCollection[2].Parameters.Add(new global::System.Data.Odbc.OdbcParameter("Paciente", global::System.Data.Odbc.OdbcType.NVarChar, 1024, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "DNI", global::System.Data.DataRowVersion.Current, false, null));
+            this._commandCollection[2].Parameters.Add(new global::System.Data.Odbc.OdbcParameter("Fecha", global::System.Data.Odbc.OdbcType.Date, 0, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "Fecha", global::System.Data.DataRowVersion.Current, false, null));
+            this._commandCollection[3] = new global::System.Data.Odbc.OdbcCommand();
+            this._commandCollection[3].Connection = this.Connection;
+            this._commandCollection[3].CommandText = @"SELECT        detalle_presupuesto.Id, presupuesto.Num_presupuesto, presupuesto.Fecha, centro.Nombre AS Centro, centro.Direccion, centro.Localidad, centro.CP, centro.Telefono, presupuesto.Paciente AS DNI, paciente.Nombre, 
+                         paciente.Apellido1, paciente.Apellido2, tratamiento.Nombre AS Tratamiento, detalle_presupuesto.Cantidad, tratamiento.Precio, tratamiento.Precio * detalle_presupuesto.Cantidad AS Subtotal
+FROM            presupuesto, detalle_presupuesto, Centro, Paciente, Tratamiento
+WHERE        presupuesto.Num_presupuesto = detalle_presupuesto.Presupuesto AND presupuesto.Centro = Centro.Cif AND presupuesto.Paciente = Paciente.Dni AND detalle_presupuesto.Tratamiento = Tratamiento.Id AND 
+                         (presupuesto.Fecha = ?)";
+            this._commandCollection[3].CommandType = global::System.Data.CommandType.Text;
+            this._commandCollection[3].Parameters.Add(new global::System.Data.Odbc.OdbcParameter("Fecha", global::System.Data.Odbc.OdbcType.Date, 0, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "Fecha", global::System.Data.DataRowVersion.Current, false, null));
+            this._commandCollection[4] = new global::System.Data.Odbc.OdbcCommand();
+            this._commandCollection[4].Connection = this.Connection;
+            this._commandCollection[4].CommandText = @"SELECT        detalle_presupuesto.Id, presupuesto.Num_presupuesto, presupuesto.Fecha, centro.Nombre AS Centro, centro.Direccion, centro.Localidad, centro.CP, centro.Telefono, presupuesto.Paciente AS DNI, paciente.Nombre, 
+                         paciente.Apellido1, paciente.Apellido2, tratamiento.Nombre AS Tratamiento, detalle_presupuesto.Cantidad, tratamiento.Precio, tratamiento.Precio * detalle_presupuesto.Cantidad AS Subtotal
+FROM            presupuesto, detalle_presupuesto, Centro, Paciente, Tratamiento
+WHERE        presupuesto.Num_presupuesto = detalle_presupuesto.Presupuesto AND presupuesto.Centro = Centro.Cif AND presupuesto.Paciente = Paciente.Dni AND detalle_presupuesto.Tratamiento = Tratamiento.Id AND 
+                         (presupuesto.Num_presupuesto = ?)";
+            this._commandCollection[4].CommandType = global::System.Data.CommandType.Text;
+            this._commandCollection[4].Parameters.Add(new global::System.Data.Odbc.OdbcParameter("Num_presupuesto", global::System.Data.Odbc.OdbcType.NVarChar, 1024, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "Num_presupuesto", global::System.Data.DataRowVersion.Current, false, null));
         }
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
         [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Fill, true)]
-        public virtual int FillTodosEpisodios(DataSetEpisodioClinico.episodio_clinicoDataTable dataTable, string Dni) {
+        public virtual int Fill(DataSetPresupuestos.DetallePresupuestoDataTable dataTable) {
             this.Adapter.SelectCommand = this.CommandCollection[0];
-            if ((Dni == null)) {
-                throw new global::System.ArgumentNullException("Dni");
-            }
-            else {
-                this.Adapter.SelectCommand.Parameters[0].Value = ((string)(Dni));
-            }
             if ((this.ClearBeforeFill == true)) {
                 dataTable.Clear();
             }
@@ -1063,15 +1255,9 @@ WHERE        paciente.Dni = historial_clinico.Paciente AND episodio_clinico.Hist
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
         [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Select, true)]
-        public virtual DataSetEpisodioClinico.episodio_clinicoDataTable GetData(string Dni) {
+        public virtual DataSetPresupuestos.DetallePresupuestoDataTable GetData() {
             this.Adapter.SelectCommand = this.CommandCollection[0];
-            if ((Dni == null)) {
-                throw new global::System.ArgumentNullException("Dni");
-            }
-            else {
-                this.Adapter.SelectCommand.Parameters[0].Value = ((string)(Dni));
-            }
-            DataSetEpisodioClinico.episodio_clinicoDataTable dataTable = new DataSetEpisodioClinico.episodio_clinicoDataTable();
+            DataSetPresupuestos.DetallePresupuestoDataTable dataTable = new DataSetPresupuestos.DetallePresupuestoDataTable();
             this.Adapter.Fill(dataTable);
             return dataTable;
         }
@@ -1080,19 +1266,13 @@ WHERE        paciente.Dni = historial_clinico.Paciente AND episodio_clinico.Hist
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
         [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Fill, false)]
-        public virtual int FillEpisodiosByFecha(DataSetEpisodioClinico.episodio_clinicoDataTable dataTable, string Dni, global::System.Nullable<global::System.DateTime> Fecha) {
+        public virtual int FillByDni(DataSetPresupuestos.DetallePresupuestoDataTable dataTable, string Paciente) {
             this.Adapter.SelectCommand = this.CommandCollection[1];
-            if ((Dni == null)) {
-                throw new global::System.ArgumentNullException("Dni");
+            if ((Paciente == null)) {
+                throw new global::System.ArgumentNullException("Paciente");
             }
             else {
-                this.Adapter.SelectCommand.Parameters[0].Value = ((string)(Dni));
-            }
-            if ((Fecha.HasValue == true)) {
-                this.Adapter.SelectCommand.Parameters[1].Value = ((System.DateTime)(Fecha.Value));
-            }
-            else {
-                this.Adapter.SelectCommand.Parameters[1].Value = global::System.DBNull.Value;
+                this.Adapter.SelectCommand.Parameters[0].Value = ((string)(Paciente));
             }
             if ((this.ClearBeforeFill == true)) {
                 dataTable.Clear();
@@ -1105,21 +1285,115 @@ WHERE        paciente.Dni = historial_clinico.Paciente AND episodio_clinico.Hist
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
         [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Select, false)]
-        public virtual DataSetEpisodioClinico.episodio_clinicoDataTable GetDataBy(string Dni, global::System.Nullable<global::System.DateTime> Fecha) {
+        public virtual DataSetPresupuestos.DetallePresupuestoDataTable GetDataByDni(string Paciente) {
             this.Adapter.SelectCommand = this.CommandCollection[1];
-            if ((Dni == null)) {
-                throw new global::System.ArgumentNullException("Dni");
+            if ((Paciente == null)) {
+                throw new global::System.ArgumentNullException("Paciente");
             }
             else {
-                this.Adapter.SelectCommand.Parameters[0].Value = ((string)(Dni));
+                this.Adapter.SelectCommand.Parameters[0].Value = ((string)(Paciente));
             }
-            if ((Fecha.HasValue == true)) {
-                this.Adapter.SelectCommand.Parameters[1].Value = ((System.DateTime)(Fecha.Value));
+            DataSetPresupuestos.DetallePresupuestoDataTable dataTable = new DataSetPresupuestos.DetallePresupuestoDataTable();
+            this.Adapter.Fill(dataTable);
+            return dataTable;
+        }
+        
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+        [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
+        [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Fill, false)]
+        public virtual int FillByDniAndFecha(DataSetPresupuestos.DetallePresupuestoDataTable dataTable, string Paciente, System.DateTime Fecha) {
+            this.Adapter.SelectCommand = this.CommandCollection[2];
+            if ((Paciente == null)) {
+                throw new global::System.ArgumentNullException("Paciente");
             }
             else {
-                this.Adapter.SelectCommand.Parameters[1].Value = global::System.DBNull.Value;
+                this.Adapter.SelectCommand.Parameters[0].Value = ((string)(Paciente));
             }
-            DataSetEpisodioClinico.episodio_clinicoDataTable dataTable = new DataSetEpisodioClinico.episodio_clinicoDataTable();
+            this.Adapter.SelectCommand.Parameters[1].Value = ((System.DateTime)(Fecha));
+            if ((this.ClearBeforeFill == true)) {
+                dataTable.Clear();
+            }
+            int returnValue = this.Adapter.Fill(dataTable);
+            return returnValue;
+        }
+        
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+        [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
+        [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Select, false)]
+        public virtual DataSetPresupuestos.DetallePresupuestoDataTable GetDataByDniAndFecha(string Paciente, System.DateTime Fecha) {
+            this.Adapter.SelectCommand = this.CommandCollection[2];
+            if ((Paciente == null)) {
+                throw new global::System.ArgumentNullException("Paciente");
+            }
+            else {
+                this.Adapter.SelectCommand.Parameters[0].Value = ((string)(Paciente));
+            }
+            this.Adapter.SelectCommand.Parameters[1].Value = ((System.DateTime)(Fecha));
+            DataSetPresupuestos.DetallePresupuestoDataTable dataTable = new DataSetPresupuestos.DetallePresupuestoDataTable();
+            this.Adapter.Fill(dataTable);
+            return dataTable;
+        }
+        
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+        [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
+        [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Fill, false)]
+        public virtual int FillByFecha(DataSetPresupuestos.DetallePresupuestoDataTable dataTable, System.DateTime Fecha) {
+            this.Adapter.SelectCommand = this.CommandCollection[3];
+            this.Adapter.SelectCommand.Parameters[0].Value = ((System.DateTime)(Fecha));
+            if ((this.ClearBeforeFill == true)) {
+                dataTable.Clear();
+            }
+            int returnValue = this.Adapter.Fill(dataTable);
+            return returnValue;
+        }
+        
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+        [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
+        [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Select, false)]
+        public virtual DataSetPresupuestos.DetallePresupuestoDataTable GetDataByFecha(System.DateTime Fecha) {
+            this.Adapter.SelectCommand = this.CommandCollection[3];
+            this.Adapter.SelectCommand.Parameters[0].Value = ((System.DateTime)(Fecha));
+            DataSetPresupuestos.DetallePresupuestoDataTable dataTable = new DataSetPresupuestos.DetallePresupuestoDataTable();
+            this.Adapter.Fill(dataTable);
+            return dataTable;
+        }
+        
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+        [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
+        [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Fill, false)]
+        public virtual int FillByPresupuesto(DataSetPresupuestos.DetallePresupuestoDataTable dataTable, string Num_presupuesto) {
+            this.Adapter.SelectCommand = this.CommandCollection[4];
+            if ((Num_presupuesto == null)) {
+                throw new global::System.ArgumentNullException("Num_presupuesto");
+            }
+            else {
+                this.Adapter.SelectCommand.Parameters[0].Value = ((string)(Num_presupuesto));
+            }
+            if ((this.ClearBeforeFill == true)) {
+                dataTable.Clear();
+            }
+            int returnValue = this.Adapter.Fill(dataTable);
+            return returnValue;
+        }
+        
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+        [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
+        [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Select, false)]
+        public virtual DataSetPresupuestos.DetallePresupuestoDataTable GetDataByPresupuesto(string Num_presupuesto) {
+            this.Adapter.SelectCommand = this.CommandCollection[4];
+            if ((Num_presupuesto == null)) {
+                throw new global::System.ArgumentNullException("Num_presupuesto");
+            }
+            else {
+                this.Adapter.SelectCommand.Parameters[0].Value = ((string)(Num_presupuesto));
+            }
+            DataSetPresupuestos.DetallePresupuestoDataTable dataTable = new DataSetPresupuestos.DetallePresupuestoDataTable();
             this.Adapter.Fill(dataTable);
             return dataTable;
         }
@@ -1193,7 +1467,7 @@ WHERE        paciente.Dni = historial_clinico.Paciente AND episodio_clinico.Hist
         ///</summary>
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-        private int UpdateUpdatedRows(DataSetEpisodioClinico dataSet, global::System.Collections.Generic.List<global::System.Data.DataRow> allChangedRows, global::System.Collections.Generic.List<global::System.Data.DataRow> allAddedRows) {
+        private int UpdateUpdatedRows(DataSetPresupuestos dataSet, global::System.Collections.Generic.List<global::System.Data.DataRow> allChangedRows, global::System.Collections.Generic.List<global::System.Data.DataRow> allAddedRows) {
             int result = 0;
             return result;
         }
@@ -1203,7 +1477,7 @@ WHERE        paciente.Dni = historial_clinico.Paciente AND episodio_clinico.Hist
         ///</summary>
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-        private int UpdateInsertedRows(DataSetEpisodioClinico dataSet, global::System.Collections.Generic.List<global::System.Data.DataRow> allAddedRows) {
+        private int UpdateInsertedRows(DataSetPresupuestos dataSet, global::System.Collections.Generic.List<global::System.Data.DataRow> allAddedRows) {
             int result = 0;
             return result;
         }
@@ -1213,7 +1487,7 @@ WHERE        paciente.Dni = historial_clinico.Paciente AND episodio_clinico.Hist
         ///</summary>
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-        private int UpdateDeletedRows(DataSetEpisodioClinico dataSet, global::System.Collections.Generic.List<global::System.Data.DataRow> allChangedRows) {
+        private int UpdateDeletedRows(DataSetPresupuestos dataSet, global::System.Collections.Generic.List<global::System.Data.DataRow> allChangedRows) {
             int result = 0;
             return result;
         }
@@ -1247,7 +1521,7 @@ WHERE        paciente.Dni = historial_clinico.Paciente AND episodio_clinico.Hist
         ///</summary>
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-        public virtual int UpdateAll(DataSetEpisodioClinico dataSet) {
+        public virtual int UpdateAll(DataSetPresupuestos dataSet) {
             if ((dataSet == null)) {
                 throw new global::System.ArgumentNullException("dataSet");
             }

@@ -59,64 +59,64 @@ WHERE        paciente.Dni = historial_clinico.Paciente AND episodio_clinico.Hist
       </DataSource>
     </xs:appinfo>
   </xs:annotation>
-  <xs:element name="DataSetEpisodioClinico" msdata:IsDataSet="true" msdata:UseCurrentLocale="true" msprop:EnableTableAdapterManager="true" msprop:Generator_UserDSName="DataSetEpisodioClinico" msprop:Generator_DataSetName="DataSetEpisodioClinico">
+  <xs:element name="DataSetEpisodioClinico" msdata:IsDataSet="true" msdata:UseCurrentLocale="true" msprop:Generator_UserDSName="DataSetEpisodioClinico" msprop:EnableTableAdapterManager="true" msprop:Generator_DataSetName="DataSetEpisodioClinico">
     <xs:complexType>
       <xs:choice minOccurs="0" maxOccurs="unbounded">
-        <xs:element name="episodio_clinico" msprop:Generator_RowEvHandlerName="episodio_clinicoRowChangeEventHandler" msprop:Generator_RowDeletedName="episodio_clinicoRowDeleted" msprop:Generator_RowDeletingName="episodio_clinicoRowDeleting" msprop:Generator_RowEvArgName="episodio_clinicoRowChangeEvent" msprop:Generator_TablePropName="episodio_clinico" msprop:Generator_RowChangedName="episodio_clinicoRowChanged" msprop:Generator_RowChangingName="episodio_clinicoRowChanging" msprop:Generator_TableClassName="episodio_clinicoDataTable" msprop:Generator_RowClassName="episodio_clinicoRow" msprop:Generator_TableVarName="tableepisodio_clinico" msprop:Generator_UserTableName="episodio_clinico">
+        <xs:element name="episodio_clinico" msprop:Generator_RowEvHandlerName="episodio_clinicoRowChangeEventHandler" msprop:Generator_RowDeletedName="episodio_clinicoRowDeleted" msprop:Generator_RowDeletingName="episodio_clinicoRowDeleting" msprop:Generator_RowEvArgName="episodio_clinicoRowChangeEvent" msprop:Generator_TablePropName="episodio_clinico" msprop:Generator_RowChangedName="episodio_clinicoRowChanged" msprop:Generator_UserTableName="episodio_clinico" msprop:Generator_RowChangingName="episodio_clinicoRowChanging" msprop:Generator_RowClassName="episodio_clinicoRow" msprop:Generator_TableClassName="episodio_clinicoDataTable" msprop:Generator_TableVarName="tableepisodio_clinico">
           <xs:complexType>
             <xs:sequence>
-              <xs:element name="Fecha" msprop:Generator_ColumnPropNameInRow="Fecha" msprop:Generator_ColumnPropNameInTable="FechaColumn" msprop:Generator_ColumnVarNameInTable="columnFecha" msprop:Generator_UserColumnName="Fecha" type="xs:dateTime" minOccurs="0" />
-              <xs:element name="Pieza" msprop:Generator_ColumnPropNameInRow="Pieza" msprop:Generator_ColumnPropNameInTable="PiezaColumn" msprop:Generator_ColumnVarNameInTable="columnPieza" msprop:Generator_UserColumnName="Pieza" type="xs:int" />
-              <xs:element name="Nombre" msprop:Generator_ColumnPropNameInRow="Nombre" msprop:Generator_ColumnPropNameInTable="NombreColumn" msprop:Generator_ColumnVarNameInTable="columnNombre" msprop:Generator_UserColumnName="Nombre">
+              <xs:element name="Fecha" msprop:Generator_ColumnPropNameInTable="FechaColumn" msprop:Generator_ColumnPropNameInRow="Fecha" msprop:Generator_UserColumnName="Fecha" msprop:Generator_ColumnVarNameInTable="columnFecha" type="xs:dateTime" minOccurs="0" />
+              <xs:element name="Pieza" msprop:Generator_ColumnPropNameInTable="PiezaColumn" msprop:Generator_ColumnPropNameInRow="Pieza" msprop:Generator_UserColumnName="Pieza" msprop:Generator_ColumnVarNameInTable="columnPieza" type="xs:int" />
+              <xs:element name="Nombre" msprop:Generator_ColumnPropNameInTable="NombreColumn" msprop:Generator_ColumnPropNameInRow="Nombre" msprop:Generator_UserColumnName="Nombre" msprop:Generator_ColumnVarNameInTable="columnNombre">
                 <xs:simpleType>
                   <xs:restriction base="xs:string">
                     <xs:maxLength value="60" />
                   </xs:restriction>
                 </xs:simpleType>
               </xs:element>
-              <xs:element name="Apellido1" msprop:Generator_ColumnPropNameInRow="Apellido1" msprop:Generator_ColumnPropNameInTable="Apellido1Column" msprop:Generator_ColumnVarNameInTable="columnApellido1" msprop:Generator_UserColumnName="Apellido1">
+              <xs:element name="Apellido1" msprop:Generator_ColumnPropNameInTable="Apellido1Column" msprop:Generator_ColumnPropNameInRow="Apellido1" msprop:Generator_UserColumnName="Apellido1" msprop:Generator_ColumnVarNameInTable="columnApellido1">
                 <xs:simpleType>
                   <xs:restriction base="xs:string">
                     <xs:maxLength value="60" />
                   </xs:restriction>
                 </xs:simpleType>
               </xs:element>
-              <xs:element name="Apellido2" msprop:Generator_ColumnPropNameInRow="Apellido2" msprop:Generator_ColumnPropNameInTable="Apellido2Column" msprop:Generator_ColumnVarNameInTable="columnApellido2" msprop:Generator_UserColumnName="Apellido2" minOccurs="0">
+              <xs:element name="Apellido2" msprop:Generator_ColumnPropNameInTable="Apellido2Column" msprop:nullValue="_empty" msprop:Generator_ColumnPropNameInRow="Apellido2" msprop:Generator_UserColumnName="Apellido2" msprop:Generator_ColumnVarNameInTable="columnApellido2" minOccurs="0">
                 <xs:simpleType>
                   <xs:restriction base="xs:string">
                     <xs:maxLength value="60" />
                   </xs:restriction>
                 </xs:simpleType>
               </xs:element>
-              <xs:element name="Sección" msprop:Generator_ColumnPropNameInRow="Sección" msprop:Generator_ColumnPropNameInTable="SecciónColumn" msprop:Generator_ColumnVarNameInTable="columnSección" msprop:Generator_UserColumnName="Sección" minOccurs="0">
+              <xs:element name="Sección" msprop:Generator_ColumnPropNameInTable="SecciónColumn" msprop:Generator_ColumnPropNameInRow="Sección" msprop:Generator_UserColumnName="Sección" msprop:Generator_ColumnVarNameInTable="columnSección" minOccurs="0">
                 <xs:simpleType>
                   <xs:restriction base="xs:string">
                     <xs:maxLength value="30" />
                   </xs:restriction>
                 </xs:simpleType>
               </xs:element>
-              <xs:element name="Diagnóstico" msprop:Generator_ColumnPropNameInRow="Diagnóstico" msprop:Generator_ColumnPropNameInTable="DiagnósticoColumn" msprop:Generator_ColumnVarNameInTable="columnDiagnóstico" msprop:Generator_UserColumnName="Diagnóstico">
+              <xs:element name="Diagnóstico" msprop:Generator_ColumnPropNameInTable="DiagnósticoColumn" msprop:Generator_ColumnPropNameInRow="Diagnóstico" msprop:Generator_UserColumnName="Diagnóstico" msprop:Generator_ColumnVarNameInTable="columnDiagnóstico">
                 <xs:simpleType>
                   <xs:restriction base="xs:string">
                     <xs:maxLength value="120" />
                   </xs:restriction>
                 </xs:simpleType>
               </xs:element>
-              <xs:element name="Tratamiento" msprop:Generator_ColumnPropNameInRow="Tratamiento" msprop:Generator_ColumnPropNameInTable="TratamientoColumn" msprop:Generator_ColumnVarNameInTable="columnTratamiento" msprop:Generator_UserColumnName="Tratamiento">
+              <xs:element name="Tratamiento" msprop:Generator_ColumnPropNameInTable="TratamientoColumn" msprop:Generator_ColumnPropNameInRow="Tratamiento" msprop:Generator_UserColumnName="Tratamiento" msprop:Generator_ColumnVarNameInTable="columnTratamiento">
                 <xs:simpleType>
                   <xs:restriction base="xs:string">
                     <xs:maxLength value="120" />
                   </xs:restriction>
                 </xs:simpleType>
               </xs:element>
-              <xs:element name="Especialidad" msprop:Generator_ColumnPropNameInRow="Especialidad" msprop:Generator_ColumnPropNameInTable="EspecialidadColumn" msprop:Generator_ColumnVarNameInTable="columnEspecialidad" msprop:Generator_UserColumnName="Especialidad">
+              <xs:element name="Especialidad" msprop:Generator_ColumnPropNameInTable="EspecialidadColumn" msprop:Generator_ColumnPropNameInRow="Especialidad" msprop:Generator_UserColumnName="Especialidad" msprop:Generator_ColumnVarNameInTable="columnEspecialidad">
                 <xs:simpleType>
                   <xs:restriction base="xs:string">
                     <xs:maxLength value="90" />
                   </xs:restriction>
                 </xs:simpleType>
               </xs:element>
-              <xs:element name="Paciente" msprop:Generator_ColumnPropNameInRow="Paciente" msprop:Generator_ColumnPropNameInTable="PacienteColumn" msprop:Generator_ColumnVarNameInTable="columnPaciente" msprop:Generator_UserColumnName="Paciente">
+              <xs:element name="Paciente" msprop:Generator_ColumnPropNameInTable="PacienteColumn" msprop:Generator_ColumnPropNameInRow="Paciente" msprop:Generator_UserColumnName="Paciente" msprop:Generator_ColumnVarNameInTable="columnPaciente">
                 <xs:simpleType>
                   <xs:restriction base="xs:string">
                     <xs:maxLength value="13" />
@@ -128,10 +128,5 @@ WHERE        paciente.Dni = historial_clinico.Paciente AND episodio_clinico.Hist
         </xs:element>
       </xs:choice>
     </xs:complexType>
-    <xs:unique name="Constraint1" msdata:PrimaryKey="true">
-      <xs:selector xpath=".//mstns:episodio_clinico" />
-      <xs:field xpath="mstns:Pieza" />
-      <xs:field xpath="mstns:Paciente" />
-    </xs:unique>
   </xs:element>
 </xs:schema>

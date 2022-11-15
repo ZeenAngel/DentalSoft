@@ -39,7 +39,7 @@
             this.btnAjustesMenuLateral = new System.Windows.Forms.Button();
             this.btnCajaMenuLateral = new System.Windows.Forms.Button();
             this.btnAlmacenMenuLateral = new System.Windows.Forms.Button();
-            this.btnFacturasMenuLateral = new System.Windows.Forms.Button();
+            this.btnPresupuestosMenuLateral = new System.Windows.Forms.Button();
             this.btnEmpleadosMenuLateral = new System.Windows.Forms.Button();
             this.btnPacientesMenuLateral = new System.Windows.Forms.Button();
             this.btnAgendaMenuLateral = new System.Windows.Forms.Button();
@@ -135,7 +135,7 @@
             this.pnlMenuLateral.Controls.Add(this.btnAjustesMenuLateral);
             this.pnlMenuLateral.Controls.Add(this.btnCajaMenuLateral);
             this.pnlMenuLateral.Controls.Add(this.btnAlmacenMenuLateral);
-            this.pnlMenuLateral.Controls.Add(this.btnFacturasMenuLateral);
+            this.pnlMenuLateral.Controls.Add(this.btnPresupuestosMenuLateral);
             this.pnlMenuLateral.Controls.Add(this.btnEmpleadosMenuLateral);
             this.pnlMenuLateral.Controls.Add(this.btnPacientesMenuLateral);
             this.pnlMenuLateral.Controls.Add(this.btnAgendaMenuLateral);
@@ -218,26 +218,28 @@
             this.btnAlmacenMenuLateral.Text = "   Almacen";
             this.btnAlmacenMenuLateral.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.btnAlmacenMenuLateral.UseVisualStyleBackColor = false;
+            this.btnAlmacenMenuLateral.Click += new System.EventHandler(this.btnAlmacenMenuLateral_Click);
             // 
-            // btnFacturasMenuLateral
+            // btnPresupuestosMenuLateral
             // 
-            this.btnFacturasMenuLateral.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(16)))), ((int)(((byte)(110)))), ((int)(((byte)(196)))));
-            this.btnFacturasMenuLateral.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.btnFacturasMenuLateral.Dock = System.Windows.Forms.DockStyle.Top;
-            this.btnFacturasMenuLateral.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(195)))), ((int)(((byte)(165)))));
-            this.btnFacturasMenuLateral.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnFacturasMenuLateral.Font = new System.Drawing.Font("Roboto", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnFacturasMenuLateral.ForeColor = System.Drawing.Color.White;
-            this.btnFacturasMenuLateral.Image = ((System.Drawing.Image)(resources.GetObject("btnFacturasMenuLateral.Image")));
-            this.btnFacturasMenuLateral.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnFacturasMenuLateral.Location = new System.Drawing.Point(0, 280);
-            this.btnFacturasMenuLateral.Name = "btnFacturasMenuLateral";
-            this.btnFacturasMenuLateral.Padding = new System.Windows.Forms.Padding(35, 0, 0, 0);
-            this.btnFacturasMenuLateral.Size = new System.Drawing.Size(250, 50);
-            this.btnFacturasMenuLateral.TabIndex = 20;
-            this.btnFacturasMenuLateral.Text = "   Facturas";
-            this.btnFacturasMenuLateral.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
-            this.btnFacturasMenuLateral.UseVisualStyleBackColor = false;
+            this.btnPresupuestosMenuLateral.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(16)))), ((int)(((byte)(110)))), ((int)(((byte)(196)))));
+            this.btnPresupuestosMenuLateral.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnPresupuestosMenuLateral.Dock = System.Windows.Forms.DockStyle.Top;
+            this.btnPresupuestosMenuLateral.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(195)))), ((int)(((byte)(165)))));
+            this.btnPresupuestosMenuLateral.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnPresupuestosMenuLateral.Font = new System.Drawing.Font("Roboto", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnPresupuestosMenuLateral.ForeColor = System.Drawing.Color.White;
+            this.btnPresupuestosMenuLateral.Image = ((System.Drawing.Image)(resources.GetObject("btnPresupuestosMenuLateral.Image")));
+            this.btnPresupuestosMenuLateral.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnPresupuestosMenuLateral.Location = new System.Drawing.Point(0, 280);
+            this.btnPresupuestosMenuLateral.Name = "btnPresupuestosMenuLateral";
+            this.btnPresupuestosMenuLateral.Padding = new System.Windows.Forms.Padding(35, 0, 0, 0);
+            this.btnPresupuestosMenuLateral.Size = new System.Drawing.Size(250, 50);
+            this.btnPresupuestosMenuLateral.TabIndex = 20;
+            this.btnPresupuestosMenuLateral.Text = "   Presupuestos";
+            this.btnPresupuestosMenuLateral.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
+            this.btnPresupuestosMenuLateral.UseVisualStyleBackColor = false;
+            this.btnPresupuestosMenuLateral.Click += new System.EventHandler(this.btnPresupuestosMenuLateral_Click);
             // 
             // btnEmpleadosMenuLateral
             // 
@@ -258,6 +260,7 @@
             this.btnEmpleadosMenuLateral.Text = "   Empleados";
             this.btnEmpleadosMenuLateral.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.btnEmpleadosMenuLateral.UseVisualStyleBackColor = false;
+            this.btnEmpleadosMenuLateral.Click += new System.EventHandler(this.btnEmpleadosMenuLateral_Click);
             // 
             // btnPacientesMenuLateral
             // 
@@ -430,7 +433,7 @@
         private System.Windows.Forms.Button btnAjustesMenuLateral;
         private System.Windows.Forms.Button btnCajaMenuLateral;
         private System.Windows.Forms.Button btnAlmacenMenuLateral;
-        private System.Windows.Forms.Button btnFacturasMenuLateral;
+        private System.Windows.Forms.Button btnPresupuestosMenuLateral;
         private System.Windows.Forms.Button btnEmpleadosMenuLateral;
         private System.Windows.Forms.Button btnPacientesMenuLateral;
         private System.Windows.Forms.Button btnAgendaMenuLateral;

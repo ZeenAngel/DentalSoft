@@ -27,7 +27,7 @@ namespace DentalSoft
             InitializeComponent();
         }
 
-        public ReservasPaciente(Clases.Paciente paciente)
+        public ReservasPaciente(Paciente paciente)
         {
             InitializeComponent();
             this.paciente = paciente;
@@ -92,8 +92,7 @@ namespace DentalSoft
         {
             CargarDgv(false);
         }
+
         #endregion
-
-
     }
 }

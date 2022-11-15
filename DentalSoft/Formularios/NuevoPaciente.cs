@@ -188,6 +188,10 @@ namespace DentalSoft
                     lblErrorGenero.Text = "      " + cadena;
                     lblErrorGenero.Visible = true;
                     break;
+                case "existe":
+                    lblErrorDni.Text = "     " + cadena;
+                    lblErrorDni.Visible = true;
+                    break;
             }
         }
 
@@ -245,6 +249,23 @@ namespace DentalSoft
             if (pa.Consentimiento)
                 chConsentimiento.Checked = true;
         }
+
+        private bool ExistePaciente()
+        {
+            ConexionBD conexion = new ConexionBD();
+            bool sw = false;
+            if (conexion.EstablecerConexion())
+            {
+                string sentencia = "SELECT Dni FROM Paciente WHERE Dni = '" + txtDni.Texto + "'";
+                MySqlCommand comando = new MySqlCommand(sentencia, conexion.conexionSql);
+                MySqlDataReader reader = comando.ExecuteReader();
+                if (reader.HasRows)
+                    sw = true;
+                reader.Close();
+                conexion.CerrarConexion();
+            }
+            return sw;
+        }
         #endregion
 
         // Eventos
@@ -301,54 +322,59 @@ namespace DentalSoft
                     sw = ComprobarDni();
                 if (sw || isDesdeReserva)
                 {
-                    Clases.ConexionBD conexion = new ConexionBD();
-                    if (conexion.EstablecerConexion())
+                    if (!ExistePaciente()) // No existe el paciente
                     {
-                        string sentencia = "INSERT INTO Paciente VALUES('";
-                        if (isDesdeReserva) // DNI
-                            sentencia += this.paciente.Texto;
-                        else
-                            sentencia += txtDni.Texto;
-                        sentencia += "', '" + txtNombre.Texto + "', '" + txtApellido1.Texto + "', "; // NOMBRE Y APELLIDO1
-                        if (txtApellido2.Texto.Equals("")) // APELLIDO2
-                            sentencia += "NULL, ";
-                        else
-                            sentencia += "'" + txtApellido2.Texto + "', '";
-                        sentencia += txtTelefono.Texto + "', "; // TELÉFONO
-                        if (txtEmail.Texto.Equals("")) // EMAIL
-                            sentencia += "NULL, ";
-                        else
-                            sentencia += "'" + txtEmail.Texto + "', ";
-                        sentencia += "'" + txtCp.Texto + "', "; // CÓDIGO POSTAL
-                        sentencia += "'" + txtDireccion.Texto + "', "; // DIRECCIÓN
-                        sentencia += txtEdad.Texto + ", "; // EDAD
-                        if (rbMasculino.Checked) // GÉNERO
-                            sentencia += "'M', ";
-                        else
-                            sentencia += "'F', ";
-                        if (chConsentimiento.Checked) // CONSENTIMIENTO
-                            sentencia += "1)";
-                        else
-                            sentencia += "0)";
-                        MySqlCommand comando = new MySqlCommand(sentencia, conexion.conexionSql);
-                        int resultado = comando.ExecuteNonQuery();
-                        if (resultado > 0)
+                        ConexionBD conexion = new ConexionBD();
+                        if (conexion.EstablecerConexion())
                         {
-                            LimpiarCampos();
-                            mensaje = MessageBoxPersonalizadoControl.Show("Paciente creado correctamente", datosGlobales.TituloAplicacion, MessageBoxButtons.OK);
+                            string sentencia = "INSERT INTO Paciente VALUES('";
+                            if (isDesdeReserva) // DNI
+                                sentencia += this.paciente.Texto;
+                            else
+                                sentencia += txtDni.Texto;
+                            sentencia += "', '" + txtNombre.Texto + "', '" + txtApellido1.Texto + "', "; // NOMBRE Y APELLIDO1
+                            if (txtApellido2.Texto.Equals("")) // APELLIDO2
+                                sentencia += "NULL, ";
+                            else
+                                sentencia += "'" + txtApellido2.Texto + "', '";
+                            sentencia += txtTelefono.Texto + "', "; // TELÉFONO
+                            if (txtEmail.Texto.Equals("")) // EMAIL
+                                sentencia += "NULL, ";
+                            else
+                                sentencia += "'" + txtEmail.Texto + "', ";
+                            sentencia += "'" + txtCp.Texto + "', "; // CÓDIGO POSTAL
+                            sentencia += "'" + txtDireccion.Texto + "', "; // DIRECCIÓN
+                            sentencia += txtEdad.Texto + ", "; // EDAD
+                            if (rbMasculino.Checked) // GÉNERO
+                                sentencia += "'M', ";
+                            else
+                                sentencia += "'F', ";
+                            if (chConsentimiento.Checked) // CONSENTIMIENTO
+                                sentencia += "1)";
+                            else
+                                sentencia += "0)";
+                            MySqlCommand comando = new MySqlCommand(sentencia, conexion.conexionSql);
+                            int resultado = comando.ExecuteNonQuery();
+                            if (resultado > 0)
+                            {
+                                LimpiarCampos();
+                                mensaje = MessageBoxPersonalizadoControl.Show("Paciente creado correctamente", datosGlobales.TituloAplicacion, MessageBoxButtons.OK);
+                            }
+                            else
+                                mensaje = MessageBoxPersonalizadoControl.Show("No se ha guardado el paciente", datosGlobales.TituloAplicacion, MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                            conexion.CerrarConexion();
+                            if (isDesdeReserva || isDesdeEditar)
+                                this.Close();
                         }
                         else
-                            mensaje = MessageBoxPersonalizadoControl.Show("No se ha guardado el paciente", datosGlobales.TituloAplicacion, MessageBoxButtons.OK, MessageBoxIcon.Warning);
-                        conexion.CerrarConexion();
-                        if (isDesdeReserva || isDesdeEditar)
-                            this.Close();
+                            mensaje = MessageBoxPersonalizadoControl.Show("No se ha podido conectar a la base de datos", datosGlobales.TituloAplicacion, MessageBoxButtons.OK, MessageBoxIcon.Warning);
                     }
                     else
-                        mensaje = MessageBoxPersonalizadoControl.Show("No se ha podido conectar a la base de datos", datosGlobales.TituloAplicacion, MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                        MostrarMensajeError("El paciente ya existe", "existe");
                 }
                 else // Es porque la ventana se creo para EDITAR al paciente
                 {
-                    Clases.ConexionBD conexion = new ConexionBD();
+                    ConexionBD conexion = new ConexionBD();
                     if (conexion.EstablecerConexion())
                     {
                         string sentencia = "UPDATE Paciente SET Nombre='" + txtNombre.Texto + "', Apellido1='" + txtApellido1.Texto + "'";

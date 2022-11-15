@@ -34,8 +34,9 @@ namespace DentalSoft.Clases
          */
         #endregion
 
+        // Variables
         #region -> Variables
-
+        private DatosGlobales datosGlobales = new DatosGlobales();
         private string dni;
         private string nombre;
         private string apellido1;
@@ -47,15 +48,15 @@ namespace DentalSoft.Clases
         private int especialidad;
         private string numColegiado;
         private string centro;
+        private bool activo;
         private bool estadoFichaje;
-
         #endregion
 
         // Constructores
         public Empleado() { }
 
+        // Getters y Setters
         #region -> Getters y Setters
-
         public string Dni { get => dni; set => dni = value; }
         public string Nombre { get => nombre; set => nombre = value; }
         public string Apellido1 { get => apellido1; set => apellido1 = value; }
@@ -68,14 +69,14 @@ namespace DentalSoft.Clases
         public string NumColegiado { get => numColegiado; set => numColegiado = value; }
         public string Centro { get => centro; set => centro = value; }
         public bool EstadoFichaje { get => estadoFichaje; set => estadoFichaje = value; }
-
+        public bool Activo { get => activo; set => activo = value; }
         #endregion
 
+        // Métodos
         #region -> Métodos
-
         public bool CargarEmpleado(string dni)
         {
-            Clases.ConexionBD conexion = new ConexionBD();
+            ConexionBD conexion = new ConexionBD();
             if (conexion.EstablecerConexion())
             {
                 string sentencia = "SELECT * FROM Empleado WHERE Dni='" + dni + "'";
@@ -97,21 +98,22 @@ namespace DentalSoft.Clases
                     if (!reader.IsDBNull(9))
                         numColegiado = reader.GetString(9);
                     this.centro = reader.GetString(10);
-                    this.estadoFichaje = reader.GetBoolean(11);
+                    this.activo = reader.GetBoolean(11);
+                    this.estadoFichaje = reader.GetBoolean(12);
                     reader.Close();
                     conexion.CerrarConexion();
                     return true; // Todo OK
                 }
                 else
                 {
-                    DialogResult mensaje = MessageBoxPersonalizadoControl.Show("No se ha encontrado ningún usuario con ese DNI", "DentalSoft", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                    DialogResult mensaje = MessageBoxPersonalizadoControl.Show("No se ha encontrado ningún usuario con ese DNI", datosGlobales.TituloAplicacion, MessageBoxButtons.OK, MessageBoxIcon.Warning);
                     conexion.CerrarConexion();
                     return false; // No se encuentra
                 }
             }
             else
             {
-                DialogResult mensaje = MessageBoxPersonalizadoControl.Show("No se ha podido establecer conexión con la base de datos", "DentalSoft", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                DialogResult mensaje = MessageBoxPersonalizadoControl.Show("No se ha podido establecer conexión con la base de datos", datosGlobales.TituloAplicacion, MessageBoxButtons.OK, MessageBoxIcon.Warning);
                 conexion.CerrarConexion();
                 return false; // No se ha conectado
             }

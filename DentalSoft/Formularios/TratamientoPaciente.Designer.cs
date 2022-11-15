@@ -85,6 +85,7 @@
             this.pnlCabecera.Name = "pnlCabecera";
             this.pnlCabecera.Size = new System.Drawing.Size(1500, 35);
             this.pnlCabecera.TabIndex = 1;
+            this.pnlCabecera.MouseDown += new System.Windows.Forms.MouseEventHandler(this.pnlCabecera_MouseDown);
             // 
             // lblTitulo
             // 
