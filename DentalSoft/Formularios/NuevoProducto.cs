@@ -45,6 +45,7 @@ namespace DentalSoft.Formularios
         #endregion
 
         // Métodos privados
+        #region -> Métodos privados
         private void LimpiarCampos()
         {
             if (!isEditando)
@@ -174,9 +175,7 @@ namespace DentalSoft.Formularios
                         numero = numero.Replace(',', '.');
                     txtCoste.Texto = numero;
                     break;
-            }
-            
-            txtCantidad.Texto = numero;
+            }  
             return float.TryParse(numero, out float numCantidad); // Devuelve true si puede convertir la cadena en número
         }
 
@@ -189,7 +188,7 @@ namespace DentalSoft.Formularios
                         if (IsNumero("cantidad")) // IsNumero Cantidad
                             if (!txtCoste.Texto.Equals("")) // Coste
                                 if (IsNumero("coste")) // IsNumero Coste
-                                    if(DateTime.Compare(mcCaducidad.Value, DateTime.Now) > 0) // Comprobar si la fecha introducida es anterior a la actual
+                                    if(DateTime.Compare(mcCaducidad.Value, DateTime.Now) > 0 || int.Parse(txtCantidad.Texto) == 0) // Comprobar si la fecha introducida es anterior a la actual
                                         if (!txtLote.Texto.Equals("")) // Lote
                                             if (cbCategoria.SelectedIndex > 0) // Categoria
                                                 if (cbAlmacen.SelectedIndex > 0) // Almacen
@@ -257,7 +256,63 @@ namespace DentalSoft.Formularios
             return almacen;
         }
 
+        private string GetNombreCategoria(int idCategoria)
+        {
+            string categoria = "";
+            if (conexion.EstablecerConexion())
+            {
+                string sentencia = "SELECT descripcion FROM categoria_producto WHERE id = " + idCategoria;
+                MySqlCommand comando = new MySqlCommand(sentencia, conexion.conexionSql);
+                MySqlDataReader reader = comando.ExecuteReader();
+                if (reader.HasRows)
+                {
+                    reader.Read();
+                    categoria = reader.GetString(0);
+                }
+                reader.Close();
+                comando.Dispose();
+                conexion.CerrarConexion();
+            }
+            return categoria;
+        }
+
+        private string GetNombreAlmacen(int idAlmacen)
+        {
+            string almacen = "";
+            if (conexion.EstablecerConexion())
+            {
+                string sentencia = "SELECT nombre FROM almacen WHERE id = " + idAlmacen;
+                MySqlCommand comando = new MySqlCommand(sentencia, conexion.conexionSql);
+                MySqlDataReader reader = comando.ExecuteReader();
+                if (reader.HasRows)
+                {
+                    reader.Read();
+                    almacen = reader.GetString(0);
+                }
+                reader.Close();
+                comando.Dispose();
+                conexion.CerrarConexion();
+            }
+            return almacen;
+        }
+        
+        private void CargarDatosProducto()
+        {
+            txtReferencia.Texto = producto.Referencia;
+            txtDescripcion.Texto = producto.Descripcion;
+            txtCantidad.Texto = producto.Cantidad.ToString();
+            txtCoste.Texto = producto.Coste.ToString();
+            txtLote.Texto = producto.Lote;
+            mcCaducidad.Value = Convert.ToDateTime(producto.Fecha_caducidad);
+            string categoria = GetNombreCategoria(producto.Categoria);
+            string almacen = GetNombreAlmacen(producto.Almacen);
+            cbCategoria.SelectedItem = categoria;
+            cbAlmacen.SelectedItem = almacen;
+        }
+        #endregion
+
         // Eventos
+        #region -> Eventos
         private void lblTitulo_MouseDown(object sender, MouseEventArgs e)
         {
             ReleaseCapture();
@@ -298,11 +353,14 @@ namespace DentalSoft.Formularios
         {
             // No establezco el calendario a un MinDate DateTime.Now porque así si introduce una fecha anterior
             // puede ver el mensaje de error y tirar el producto
-            if (isEditando)
-                txtReferencia.Enabled = false;
             CargarCategorias();
             CargarAlmacenes();
-            mcCaducidad.Value = DateTime.Now;
+            if (isEditando)
+            {
+                txtReferencia.Enabled = false;
+                CargarDatosProducto();
+            }else
+                mcCaducidad.Value = DateTime.Now;
         }
 
         private void btnLimpiarCampos_Click(object sender, EventArgs e)
@@ -339,5 +397,6 @@ namespace DentalSoft.Formularios
                 
             }
         }
+        #endregion
     }
 }

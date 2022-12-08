@@ -191,7 +191,7 @@ namespace DentalSoft.ControlesPersonalizados
         [DefaultValue(null)]
         [RefreshProperties(RefreshProperties.Repaint)]
         [AttributeProvider(typeof(IListSource))]
-        public new object DataSource
+        public object DataSource
         {
             get
             {

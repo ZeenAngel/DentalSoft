@@ -84,7 +84,7 @@
             this.cbFiltrosBuscarOdontologo.Name = "cbFiltrosBuscarOdontologo";
             this.cbFiltrosBuscarOdontologo.Padding = new System.Windows.Forms.Padding(1);
             this.cbFiltrosBuscarOdontologo.Size = new System.Drawing.Size(200, 30);
-            this.cbFiltrosBuscarOdontologo.TabIndex = 7;
+            this.cbFiltrosBuscarOdontologo.TabIndex = 5;
             this.cbFiltrosBuscarOdontologo.Textos = "";
             // 
             // txtOdontologoBuscarOdontologo
@@ -104,9 +104,11 @@
             this.txtOdontologoBuscarOdontologo.Multilinea = false;
             this.txtOdontologoBuscarOdontologo.Name = "txtOdontologoBuscarOdontologo";
             this.txtOdontologoBuscarOdontologo.Padding = new System.Windows.Forms.Padding(10, 7, 10, 7);
+            this.txtOdontologoBuscarOdontologo.PosicionSeleccion = 0;
             this.txtOdontologoBuscarOdontologo.Size = new System.Drawing.Size(464, 30);
             this.txtOdontologoBuscarOdontologo.SubrayadoEstilo = true;
-            this.txtOdontologoBuscarOdontologo.TabIndex = 6;
+            this.txtOdontologoBuscarOdontologo.TabIndex = 0;
+            this.txtOdontologoBuscarOdontologo.TamañoMaximo = 30000;
             this.txtOdontologoBuscarOdontologo.Texto = "";
             this.txtOdontologoBuscarOdontologo._TextChanged += new System.EventHandler(this.txtOdontologoBuscarOdontologo__TextChanged);
             // 
@@ -187,6 +189,7 @@
             this.Controls.Add(this.txtOdontologoBuscarOdontologo);
             this.Font = new System.Drawing.Font("Roboto", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "BuscarOdontologo";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "BuscarOdontologo";

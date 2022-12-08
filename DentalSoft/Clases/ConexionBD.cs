@@ -33,7 +33,7 @@ namespace DentalSoft.Clases
             }
             catch(MySqlException e)
             {
-                MessageBox.Show(" No se pudo conectar a la base de datos. Error: " + e.ToString());
+                // MessageBox.Show(" No se pudo conectar a la base de datos. Error: " + e.ToString());
             }
             return isConectado;
         }

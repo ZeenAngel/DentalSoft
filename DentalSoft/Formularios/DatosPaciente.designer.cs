@@ -211,7 +211,7 @@
             this.textboxPersonalizado2.Padding = new System.Windows.Forms.Padding(10, 7, 10, 7);
             this.textboxPersonalizado2.Size = new System.Drawing.Size(157, 34);
             this.textboxPersonalizado2.SubrayadoEstilo = true;
-            this.textboxPersonalizado2.TabIndex = 111;
+            this.textboxPersonalizado2.TabIndex = 45;
             this.textboxPersonalizado2.Texto = "";
             // 
             // textboxPersonalizado1
@@ -235,7 +235,7 @@
             this.textboxPersonalizado1.Padding = new System.Windows.Forms.Padding(10, 7, 10, 7);
             this.textboxPersonalizado1.Size = new System.Drawing.Size(74, 34);
             this.textboxPersonalizado1.SubrayadoEstilo = true;
-            this.textboxPersonalizado1.TabIndex = 109;
+            this.textboxPersonalizado1.TabIndex = 40;
             this.textboxPersonalizado1.Texto = "";
             // 
             // txtDireccion
@@ -259,7 +259,7 @@
             this.txtDireccion.Padding = new System.Windows.Forms.Padding(10, 7, 10, 7);
             this.txtDireccion.Size = new System.Drawing.Size(518, 34);
             this.txtDireccion.SubrayadoEstilo = true;
-            this.txtDireccion.TabIndex = 107;
+            this.txtDireccion.TabIndex = 35;
             this.txtDireccion.Texto = "";
             // 
             // txtNombre
@@ -282,7 +282,7 @@
             this.txtNombre.Padding = new System.Windows.Forms.Padding(10, 7, 10, 7);
             this.txtNombre.Size = new System.Drawing.Size(250, 34);
             this.txtNombre.SubrayadoEstilo = true;
-            this.txtNombre.TabIndex = 103;
+            this.txtNombre.TabIndex = 5;
             this.txtNombre.Texto = "";
             // 
             // txtDni
@@ -305,7 +305,7 @@
             this.txtDni.Padding = new System.Windows.Forms.Padding(10, 7, 10, 7);
             this.txtDni.Size = new System.Drawing.Size(250, 34);
             this.txtDni.SubrayadoEstilo = true;
-            this.txtDni.TabIndex = 102;
+            this.txtDni.TabIndex = 0;
             this.txtDni.Texto = "";
             // 
             // txtEmail
@@ -331,7 +331,7 @@
             this.txtEmail.Padding = new System.Windows.Forms.Padding(10, 7, 10, 7);
             this.txtEmail.Size = new System.Drawing.Size(369, 34);
             this.txtEmail.SubrayadoEstilo = true;
-            this.txtEmail.TabIndex = 93;
+            this.txtEmail.TabIndex = 25;
             this.txtEmail.Texto = "";
             // 
             // txtApellido2
@@ -357,7 +357,7 @@
             this.txtApellido2.Padding = new System.Windows.Forms.Padding(10, 7, 10, 7);
             this.txtApellido2.Size = new System.Drawing.Size(261, 34);
             this.txtApellido2.SubrayadoEstilo = true;
-            this.txtApellido2.TabIndex = 90;
+            this.txtApellido2.TabIndex = 15;
             this.txtApellido2.Texto = "";
             // 
             // txtCp
@@ -381,7 +381,7 @@
             this.txtCp.Padding = new System.Windows.Forms.Padding(10, 7, 10, 7);
             this.txtCp.Size = new System.Drawing.Size(136, 34);
             this.txtCp.SubrayadoEstilo = true;
-            this.txtCp.TabIndex = 95;
+            this.txtCp.TabIndex = 30;
             this.txtCp.Texto = "";
             // 
             // txtTelefono
@@ -407,7 +407,7 @@
             this.txtTelefono.Padding = new System.Windows.Forms.Padding(10, 7, 10, 7);
             this.txtTelefono.Size = new System.Drawing.Size(261, 34);
             this.txtTelefono.SubrayadoEstilo = true;
-            this.txtTelefono.TabIndex = 91;
+            this.txtTelefono.TabIndex = 20;
             this.txtTelefono.Texto = "";
             // 
             // txtApellido1
@@ -433,7 +433,7 @@
             this.txtApellido1.Padding = new System.Windows.Forms.Padding(10, 7, 10, 7);
             this.txtApellido1.Size = new System.Drawing.Size(261, 34);
             this.txtApellido1.SubrayadoEstilo = true;
-            this.txtApellido1.TabIndex = 84;
+            this.txtApellido1.TabIndex = 10;
             this.txtApellido1.Texto = "";
             // 
             // DatosPaciente

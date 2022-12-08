@@ -365,9 +365,11 @@
             this.txtColegiado.Multilinea = false;
             this.txtColegiado.Name = "txtColegiado";
             this.txtColegiado.Padding = new System.Windows.Forms.Padding(10, 7, 10, 7);
+            this.txtColegiado.PosicionSeleccion = 0;
             this.txtColegiado.Size = new System.Drawing.Size(200, 30);
             this.txtColegiado.SubrayadoEstilo = true;
             this.txtColegiado.TabIndex = 45;
+            this.txtColegiado.TamañoMaximo = 30000;
             this.txtColegiado.Texto = "";
             // 
             // txtTelefono
@@ -387,9 +389,11 @@
             this.txtTelefono.Multilinea = false;
             this.txtTelefono.Name = "txtTelefono";
             this.txtTelefono.Padding = new System.Windows.Forms.Padding(10, 7, 10, 7);
+            this.txtTelefono.PosicionSeleccion = 0;
             this.txtTelefono.Size = new System.Drawing.Size(200, 30);
             this.txtTelefono.SubrayadoEstilo = true;
             this.txtTelefono.TabIndex = 20;
+            this.txtTelefono.TamañoMaximo = 30000;
             this.txtTelefono.Texto = "";
             // 
             // txtApellido1
@@ -409,9 +413,11 @@
             this.txtApellido1.Multilinea = false;
             this.txtApellido1.Name = "txtApellido1";
             this.txtApellido1.Padding = new System.Windows.Forms.Padding(10, 7, 10, 7);
+            this.txtApellido1.PosicionSeleccion = 0;
             this.txtApellido1.Size = new System.Drawing.Size(200, 30);
             this.txtApellido1.SubrayadoEstilo = true;
             this.txtApellido1.TabIndex = 10;
+            this.txtApellido1.TamañoMaximo = 30000;
             this.txtApellido1.Texto = "";
             // 
             // txtEmail
@@ -431,9 +437,11 @@
             this.txtEmail.Multilinea = false;
             this.txtEmail.Name = "txtEmail";
             this.txtEmail.Padding = new System.Windows.Forms.Padding(10, 7, 10, 7);
+            this.txtEmail.PosicionSeleccion = 0;
             this.txtEmail.Size = new System.Drawing.Size(576, 30);
             this.txtEmail.SubrayadoEstilo = true;
             this.txtEmail.TabIndex = 25;
+            this.txtEmail.TamañoMaximo = 30000;
             this.txtEmail.Texto = "";
             // 
             // txtApellido2
@@ -453,9 +461,11 @@
             this.txtApellido2.Multilinea = false;
             this.txtApellido2.Name = "txtApellido2";
             this.txtApellido2.Padding = new System.Windows.Forms.Padding(10, 7, 10, 7);
+            this.txtApellido2.PosicionSeleccion = 0;
             this.txtApellido2.Size = new System.Drawing.Size(205, 30);
             this.txtApellido2.SubrayadoEstilo = true;
             this.txtApellido2.TabIndex = 15;
+            this.txtApellido2.TamañoMaximo = 30000;
             this.txtApellido2.Texto = "";
             // 
             // txtNombre
@@ -475,9 +485,11 @@
             this.txtNombre.Multilinea = false;
             this.txtNombre.Name = "txtNombre";
             this.txtNombre.Padding = new System.Windows.Forms.Padding(10, 7, 10, 7);
+            this.txtNombre.PosicionSeleccion = 0;
             this.txtNombre.Size = new System.Drawing.Size(205, 30);
             this.txtNombre.SubrayadoEstilo = true;
             this.txtNombre.TabIndex = 5;
+            this.txtNombre.TamañoMaximo = 30000;
             this.txtNombre.Texto = "";
             // 
             // txtDni
@@ -497,9 +509,11 @@
             this.txtDni.Multilinea = false;
             this.txtDni.Name = "txtDni";
             this.txtDni.Padding = new System.Windows.Forms.Padding(10, 7, 10, 7);
+            this.txtDni.PosicionSeleccion = 0;
             this.txtDni.Size = new System.Drawing.Size(205, 30);
             this.txtDni.SubrayadoEstilo = true;
             this.txtDni.TabIndex = 0;
+            this.txtDni.TamañoMaximo = 30000;
             this.txtDni.Texto = "";
             // 
             // cbCentro
@@ -677,7 +691,7 @@
             this.btnResetPasswordLogin.Location = new System.Drawing.Point(563, 97);
             this.btnResetPasswordLogin.Name = "btnResetPasswordLogin";
             this.btnResetPasswordLogin.Size = new System.Drawing.Size(200, 29);
-            this.btnResetPasswordLogin.TabIndex = 66;
+            this.btnResetPasswordLogin.TabIndex = 1;
             this.btnResetPasswordLogin.Text = "Reiniciar Contraseña Login";
             this.btnResetPasswordLogin.TextoColor = System.Drawing.Color.White;
             this.btnResetPasswordLogin.UseVisualStyleBackColor = false;
@@ -740,6 +754,7 @@
             this.Controls.Add(this.lblTituloNombre);
             this.Controls.Add(this.pnlCabecera);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "NuevoEmpleado";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "EditarEmpleado";

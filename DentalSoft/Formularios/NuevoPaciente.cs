@@ -1,4 +1,5 @@
 ﻿using DentalSoft.Clases;
+using DentalSoft.Formularios;
 using MySql.Data.MySqlClient;
 using System;
 using System.Collections.Generic;
@@ -19,6 +20,7 @@ namespace DentalSoft
     {
         // Variables
         private Paciente pa;
+        private ConexionBD conexion = new ConexionBD();
         private DatosGlobales datosGlobales = new DatosGlobales();
         private TextboxPersonalizado paciente;
         private bool isDesdeReserva = false;
@@ -141,7 +143,7 @@ namespace DentalSoft
             lblErrorNombre.Visible = false;
             lblErrorApellido.Visible = false;
             lblErrorTelefono.Visible = false;
-            lblErrorEmail.Visible = true;
+            lblErrorEmail.Visible = false;
             lblErrorCp.Visible = false;
             lblErrorDireccion.Visible = false;
             lblErrorEdad.Visible = false;
@@ -266,6 +268,45 @@ namespace DentalSoft
             }
             return sw;
         }
+
+        private void CrearHistorial()
+        {
+            NuevoHistorial nuevoHistorial = new NuevoHistorial();
+            nuevoHistorial.dni = txtDni.Texto.ToUpper();
+            nuevoHistorial.fecha = DateTime.Now.ToString("dd-MM-yyyy");
+            nuevoHistorial.ShowDialog();
+        }
+
+        private bool ComprobarExisteHistorial()
+        {
+            bool sw = false;
+            if (conexion.EstablecerConexion())
+            {
+                string sentencia = "SELECT paciente FROM historial_clinico WHERE paciente = '" + txtDni.Texto.ToUpper() + "'";
+                MySqlCommand comando = new MySqlCommand(sentencia, conexion.conexionSql);
+                MySqlDataReader reader = comando.ExecuteReader();
+                if (reader.HasRows)
+                    sw = true;
+                reader.Close();
+                comando.Dispose();
+                conexion.CerrarConexion();
+            }
+            return sw;
+        }
+
+        private void CrearHistorialPredenterminado()
+        {
+            if (conexion.EstablecerConexion())
+            {
+                string sentencia = "INSERT INTO historial_clinico VALUES('" + txtDni.Texto.ToUpper() + "', '" + DateTime.Now.ToString("yyyy-MM-dd") +
+                        "', '" + datosGlobales.AlergiasPredeterminado + "', '" + datosGlobales.MedicacionPredeterminado + "', null)";
+                MySqlCommand comando = new MySqlCommand(sentencia, conexion.conexionSql);
+                comando.ExecuteNonQuery();
+                comando.Dispose();
+                conexion.CerrarConexion();
+            }
+            
+        }
         #endregion
 
         // Eventos
@@ -280,12 +321,12 @@ namespace DentalSoft
             if (this.WindowState == FormWindowState.Normal)
             {
                 this.WindowState ^= FormWindowState.Maximized;
-                btnRedimensionar.Image = System.Drawing.Image.FromFile(datosGlobales.PathBotonRedimensionar);
+                btnRedimensionar.Image = Image.FromFile(datosGlobales.PathBotonRedimensionar);
             }
             else
             {
                 this.WindowState = FormWindowState.Normal;
-                btnRedimensionar.Image = System.Drawing.Image.FromFile(datosGlobales.PathBotonMaximizar);
+                btnRedimensionar.Image = Image.FromFile(datosGlobales.PathBotonMaximizar);
             }
         }
 
@@ -324,17 +365,16 @@ namespace DentalSoft
                 {
                     if (!ExistePaciente()) // No existe el paciente
                     {
-                        ConexionBD conexion = new ConexionBD();
                         if (conexion.EstablecerConexion())
                         {
                             string sentencia = "INSERT INTO Paciente VALUES('";
                             if (isDesdeReserva) // DNI
-                                sentencia += this.paciente.Texto;
+                                sentencia += this.paciente.Texto.ToUpper();
                             else
-                                sentencia += txtDni.Texto;
+                                sentencia += txtDni.Texto.ToUpper();
                             sentencia += "', '" + txtNombre.Texto + "', '" + txtApellido1.Texto + "', "; // NOMBRE Y APELLIDO1
                             if (txtApellido2.Texto.Equals("")) // APELLIDO2
-                                sentencia += "NULL, ";
+                                sentencia += "NULL, '";
                             else
                                 sentencia += "'" + txtApellido2.Texto + "', '";
                             sentencia += txtTelefono.Texto + "', "; // TELÉFONO
@@ -357,14 +397,21 @@ namespace DentalSoft
                             int resultado = comando.ExecuteNonQuery();
                             if (resultado > 0)
                             {
-                                LimpiarCampos();
                                 mensaje = MessageBoxPersonalizadoControl.Show("Paciente creado correctamente", datosGlobales.TituloAplicacion, MessageBoxButtons.OK);
                             }
                             else
                                 mensaje = MessageBoxPersonalizadoControl.Show("No se ha guardado el paciente", datosGlobales.TituloAplicacion, MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                            comando.Dispose();
                             conexion.CerrarConexion();
                             if (isDesdeReserva || isDesdeEditar)
                                 this.Close();
+                            else
+                            {
+                                CrearHistorial();
+                                if(! ComprobarExisteHistorial())
+                                    CrearHistorialPredenterminado();
+                                LimpiarCampos();
+                            }
                         }
                         else
                             mensaje = MessageBoxPersonalizadoControl.Show("No se ha podido conectar a la base de datos", datosGlobales.TituloAplicacion, MessageBoxButtons.OK, MessageBoxIcon.Warning);

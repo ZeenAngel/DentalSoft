@@ -130,8 +130,6 @@ namespace DentalSoft.Formularios
         private void DesactivarTextbox()
         {
             lblResetPassword.Visible = false;
-            btnResetPasswordLogin.Enabled = false;
-            btnResetPasswordLogin.Visible = false;
             isEditando = false;
             txtDni.Enabled = false;
             txtNombre.Enabled = false;
@@ -169,8 +167,6 @@ namespace DentalSoft.Formularios
             cbPuesto.Enabled = true;
             if (empleado.Puesto == 3)
             {
-                btnResetPasswordLogin.Enabled = true;
-                btnResetPasswordLogin.Visible = true;
                 cbEspecialidad.Enabled = true;
                 cbEspecialidad.Visible = true;
                 txtColegiado.Enabled = true;
@@ -467,12 +463,17 @@ namespace DentalSoft.Formularios
 
         private void EditarEmpleado_Load(object sender, EventArgs e)
         {
+            lblResetPassword.Visible = false;
             CargarPuestos();
             CargarEspecialidades();
             CargarCentros();
             CargarEmpleado();
             OcultarMensajesError();
             OcultarControlesNoOdontologo();
+            if (this.dni != null)
+                btnResetPasswordLogin.Visible = true;
+            else
+                btnResetPasswordLogin.Visible = false;
         }
 
         private void btnGuardar_Click(object sender, EventArgs e)

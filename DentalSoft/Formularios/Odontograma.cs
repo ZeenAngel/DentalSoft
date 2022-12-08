@@ -15,7 +15,8 @@ namespace DentalSoft.Formularios
     public partial class Odontograma : Form
     {
         // Variables
-        Clases.Paciente paciente;
+        private Paciente paciente;
+        private Empleado empleado;
 
         // Constructores
         #region -> Constructores
@@ -29,19 +30,25 @@ namespace DentalSoft.Formularios
             InitializeComponent();
             this.paciente = paciente;
         }
+
+        public Odontograma(Paciente paciente, Empleado empleado)
+        {
+            InitializeComponent();
+            this.paciente = paciente;
+            this.empleado = empleado;
+        }
         #endregion
 
         // Métodos privados
         #region -> Métodos privados
         private void ActivarBoton()
         {
-            btnCrearOdontograma.Visible = true;
-            btnCrearOdontograma.Enabled = true;
+            if(empleado.Puesto == 1 || empleado.Puesto == 3 || empleado.Puesto == 5)
+                btnCrearOdontograma.Visible = true;
         }
 
         private void DesactivarBoton()
         {
-            btnCrearOdontograma.Enabled = false;
             btnCrearOdontograma.Visible = false;
         }
 
@@ -204,6 +211,7 @@ namespace DentalSoft.Formularios
 
         private void CargarOdontograma()
         {
+            OcultarMensaje();
             DesactivarBoton();
             if (this.paciente.CargarOdontograma())
             {
@@ -232,7 +240,10 @@ namespace DentalSoft.Formularios
                 }
             }
             else
+            {
                 MostrarMensaje("El paciente no tiene creado un odontograma.");
+                ActivarBoton();
+            }
         }
         #endregion
 
@@ -253,7 +264,8 @@ namespace DentalSoft.Formularios
             TratamientoPaciente tratamientoPaciente = new TratamientoPaciente(this.paciente);
             tratamientoPaciente.ShowDialog();
             CargarOdontograma();
-            DesactivarBoton();
+            if(paciente.Odontograma.Count() > 0)
+                DesactivarBoton();
         }
         #endregion
     }

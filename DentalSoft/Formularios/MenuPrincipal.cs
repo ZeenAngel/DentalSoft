@@ -17,6 +17,7 @@ namespace DentalSoft
 {
     public partial class MenuPrincipal : Form
     {
+        // Variables
         #region -> Variables
         private Form formularioActivo = null;
         public string dniEmpleado;
@@ -25,6 +26,13 @@ namespace DentalSoft
         private DatosGlobales datosGlobales = new DatosGlobales();
         #endregion
 
+        // Constructor
+        public MenuPrincipal()
+        {
+            InitializeComponent();
+        }
+
+        // Funcionalidades
         #region -> Funcionalidades
         // Funcionalidades arrastrar formulario
         [DllImport("user32.dll", EntryPoint = "ReleaseCapture")]
@@ -33,11 +41,7 @@ namespace DentalSoft
         private extern static void SendMessage(System.IntPtr hWnd, int Msg, int wParam, int lParam);
         #endregion
 
-        public MenuPrincipal()
-        {
-            InitializeComponent();
-        }
-
+        // Métodos privados
         #region -> Métodos privados
         public void AbrirFormularioHijo(Form formularioHijo)
         {
@@ -99,10 +103,34 @@ namespace DentalSoft
         {
             if (empleado.CargarEmpleado(dniEmpleado))
                 RellenarDatosEmpleado();
+        }
 
+        private void CargarPermisos()
+        {
+            if(empleado.Puesto == 3 || empleado.Puesto == 4)
+            {
+                btnPresupuestosMenuLateral.Visible = false;
+                btnFacturasMenuLateral.Visible = false;
+                btnAgendaMenuLateral.Visible = false;
+                btnAjustesMenuLateral.Visible = false;
+                btnEstadisticasMenuLateral.Visible = false;
+            }
+        }
+
+        private void ComprobarEstadoCitas()
+        {
+            if (conexion.EstablecerConexion())
+            {
+                string sentencia = "UPDATE reserva SET estado = 2 WHERE estado = 1 AND fecha < '" + DateTime.Now.ToString("yyyy-MM-dd") + "'";
+                MySqlCommand comando = new MySqlCommand(sentencia, conexion.conexionSql);
+                comando.ExecuteNonQuery();
+                comando.Dispose();
+                conexion.CerrarConexion();
+            }
         }
         #endregion
 
+        // Eventos
         #region -> Eventos
         private void pnlCabecera_MouseDown(object sender, MouseEventArgs e)
         {
@@ -144,6 +172,8 @@ namespace DentalSoft
         private void MenuPrincipal_Load(object sender, EventArgs e)
         {
             CargarEmpleado();
+            CargarPermisos();
+            ComprobarEstadoCitas();
         }
 
         private void btnCerrarSesionMenuLateral_Click(object sender, EventArgs e)
@@ -153,13 +183,13 @@ namespace DentalSoft
             this.Close();
         }
 
-        private void btnAgendaMenuLateral_Click(object sender, EventArgs e)
+        private void btnCitasMenuLateral_Click(object sender, EventArgs e)
         {
-            Agenda agenda = new Agenda(this);
+            Cita agenda = new Cita(this);
             agenda.empleado = empleado;
             AbrirFormularioHijo(agenda);
         }
-         
+
         private void label1_MouseDown(object sender, MouseEventArgs e)
         {
             ReleaseCapture();
@@ -191,10 +221,29 @@ namespace DentalSoft
             AbrirFormularioHijo(almacen);
         }
 
-        #endregion
+        private void btnCajaMenuLateral_Click(object sender, EventArgs e)
+        {
+            Caja caja = new Caja(empleado.Centro);
+            AbrirFormularioHijo(caja);
+        }
 
-        /************** IMPORTANTE, EN LA REGIÓN EVENTOS, AL ABRIR EL FORMULARIO AGENDA, HAY QUE PASARLE EL DNI DEL EMPLEADO PARA QUE APAREZCAN LAS RESERVAS SOLO DE ESE ODONTOLOGO, O SI ES
-         * ADMINISTRATIVO QUE SALGA EL DE TODOS LOS PACIENTES
-         ***************************/
+        private void btnFacturasMenuLateral_Click(object sender, EventArgs e)
+        {
+            Facturas facturas = new Facturas();
+            AbrirFormularioHijo(facturas);
+        }
+
+        private void btnAgendaMenuLateral_Click(object sender, EventArgs e)
+        {
+            Agenda ajustes = new Agenda();
+            AbrirFormularioHijo(ajustes);
+        }
+
+        private void btnEstadisticasMenuLateral_Click(object sender, EventArgs e)
+        {
+            Estadisticas estadisticas = new Estadisticas();
+            AbrirFormularioHijo(estadisticas);
+        }
+        #endregion
     }
 }

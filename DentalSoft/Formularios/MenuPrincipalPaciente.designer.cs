@@ -35,7 +35,6 @@
             this.btnMinimizar = new System.Windows.Forms.PictureBox();
             this.btnCerrar = new System.Windows.Forms.PictureBox();
             this.pnlPestañas = new System.Windows.Forms.Panel();
-            this.btnCobros = new System.Windows.Forms.Button();
             this.btnOdontograma = new System.Windows.Forms.Button();
             this.btnHistorial = new System.Windows.Forms.Button();
             this.btnArchivos = new System.Windows.Forms.Button();
@@ -119,7 +118,7 @@
             // 
             // pnlPestañas
             // 
-            this.pnlPestañas.Controls.Add(this.btnCobros);
+            this.pnlPestañas.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(16)))), ((int)(((byte)(110)))), ((int)(((byte)(196)))));
             this.pnlPestañas.Controls.Add(this.btnOdontograma);
             this.pnlPestañas.Controls.Add(this.btnHistorial);
             this.pnlPestañas.Controls.Add(this.btnArchivos);
@@ -130,22 +129,6 @@
             this.pnlPestañas.Name = "pnlPestañas";
             this.pnlPestañas.Size = new System.Drawing.Size(125, 715);
             this.pnlPestañas.TabIndex = 3;
-            // 
-            // btnCobros
-            // 
-            this.btnCobros.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(16)))), ((int)(((byte)(110)))), ((int)(((byte)(196)))));
-            this.btnCobros.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.btnCobros.Dock = System.Windows.Forms.DockStyle.Top;
-            this.btnCobros.FlatAppearance.BorderColor = System.Drawing.Color.White;
-            this.btnCobros.FlatAppearance.BorderSize = 3;
-            this.btnCobros.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(195)))), ((int)(((byte)(165)))));
-            this.btnCobros.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnCobros.Image = ((System.Drawing.Image)(resources.GetObject("btnCobros.Image")));
-            this.btnCobros.Location = new System.Drawing.Point(0, 595);
-            this.btnCobros.Name = "btnCobros";
-            this.btnCobros.Size = new System.Drawing.Size(125, 119);
-            this.btnCobros.TabIndex = 5;
-            this.btnCobros.UseVisualStyleBackColor = false;
             // 
             // btnOdontograma
             // 
@@ -160,7 +143,7 @@
             this.btnOdontograma.Location = new System.Drawing.Point(0, 476);
             this.btnOdontograma.Name = "btnOdontograma";
             this.btnOdontograma.Size = new System.Drawing.Size(125, 119);
-            this.btnOdontograma.TabIndex = 4;
+            this.btnOdontograma.TabIndex = 20;
             this.btnOdontograma.UseVisualStyleBackColor = false;
             this.btnOdontograma.Click += new System.EventHandler(this.btnOdontograma_Click);
             // 
@@ -177,7 +160,7 @@
             this.btnHistorial.Location = new System.Drawing.Point(0, 357);
             this.btnHistorial.Name = "btnHistorial";
             this.btnHistorial.Size = new System.Drawing.Size(125, 119);
-            this.btnHistorial.TabIndex = 3;
+            this.btnHistorial.TabIndex = 15;
             this.btnHistorial.UseVisualStyleBackColor = false;
             this.btnHistorial.Click += new System.EventHandler(this.btnHistorial_Click);
             // 
@@ -194,7 +177,7 @@
             this.btnArchivos.Location = new System.Drawing.Point(0, 238);
             this.btnArchivos.Name = "btnArchivos";
             this.btnArchivos.Size = new System.Drawing.Size(125, 119);
-            this.btnArchivos.TabIndex = 2;
+            this.btnArchivos.TabIndex = 10;
             this.btnArchivos.UseVisualStyleBackColor = false;
             this.btnArchivos.Click += new System.EventHandler(this.btnArchivos_Click);
             // 
@@ -211,7 +194,7 @@
             this.btnAgenda.Location = new System.Drawing.Point(0, 119);
             this.btnAgenda.Name = "btnAgenda";
             this.btnAgenda.Size = new System.Drawing.Size(125, 119);
-            this.btnAgenda.TabIndex = 1;
+            this.btnAgenda.TabIndex = 5;
             this.btnAgenda.UseVisualStyleBackColor = false;
             this.btnAgenda.Click += new System.EventHandler(this.btnAgenda_Click);
             // 
@@ -263,6 +246,7 @@
             this.Controls.Add(this.pnlCabecera);
             this.Font = new System.Drawing.Font("Roboto", 9.25F);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
             this.MinimumSize = new System.Drawing.Size(1400, 750);
             this.Name = "MenuPrincipalPaciente";
@@ -296,6 +280,5 @@
         private System.Windows.Forms.Button btnAgenda;
         private System.Windows.Forms.Panel pnlContenedor;
         private System.Windows.Forms.PictureBox pbLogoMenuPrincipal;
-        private System.Windows.Forms.Button btnCobros;
     }
 }

@@ -121,7 +121,7 @@
             this.btnFiltrarTodos.Location = new System.Drawing.Point(999, 454);
             this.btnFiltrarTodos.Name = "btnFiltrarTodos";
             this.btnFiltrarTodos.Size = new System.Drawing.Size(150, 40);
-            this.btnFiltrarTodos.TabIndex = 81;
+            this.btnFiltrarTodos.TabIndex = 5;
             this.btnFiltrarTodos.Text = "Ver Todos";
             this.btnFiltrarTodos.TextoColor = System.Drawing.Color.White;
             this.btnFiltrarTodos.UseVisualStyleBackColor = false;
@@ -139,7 +139,7 @@
             this.mcFiltrarFecha.MinimumSize = new System.Drawing.Size(4, 35);
             this.mcFiltrarFecha.Name = "mcFiltrarFecha";
             this.mcFiltrarFecha.Size = new System.Drawing.Size(261, 35);
-            this.mcFiltrarFecha.TabIndex = 80;
+            this.mcFiltrarFecha.TabIndex = 0;
             this.mcFiltrarFecha.TextoColor = System.Drawing.Color.White;
             this.mcFiltrarFecha.Value = new System.DateTime(2022, 10, 29, 13, 46, 1, 999);
             this.mcFiltrarFecha.CloseUp += new System.EventHandler(this.mcFiltrarFecha_CloseUp);

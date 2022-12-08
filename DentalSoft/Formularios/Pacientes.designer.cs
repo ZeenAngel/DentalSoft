@@ -106,7 +106,7 @@
             this.btnHistorialPacientes.Location = new System.Drawing.Point(292, 637);
             this.btnHistorialPacientes.Name = "btnHistorialPacientes";
             this.btnHistorialPacientes.Size = new System.Drawing.Size(559, 34);
-            this.btnHistorialPacientes.TabIndex = 28;
+            this.btnHistorialPacientes.TabIndex = 25;
             this.btnHistorialPacientes.Text = "Historial Paciente";
             this.btnHistorialPacientes.TextoColor = System.Drawing.Color.White;
             this.btnHistorialPacientes.UseVisualStyleBackColor = false;
@@ -129,7 +129,7 @@
             this.btnEliminarPacientes.Location = new System.Drawing.Point(788, 562);
             this.btnEliminarPacientes.Name = "btnEliminarPacientes";
             this.btnEliminarPacientes.Size = new System.Drawing.Size(270, 34);
-            this.btnEliminarPacientes.TabIndex = 27;
+            this.btnEliminarPacientes.TabIndex = 20;
             this.btnEliminarPacientes.Text = "Eliminar Paciente";
             this.btnEliminarPacientes.TextoColor = System.Drawing.Color.White;
             this.btnEliminarPacientes.UseVisualStyleBackColor = false;
@@ -153,7 +153,7 @@
             this.btnEditarPacientes.Location = new System.Drawing.Point(432, 562);
             this.btnEditarPacientes.Name = "btnEditarPacientes";
             this.btnEditarPacientes.Size = new System.Drawing.Size(270, 34);
-            this.btnEditarPacientes.TabIndex = 26;
+            this.btnEditarPacientes.TabIndex = 15;
             this.btnEditarPacientes.Text = "Editar Paciente";
             this.btnEditarPacientes.TextoColor = System.Drawing.Color.White;
             this.btnEditarPacientes.UseVisualStyleBackColor = false;
@@ -176,7 +176,7 @@
             this.btnNuevoPaciente.Location = new System.Drawing.Point(92, 562);
             this.btnNuevoPaciente.Name = "btnNuevoPaciente";
             this.btnNuevoPaciente.Size = new System.Drawing.Size(270, 34);
-            this.btnNuevoPaciente.TabIndex = 25;
+            this.btnNuevoPaciente.TabIndex = 10;
             this.btnNuevoPaciente.Text = "Nuevo Paciente";
             this.btnNuevoPaciente.TextoColor = System.Drawing.Color.White;
             this.btnNuevoPaciente.UseVisualStyleBackColor = false;
@@ -201,7 +201,7 @@
             this.cbFiltrosPacientes.Name = "cbFiltrosPacientes";
             this.cbFiltrosPacientes.Padding = new System.Windows.Forms.Padding(1);
             this.cbFiltrosPacientes.Size = new System.Drawing.Size(200, 30);
-            this.cbFiltrosPacientes.TabIndex = 14;
+            this.cbFiltrosPacientes.TabIndex = 5;
             this.cbFiltrosPacientes.Textos = "";
             this.cbFiltrosPacientes.OnSelectedIndexChanged += new System.EventHandler(this.cbFiltrosPacientes_OnSelectedIndexChanged);
             // 
@@ -224,7 +224,7 @@
             this.txtPacientes.Padding = new System.Windows.Forms.Padding(10, 7, 10, 7);
             this.txtPacientes.Size = new System.Drawing.Size(591, 34);
             this.txtPacientes.SubrayadoEstilo = true;
-            this.txtPacientes.TabIndex = 13;
+            this.txtPacientes.TabIndex = 0;
             this.txtPacientes.Texto = "";
             this.txtPacientes._TextChanged += new System.EventHandler(this.txtPacientes__TextChanged);
             // 

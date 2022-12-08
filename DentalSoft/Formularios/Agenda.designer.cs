@@ -1,4 +1,4 @@
-﻿namespace DentalSoft
+﻿namespace DentalSoft.Formularios
 {
     partial class Agenda
     {
@@ -29,35 +29,65 @@
         private void InitializeComponent()
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Agenda));
-            this.lblSeleccionarAgenda = new System.Windows.Forms.Label();
+            this.lvHorasConsulta = new System.Windows.Forms.ListView();
+            this.lblNuevaHora = new System.Windows.Forms.Label();
+            this.lblErrorHora = new System.Windows.Forms.Label();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
-            this.gbFechaReserva = new System.Windows.Forms.GroupBox();
-            this.btnEliminarAgenda = new DentalSoft.ControlesPersonalizados.BotonPersonalizado();
-            this.btnEditarAgenda = new DentalSoft.ControlesPersonalizados.BotonPersonalizado();
-            this.btnNuevaAgenda = new DentalSoft.ControlesPersonalizados.BotonPersonalizado();
-            this.selectorFecha1 = new DentalSoft.ControlesPersonalizados.SelectorFecha();
-            this.dgvReservas = new System.Windows.Forms.DataGridView();
-            this.lblErrorModificarCita = new System.Windows.Forms.Label();
-            this.pnlDgv = new System.Windows.Forms.Panel();
-            this.gbDatosReserva = new System.Windows.Forms.GroupBox();
-            this.backgroundWorker1 = new System.ComponentModel.BackgroundWorker();
+            this.gbHorasConsulta = new System.Windows.Forms.GroupBox();
+            this.btnNuevaHora = new DentalSoft.ControlesPersonalizados.BotonPersonalizado();
+            this.txtNuevaHora = new DentalSoft.TextboxPersonalizado();
+            this.btnEliminar = new DentalSoft.ControlesPersonalizados.BotonPersonalizado();
+            this.gbAgendar = new System.Windows.Forms.GroupBox();
+            this.lblErrorGuardar = new System.Windows.Forms.Label();
+            this.btnGuardarAgenda = new DentalSoft.ControlesPersonalizados.BotonPersonalizado();
+            this.lvHorasAsignadas = new System.Windows.Forms.ListView();
+            this.btnQuitarHora = new DentalSoft.ControlesPersonalizados.BotonPersonalizado();
+            this.btnQuitarTodasHora = new DentalSoft.ControlesPersonalizados.BotonPersonalizado();
+            this.btnAñadirTodasHora = new DentalSoft.ControlesPersonalizados.BotonPersonalizado();
+            this.btnAñadirHora = new DentalSoft.ControlesPersonalizados.BotonPersonalizado();
+            this.lvHorasDisponibles = new System.Windows.Forms.ListView();
+            this.label1 = new System.Windows.Forms.Label();
+            this.lblErrorOdontologo = new System.Windows.Forms.Label();
+            this.btnBuscarOdontologoNuevaReserva = new DentalSoft.ControlesPersonalizados.BotonPersonalizado();
+            this.lblOdontologoNuevaReserva = new System.Windows.Forms.Label();
+            this.txtOdontologo = new DentalSoft.TextboxPersonalizado();
+            this.mcFecha = new DentalSoft.ControlesPersonalizados.SelectorFecha();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
-            this.gbFechaReserva.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dgvReservas)).BeginInit();
-            this.pnlDgv.SuspendLayout();
-            this.gbDatosReserva.SuspendLayout();
+            this.gbHorasConsulta.SuspendLayout();
+            this.gbAgendar.SuspendLayout();
             this.SuspendLayout();
             // 
-            // lblSeleccionarAgenda
+            // lvHorasConsulta
             // 
-            this.lblSeleccionarAgenda.AutoSize = true;
-            this.lblSeleccionarAgenda.Font = new System.Drawing.Font("Roboto", 12F);
-            this.lblSeleccionarAgenda.ForeColor = System.Drawing.Color.Black;
-            this.lblSeleccionarAgenda.Location = new System.Drawing.Point(89, 137);
-            this.lblSeleccionarAgenda.Name = "lblSeleccionarAgenda";
-            this.lblSeleccionarAgenda.Size = new System.Drawing.Size(160, 19);
-            this.lblSeleccionarAgenda.TabIndex = 10;
-            this.lblSeleccionarAgenda.Text = "Seleccione una fecha";
+            this.lvHorasConsulta.HideSelection = false;
+            this.lvHorasConsulta.Location = new System.Drawing.Point(23, 40);
+            this.lvHorasConsulta.Name = "lvHorasConsulta";
+            this.lvHorasConsulta.Size = new System.Drawing.Size(116, 526);
+            this.lvHorasConsulta.TabIndex = 13;
+            this.lvHorasConsulta.UseCompatibleStateImageBehavior = false;
+            // 
+            // lblNuevaHora
+            // 
+            this.lblNuevaHora.AutoSize = true;
+            this.lblNuevaHora.Location = new System.Drawing.Point(155, 191);
+            this.lblNuevaHora.Name = "lblNuevaHora";
+            this.lblNuevaHora.Size = new System.Drawing.Size(90, 19);
+            this.lblNuevaHora.TabIndex = 17;
+            this.lblNuevaHora.Text = "Nueva hora";
+            // 
+            // lblErrorHora
+            // 
+            this.lblErrorHora.AutoSize = true;
+            this.lblErrorHora.Font = new System.Drawing.Font("Roboto", 9.5F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblErrorHora.ForeColor = System.Drawing.Color.IndianRed;
+            this.lblErrorHora.Image = ((System.Drawing.Image)(resources.GetObject("lblErrorHora.Image")));
+            this.lblErrorHora.ImageAlign = System.Drawing.ContentAlignment.TopLeft;
+            this.lblErrorHora.Location = new System.Drawing.Point(160, 248);
+            this.lblErrorHora.Name = "lblErrorHora";
+            this.lblErrorHora.Size = new System.Drawing.Size(85, 15);
+            this.lblErrorHora.TabIndex = 48;
+            this.lblErrorHora.Text = "Mensaje Error";
+            this.lblErrorHora.Visible = false;
             // 
             // pictureBox1
             // 
@@ -70,196 +100,404 @@
             this.pictureBox1.Name = "pictureBox1";
             this.pictureBox1.Size = new System.Drawing.Size(100, 50);
             this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.pictureBox1.TabIndex = 11;
+            this.pictureBox1.TabIndex = 98;
             this.pictureBox1.TabStop = false;
             this.pictureBox1.Click += new System.EventHandler(this.pictureBox1_Click);
             // 
-            // gbFechaReserva
+            // gbHorasConsulta
             // 
-            this.gbFechaReserva.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.gbFechaReserva.Controls.Add(this.btnEliminarAgenda);
-            this.gbFechaReserva.Controls.Add(this.btnEditarAgenda);
-            this.gbFechaReserva.Controls.Add(this.btnNuevaAgenda);
-            this.gbFechaReserva.Controls.Add(this.selectorFecha1);
-            this.gbFechaReserva.Controls.Add(this.lblSeleccionarAgenda);
-            this.gbFechaReserva.Font = new System.Drawing.Font("Roboto", 14F);
-            this.gbFechaReserva.ForeColor = System.Drawing.Color.Black;
-            this.gbFechaReserva.Location = new System.Drawing.Point(25, 97);
-            this.gbFechaReserva.Name = "gbFechaReserva";
-            this.gbFechaReserva.Size = new System.Drawing.Size(358, 606);
-            this.gbFechaReserva.TabIndex = 38;
-            this.gbFechaReserva.TabStop = false;
-            this.gbFechaReserva.Text = "Fecha Reserva";
+            this.gbHorasConsulta.Controls.Add(this.lvHorasConsulta);
+            this.gbHorasConsulta.Controls.Add(this.btnNuevaHora);
+            this.gbHorasConsulta.Controls.Add(this.txtNuevaHora);
+            this.gbHorasConsulta.Controls.Add(this.lblNuevaHora);
+            this.gbHorasConsulta.Controls.Add(this.lblErrorHora);
+            this.gbHorasConsulta.Controls.Add(this.btnEliminar);
+            this.gbHorasConsulta.Location = new System.Drawing.Point(121, 96);
+            this.gbHorasConsulta.Name = "gbHorasConsulta";
+            this.gbHorasConsulta.Size = new System.Drawing.Size(436, 591);
+            this.gbHorasConsulta.TabIndex = 99;
+            this.gbHorasConsulta.TabStop = false;
+            this.gbHorasConsulta.Text = "Horas de consulta";
             // 
-            // btnEliminarAgenda
+            // btnNuevaHora
             // 
-            this.btnEliminarAgenda.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(16)))), ((int)(((byte)(110)))), ((int)(((byte)(196)))));
-            this.btnEliminarAgenda.BordeColor = System.Drawing.Color.PaleVioletRed;
-            this.btnEliminarAgenda.BordeRadio = 32;
-            this.btnEliminarAgenda.BordeTamaño = 0;
-            this.btnEliminarAgenda.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.btnEliminarAgenda.FlatAppearance.BorderSize = 0;
-            this.btnEliminarAgenda.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(195)))), ((int)(((byte)(165)))));
-            this.btnEliminarAgenda.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnEliminarAgenda.FondoColor = System.Drawing.Color.FromArgb(((int)(((byte)(16)))), ((int)(((byte)(110)))), ((int)(((byte)(196)))));
-            this.btnEliminarAgenda.ForeColor = System.Drawing.Color.White;
-            this.btnEliminarAgenda.Location = new System.Drawing.Point(195, 496);
-            this.btnEliminarAgenda.Name = "btnEliminarAgenda";
-            this.btnEliminarAgenda.Size = new System.Drawing.Size(114, 34);
-            this.btnEliminarAgenda.TabIndex = 24;
-            this.btnEliminarAgenda.Text = "Eliminar";
-            this.btnEliminarAgenda.TextoColor = System.Drawing.Color.White;
-            this.btnEliminarAgenda.UseVisualStyleBackColor = false;
-            this.btnEliminarAgenda.Click += new System.EventHandler(this.btnEliminarAgenda_Click);
+            this.btnNuevaHora.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(16)))), ((int)(((byte)(110)))), ((int)(((byte)(196)))));
+            this.btnNuevaHora.BordeColor = System.Drawing.Color.PaleVioletRed;
+            this.btnNuevaHora.BordeRadio = 32;
+            this.btnNuevaHora.BordeTamaño = 0;
+            this.btnNuevaHora.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnNuevaHora.FlatAppearance.BorderSize = 0;
+            this.btnNuevaHora.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(195)))), ((int)(((byte)(165)))));
+            this.btnNuevaHora.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnNuevaHora.FondoColor = System.Drawing.Color.FromArgb(((int)(((byte)(16)))), ((int)(((byte)(110)))), ((int)(((byte)(196)))));
+            this.btnNuevaHora.ForeColor = System.Drawing.Color.White;
+            this.btnNuevaHora.Location = new System.Drawing.Point(277, 210);
+            this.btnNuevaHora.Name = "btnNuevaHora";
+            this.btnNuevaHora.Size = new System.Drawing.Size(137, 34);
+            this.btnNuevaHora.TabIndex = 16;
+            this.btnNuevaHora.Text = "Añadir hora";
+            this.btnNuevaHora.TextoColor = System.Drawing.Color.White;
+            this.btnNuevaHora.UseVisualStyleBackColor = false;
+            this.btnNuevaHora.Click += new System.EventHandler(this.btnNuevaHora_Click);
             // 
-            // btnEditarAgenda
+            // txtNuevaHora
             // 
-            this.btnEditarAgenda.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(16)))), ((int)(((byte)(110)))), ((int)(((byte)(196)))));
-            this.btnEditarAgenda.BordeColor = System.Drawing.Color.PaleVioletRed;
-            this.btnEditarAgenda.BordeRadio = 32;
-            this.btnEditarAgenda.BordeTamaño = 0;
-            this.btnEditarAgenda.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.btnEditarAgenda.FlatAppearance.BorderSize = 0;
-            this.btnEditarAgenda.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(195)))), ((int)(((byte)(165)))));
-            this.btnEditarAgenda.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnEditarAgenda.FondoColor = System.Drawing.Color.FromArgb(((int)(((byte)(16)))), ((int)(((byte)(110)))), ((int)(((byte)(196)))));
-            this.btnEditarAgenda.ForeColor = System.Drawing.Color.White;
-            this.btnEditarAgenda.Location = new System.Drawing.Point(39, 496);
-            this.btnEditarAgenda.Name = "btnEditarAgenda";
-            this.btnEditarAgenda.Size = new System.Drawing.Size(114, 34);
-            this.btnEditarAgenda.TabIndex = 23;
-            this.btnEditarAgenda.Text = "Editar";
-            this.btnEditarAgenda.TextoColor = System.Drawing.Color.White;
-            this.btnEditarAgenda.UseVisualStyleBackColor = false;
-            this.btnEditarAgenda.Click += new System.EventHandler(this.btnEditarAgenda_Click);
+            this.txtNuevaHora.BackColor = System.Drawing.Color.White;
+            this.txtNuevaHora.BordeColor = System.Drawing.Color.FromArgb(((int)(((byte)(16)))), ((int)(((byte)(110)))), ((int)(((byte)(196)))));
+            this.txtNuevaHora.BordeColorFoco = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(195)))), ((int)(((byte)(165)))));
+            this.txtNuevaHora.BordeRadio = 0;
+            this.txtNuevaHora.BordeTamaño = 2;
+            this.txtNuevaHora.Contraseña = false;
+            this.txtNuevaHora.Font = new System.Drawing.Font("Roboto", 9.5F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtNuevaHora.ForeColor = System.Drawing.Color.Black;
+            this.txtNuevaHora.Location = new System.Drawing.Point(159, 214);
+            this.txtNuevaHora.MarcadorPosicionColor = System.Drawing.Color.DarkGray;
+            this.txtNuevaHora.MarcadorPosicionTexto = "";
+            this.txtNuevaHora.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
+            this.txtNuevaHora.Multilinea = false;
+            this.txtNuevaHora.Name = "txtNuevaHora";
+            this.txtNuevaHora.Padding = new System.Windows.Forms.Padding(10, 7, 10, 7);
+            this.txtNuevaHora.PosicionSeleccion = 0;
+            this.txtNuevaHora.Size = new System.Drawing.Size(111, 30);
+            this.txtNuevaHora.SubrayadoEstilo = true;
+            this.txtNuevaHora.TabIndex = 50;
+            this.txtNuevaHora.TamañoMaximo = 30000;
+            this.txtNuevaHora.Texto = "";
+            this.txtNuevaHora._TextChanged += new System.EventHandler(this.txtNuevaHora__TextChanged);
             // 
-            // btnNuevaAgenda
+            // btnEliminar
             // 
-            this.btnNuevaAgenda.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(16)))), ((int)(((byte)(110)))), ((int)(((byte)(196)))));
-            this.btnNuevaAgenda.BordeColor = System.Drawing.Color.PaleVioletRed;
-            this.btnNuevaAgenda.BordeRadio = 32;
-            this.btnNuevaAgenda.BordeTamaño = 0;
-            this.btnNuevaAgenda.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.btnNuevaAgenda.FlatAppearance.BorderSize = 0;
-            this.btnNuevaAgenda.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(195)))), ((int)(((byte)(165)))));
-            this.btnNuevaAgenda.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnNuevaAgenda.FondoColor = System.Drawing.Color.FromArgb(((int)(((byte)(16)))), ((int)(((byte)(110)))), ((int)(((byte)(196)))));
-            this.btnNuevaAgenda.ForeColor = System.Drawing.Color.White;
-            this.btnNuevaAgenda.Location = new System.Drawing.Point(39, 425);
-            this.btnNuevaAgenda.Name = "btnNuevaAgenda";
-            this.btnNuevaAgenda.Size = new System.Drawing.Size(270, 34);
-            this.btnNuevaAgenda.TabIndex = 20;
-            this.btnNuevaAgenda.Text = "Nueva";
-            this.btnNuevaAgenda.TextoColor = System.Drawing.Color.White;
-            this.btnNuevaAgenda.UseVisualStyleBackColor = false;
-            this.btnNuevaAgenda.Click += new System.EventHandler(this.btnNuevaAgenda_Click);
+            this.btnEliminar.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(16)))), ((int)(((byte)(110)))), ((int)(((byte)(196)))));
+            this.btnEliminar.BordeColor = System.Drawing.Color.PaleVioletRed;
+            this.btnEliminar.BordeRadio = 32;
+            this.btnEliminar.BordeTamaño = 0;
+            this.btnEliminar.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnEliminar.FlatAppearance.BorderSize = 0;
+            this.btnEliminar.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(195)))), ((int)(((byte)(165)))));
+            this.btnEliminar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnEliminar.FondoColor = System.Drawing.Color.FromArgb(((int)(((byte)(16)))), ((int)(((byte)(110)))), ((int)(((byte)(196)))));
+            this.btnEliminar.ForeColor = System.Drawing.Color.White;
+            this.btnEliminar.Location = new System.Drawing.Point(159, 313);
+            this.btnEliminar.Name = "btnEliminar";
+            this.btnEliminar.Size = new System.Drawing.Size(251, 34);
+            this.btnEliminar.TabIndex = 18;
+            this.btnEliminar.Text = "Eliminar hora seleccionada";
+            this.btnEliminar.TextoColor = System.Drawing.Color.White;
+            this.btnEliminar.UseVisualStyleBackColor = false;
+            this.btnEliminar.Click += new System.EventHandler(this.btnEliminar_Click);
             // 
-            // selectorFecha1
+            // gbAgendar
             // 
-            this.selectorFecha1.BordeColor = System.Drawing.Color.PaleVioletRed;
-            this.selectorFecha1.BordeTamaño = 0;
-            this.selectorFecha1.CalendarFont = new System.Drawing.Font("Roboto", 12F);
-            this.selectorFecha1.DropDownAlign = System.Windows.Forms.LeftRightAlignment.Right;
-            this.selectorFecha1.FondoColor = System.Drawing.Color.FromArgb(((int)(((byte)(16)))), ((int)(((byte)(110)))), ((int)(((byte)(196)))));
-            this.selectorFecha1.Font = new System.Drawing.Font("Roboto", 11F);
-            this.selectorFecha1.IsDesplegado = false;
-            this.selectorFecha1.Location = new System.Drawing.Point(39, 169);
-            this.selectorFecha1.MinDate = new System.DateTime(2022, 10, 9, 17, 51, 48, 129);
-            this.selectorFecha1.MinimumSize = new System.Drawing.Size(4, 35);
-            this.selectorFecha1.Name = "selectorFecha1";
-            this.selectorFecha1.Size = new System.Drawing.Size(270, 35);
-            this.selectorFecha1.TabIndex = 19;
-            this.selectorFecha1.TextoColor = System.Drawing.Color.White;
-            this.selectorFecha1.Value = new System.DateTime(2022, 10, 9, 17, 56, 50, 302);
-            this.selectorFecha1.CloseUp += new System.EventHandler(this.selectorFecha1_CloseUp);
+            this.gbAgendar.Controls.Add(this.lblErrorGuardar);
+            this.gbAgendar.Controls.Add(this.btnGuardarAgenda);
+            this.gbAgendar.Controls.Add(this.lvHorasAsignadas);
+            this.gbAgendar.Controls.Add(this.btnQuitarHora);
+            this.gbAgendar.Controls.Add(this.btnQuitarTodasHora);
+            this.gbAgendar.Controls.Add(this.btnAñadirTodasHora);
+            this.gbAgendar.Controls.Add(this.btnAñadirHora);
+            this.gbAgendar.Controls.Add(this.lvHorasDisponibles);
+            this.gbAgendar.Controls.Add(this.label1);
+            this.gbAgendar.Controls.Add(this.lblErrorOdontologo);
+            this.gbAgendar.Controls.Add(this.btnBuscarOdontologoNuevaReserva);
+            this.gbAgendar.Controls.Add(this.lblOdontologoNuevaReserva);
+            this.gbAgendar.Controls.Add(this.txtOdontologo);
+            this.gbAgendar.Controls.Add(this.mcFecha);
+            this.gbAgendar.Location = new System.Drawing.Point(589, 96);
+            this.gbAgendar.Name = "gbAgendar";
+            this.gbAgendar.Size = new System.Drawing.Size(444, 591);
+            this.gbAgendar.TabIndex = 100;
+            this.gbAgendar.TabStop = false;
+            this.gbAgendar.Text = "Agendar horas";
             // 
-            // dgvReservas
+            // lblErrorGuardar
             // 
-            this.dgvReservas.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(236)))), ((int)(((byte)(236)))), ((int)(((byte)(236)))));
-            this.dgvReservas.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.dgvReservas.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.Sunken;
-            this.dgvReservas.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dgvReservas.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.dgvReservas.Location = new System.Drawing.Point(0, 0);
-            this.dgvReservas.Name = "dgvReservas";
-            this.dgvReservas.Size = new System.Drawing.Size(743, 577);
-            this.dgvReservas.TabIndex = 17;
-            this.dgvReservas.CellContentDoubleClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvReservas_CellContentDoubleClick);
+            this.lblErrorGuardar.AutoSize = true;
+            this.lblErrorGuardar.Font = new System.Drawing.Font("Roboto", 9.5F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblErrorGuardar.ForeColor = System.Drawing.Color.IndianRed;
+            this.lblErrorGuardar.Image = ((System.Drawing.Image)(resources.GetObject("lblErrorGuardar.Image")));
+            this.lblErrorGuardar.ImageAlign = System.Drawing.ContentAlignment.TopLeft;
+            this.lblErrorGuardar.Location = new System.Drawing.Point(44, 569);
+            this.lblErrorGuardar.Name = "lblErrorGuardar";
+            this.lblErrorGuardar.Size = new System.Drawing.Size(85, 15);
+            this.lblErrorGuardar.TabIndex = 45;
+            this.lblErrorGuardar.Text = "Mensaje Error";
+            this.lblErrorGuardar.Visible = false;
             // 
-            // lblErrorModificarCita
+            // btnGuardarAgenda
             // 
-            this.lblErrorModificarCita.AutoSize = true;
-            this.lblErrorModificarCita.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
-            this.lblErrorModificarCita.ForeColor = System.Drawing.Color.White;
-            this.lblErrorModificarCita.Location = new System.Drawing.Point(40, 287);
-            this.lblErrorModificarCita.Name = "lblErrorModificarCita";
-            this.lblErrorModificarCita.Size = new System.Drawing.Size(0, 20);
-            this.lblErrorModificarCita.TabIndex = 34;
+            this.btnGuardarAgenda.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(16)))), ((int)(((byte)(110)))), ((int)(((byte)(196)))));
+            this.btnGuardarAgenda.BordeColor = System.Drawing.Color.PaleVioletRed;
+            this.btnGuardarAgenda.BordeRadio = 32;
+            this.btnGuardarAgenda.BordeTamaño = 0;
+            this.btnGuardarAgenda.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnGuardarAgenda.FlatAppearance.BorderSize = 0;
+            this.btnGuardarAgenda.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(195)))), ((int)(((byte)(165)))));
+            this.btnGuardarAgenda.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnGuardarAgenda.FondoColor = System.Drawing.Color.FromArgb(((int)(((byte)(16)))), ((int)(((byte)(110)))), ((int)(((byte)(196)))));
+            this.btnGuardarAgenda.ForeColor = System.Drawing.Color.White;
+            this.btnGuardarAgenda.Location = new System.Drawing.Point(41, 532);
+            this.btnGuardarAgenda.Name = "btnGuardarAgenda";
+            this.btnGuardarAgenda.Size = new System.Drawing.Size(370, 34);
+            this.btnGuardarAgenda.TabIndex = 44;
+            this.btnGuardarAgenda.Text = "Guardar Agenda";
+            this.btnGuardarAgenda.TextoColor = System.Drawing.Color.White;
+            this.btnGuardarAgenda.UseVisualStyleBackColor = false;
+            this.btnGuardarAgenda.Click += new System.EventHandler(this.btnGuardarAgenda_Click);
             // 
-            // pnlDgv
+            // lvHorasAsignadas
             // 
-            this.pnlDgv.Controls.Add(this.dgvReservas);
-            this.pnlDgv.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.pnlDgv.Location = new System.Drawing.Point(3, 26);
-            this.pnlDgv.Name = "pnlDgv";
-            this.pnlDgv.Size = new System.Drawing.Size(743, 577);
-            this.pnlDgv.TabIndex = 35;
+            this.lvHorasAsignadas.HideSelection = false;
+            this.lvHorasAsignadas.Location = new System.Drawing.Point(295, 240);
+            this.lvHorasAsignadas.Name = "lvHorasAsignadas";
+            this.lvHorasAsignadas.Size = new System.Drawing.Size(116, 270);
+            this.lvHorasAsignadas.TabIndex = 43;
+            this.lvHorasAsignadas.UseCompatibleStateImageBehavior = false;
             // 
-            // gbDatosReserva
+            // btnQuitarHora
             // 
-            this.gbDatosReserva.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.gbDatosReserva.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
-            this.gbDatosReserva.Controls.Add(this.pnlDgv);
-            this.gbDatosReserva.Controls.Add(this.lblErrorModificarCita);
-            this.gbDatosReserva.Font = new System.Drawing.Font("Roboto", 14F);
-            this.gbDatosReserva.ForeColor = System.Drawing.Color.Black;
-            this.gbDatosReserva.Location = new System.Drawing.Point(389, 97);
-            this.gbDatosReserva.Name = "gbDatosReserva";
-            this.gbDatosReserva.Size = new System.Drawing.Size(749, 606);
-            this.gbDatosReserva.TabIndex = 39;
-            this.gbDatosReserva.TabStop = false;
-            this.gbDatosReserva.Text = "Datos Reserva";
+            this.btnQuitarHora.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(16)))), ((int)(((byte)(110)))), ((int)(((byte)(196)))));
+            this.btnQuitarHora.BordeColor = System.Drawing.Color.PaleVioletRed;
+            this.btnQuitarHora.BordeRadio = 32;
+            this.btnQuitarHora.BordeTamaño = 0;
+            this.btnQuitarHora.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnQuitarHora.FlatAppearance.BorderSize = 0;
+            this.btnQuitarHora.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(195)))), ((int)(((byte)(165)))));
+            this.btnQuitarHora.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnQuitarHora.FondoColor = System.Drawing.Color.FromArgb(((int)(((byte)(16)))), ((int)(((byte)(110)))), ((int)(((byte)(196)))));
+            this.btnQuitarHora.Font = new System.Drawing.Font("Roboto", 16F);
+            this.btnQuitarHora.ForeColor = System.Drawing.Color.White;
+            this.btnQuitarHora.Location = new System.Drawing.Point(199, 438);
+            this.btnQuitarHora.Name = "btnQuitarHora";
+            this.btnQuitarHora.Size = new System.Drawing.Size(51, 34);
+            this.btnQuitarHora.TabIndex = 42;
+            this.btnQuitarHora.Text = "<";
+            this.btnQuitarHora.TextoColor = System.Drawing.Color.White;
+            this.btnQuitarHora.UseVisualStyleBackColor = false;
+            this.btnQuitarHora.Click += new System.EventHandler(this.btnQuitarHora_Click);
+            // 
+            // btnQuitarTodasHora
+            // 
+            this.btnQuitarTodasHora.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(16)))), ((int)(((byte)(110)))), ((int)(((byte)(196)))));
+            this.btnQuitarTodasHora.BordeColor = System.Drawing.Color.PaleVioletRed;
+            this.btnQuitarTodasHora.BordeRadio = 32;
+            this.btnQuitarTodasHora.BordeTamaño = 0;
+            this.btnQuitarTodasHora.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnQuitarTodasHora.FlatAppearance.BorderSize = 0;
+            this.btnQuitarTodasHora.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(195)))), ((int)(((byte)(165)))));
+            this.btnQuitarTodasHora.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnQuitarTodasHora.FondoColor = System.Drawing.Color.FromArgb(((int)(((byte)(16)))), ((int)(((byte)(110)))), ((int)(((byte)(196)))));
+            this.btnQuitarTodasHora.Font = new System.Drawing.Font("Roboto", 16F);
+            this.btnQuitarTodasHora.ForeColor = System.Drawing.Color.White;
+            this.btnQuitarTodasHora.Location = new System.Drawing.Point(199, 389);
+            this.btnQuitarTodasHora.Name = "btnQuitarTodasHora";
+            this.btnQuitarTodasHora.Size = new System.Drawing.Size(51, 34);
+            this.btnQuitarTodasHora.TabIndex = 41;
+            this.btnQuitarTodasHora.Text = "<<";
+            this.btnQuitarTodasHora.TextoColor = System.Drawing.Color.White;
+            this.btnQuitarTodasHora.UseVisualStyleBackColor = false;
+            this.btnQuitarTodasHora.Click += new System.EventHandler(this.btnQuitarTodasHora_Click);
+            // 
+            // btnAñadirTodasHora
+            // 
+            this.btnAñadirTodasHora.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(16)))), ((int)(((byte)(110)))), ((int)(((byte)(196)))));
+            this.btnAñadirTodasHora.BordeColor = System.Drawing.Color.PaleVioletRed;
+            this.btnAñadirTodasHora.BordeRadio = 32;
+            this.btnAñadirTodasHora.BordeTamaño = 0;
+            this.btnAñadirTodasHora.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnAñadirTodasHora.FlatAppearance.BorderSize = 0;
+            this.btnAñadirTodasHora.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(195)))), ((int)(((byte)(165)))));
+            this.btnAñadirTodasHora.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnAñadirTodasHora.FondoColor = System.Drawing.Color.FromArgb(((int)(((byte)(16)))), ((int)(((byte)(110)))), ((int)(((byte)(196)))));
+            this.btnAñadirTodasHora.Font = new System.Drawing.Font("Roboto", 16F);
+            this.btnAñadirTodasHora.ForeColor = System.Drawing.Color.White;
+            this.btnAñadirTodasHora.Location = new System.Drawing.Point(199, 339);
+            this.btnAñadirTodasHora.Name = "btnAñadirTodasHora";
+            this.btnAñadirTodasHora.Size = new System.Drawing.Size(51, 34);
+            this.btnAñadirTodasHora.TabIndex = 40;
+            this.btnAñadirTodasHora.Text = ">>";
+            this.btnAñadirTodasHora.TextoColor = System.Drawing.Color.White;
+            this.btnAñadirTodasHora.UseVisualStyleBackColor = false;
+            this.btnAñadirTodasHora.Click += new System.EventHandler(this.btnAñadirTodasHora_Click);
+            // 
+            // btnAñadirHora
+            // 
+            this.btnAñadirHora.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(16)))), ((int)(((byte)(110)))), ((int)(((byte)(196)))));
+            this.btnAñadirHora.BordeColor = System.Drawing.Color.PaleVioletRed;
+            this.btnAñadirHora.BordeRadio = 32;
+            this.btnAñadirHora.BordeTamaño = 0;
+            this.btnAñadirHora.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnAñadirHora.FlatAppearance.BorderSize = 0;
+            this.btnAñadirHora.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(195)))), ((int)(((byte)(165)))));
+            this.btnAñadirHora.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnAñadirHora.FondoColor = System.Drawing.Color.FromArgb(((int)(((byte)(16)))), ((int)(((byte)(110)))), ((int)(((byte)(196)))));
+            this.btnAñadirHora.Font = new System.Drawing.Font("Roboto", 16F);
+            this.btnAñadirHora.ForeColor = System.Drawing.Color.White;
+            this.btnAñadirHora.Location = new System.Drawing.Point(199, 290);
+            this.btnAñadirHora.Name = "btnAñadirHora";
+            this.btnAñadirHora.Size = new System.Drawing.Size(51, 34);
+            this.btnAñadirHora.TabIndex = 39;
+            this.btnAñadirHora.Text = ">";
+            this.btnAñadirHora.TextoColor = System.Drawing.Color.White;
+            this.btnAñadirHora.UseVisualStyleBackColor = false;
+            this.btnAñadirHora.Click += new System.EventHandler(this.btnAñadirHora_Click);
+            // 
+            // lvHorasDisponibles
+            // 
+            this.lvHorasDisponibles.HideSelection = false;
+            this.lvHorasDisponibles.Location = new System.Drawing.Point(41, 240);
+            this.lvHorasDisponibles.Name = "lvHorasDisponibles";
+            this.lvHorasDisponibles.Size = new System.Drawing.Size(116, 270);
+            this.lvHorasDisponibles.TabIndex = 38;
+            this.lvHorasDisponibles.UseCompatibleStateImageBehavior = false;
+            // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Font = new System.Drawing.Font("Roboto", 12F);
+            this.label1.ForeColor = System.Drawing.Color.Black;
+            this.label1.Location = new System.Drawing.Point(37, 145);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(160, 19);
+            this.label1.TabIndex = 37;
+            this.label1.Text = "Seleccione una fecha";
+            // 
+            // lblErrorOdontologo
+            // 
+            this.lblErrorOdontologo.AutoSize = true;
+            this.lblErrorOdontologo.Font = new System.Drawing.Font("Roboto", 9.5F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblErrorOdontologo.ForeColor = System.Drawing.Color.IndianRed;
+            this.lblErrorOdontologo.Image = ((System.Drawing.Image)(resources.GetObject("lblErrorOdontologo.Image")));
+            this.lblErrorOdontologo.ImageAlign = System.Drawing.ContentAlignment.TopLeft;
+            this.lblErrorOdontologo.Location = new System.Drawing.Point(38, 113);
+            this.lblErrorOdontologo.Name = "lblErrorOdontologo";
+            this.lblErrorOdontologo.Size = new System.Drawing.Size(85, 15);
+            this.lblErrorOdontologo.TabIndex = 36;
+            this.lblErrorOdontologo.Text = "Mensaje Error";
+            this.lblErrorOdontologo.Visible = false;
+            // 
+            // btnBuscarOdontologoNuevaReserva
+            // 
+            this.btnBuscarOdontologoNuevaReserva.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(16)))), ((int)(((byte)(110)))), ((int)(((byte)(196)))));
+            this.btnBuscarOdontologoNuevaReserva.BordeColor = System.Drawing.Color.PaleVioletRed;
+            this.btnBuscarOdontologoNuevaReserva.BordeRadio = 32;
+            this.btnBuscarOdontologoNuevaReserva.BordeTamaño = 0;
+            this.btnBuscarOdontologoNuevaReserva.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnBuscarOdontologoNuevaReserva.FlatAppearance.BorderSize = 0;
+            this.btnBuscarOdontologoNuevaReserva.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(195)))), ((int)(((byte)(165)))));
+            this.btnBuscarOdontologoNuevaReserva.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnBuscarOdontologoNuevaReserva.FondoColor = System.Drawing.Color.FromArgb(((int)(((byte)(16)))), ((int)(((byte)(110)))), ((int)(((byte)(196)))));
+            this.btnBuscarOdontologoNuevaReserva.ForeColor = System.Drawing.Color.White;
+            this.btnBuscarOdontologoNuevaReserva.Location = new System.Drawing.Point(298, 64);
+            this.btnBuscarOdontologoNuevaReserva.Name = "btnBuscarOdontologoNuevaReserva";
+            this.btnBuscarOdontologoNuevaReserva.Size = new System.Drawing.Size(115, 34);
+            this.btnBuscarOdontologoNuevaReserva.TabIndex = 34;
+            this.btnBuscarOdontologoNuevaReserva.Text = "Buscar";
+            this.btnBuscarOdontologoNuevaReserva.TextoColor = System.Drawing.Color.White;
+            this.btnBuscarOdontologoNuevaReserva.UseVisualStyleBackColor = false;
+            this.btnBuscarOdontologoNuevaReserva.Click += new System.EventHandler(this.btnBuscarOdontologoNuevaReserva_Click);
+            // 
+            // lblOdontologoNuevaReserva
+            // 
+            this.lblOdontologoNuevaReserva.AutoSize = true;
+            this.lblOdontologoNuevaReserva.Font = new System.Drawing.Font("Roboto", 12F);
+            this.lblOdontologoNuevaReserva.ForeColor = System.Drawing.Color.Black;
+            this.lblOdontologoNuevaReserva.Location = new System.Drawing.Point(37, 46);
+            this.lblOdontologoNuevaReserva.Name = "lblOdontologoNuevaReserva";
+            this.lblOdontologoNuevaReserva.Size = new System.Drawing.Size(92, 19);
+            this.lblOdontologoNuevaReserva.TabIndex = 35;
+            this.lblOdontologoNuevaReserva.Text = "Odontologo";
+            // 
+            // txtOdontologo
+            // 
+            this.txtOdontologo.BackColor = System.Drawing.SystemColors.Window;
+            this.txtOdontologo.BordeColor = System.Drawing.Color.FromArgb(((int)(((byte)(16)))), ((int)(((byte)(110)))), ((int)(((byte)(196)))));
+            this.txtOdontologo.BordeColorFoco = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(195)))), ((int)(((byte)(165)))));
+            this.txtOdontologo.BordeRadio = 0;
+            this.txtOdontologo.BordeTamaño = 2;
+            this.txtOdontologo.Contraseña = false;
+            this.txtOdontologo.Font = new System.Drawing.Font("Roboto", 9.5F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtOdontologo.ForeColor = System.Drawing.Color.Black;
+            this.txtOdontologo.Location = new System.Drawing.Point(41, 68);
+            this.txtOdontologo.MarcadorPosicionColor = System.Drawing.Color.DarkGray;
+            this.txtOdontologo.MarcadorPosicionTexto = "";
+            this.txtOdontologo.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
+            this.txtOdontologo.Multilinea = false;
+            this.txtOdontologo.Name = "txtOdontologo";
+            this.txtOdontologo.Padding = new System.Windows.Forms.Padding(10, 7, 10, 7);
+            this.txtOdontologo.PosicionSeleccion = 0;
+            this.txtOdontologo.Size = new System.Drawing.Size(250, 30);
+            this.txtOdontologo.SubrayadoEstilo = true;
+            this.txtOdontologo.TabIndex = 33;
+            this.txtOdontologo.TamañoMaximo = 30000;
+            this.txtOdontologo.Texto = "";
+            this.txtOdontologo.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtOdontologo_KeyPress);
+            // 
+            // mcFecha
+            // 
+            this.mcFecha.BordeColor = System.Drawing.Color.PaleVioletRed;
+            this.mcFecha.BordeTamaño = 0;
+            this.mcFecha.CalendarFont = new System.Drawing.Font("Roboto", 12F);
+            this.mcFecha.DropDownAlign = System.Windows.Forms.LeftRightAlignment.Right;
+            this.mcFecha.FondoColor = System.Drawing.Color.FromArgb(((int)(((byte)(16)))), ((int)(((byte)(110)))), ((int)(((byte)(196)))));
+            this.mcFecha.Font = new System.Drawing.Font("Roboto", 11F);
+            this.mcFecha.IsDesplegado = false;
+            this.mcFecha.Location = new System.Drawing.Point(41, 167);
+            this.mcFecha.MinDate = new System.DateTime(2022, 10, 9, 17, 51, 48, 129);
+            this.mcFecha.MinimumSize = new System.Drawing.Size(4, 35);
+            this.mcFecha.Name = "mcFecha";
+            this.mcFecha.Size = new System.Drawing.Size(270, 35);
+            this.mcFecha.TabIndex = 1;
+            this.mcFecha.TextoColor = System.Drawing.Color.White;
+            this.mcFecha.Value = new System.DateTime(2022, 10, 9, 17, 56, 50, 302);
+            this.mcFecha.ValueChanged += new System.EventHandler(this.mcFecha_ValueChanged);
             // 
             // Agenda
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 19F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(236)))), ((int)(((byte)(236)))), ((int)(((byte)(236)))));
             this.ClientSize = new System.Drawing.Size(1164, 715);
-            this.Controls.Add(this.gbDatosReserva);
-            this.Controls.Add(this.gbFechaReserva);
+            this.Controls.Add(this.gbAgendar);
+            this.Controls.Add(this.gbHorasConsulta);
             this.Controls.Add(this.pictureBox1);
+            this.Font = new System.Drawing.Font("Roboto", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
+            this.Margin = new System.Windows.Forms.Padding(4);
             this.Name = "Agenda";
-            this.Text = "Agenda";
-            this.Load += new System.EventHandler(this.Agenda_Load);
+            this.Text = "Ajustes";
+            this.Load += new System.EventHandler(this.Ajustes_Load);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
-            this.gbFechaReserva.ResumeLayout(false);
-            this.gbFechaReserva.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dgvReservas)).EndInit();
-            this.pnlDgv.ResumeLayout(false);
-            this.gbDatosReserva.ResumeLayout(false);
-            this.gbDatosReserva.PerformLayout();
+            this.gbHorasConsulta.ResumeLayout(false);
+            this.gbHorasConsulta.PerformLayout();
+            this.gbAgendar.ResumeLayout(false);
+            this.gbAgendar.PerformLayout();
             this.ResumeLayout(false);
 
         }
 
         #endregion
-        private System.Windows.Forms.Label lblSeleccionarAgenda;
+        private System.Windows.Forms.ListView lvHorasConsulta;
+        private ControlesPersonalizados.BotonPersonalizado btnNuevaHora;
+        private System.Windows.Forms.Label lblNuevaHora;
+        private ControlesPersonalizados.BotonPersonalizado btnEliminar;
+        private System.Windows.Forms.Label lblErrorHora;
+        private TextboxPersonalizado txtNuevaHora;
         private System.Windows.Forms.PictureBox pictureBox1;
-        private ControlesPersonalizados.SelectorFecha selectorFecha1;
-        private System.Windows.Forms.GroupBox gbFechaReserva;
-        private ControlesPersonalizados.BotonPersonalizado btnEditarAgenda;
-        private ControlesPersonalizados.BotonPersonalizado btnNuevaAgenda;
-        private System.Windows.Forms.DataGridView dgvReservas;
-        private System.Windows.Forms.Label lblErrorModificarCita;
-        private System.Windows.Forms.Panel pnlDgv;
-        private System.Windows.Forms.GroupBox gbDatosReserva;
-        private ControlesPersonalizados.BotonPersonalizado btnEliminarAgenda;
-        private System.ComponentModel.BackgroundWorker backgroundWorker1;
+        private System.Windows.Forms.GroupBox gbHorasConsulta;
+        private System.Windows.Forms.GroupBox gbAgendar;
+        private ControlesPersonalizados.SelectorFecha mcFecha;
+        private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.Label lblErrorOdontologo;
+        private ControlesPersonalizados.BotonPersonalizado btnBuscarOdontologoNuevaReserva;
+        private System.Windows.Forms.Label lblOdontologoNuevaReserva;
+        private TextboxPersonalizado txtOdontologo;
+        private System.Windows.Forms.ListView lvHorasAsignadas;
+        private ControlesPersonalizados.BotonPersonalizado btnQuitarHora;
+        private ControlesPersonalizados.BotonPersonalizado btnQuitarTodasHora;
+        private ControlesPersonalizados.BotonPersonalizado btnAñadirTodasHora;
+        private ControlesPersonalizados.BotonPersonalizado btnAñadirHora;
+        private System.Windows.Forms.ListView lvHorasDisponibles;
+        private ControlesPersonalizados.BotonPersonalizado btnGuardarAgenda;
+        private System.Windows.Forms.Label lblErrorGuardar;
     }
 }

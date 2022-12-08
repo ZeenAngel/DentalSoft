@@ -163,7 +163,7 @@
             this.btnGuardarNuevaReserva.Location = new System.Drawing.Point(280, 397);
             this.btnGuardarNuevaReserva.Name = "btnGuardarNuevaReserva";
             this.btnGuardarNuevaReserva.Size = new System.Drawing.Size(196, 34);
-            this.btnGuardarNuevaReserva.TabIndex = 30;
+            this.btnGuardarNuevaReserva.TabIndex = 10;
             this.btnGuardarNuevaReserva.Text = "Guardar";
             this.btnGuardarNuevaReserva.TextoColor = System.Drawing.Color.White;
             this.btnGuardarNuevaReserva.UseVisualStyleBackColor = false;
@@ -185,7 +185,7 @@
             this.cbHorasEditarReserva.Name = "cbHorasEditarReserva";
             this.cbHorasEditarReserva.Padding = new System.Windows.Forms.Padding(1);
             this.cbHorasEditarReserva.Size = new System.Drawing.Size(200, 30);
-            this.cbHorasEditarReserva.TabIndex = 4;
+            this.cbHorasEditarReserva.TabIndex = 5;
             this.cbHorasEditarReserva.Textos = "";
             // 
             // mcFechaEditarReserva
@@ -200,7 +200,7 @@
             this.mcFechaEditarReserva.MinimumSize = new System.Drawing.Size(4, 35);
             this.mcFechaEditarReserva.Name = "mcFechaEditarReserva";
             this.mcFechaEditarReserva.Size = new System.Drawing.Size(240, 35);
-            this.mcFechaEditarReserva.TabIndex = 3;
+            this.mcFechaEditarReserva.TabIndex = 0;
             this.mcFechaEditarReserva.TextoColor = System.Drawing.Color.White;
             this.mcFechaEditarReserva.Value = new System.DateTime(2022, 10, 14, 14, 15, 33, 342);
             // 
@@ -254,6 +254,7 @@
             this.Controls.Add(this.mcFechaEditarReserva);
             this.Controls.Add(this.pnlCabecera);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "EditarReserva";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "EditarReserva";

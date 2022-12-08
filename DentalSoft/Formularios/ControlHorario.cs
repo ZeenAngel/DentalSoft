@@ -35,6 +35,18 @@ namespace DentalSoft.Formularios
         #endregion
 
         // Métodos privados
+        #region -> Métodos privados
+        private void MostrarMensaje(string cadena)
+        {
+            lblErrorIncidencias.Text = "     " + cadena;
+            lblErrorIncidencias.Visible = true;
+        }
+
+        private void OcultarMensaje()
+        {
+            lblErrorIncidencias.Visible = false;
+        }
+
         private void AjustarColumnasDgv()
         {
             for(int i = 0; i < dgvFichajes.ColumnCount - 1; i++)
@@ -87,6 +99,7 @@ namespace DentalSoft.Formularios
                 AjustarColumnasDgv();
             }
         }
+        #endregion
 
         // Eventos
         #region -> Eventos
@@ -132,7 +145,6 @@ namespace DentalSoft.Formularios
             estilo.EstiloDataGridView(dgvFichajes);
             CargarDgv();
         }
-        #endregion
 
         private void txtBuscar__TextChanged(object sender, EventArgs e)
         {
@@ -157,5 +169,43 @@ namespace DentalSoft.Formularios
             else
                 FiltrarFichajes("dni");
         }
+
+        private void btnIncidencias_Click(object sender, EventArgs e)
+        {
+            if (conexion.EstablecerConexion())
+            {
+                string empleado = txtBuscar.Texto;
+                string sentencia = "SELECT Empleado, Fecha, Hora FROM Fichaje_Empleado WHERE hora LIKE '00:%'";
+                MySqlCommand comando = new MySqlCommand(sentencia, conexion.conexionSql);
+                MySqlDataAdapter datos = new MySqlDataAdapter(comando);
+                DataTable tabla = new DataTable();
+                datos.Fill(tabla);
+                dgvFichajes.DataSource = tabla;
+                conexion.CerrarConexion();
+                AjustarColumnasDgv();
+            }
+        }
+
+        private void dgvFichajes_CellFormatting(object sender, DataGridViewCellFormattingEventArgs e)
+        {
+            if (dgvFichajes.Columns[e.ColumnIndex].Name.Equals("Hora"))
+            {
+                if (e.Value.ToString().Contains("00:"))
+                {
+                    e.CellStyle.BackColor = Color.IndianRed;
+                    MostrarMensaje("Hay incidencias en los fichajes");
+                }
+            }
+        }
+
+        private void dgvFichajes_CellContentDoubleClick(object sender, DataGridViewCellEventArgs e)
+        {
+            ModificarFichaje modificarFichaje = new ModificarFichaje(dgvFichajes.CurrentRow.Cells[0].Value.ToString(),
+                dgvFichajes.CurrentRow.Cells[1].Value.ToString(), dgvFichajes.CurrentRow.Cells[2].Value.ToString());
+            modificarFichaje.ShowDialog();
+            CargarDgv();
+            OcultarMensaje();
+        }
+        #endregion
     }
 }

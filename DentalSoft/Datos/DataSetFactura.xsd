@@ -1,0 +1,203 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<xs:schema id="DataSetFactura" targetNamespace="http://tempuri.org/DataSetFactura.xsd" xmlns:mstns="http://tempuri.org/DataSetFactura.xsd" xmlns="http://tempuri.org/DataSetFactura.xsd" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata" xmlns:msprop="urn:schemas-microsoft-com:xml-msprop" attributeFormDefault="qualified" elementFormDefault="qualified">
+  <xs:annotation>
+    <xs:appinfo source="urn:schemas-microsoft-com:xml-msdatasource">
+      <DataSource DefaultConnectionIndex="0" FunctionsComponentName="QueriesTableAdapter" Modifier="AutoLayout, AnsiClass, Class, Public" SchemaSerializationMode="IncludeSchema" xmlns="urn:schemas-microsoft-com:xml-msdatasource">
+        <Connections>
+          <Connection AppSettingsObjectName="Settings" AppSettingsPropertyName="ConnectionString" ConnectionStringObject="" IsAppSettingsProperty="true" Modifier="Assembly" Name="ConnectionString (Settings)" PropertyReference="ApplicationSettings.DentalSoft.Properties.Settings.GlobalReference.Default.ConnectionString" Provider="System.Data.Odbc" />
+        </Connections>
+        <Tables>
+          <TableAdapter BaseClass="System.ComponentModel.Component" DataAccessorModifier="AutoLayout, AnsiClass, Class, Public" DataAccessorName="FacturaTableAdapter" GeneratorDataComponentClassName="FacturaTableAdapter" Name="Factura" UserDataComponentName="FacturaTableAdapter">
+            <MainSource>
+              <DbSource ConnectionRef="ConnectionString (Settings)" DbObjectType="Unknown" FillMethodModifier="Public" FillMethodName="Fill" GenerateMethods="Both" GenerateShortCommands="false" GeneratorGetMethodName="GetData" GeneratorSourceName="Fill" GetMethodModifier="Public" GetMethodName="GetData" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="false" UserGetMethodName="GetData" UserSourceName="Fill">
+                <SelectCommand>
+                  <DbCommand CommandType="Text" ModifiedByUser="true">
+                    <CommandText>SELECT        factura.Num_factura, factura.Fecha, factura.Nif_centro AS NIF, factura.Nombre_centro AS Centro, factura.Direccion, factura.Localidad, factura.CP, factura.Telefono, factura.Dni_paciente AS DNI, 
+                         factura.Nombre_paciente AS Nombre, factura.Apellido1, factura.Apellido2, factura.Presupuesto, detalle_factura.Id, tratamiento.Nombre AS Tratamiento, detalle_factura.Cantidad, detalle_factura.Precio, 
+                         detalle_factura.Cantidad * detalle_factura.Precio AS Subtotal
+FROM            factura, detalle_factura, tratamiento
+WHERE        factura.Num_factura = detalle_factura.Factura AND detalle_factura.Tratamiento = tratamiento.Id</CommandText>
+                    <Parameters />
+                  </DbCommand>
+                </SelectCommand>
+              </DbSource>
+            </MainSource>
+            <Mappings>
+              <Mapping SourceColumn="Num_factura" DataSetColumn="Num_factura" />
+              <Mapping SourceColumn="Fecha" DataSetColumn="Fecha" />
+              <Mapping SourceColumn="Direccion" DataSetColumn="Direccion" />
+              <Mapping SourceColumn="Localidad" DataSetColumn="Localidad" />
+              <Mapping SourceColumn="CP" DataSetColumn="CP" />
+              <Mapping SourceColumn="Telefono" DataSetColumn="Telefono" />
+              <Mapping SourceColumn="Apellido1" DataSetColumn="Apellido1" />
+              <Mapping SourceColumn="Apellido2" DataSetColumn="Apellido2" />
+              <Mapping SourceColumn="Presupuesto" DataSetColumn="Presupuesto" />
+              <Mapping SourceColumn="NIF" DataSetColumn="NIF" />
+              <Mapping SourceColumn="Centro" DataSetColumn="Centro" />
+              <Mapping SourceColumn="DNI" DataSetColumn="DNI" />
+              <Mapping SourceColumn="Nombre" DataSetColumn="Nombre" />
+              <Mapping SourceColumn="Id" DataSetColumn="Id" />
+              <Mapping SourceColumn="Tratamiento" DataSetColumn="Tratamiento" />
+              <Mapping SourceColumn="Cantidad" DataSetColumn="Cantidad" />
+              <Mapping SourceColumn="Precio" DataSetColumn="Precio" />
+              <Mapping SourceColumn="Subtotal" DataSetColumn="Subtotal" />
+            </Mappings>
+            <Sources>
+              <DbSource ConnectionRef="ConnectionString (Settings)" DbObjectType="Unknown" FillMethodModifier="Public" FillMethodName="FillByFactura" GenerateMethods="Both" GenerateShortCommands="true" GeneratorGetMethodName="GetDataByFactura" GeneratorSourceName="FillByFactura" GetMethodModifier="Public" GetMethodName="GetDataByFactura" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetDataByFactura" UserSourceName="FillByFactura">
+                <SelectCommand>
+                  <DbCommand CommandType="Text" ModifiedByUser="true">
+                    <CommandText>SELECT        factura.Num_factura, factura.Fecha, factura.Nif_centro AS NIF, factura.Nombre_centro AS Centro, factura.Direccion, factura.Localidad, factura.CP, factura.Telefono, factura.Dni_paciente AS DNI, 
+                         factura.Nombre_paciente AS Nombre, factura.Apellido1, factura.Apellido2, factura.Presupuesto, detalle_factura.Id, tratamiento.Nombre AS Tratamiento, detalle_factura.Cantidad, detalle_factura.Precio, 
+                         detalle_factura.Cantidad * detalle_factura.Precio AS Subtotal
+FROM            factura, detalle_factura, tratamiento
+WHERE        factura.Num_factura = detalle_factura.Factura AND detalle_factura.Tratamiento = tratamiento.Id AND (factura.Num_factura = ?)</CommandText>
+                    <Parameters>
+                      <Parameter AllowDbNull="false" AutogeneratedName="Param1" ColumnName="Num_factura" DataSourceName="dentalsoftdb.factura" DataTypeServer="varchar" DbType="String" Direction="Input" ParameterName="Num_factura" Precision="0" Scale="0" Size="1024" SourceColumn="Num_factura" SourceColumnNullMapping="false" SourceVersion="Current" />
+                    </Parameters>
+                  </DbCommand>
+                </SelectCommand>
+              </DbSource>
+              <DbSource ConnectionRef="ConnectionString (Settings)" DbObjectType="Unknown" FillMethodModifier="Public" FillMethodName="FillByFecha" GenerateMethods="Both" GenerateShortCommands="true" GeneratorGetMethodName="GetDataByFecha" GeneratorSourceName="FillByFecha" GetMethodModifier="Public" GetMethodName="GetDataByFecha" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetDataByFecha" UserSourceName="FillByFecha">
+                <SelectCommand>
+                  <DbCommand CommandType="Text" ModifiedByUser="true">
+                    <CommandText>SELECT        factura.Num_factura, factura.Fecha, factura.Nif_centro AS NIF, factura.Nombre_centro AS Centro, factura.Direccion, factura.Localidad, factura.CP, factura.Telefono, factura.Dni_paciente AS DNI, 
+                         factura.Nombre_paciente AS Nombre, factura.Apellido1, factura.Apellido2, factura.Presupuesto, detalle_factura.Id, tratamiento.Nombre AS Tratamiento, detalle_factura.Cantidad, detalle_factura.Precio, 
+                         detalle_factura.Cantidad * detalle_factura.Precio AS Subtotal
+FROM            factura, detalle_factura, tratamiento
+WHERE        factura.Num_factura = detalle_factura.Factura AND detalle_factura.Tratamiento = tratamiento.Id AND (factura.Fecha = ?)</CommandText>
+                    <Parameters>
+                      <Parameter AllowDbNull="false" AutogeneratedName="Param1" ColumnName="Fecha" DataSourceName="dentalsoftdb.factura" DataTypeServer="date" DbType="Date" Direction="Input" ParameterName="Fecha" Precision="0" Scale="0" Size="0" SourceColumn="Fecha" SourceColumnNullMapping="false" SourceVersion="Current" />
+                    </Parameters>
+                  </DbCommand>
+                </SelectCommand>
+              </DbSource>
+              <DbSource ConnectionRef="ConnectionString (Settings)" DbObjectType="Unknown" FillMethodModifier="Public" FillMethodName="FillByPaciente" GenerateMethods="Both" GenerateShortCommands="true" GeneratorGetMethodName="GetDataByPaciente" GeneratorSourceName="FillByPaciente" GetMethodModifier="Public" GetMethodName="GetDataByPaciente" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetDataByPaciente" UserSourceName="FillByPaciente">
+                <SelectCommand>
+                  <DbCommand CommandType="Text" ModifiedByUser="true">
+                    <CommandText>SELECT        factura.Num_factura, factura.Fecha, factura.Nif_centro AS NIF, factura.Nombre_centro AS Centro, factura.Direccion, factura.Localidad, factura.CP, factura.Telefono, factura.Dni_paciente AS DNI, 
+                         factura.Nombre_paciente AS Nombre, factura.Apellido1, factura.Apellido2, factura.Presupuesto, detalle_factura.Id, tratamiento.Nombre AS Tratamiento, detalle_factura.Cantidad, detalle_factura.Precio, 
+                         detalle_factura.Cantidad * detalle_factura.Precio AS Subtotal
+FROM            factura, detalle_factura, tratamiento
+WHERE        factura.Num_factura = detalle_factura.Factura AND detalle_factura.Tratamiento = tratamiento.Id AND (factura.Dni_paciente = ?)</CommandText>
+                    <Parameters>
+                      <Parameter AllowDbNull="false" AutogeneratedName="Param1" ColumnName="Dni_paciente" DataSourceName="dentalsoftdb.factura" DataTypeServer="varchar" DbType="String" Direction="Input" ParameterName="Dni_paciente" Precision="0" Scale="0" Size="1024" SourceColumn="DNI" SourceColumnNullMapping="false" SourceVersion="Current" />
+                    </Parameters>
+                  </DbCommand>
+                </SelectCommand>
+              </DbSource>
+            </Sources>
+          </TableAdapter>
+        </Tables>
+        <Sources />
+      </DataSource>
+    </xs:appinfo>
+  </xs:annotation>
+  <xs:element name="DataSetFactura" msdata:IsDataSet="true" msdata:UseCurrentLocale="true" msprop:Generator_UserDSName="DataSetFactura" msprop:EnableTableAdapterManager="true" msprop:Generator_DataSetName="DataSetFactura">
+    <xs:complexType>
+      <xs:choice minOccurs="0" maxOccurs="unbounded">
+        <xs:element name="Factura" msprop:Generator_RowClassName="FacturaRow" msprop:Generator_RowEvHandlerName="FacturaRowChangeEventHandler" msprop:Generator_RowDeletedName="FacturaRowDeleted" msprop:Generator_RowDeletingName="FacturaRowDeleting" msprop:Generator_RowEvArgName="FacturaRowChangeEvent" msprop:Generator_TablePropName="Factura" msprop:Generator_RowChangedName="FacturaRowChanged" msprop:Generator_UserTableName="Factura" msprop:Generator_RowChangingName="FacturaRowChanging" msprop:Generator_TableClassName="FacturaDataTable" msprop:Generator_TableVarName="tableFactura">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="Num_factura" msprop:Generator_UserColumnName="Num_factura" msprop:Generator_ColumnPropNameInTable="Num_facturaColumn" msprop:Generator_ColumnPropNameInRow="Num_factura" msprop:Generator_ColumnVarNameInTable="columnNum_factura">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="16" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="Fecha" msprop:Generator_UserColumnName="Fecha" msprop:Generator_ColumnPropNameInTable="FechaColumn" msprop:Generator_ColumnPropNameInRow="Fecha" msprop:Generator_ColumnVarNameInTable="columnFecha" type="xs:dateTime" />
+              <xs:element name="Direccion" msprop:Generator_UserColumnName="Direccion" msprop:Generator_ColumnPropNameInTable="DireccionColumn" msprop:Generator_ColumnPropNameInRow="Direccion" msprop:Generator_ColumnVarNameInTable="columnDireccion">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="150" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="Localidad" msprop:Generator_UserColumnName="Localidad" msprop:Generator_ColumnPropNameInTable="LocalidadColumn" msprop:Generator_ColumnPropNameInRow="Localidad" msprop:Generator_ColumnVarNameInTable="columnLocalidad">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="90" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="CP" msprop:Generator_UserColumnName="CP" msprop:Generator_ColumnPropNameInTable="CPColumn" msprop:Generator_ColumnPropNameInRow="CP" msprop:Generator_ColumnVarNameInTable="columnCP">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="7" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="Telefono" msprop:Generator_UserColumnName="Telefono" msprop:Generator_ColumnPropNameInTable="TelefonoColumn" msprop:Generator_ColumnPropNameInRow="Telefono" msprop:Generator_ColumnVarNameInTable="columnTelefono">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="13" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="Apellido1" msprop:Generator_UserColumnName="Apellido1" msprop:Generator_ColumnPropNameInTable="Apellido1Column" msprop:Generator_ColumnPropNameInRow="Apellido1" msprop:Generator_ColumnVarNameInTable="columnApellido1">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="60" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="Apellido2" msprop:Generator_UserColumnName="Apellido2" msprop:Generator_ColumnPropNameInTable="Apellido2Column" msprop:Generator_ColumnPropNameInRow="Apellido2" msprop:Generator_ColumnVarNameInTable="columnApellido2" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="60" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="Presupuesto" msprop:Generator_UserColumnName="Presupuesto" msprop:Generator_ColumnPropNameInTable="PresupuestoColumn" msprop:Generator_ColumnPropNameInRow="Presupuesto" msprop:Generator_ColumnVarNameInTable="columnPresupuesto" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="19" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="NIF" msprop:Generator_UserColumnName="NIF" msprop:Generator_ColumnPropNameInTable="NIFColumn" msprop:Generator_ColumnPropNameInRow="NIF" msprop:Generator_ColumnVarNameInTable="columnNIF">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="13" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="Centro" msprop:Generator_UserColumnName="Centro" msprop:Generator_ColumnPropNameInTable="CentroColumn" msprop:Generator_ColumnPropNameInRow="Centro" msprop:Generator_ColumnVarNameInTable="columnCentro">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="90" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="DNI" msprop:Generator_UserColumnName="DNI" msprop:Generator_ColumnPropNameInTable="DNIColumn" msprop:Generator_ColumnPropNameInRow="DNI" msprop:Generator_ColumnVarNameInTable="columnDNI">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="13" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="Nombre" msprop:Generator_UserColumnName="Nombre" msprop:Generator_ColumnPropNameInTable="NombreColumn" msprop:Generator_ColumnPropNameInRow="Nombre" msprop:Generator_ColumnVarNameInTable="columnNombre">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="60" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="Id" msdata:AutoIncrement="true" msdata:AutoIncrementSeed="-1" msdata:AutoIncrementStep="-1" msprop:Generator_UserColumnName="Id" msprop:Generator_ColumnPropNameInTable="IdColumn" msprop:Generator_ColumnPropNameInRow="Id" msprop:Generator_ColumnVarNameInTable="columnId" type="xs:int" minOccurs="0" />
+              <xs:element name="Tratamiento" msprop:Generator_UserColumnName="Tratamiento" msprop:Generator_ColumnPropNameInTable="TratamientoColumn" msprop:Generator_ColumnPropNameInRow="Tratamiento" msprop:Generator_ColumnVarNameInTable="columnTratamiento">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="120" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="Cantidad" msprop:Generator_UserColumnName="Cantidad" msprop:Generator_ColumnPropNameInTable="CantidadColumn" msprop:Generator_ColumnPropNameInRow="Cantidad" msprop:Generator_ColumnVarNameInTable="columnCantidad" type="xs:int" />
+              <xs:element name="Precio" msprop:Generator_UserColumnName="Precio" msprop:Generator_ColumnPropNameInTable="PrecioColumn" msprop:Generator_ColumnPropNameInRow="Precio" msprop:Generator_ColumnVarNameInTable="columnPrecio" type="xs:float" />
+              <xs:element name="Subtotal" msdata:ReadOnly="true" msprop:Generator_UserColumnName="Subtotal" msprop:Generator_ColumnPropNameInTable="SubtotalColumn" msprop:Generator_ColumnPropNameInRow="Subtotal" msprop:Generator_ColumnVarNameInTable="columnSubtotal" type="xs:double" minOccurs="0" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+      </xs:choice>
+    </xs:complexType>
+  </xs:element>
+</xs:schema>

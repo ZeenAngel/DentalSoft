@@ -149,9 +149,11 @@
             this.txtNombre.Multilinea = false;
             this.txtNombre.Name = "txtNombre";
             this.txtNombre.Padding = new System.Windows.Forms.Padding(10, 7, 10, 7);
+            this.txtNombre.PosicionSeleccion = 0;
             this.txtNombre.Size = new System.Drawing.Size(331, 34);
             this.txtNombre.SubrayadoEstilo = true;
-            this.txtNombre.TabIndex = 53;
+            this.txtNombre.TabIndex = 0;
+            this.txtNombre.TamañoMaximo = 30000;
             this.txtNombre.Texto = "";
             // 
             // txtUbicacion
@@ -171,9 +173,11 @@
             this.txtUbicacion.Multilinea = true;
             this.txtUbicacion.Name = "txtUbicacion";
             this.txtUbicacion.Padding = new System.Windows.Forms.Padding(10, 7, 10, 7);
+            this.txtUbicacion.PosicionSeleccion = 0;
             this.txtUbicacion.Size = new System.Drawing.Size(606, 169);
             this.txtUbicacion.SubrayadoEstilo = true;
-            this.txtUbicacion.TabIndex = 55;
+            this.txtUbicacion.TabIndex = 5;
+            this.txtUbicacion.TamañoMaximo = 30000;
             this.txtUbicacion.Texto = "";
             // 
             // btnLimpiarCampos
@@ -194,7 +198,7 @@
             this.btnLimpiarCampos.Location = new System.Drawing.Point(462, 369);
             this.btnLimpiarCampos.Name = "btnLimpiarCampos";
             this.btnLimpiarCampos.Size = new System.Drawing.Size(256, 34);
-            this.btnLimpiarCampos.TabIndex = 94;
+            this.btnLimpiarCampos.TabIndex = 15;
             this.btnLimpiarCampos.Text = "Limpiar Campos";
             this.btnLimpiarCampos.TextoColor = System.Drawing.Color.White;
             this.btnLimpiarCampos.UseVisualStyleBackColor = false;
@@ -218,8 +222,8 @@
             this.btnGuardarAlmacen.Location = new System.Drawing.Point(147, 369);
             this.btnGuardarAlmacen.Name = "btnGuardarAlmacen";
             this.btnGuardarAlmacen.Size = new System.Drawing.Size(256, 34);
-            this.btnGuardarAlmacen.TabIndex = 93;
-            this.btnGuardarAlmacen.Text = "Guardar Almacen";
+            this.btnGuardarAlmacen.TabIndex = 10;
+            this.btnGuardarAlmacen.Text = "Guardar Almacén";
             this.btnGuardarAlmacen.TextoColor = System.Drawing.Color.White;
             this.btnGuardarAlmacen.UseVisualStyleBackColor = false;
             this.btnGuardarAlmacen.Click += new System.EventHandler(this.btnGuardarAlmacen_Click);
@@ -254,6 +258,7 @@
             this.Controls.Add(this.pnlCabecera);
             this.Font = new System.Drawing.Font("Roboto", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "NuevoAlmacen";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "NuevoAlmacen";

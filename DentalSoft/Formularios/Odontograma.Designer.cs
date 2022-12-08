@@ -38,27 +38,27 @@
             this.lbl15Raiz = new System.Windows.Forms.Label();
             this.lbl11Lingual = new System.Windows.Forms.Label();
             this.lbl11Vestibular = new System.Windows.Forms.Label();
-            this.lbl11Mestial = new System.Windows.Forms.Label();
+            this.lbl11Mesial = new System.Windows.Forms.Label();
             this.lbl11Oclusal = new System.Windows.Forms.Label();
             this.lbl11Distal = new System.Windows.Forms.Label();
             this.lbl12Lingual = new System.Windows.Forms.Label();
             this.lbl12Vestibular = new System.Windows.Forms.Label();
-            this.lbl12Mestial = new System.Windows.Forms.Label();
+            this.lbl12Mesial = new System.Windows.Forms.Label();
             this.lbl12Oclusal = new System.Windows.Forms.Label();
             this.lbl12Distal = new System.Windows.Forms.Label();
             this.lbl13Lingual = new System.Windows.Forms.Label();
             this.lbl13Vestibular = new System.Windows.Forms.Label();
-            this.lbl13Mestial = new System.Windows.Forms.Label();
+            this.lbl13Mesial = new System.Windows.Forms.Label();
             this.lbl13Oclusal = new System.Windows.Forms.Label();
             this.lbl13Distal = new System.Windows.Forms.Label();
             this.lbl14Lingual = new System.Windows.Forms.Label();
             this.lbl14Vestibular = new System.Windows.Forms.Label();
-            this.lbl14Mestial = new System.Windows.Forms.Label();
+            this.lbl14Mesial = new System.Windows.Forms.Label();
             this.lbl14Oclusal = new System.Windows.Forms.Label();
             this.lbl14Distal = new System.Windows.Forms.Label();
             this.lbl15Lingual = new System.Windows.Forms.Label();
             this.lbl15Vestibular = new System.Windows.Forms.Label();
-            this.lbl15Mestial = new System.Windows.Forms.Label();
+            this.lbl15Mesial = new System.Windows.Forms.Label();
             this.lbl15Oclusal = new System.Windows.Forms.Label();
             this.lbl15Distal = new System.Windows.Forms.Label();
             this.lbl16RaizIzquierda = new System.Windows.Forms.Label();
@@ -66,7 +66,7 @@
             this.lbl16RaizCentral = new System.Windows.Forms.Label();
             this.lbl16Lingual = new System.Windows.Forms.Label();
             this.lbl16Vestibular = new System.Windows.Forms.Label();
-            this.lbl16Mestial = new System.Windows.Forms.Label();
+            this.lbl16Mesial = new System.Windows.Forms.Label();
             this.lbl16Oclusal = new System.Windows.Forms.Label();
             this.lbl16Distal = new System.Windows.Forms.Label();
             this.lbl17RaizIzquierda = new System.Windows.Forms.Label();
@@ -74,7 +74,7 @@
             this.lbl17RaizCentral = new System.Windows.Forms.Label();
             this.lbl17Lingual = new System.Windows.Forms.Label();
             this.lbl17Vestibular = new System.Windows.Forms.Label();
-            this.lbl17Mestial = new System.Windows.Forms.Label();
+            this.lbl17Mesial = new System.Windows.Forms.Label();
             this.lbl17Oclusal = new System.Windows.Forms.Label();
             this.lbl17Distal = new System.Windows.Forms.Label();
             this.lbl18RaizIzquierda = new System.Windows.Forms.Label();
@@ -82,7 +82,7 @@
             this.lbl18RaizCentral = new System.Windows.Forms.Label();
             this.lbl18Lingual = new System.Windows.Forms.Label();
             this.lbl18Vestibular = new System.Windows.Forms.Label();
-            this.lbl18Mestial = new System.Windows.Forms.Label();
+            this.lbl18Mesial = new System.Windows.Forms.Label();
             this.lbl18Oclusal = new System.Windows.Forms.Label();
             this.lbl18Distal = new System.Windows.Forms.Label();
             this.panel2 = new System.Windows.Forms.Panel();
@@ -248,18 +248,7 @@
             this.lblSeparadorHorizontal = new System.Windows.Forms.Label();
             this.lblSeparadorVertical = new System.Windows.Forms.Label();
             this.lblError = new System.Windows.Forms.Label();
-            this.btnCrearOdontograma = new DentalSoft.ControlesPersonalizados.BotonPersonalizado();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
-            this.lblImagenCaries = new System.Windows.Forms.Label();
-            this.lblImagenFractura = new System.Windows.Forms.Label();
-            this.lblImagenObturacion = new System.Windows.Forms.Label();
-            this.lblImagenEndodoncia = new System.Windows.Forms.Label();
-            this.lblImagenAusencia = new System.Windows.Forms.Label();
-            this.lblDescripcionCaries = new System.Windows.Forms.Label();
-            this.lblDescripcionFractura = new System.Windows.Forms.Label();
-            this.lblDescripcionObturacion = new System.Windows.Forms.Label();
-            this.lblDescripcionEndodoncia = new System.Windows.Forms.Label();
-            this.lblDescripcionAusencia = new System.Windows.Forms.Label();
             this.lblDescripcionErupcion = new System.Windows.Forms.Label();
             this.lblDescripcionCariesRadiografia = new System.Windows.Forms.Label();
             this.lblDescripcionPuente = new System.Windows.Forms.Label();
@@ -268,6 +257,17 @@
             this.lblImagenCariesRadiografia = new System.Windows.Forms.Label();
             this.lblImagenPuente = new System.Windows.Forms.Label();
             this.lblImagenCorona = new System.Windows.Forms.Label();
+            this.lblDescripcionAusencia = new System.Windows.Forms.Label();
+            this.lblDescripcionEndodoncia = new System.Windows.Forms.Label();
+            this.lblDescripcionObturacion = new System.Windows.Forms.Label();
+            this.lblDescripcionFractura = new System.Windows.Forms.Label();
+            this.lblDescripcionCaries = new System.Windows.Forms.Label();
+            this.lblImagenAusencia = new System.Windows.Forms.Label();
+            this.lblImagenEndodoncia = new System.Windows.Forms.Label();
+            this.lblImagenObturacion = new System.Windows.Forms.Label();
+            this.lblImagenFractura = new System.Windows.Forms.Label();
+            this.lblImagenCaries = new System.Windows.Forms.Label();
+            this.btnCrearOdontograma = new DentalSoft.ControlesPersonalizados.BotonPersonalizado();
             ((System.ComponentModel.ISupportInitialize)(this.btnAtras)).BeginInit();
             this.pnlArcadaSuperiorIzquierda.SuspendLayout();
             this.pnlArcadaSuperiorDerecha.SuspendLayout();
@@ -300,27 +300,27 @@
             this.pnlArcadaSuperiorIzquierda.Controls.Add(this.lbl15Raiz);
             this.pnlArcadaSuperiorIzquierda.Controls.Add(this.lbl11Lingual);
             this.pnlArcadaSuperiorIzquierda.Controls.Add(this.lbl11Vestibular);
-            this.pnlArcadaSuperiorIzquierda.Controls.Add(this.lbl11Mestial);
+            this.pnlArcadaSuperiorIzquierda.Controls.Add(this.lbl11Mesial);
             this.pnlArcadaSuperiorIzquierda.Controls.Add(this.lbl11Oclusal);
             this.pnlArcadaSuperiorIzquierda.Controls.Add(this.lbl11Distal);
             this.pnlArcadaSuperiorIzquierda.Controls.Add(this.lbl12Lingual);
             this.pnlArcadaSuperiorIzquierda.Controls.Add(this.lbl12Vestibular);
-            this.pnlArcadaSuperiorIzquierda.Controls.Add(this.lbl12Mestial);
+            this.pnlArcadaSuperiorIzquierda.Controls.Add(this.lbl12Mesial);
             this.pnlArcadaSuperiorIzquierda.Controls.Add(this.lbl12Oclusal);
             this.pnlArcadaSuperiorIzquierda.Controls.Add(this.lbl12Distal);
             this.pnlArcadaSuperiorIzquierda.Controls.Add(this.lbl13Lingual);
             this.pnlArcadaSuperiorIzquierda.Controls.Add(this.lbl13Vestibular);
-            this.pnlArcadaSuperiorIzquierda.Controls.Add(this.lbl13Mestial);
+            this.pnlArcadaSuperiorIzquierda.Controls.Add(this.lbl13Mesial);
             this.pnlArcadaSuperiorIzquierda.Controls.Add(this.lbl13Oclusal);
             this.pnlArcadaSuperiorIzquierda.Controls.Add(this.lbl13Distal);
             this.pnlArcadaSuperiorIzquierda.Controls.Add(this.lbl14Lingual);
             this.pnlArcadaSuperiorIzquierda.Controls.Add(this.lbl14Vestibular);
-            this.pnlArcadaSuperiorIzquierda.Controls.Add(this.lbl14Mestial);
+            this.pnlArcadaSuperiorIzquierda.Controls.Add(this.lbl14Mesial);
             this.pnlArcadaSuperiorIzquierda.Controls.Add(this.lbl14Oclusal);
             this.pnlArcadaSuperiorIzquierda.Controls.Add(this.lbl14Distal);
             this.pnlArcadaSuperiorIzquierda.Controls.Add(this.lbl15Lingual);
             this.pnlArcadaSuperiorIzquierda.Controls.Add(this.lbl15Vestibular);
-            this.pnlArcadaSuperiorIzquierda.Controls.Add(this.lbl15Mestial);
+            this.pnlArcadaSuperiorIzquierda.Controls.Add(this.lbl15Mesial);
             this.pnlArcadaSuperiorIzquierda.Controls.Add(this.lbl15Oclusal);
             this.pnlArcadaSuperiorIzquierda.Controls.Add(this.lbl15Distal);
             this.pnlArcadaSuperiorIzquierda.Controls.Add(this.lbl16RaizIzquierda);
@@ -328,7 +328,7 @@
             this.pnlArcadaSuperiorIzquierda.Controls.Add(this.lbl16RaizCentral);
             this.pnlArcadaSuperiorIzquierda.Controls.Add(this.lbl16Lingual);
             this.pnlArcadaSuperiorIzquierda.Controls.Add(this.lbl16Vestibular);
-            this.pnlArcadaSuperiorIzquierda.Controls.Add(this.lbl16Mestial);
+            this.pnlArcadaSuperiorIzquierda.Controls.Add(this.lbl16Mesial);
             this.pnlArcadaSuperiorIzquierda.Controls.Add(this.lbl16Oclusal);
             this.pnlArcadaSuperiorIzquierda.Controls.Add(this.lbl16Distal);
             this.pnlArcadaSuperiorIzquierda.Controls.Add(this.lbl17RaizIzquierda);
@@ -336,7 +336,7 @@
             this.pnlArcadaSuperiorIzquierda.Controls.Add(this.lbl17RaizCentral);
             this.pnlArcadaSuperiorIzquierda.Controls.Add(this.lbl17Lingual);
             this.pnlArcadaSuperiorIzquierda.Controls.Add(this.lbl17Vestibular);
-            this.pnlArcadaSuperiorIzquierda.Controls.Add(this.lbl17Mestial);
+            this.pnlArcadaSuperiorIzquierda.Controls.Add(this.lbl17Mesial);
             this.pnlArcadaSuperiorIzquierda.Controls.Add(this.lbl17Oclusal);
             this.pnlArcadaSuperiorIzquierda.Controls.Add(this.lbl17Distal);
             this.pnlArcadaSuperiorIzquierda.Controls.Add(this.lbl18RaizIzquierda);
@@ -344,7 +344,7 @@
             this.pnlArcadaSuperiorIzquierda.Controls.Add(this.lbl18RaizCentral);
             this.pnlArcadaSuperiorIzquierda.Controls.Add(this.lbl18Lingual);
             this.pnlArcadaSuperiorIzquierda.Controls.Add(this.lbl18Vestibular);
-            this.pnlArcadaSuperiorIzquierda.Controls.Add(this.lbl18Mestial);
+            this.pnlArcadaSuperiorIzquierda.Controls.Add(this.lbl18Mesial);
             this.pnlArcadaSuperiorIzquierda.Controls.Add(this.lbl18Oclusal);
             this.pnlArcadaSuperiorIzquierda.Controls.Add(this.lbl18Distal);
             this.pnlArcadaSuperiorIzquierda.Controls.Add(this.panel2);
@@ -444,18 +444,18 @@
             this.lbl11Vestibular.Size = new System.Drawing.Size(20, 20);
             this.lbl11Vestibular.TabIndex = 146;
             // 
-            // lbl11Mestial
+            // lbl11Mesial
             // 
-            this.lbl11Mestial.AutoSize = true;
-            this.lbl11Mestial.BackColor = System.Drawing.Color.White;
-            this.lbl11Mestial.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.lbl11Mestial.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.lbl11Mestial.Location = new System.Drawing.Point(594, 147);
-            this.lbl11Mestial.MaximumSize = new System.Drawing.Size(20, 20);
-            this.lbl11Mestial.MinimumSize = new System.Drawing.Size(20, 20);
-            this.lbl11Mestial.Name = "lbl11Mestial";
-            this.lbl11Mestial.Size = new System.Drawing.Size(20, 20);
-            this.lbl11Mestial.TabIndex = 145;
+            this.lbl11Mesial.AutoSize = true;
+            this.lbl11Mesial.BackColor = System.Drawing.Color.White;
+            this.lbl11Mesial.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.lbl11Mesial.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.lbl11Mesial.Location = new System.Drawing.Point(594, 147);
+            this.lbl11Mesial.MaximumSize = new System.Drawing.Size(20, 20);
+            this.lbl11Mesial.MinimumSize = new System.Drawing.Size(20, 20);
+            this.lbl11Mesial.Name = "lbl11Mesial";
+            this.lbl11Mesial.Size = new System.Drawing.Size(20, 20);
+            this.lbl11Mesial.TabIndex = 145;
             // 
             // lbl11Oclusal
             // 
@@ -509,18 +509,18 @@
             this.lbl12Vestibular.Size = new System.Drawing.Size(20, 20);
             this.lbl12Vestibular.TabIndex = 138;
             // 
-            // lbl12Mestial
+            // lbl12Mesial
             // 
-            this.lbl12Mestial.AutoSize = true;
-            this.lbl12Mestial.BackColor = System.Drawing.Color.White;
-            this.lbl12Mestial.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.lbl12Mestial.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.lbl12Mestial.Location = new System.Drawing.Point(515, 147);
-            this.lbl12Mestial.MaximumSize = new System.Drawing.Size(20, 20);
-            this.lbl12Mestial.MinimumSize = new System.Drawing.Size(20, 20);
-            this.lbl12Mestial.Name = "lbl12Mestial";
-            this.lbl12Mestial.Size = new System.Drawing.Size(20, 20);
-            this.lbl12Mestial.TabIndex = 137;
+            this.lbl12Mesial.AutoSize = true;
+            this.lbl12Mesial.BackColor = System.Drawing.Color.White;
+            this.lbl12Mesial.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.lbl12Mesial.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.lbl12Mesial.Location = new System.Drawing.Point(515, 147);
+            this.lbl12Mesial.MaximumSize = new System.Drawing.Size(20, 20);
+            this.lbl12Mesial.MinimumSize = new System.Drawing.Size(20, 20);
+            this.lbl12Mesial.Name = "lbl12Mesial";
+            this.lbl12Mesial.Size = new System.Drawing.Size(20, 20);
+            this.lbl12Mesial.TabIndex = 137;
             // 
             // lbl12Oclusal
             // 
@@ -574,18 +574,18 @@
             this.lbl13Vestibular.Size = new System.Drawing.Size(20, 20);
             this.lbl13Vestibular.TabIndex = 130;
             // 
-            // lbl13Mestial
+            // lbl13Mesial
             // 
-            this.lbl13Mestial.AutoSize = true;
-            this.lbl13Mestial.BackColor = System.Drawing.Color.White;
-            this.lbl13Mestial.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.lbl13Mestial.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.lbl13Mestial.Location = new System.Drawing.Point(438, 147);
-            this.lbl13Mestial.MaximumSize = new System.Drawing.Size(20, 20);
-            this.lbl13Mestial.MinimumSize = new System.Drawing.Size(20, 20);
-            this.lbl13Mestial.Name = "lbl13Mestial";
-            this.lbl13Mestial.Size = new System.Drawing.Size(20, 20);
-            this.lbl13Mestial.TabIndex = 129;
+            this.lbl13Mesial.AutoSize = true;
+            this.lbl13Mesial.BackColor = System.Drawing.Color.White;
+            this.lbl13Mesial.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.lbl13Mesial.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.lbl13Mesial.Location = new System.Drawing.Point(438, 147);
+            this.lbl13Mesial.MaximumSize = new System.Drawing.Size(20, 20);
+            this.lbl13Mesial.MinimumSize = new System.Drawing.Size(20, 20);
+            this.lbl13Mesial.Name = "lbl13Mesial";
+            this.lbl13Mesial.Size = new System.Drawing.Size(20, 20);
+            this.lbl13Mesial.TabIndex = 129;
             // 
             // lbl13Oclusal
             // 
@@ -639,18 +639,18 @@
             this.lbl14Vestibular.Size = new System.Drawing.Size(20, 20);
             this.lbl14Vestibular.TabIndex = 122;
             // 
-            // lbl14Mestial
+            // lbl14Mesial
             // 
-            this.lbl14Mestial.AutoSize = true;
-            this.lbl14Mestial.BackColor = System.Drawing.Color.White;
-            this.lbl14Mestial.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.lbl14Mestial.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.lbl14Mestial.Location = new System.Drawing.Point(359, 147);
-            this.lbl14Mestial.MaximumSize = new System.Drawing.Size(20, 20);
-            this.lbl14Mestial.MinimumSize = new System.Drawing.Size(20, 20);
-            this.lbl14Mestial.Name = "lbl14Mestial";
-            this.lbl14Mestial.Size = new System.Drawing.Size(20, 20);
-            this.lbl14Mestial.TabIndex = 121;
+            this.lbl14Mesial.AutoSize = true;
+            this.lbl14Mesial.BackColor = System.Drawing.Color.White;
+            this.lbl14Mesial.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.lbl14Mesial.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.lbl14Mesial.Location = new System.Drawing.Point(359, 147);
+            this.lbl14Mesial.MaximumSize = new System.Drawing.Size(20, 20);
+            this.lbl14Mesial.MinimumSize = new System.Drawing.Size(20, 20);
+            this.lbl14Mesial.Name = "lbl14Mesial";
+            this.lbl14Mesial.Size = new System.Drawing.Size(20, 20);
+            this.lbl14Mesial.TabIndex = 121;
             // 
             // lbl14Oclusal
             // 
@@ -704,18 +704,18 @@
             this.lbl15Vestibular.Size = new System.Drawing.Size(20, 20);
             this.lbl15Vestibular.TabIndex = 114;
             // 
-            // lbl15Mestial
+            // lbl15Mesial
             // 
-            this.lbl15Mestial.AutoSize = true;
-            this.lbl15Mestial.BackColor = System.Drawing.Color.White;
-            this.lbl15Mestial.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.lbl15Mestial.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.lbl15Mestial.Location = new System.Drawing.Point(280, 147);
-            this.lbl15Mestial.MaximumSize = new System.Drawing.Size(20, 20);
-            this.lbl15Mestial.MinimumSize = new System.Drawing.Size(20, 20);
-            this.lbl15Mestial.Name = "lbl15Mestial";
-            this.lbl15Mestial.Size = new System.Drawing.Size(20, 20);
-            this.lbl15Mestial.TabIndex = 113;
+            this.lbl15Mesial.AutoSize = true;
+            this.lbl15Mesial.BackColor = System.Drawing.Color.White;
+            this.lbl15Mesial.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.lbl15Mesial.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.lbl15Mesial.Location = new System.Drawing.Point(280, 147);
+            this.lbl15Mesial.MaximumSize = new System.Drawing.Size(20, 20);
+            this.lbl15Mesial.MinimumSize = new System.Drawing.Size(20, 20);
+            this.lbl15Mesial.Name = "lbl15Mesial";
+            this.lbl15Mesial.Size = new System.Drawing.Size(20, 20);
+            this.lbl15Mesial.TabIndex = 113;
             // 
             // lbl15Oclusal
             // 
@@ -808,18 +808,18 @@
             this.lbl16Vestibular.Size = new System.Drawing.Size(20, 20);
             this.lbl16Vestibular.TabIndex = 106;
             // 
-            // lbl16Mestial
+            // lbl16Mesial
             // 
-            this.lbl16Mestial.AutoSize = true;
-            this.lbl16Mestial.BackColor = System.Drawing.Color.White;
-            this.lbl16Mestial.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.lbl16Mestial.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.lbl16Mestial.Location = new System.Drawing.Point(203, 147);
-            this.lbl16Mestial.MaximumSize = new System.Drawing.Size(20, 20);
-            this.lbl16Mestial.MinimumSize = new System.Drawing.Size(20, 20);
-            this.lbl16Mestial.Name = "lbl16Mestial";
-            this.lbl16Mestial.Size = new System.Drawing.Size(20, 20);
-            this.lbl16Mestial.TabIndex = 105;
+            this.lbl16Mesial.AutoSize = true;
+            this.lbl16Mesial.BackColor = System.Drawing.Color.White;
+            this.lbl16Mesial.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.lbl16Mesial.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.lbl16Mesial.Location = new System.Drawing.Point(203, 147);
+            this.lbl16Mesial.MaximumSize = new System.Drawing.Size(20, 20);
+            this.lbl16Mesial.MinimumSize = new System.Drawing.Size(20, 20);
+            this.lbl16Mesial.Name = "lbl16Mesial";
+            this.lbl16Mesial.Size = new System.Drawing.Size(20, 20);
+            this.lbl16Mesial.TabIndex = 105;
             // 
             // lbl16Oclusal
             // 
@@ -912,18 +912,18 @@
             this.lbl17Vestibular.Size = new System.Drawing.Size(20, 20);
             this.lbl17Vestibular.TabIndex = 98;
             // 
-            // lbl17Mestial
+            // lbl17Mesial
             // 
-            this.lbl17Mestial.AutoSize = true;
-            this.lbl17Mestial.BackColor = System.Drawing.Color.White;
-            this.lbl17Mestial.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.lbl17Mestial.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.lbl17Mestial.Location = new System.Drawing.Point(125, 147);
-            this.lbl17Mestial.MaximumSize = new System.Drawing.Size(20, 20);
-            this.lbl17Mestial.MinimumSize = new System.Drawing.Size(20, 20);
-            this.lbl17Mestial.Name = "lbl17Mestial";
-            this.lbl17Mestial.Size = new System.Drawing.Size(20, 20);
-            this.lbl17Mestial.TabIndex = 97;
+            this.lbl17Mesial.AutoSize = true;
+            this.lbl17Mesial.BackColor = System.Drawing.Color.White;
+            this.lbl17Mesial.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.lbl17Mesial.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.lbl17Mesial.Location = new System.Drawing.Point(125, 147);
+            this.lbl17Mesial.MaximumSize = new System.Drawing.Size(20, 20);
+            this.lbl17Mesial.MinimumSize = new System.Drawing.Size(20, 20);
+            this.lbl17Mesial.Name = "lbl17Mesial";
+            this.lbl17Mesial.Size = new System.Drawing.Size(20, 20);
+            this.lbl17Mesial.TabIndex = 97;
             // 
             // lbl17Oclusal
             // 
@@ -1016,18 +1016,18 @@
             this.lbl18Vestibular.Size = new System.Drawing.Size(20, 20);
             this.lbl18Vestibular.TabIndex = 89;
             // 
-            // lbl18Mestial
+            // lbl18Mesial
             // 
-            this.lbl18Mestial.AutoSize = true;
-            this.lbl18Mestial.BackColor = System.Drawing.Color.White;
-            this.lbl18Mestial.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.lbl18Mestial.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.lbl18Mestial.Location = new System.Drawing.Point(47, 147);
-            this.lbl18Mestial.MaximumSize = new System.Drawing.Size(20, 20);
-            this.lbl18Mestial.MinimumSize = new System.Drawing.Size(20, 20);
-            this.lbl18Mestial.Name = "lbl18Mestial";
-            this.lbl18Mestial.Size = new System.Drawing.Size(20, 20);
-            this.lbl18Mestial.TabIndex = 88;
+            this.lbl18Mesial.AutoSize = true;
+            this.lbl18Mesial.BackColor = System.Drawing.Color.White;
+            this.lbl18Mesial.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.lbl18Mesial.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.lbl18Mesial.Location = new System.Drawing.Point(47, 147);
+            this.lbl18Mesial.MaximumSize = new System.Drawing.Size(20, 20);
+            this.lbl18Mesial.MinimumSize = new System.Drawing.Size(20, 20);
+            this.lbl18Mesial.Name = "lbl18Mesial";
+            this.lbl18Mesial.Size = new System.Drawing.Size(20, 20);
+            this.lbl18Mesial.TabIndex = 88;
             // 
             // lbl18Oclusal
             // 
@@ -3295,32 +3295,12 @@
             this.lblError.ForeColor = System.Drawing.Color.IndianRed;
             this.lblError.Image = ((System.Drawing.Image)(resources.GetObject("lblError.Image")));
             this.lblError.ImageAlign = System.Drawing.ContentAlignment.TopLeft;
-            this.lblError.Location = new System.Drawing.Point(418, 545);
+            this.lblError.Location = new System.Drawing.Point(550, 563);
             this.lblError.Name = "lblError";
             this.lblError.Size = new System.Drawing.Size(85, 15);
             this.lblError.TabIndex = 86;
             this.lblError.Text = "Mensaje Error";
             this.lblError.Visible = false;
-            // 
-            // btnCrearOdontograma
-            // 
-            this.btnCrearOdontograma.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(16)))), ((int)(((byte)(110)))), ((int)(((byte)(196)))));
-            this.btnCrearOdontograma.BordeColor = System.Drawing.Color.FromArgb(((int)(((byte)(16)))), ((int)(((byte)(110)))), ((int)(((byte)(196)))));
-            this.btnCrearOdontograma.BordeRadio = 40;
-            this.btnCrearOdontograma.BordeTamaño = 0;
-            this.btnCrearOdontograma.FlatAppearance.BorderSize = 0;
-            this.btnCrearOdontograma.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnCrearOdontograma.FondoColor = System.Drawing.Color.FromArgb(((int)(((byte)(16)))), ((int)(((byte)(110)))), ((int)(((byte)(196)))));
-            this.btnCrearOdontograma.Font = new System.Drawing.Font("Roboto", 12F);
-            this.btnCrearOdontograma.ForeColor = System.Drawing.Color.White;
-            this.btnCrearOdontograma.Location = new System.Drawing.Point(485, 601);
-            this.btnCrearOdontograma.Name = "btnCrearOdontograma";
-            this.btnCrearOdontograma.Size = new System.Drawing.Size(335, 40);
-            this.btnCrearOdontograma.TabIndex = 87;
-            this.btnCrearOdontograma.Text = "Crear Odontograma";
-            this.btnCrearOdontograma.TextoColor = System.Drawing.Color.White;
-            this.btnCrearOdontograma.UseVisualStyleBackColor = false;
-            this.btnCrearOdontograma.Click += new System.EventHandler(this.btnCrearOdontograma_Click);
             // 
             // groupBox1
             // 
@@ -3348,103 +3328,6 @@
             this.groupBox1.TabIndex = 88;
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Leyenda";
-            // 
-            // lblImagenCaries
-            // 
-            this.lblImagenCaries.AutoSize = true;
-            this.lblImagenCaries.BackColor = System.Drawing.Color.Red;
-            this.lblImagenCaries.Location = new System.Drawing.Point(22, 30);
-            this.lblImagenCaries.MinimumSize = new System.Drawing.Size(16, 16);
-            this.lblImagenCaries.Name = "lblImagenCaries";
-            this.lblImagenCaries.Size = new System.Drawing.Size(16, 16);
-            this.lblImagenCaries.TabIndex = 0;
-            // 
-            // lblImagenFractura
-            // 
-            this.lblImagenFractura.AutoSize = true;
-            this.lblImagenFractura.BackColor = System.Drawing.Color.White;
-            this.lblImagenFractura.Image = ((System.Drawing.Image)(resources.GetObject("lblImagenFractura.Image")));
-            this.lblImagenFractura.Location = new System.Drawing.Point(22, 55);
-            this.lblImagenFractura.MinimumSize = new System.Drawing.Size(16, 16);
-            this.lblImagenFractura.Name = "lblImagenFractura";
-            this.lblImagenFractura.Size = new System.Drawing.Size(16, 16);
-            this.lblImagenFractura.TabIndex = 1;
-            // 
-            // lblImagenObturacion
-            // 
-            this.lblImagenObturacion.AutoSize = true;
-            this.lblImagenObturacion.BackColor = System.Drawing.Color.Blue;
-            this.lblImagenObturacion.Location = new System.Drawing.Point(22, 81);
-            this.lblImagenObturacion.MinimumSize = new System.Drawing.Size(16, 16);
-            this.lblImagenObturacion.Name = "lblImagenObturacion";
-            this.lblImagenObturacion.Size = new System.Drawing.Size(16, 16);
-            this.lblImagenObturacion.TabIndex = 2;
-            // 
-            // lblImagenEndodoncia
-            // 
-            this.lblImagenEndodoncia.AutoSize = true;
-            this.lblImagenEndodoncia.BackColor = System.Drawing.Color.White;
-            this.lblImagenEndodoncia.Image = ((System.Drawing.Image)(resources.GetObject("lblImagenEndodoncia.Image")));
-            this.lblImagenEndodoncia.Location = new System.Drawing.Point(22, 106);
-            this.lblImagenEndodoncia.MinimumSize = new System.Drawing.Size(16, 16);
-            this.lblImagenEndodoncia.Name = "lblImagenEndodoncia";
-            this.lblImagenEndodoncia.Size = new System.Drawing.Size(16, 16);
-            this.lblImagenEndodoncia.TabIndex = 3;
-            // 
-            // lblImagenAusencia
-            // 
-            this.lblImagenAusencia.AutoSize = true;
-            this.lblImagenAusencia.BackColor = System.Drawing.Color.Black;
-            this.lblImagenAusencia.Location = new System.Drawing.Point(22, 133);
-            this.lblImagenAusencia.MinimumSize = new System.Drawing.Size(16, 16);
-            this.lblImagenAusencia.Name = "lblImagenAusencia";
-            this.lblImagenAusencia.Size = new System.Drawing.Size(16, 16);
-            this.lblImagenAusencia.TabIndex = 4;
-            // 
-            // lblDescripcionCaries
-            // 
-            this.lblDescripcionCaries.AutoSize = true;
-            this.lblDescripcionCaries.Location = new System.Drawing.Point(55, 30);
-            this.lblDescripcionCaries.Name = "lblDescripcionCaries";
-            this.lblDescripcionCaries.Size = new System.Drawing.Size(43, 15);
-            this.lblDescripcionCaries.TabIndex = 5;
-            this.lblDescripcionCaries.Text = "Caries";
-            // 
-            // lblDescripcionFractura
-            // 
-            this.lblDescripcionFractura.AutoSize = true;
-            this.lblDescripcionFractura.Location = new System.Drawing.Point(55, 55);
-            this.lblDescripcionFractura.Name = "lblDescripcionFractura";
-            this.lblDescripcionFractura.Size = new System.Drawing.Size(54, 15);
-            this.lblDescripcionFractura.TabIndex = 6;
-            this.lblDescripcionFractura.Text = "Fractura";
-            // 
-            // lblDescripcionObturacion
-            // 
-            this.lblDescripcionObturacion.AutoSize = true;
-            this.lblDescripcionObturacion.Location = new System.Drawing.Point(55, 82);
-            this.lblDescripcionObturacion.Name = "lblDescripcionObturacion";
-            this.lblDescripcionObturacion.Size = new System.Drawing.Size(69, 15);
-            this.lblDescripcionObturacion.TabIndex = 7;
-            this.lblDescripcionObturacion.Text = "Obturacion";
-            // 
-            // lblDescripcionEndodoncia
-            // 
-            this.lblDescripcionEndodoncia.AutoSize = true;
-            this.lblDescripcionEndodoncia.Location = new System.Drawing.Point(55, 106);
-            this.lblDescripcionEndodoncia.Name = "lblDescripcionEndodoncia";
-            this.lblDescripcionEndodoncia.Size = new System.Drawing.Size(73, 15);
-            this.lblDescripcionEndodoncia.TabIndex = 8;
-            this.lblDescripcionEndodoncia.Text = "Endodoncia";
-            // 
-            // lblDescripcionAusencia
-            // 
-            this.lblDescripcionAusencia.AutoSize = true;
-            this.lblDescripcionAusencia.Location = new System.Drawing.Point(55, 134);
-            this.lblDescripcionAusencia.Name = "lblDescripcionAusencia";
-            this.lblDescripcionAusencia.Size = new System.Drawing.Size(60, 15);
-            this.lblDescripcionAusencia.TabIndex = 9;
-            this.lblDescripcionAusencia.Text = "Ausencia";
             // 
             // lblDescripcionErupcion
             // 
@@ -3525,10 +3408,128 @@
             this.lblImagenCorona.Size = new System.Drawing.Size(16, 16);
             this.lblImagenCorona.TabIndex = 10;
             // 
+            // lblDescripcionAusencia
+            // 
+            this.lblDescripcionAusencia.AutoSize = true;
+            this.lblDescripcionAusencia.Location = new System.Drawing.Point(55, 134);
+            this.lblDescripcionAusencia.Name = "lblDescripcionAusencia";
+            this.lblDescripcionAusencia.Size = new System.Drawing.Size(60, 15);
+            this.lblDescripcionAusencia.TabIndex = 9;
+            this.lblDescripcionAusencia.Text = "Ausencia";
+            // 
+            // lblDescripcionEndodoncia
+            // 
+            this.lblDescripcionEndodoncia.AutoSize = true;
+            this.lblDescripcionEndodoncia.Location = new System.Drawing.Point(55, 106);
+            this.lblDescripcionEndodoncia.Name = "lblDescripcionEndodoncia";
+            this.lblDescripcionEndodoncia.Size = new System.Drawing.Size(73, 15);
+            this.lblDescripcionEndodoncia.TabIndex = 8;
+            this.lblDescripcionEndodoncia.Text = "Endodoncia";
+            // 
+            // lblDescripcionObturacion
+            // 
+            this.lblDescripcionObturacion.AutoSize = true;
+            this.lblDescripcionObturacion.Location = new System.Drawing.Point(55, 82);
+            this.lblDescripcionObturacion.Name = "lblDescripcionObturacion";
+            this.lblDescripcionObturacion.Size = new System.Drawing.Size(69, 15);
+            this.lblDescripcionObturacion.TabIndex = 7;
+            this.lblDescripcionObturacion.Text = "Obturacion";
+            // 
+            // lblDescripcionFractura
+            // 
+            this.lblDescripcionFractura.AutoSize = true;
+            this.lblDescripcionFractura.Location = new System.Drawing.Point(55, 55);
+            this.lblDescripcionFractura.Name = "lblDescripcionFractura";
+            this.lblDescripcionFractura.Size = new System.Drawing.Size(54, 15);
+            this.lblDescripcionFractura.TabIndex = 6;
+            this.lblDescripcionFractura.Text = "Fractura";
+            // 
+            // lblDescripcionCaries
+            // 
+            this.lblDescripcionCaries.AutoSize = true;
+            this.lblDescripcionCaries.Location = new System.Drawing.Point(55, 30);
+            this.lblDescripcionCaries.Name = "lblDescripcionCaries";
+            this.lblDescripcionCaries.Size = new System.Drawing.Size(43, 15);
+            this.lblDescripcionCaries.TabIndex = 5;
+            this.lblDescripcionCaries.Text = "Caries";
+            // 
+            // lblImagenAusencia
+            // 
+            this.lblImagenAusencia.AutoSize = true;
+            this.lblImagenAusencia.BackColor = System.Drawing.Color.Black;
+            this.lblImagenAusencia.Location = new System.Drawing.Point(22, 133);
+            this.lblImagenAusencia.MinimumSize = new System.Drawing.Size(16, 16);
+            this.lblImagenAusencia.Name = "lblImagenAusencia";
+            this.lblImagenAusencia.Size = new System.Drawing.Size(16, 16);
+            this.lblImagenAusencia.TabIndex = 4;
+            // 
+            // lblImagenEndodoncia
+            // 
+            this.lblImagenEndodoncia.AutoSize = true;
+            this.lblImagenEndodoncia.BackColor = System.Drawing.Color.White;
+            this.lblImagenEndodoncia.Image = ((System.Drawing.Image)(resources.GetObject("lblImagenEndodoncia.Image")));
+            this.lblImagenEndodoncia.Location = new System.Drawing.Point(22, 106);
+            this.lblImagenEndodoncia.MinimumSize = new System.Drawing.Size(16, 16);
+            this.lblImagenEndodoncia.Name = "lblImagenEndodoncia";
+            this.lblImagenEndodoncia.Size = new System.Drawing.Size(16, 16);
+            this.lblImagenEndodoncia.TabIndex = 3;
+            // 
+            // lblImagenObturacion
+            // 
+            this.lblImagenObturacion.AutoSize = true;
+            this.lblImagenObturacion.BackColor = System.Drawing.Color.Blue;
+            this.lblImagenObturacion.Location = new System.Drawing.Point(22, 81);
+            this.lblImagenObturacion.MinimumSize = new System.Drawing.Size(16, 16);
+            this.lblImagenObturacion.Name = "lblImagenObturacion";
+            this.lblImagenObturacion.Size = new System.Drawing.Size(16, 16);
+            this.lblImagenObturacion.TabIndex = 2;
+            // 
+            // lblImagenFractura
+            // 
+            this.lblImagenFractura.AutoSize = true;
+            this.lblImagenFractura.BackColor = System.Drawing.Color.White;
+            this.lblImagenFractura.Image = ((System.Drawing.Image)(resources.GetObject("lblImagenFractura.Image")));
+            this.lblImagenFractura.Location = new System.Drawing.Point(22, 55);
+            this.lblImagenFractura.MinimumSize = new System.Drawing.Size(16, 16);
+            this.lblImagenFractura.Name = "lblImagenFractura";
+            this.lblImagenFractura.Size = new System.Drawing.Size(16, 16);
+            this.lblImagenFractura.TabIndex = 1;
+            // 
+            // lblImagenCaries
+            // 
+            this.lblImagenCaries.AutoSize = true;
+            this.lblImagenCaries.BackColor = System.Drawing.Color.Red;
+            this.lblImagenCaries.Location = new System.Drawing.Point(22, 30);
+            this.lblImagenCaries.MinimumSize = new System.Drawing.Size(16, 16);
+            this.lblImagenCaries.Name = "lblImagenCaries";
+            this.lblImagenCaries.Size = new System.Drawing.Size(16, 16);
+            this.lblImagenCaries.TabIndex = 0;
+            // 
+            // btnCrearOdontograma
+            // 
+            this.btnCrearOdontograma.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(16)))), ((int)(((byte)(110)))), ((int)(((byte)(196)))));
+            this.btnCrearOdontograma.BordeColor = System.Drawing.Color.FromArgb(((int)(((byte)(16)))), ((int)(((byte)(110)))), ((int)(((byte)(196)))));
+            this.btnCrearOdontograma.BordeRadio = 40;
+            this.btnCrearOdontograma.BordeTamaño = 0;
+            this.btnCrearOdontograma.FlatAppearance.BorderSize = 0;
+            this.btnCrearOdontograma.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnCrearOdontograma.FondoColor = System.Drawing.Color.FromArgb(((int)(((byte)(16)))), ((int)(((byte)(110)))), ((int)(((byte)(196)))));
+            this.btnCrearOdontograma.Font = new System.Drawing.Font("Roboto", 12F);
+            this.btnCrearOdontograma.ForeColor = System.Drawing.Color.White;
+            this.btnCrearOdontograma.Location = new System.Drawing.Point(485, 601);
+            this.btnCrearOdontograma.Name = "btnCrearOdontograma";
+            this.btnCrearOdontograma.Size = new System.Drawing.Size(335, 40);
+            this.btnCrearOdontograma.TabIndex = 0;
+            this.btnCrearOdontograma.Text = "Crear Odontograma";
+            this.btnCrearOdontograma.TextoColor = System.Drawing.Color.White;
+            this.btnCrearOdontograma.UseVisualStyleBackColor = false;
+            this.btnCrearOdontograma.Click += new System.EventHandler(this.btnCrearOdontograma_Click);
+            // 
             // Odontograma
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 14F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(236)))), ((int)(((byte)(236)))), ((int)(((byte)(236)))));
             this.ClientSize = new System.Drawing.Size(1275, 715);
             this.Controls.Add(this.groupBox1);
             this.Controls.Add(this.btnCrearOdontograma);
@@ -3580,27 +3581,27 @@
         private System.Windows.Forms.Label lbl15Raiz;
         private System.Windows.Forms.Label lbl11Lingual;
         private System.Windows.Forms.Label lbl11Vestibular;
-        private System.Windows.Forms.Label lbl11Mestial;
+        private System.Windows.Forms.Label lbl11Mesial;
         private System.Windows.Forms.Label lbl11Oclusal;
         private System.Windows.Forms.Label lbl11Distal;
         private System.Windows.Forms.Label lbl12Lingual;
         private System.Windows.Forms.Label lbl12Vestibular;
-        private System.Windows.Forms.Label lbl12Mestial;
+        private System.Windows.Forms.Label lbl12Mesial;
         private System.Windows.Forms.Label lbl12Oclusal;
         private System.Windows.Forms.Label lbl12Distal;
         private System.Windows.Forms.Label lbl13Lingual;
         private System.Windows.Forms.Label lbl13Vestibular;
-        private System.Windows.Forms.Label lbl13Mestial;
+        private System.Windows.Forms.Label lbl13Mesial;
         private System.Windows.Forms.Label lbl13Oclusal;
         private System.Windows.Forms.Label lbl13Distal;
         private System.Windows.Forms.Label lbl14Lingual;
         private System.Windows.Forms.Label lbl14Vestibular;
-        private System.Windows.Forms.Label lbl14Mestial;
+        private System.Windows.Forms.Label lbl14Mesial;
         private System.Windows.Forms.Label lbl14Oclusal;
         private System.Windows.Forms.Label lbl14Distal;
         private System.Windows.Forms.Label lbl15Lingual;
         private System.Windows.Forms.Label lbl15Vestibular;
-        private System.Windows.Forms.Label lbl15Mestial;
+        private System.Windows.Forms.Label lbl15Mesial;
         private System.Windows.Forms.Label lbl15Oclusal;
         private System.Windows.Forms.Label lbl15Distal;
         private System.Windows.Forms.Label lbl16RaizIzquierda;
@@ -3608,7 +3609,7 @@
         private System.Windows.Forms.Label lbl16RaizCentral;
         private System.Windows.Forms.Label lbl16Lingual;
         private System.Windows.Forms.Label lbl16Vestibular;
-        private System.Windows.Forms.Label lbl16Mestial;
+        private System.Windows.Forms.Label lbl16Mesial;
         private System.Windows.Forms.Label lbl16Oclusal;
         private System.Windows.Forms.Label lbl16Distal;
         private System.Windows.Forms.Label lbl17RaizIzquierda;
@@ -3616,7 +3617,7 @@
         private System.Windows.Forms.Label lbl17RaizCentral;
         private System.Windows.Forms.Label lbl17Lingual;
         private System.Windows.Forms.Label lbl17Vestibular;
-        private System.Windows.Forms.Label lbl17Mestial;
+        private System.Windows.Forms.Label lbl17Mesial;
         private System.Windows.Forms.Label lbl17Oclusal;
         private System.Windows.Forms.Label lbl17Distal;
         private System.Windows.Forms.Label lbl18RaizIzquierda;
@@ -3624,7 +3625,7 @@
         private System.Windows.Forms.Label lbl18RaizCentral;
         private System.Windows.Forms.Label lbl18Lingual;
         private System.Windows.Forms.Label lbl18Vestibular;
-        private System.Windows.Forms.Label lbl18Mestial;
+        private System.Windows.Forms.Label lbl18Mesial;
         private System.Windows.Forms.Label lbl18Oclusal;
         private System.Windows.Forms.Label lbl25Raiz;
         private System.Windows.Forms.Label lbl24Raiz;

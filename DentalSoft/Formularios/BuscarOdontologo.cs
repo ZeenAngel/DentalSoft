@@ -113,7 +113,7 @@ namespace DentalSoft
 
         private void BuscarOdontologo_Load(object sender, EventArgs e)
         {
-            Clases.Estilo estilo = new Estilo();
+            Estilo estilo = new Estilo();
             estilo.EstiloDataGridView(this.dgvOdontologoBuscarOdontologo);
             CargarDgv();
             CargarFiltros();
@@ -135,12 +135,12 @@ namespace DentalSoft
             if (this.WindowState == FormWindowState.Normal)
             {
                 this.WindowState ^= FormWindowState.Maximized;
-                btnRedimensionar.Image = System.Drawing.Image.FromFile(datosGlobales.PathBotonRedimensionar);
+                btnRedimensionar.Image = Image.FromFile(datosGlobales.PathBotonRedimensionar);
             }
             else
             {
                 this.WindowState = FormWindowState.Normal;
-                btnRedimensionar.Image = System.Drawing.Image.FromFile(datosGlobales.PathBotonMaximizar);
+                btnRedimensionar.Image = Image.FromFile(datosGlobales.PathBotonMaximizar);
             }
         }
 

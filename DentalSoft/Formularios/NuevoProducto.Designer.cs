@@ -61,6 +61,7 @@
             this.lblErrorDescripcion = new System.Windows.Forms.Label();
             this.lblErrorGuardar = new System.Windows.Forms.Label();
             this.lblErrorCaducidad = new System.Windows.Forms.Label();
+            this.lblEuro = new System.Windows.Forms.Label();
             this.pnlCabecera.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.btnRedimensionar)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.btnMinimizar)).BeginInit();
@@ -234,9 +235,11 @@
             this.txtReferencia.Multilinea = false;
             this.txtReferencia.Name = "txtReferencia";
             this.txtReferencia.Padding = new System.Windows.Forms.Padding(10, 7, 10, 7);
+            this.txtReferencia.PosicionSeleccion = 0;
             this.txtReferencia.Size = new System.Drawing.Size(250, 34);
             this.txtReferencia.SubrayadoEstilo = true;
-            this.txtReferencia.TabIndex = 52;
+            this.txtReferencia.TabIndex = 0;
+            this.txtReferencia.TamañoMaximo = 30000;
             this.txtReferencia.Texto = "";
             // 
             // txtCantidad
@@ -256,9 +259,11 @@
             this.txtCantidad.Multilinea = false;
             this.txtCantidad.Name = "txtCantidad";
             this.txtCantidad.Padding = new System.Windows.Forms.Padding(10, 7, 10, 7);
+            this.txtCantidad.PosicionSeleccion = 0;
             this.txtCantidad.Size = new System.Drawing.Size(151, 34);
             this.txtCantidad.SubrayadoEstilo = true;
-            this.txtCantidad.TabIndex = 53;
+            this.txtCantidad.TabIndex = 10;
+            this.txtCantidad.TamañoMaximo = 30000;
             this.txtCantidad.Texto = "";
             // 
             // txtDescripcion
@@ -278,9 +283,11 @@
             this.txtDescripcion.Multilinea = true;
             this.txtDescripcion.Name = "txtDescripcion";
             this.txtDescripcion.Padding = new System.Windows.Forms.Padding(10, 7, 10, 7);
+            this.txtDescripcion.PosicionSeleccion = 0;
             this.txtDescripcion.Size = new System.Drawing.Size(606, 169);
             this.txtDescripcion.SubrayadoEstilo = true;
-            this.txtDescripcion.TabIndex = 54;
+            this.txtDescripcion.TabIndex = 5;
+            this.txtDescripcion.TamañoMaximo = 30000;
             this.txtDescripcion.Texto = "";
             // 
             // txtCoste
@@ -300,9 +307,11 @@
             this.txtCoste.Multilinea = false;
             this.txtCoste.Name = "txtCoste";
             this.txtCoste.Padding = new System.Windows.Forms.Padding(10, 7, 10, 7);
+            this.txtCoste.PosicionSeleccion = 0;
             this.txtCoste.Size = new System.Drawing.Size(118, 34);
             this.txtCoste.SubrayadoEstilo = true;
-            this.txtCoste.TabIndex = 55;
+            this.txtCoste.TabIndex = 20;
+            this.txtCoste.TamañoMaximo = 30000;
             this.txtCoste.Texto = "";
             // 
             // txtLote
@@ -322,9 +331,11 @@
             this.txtLote.Multilinea = false;
             this.txtLote.Name = "txtLote";
             this.txtLote.Padding = new System.Windows.Forms.Padding(10, 7, 10, 7);
+            this.txtLote.PosicionSeleccion = 0;
             this.txtLote.Size = new System.Drawing.Size(200, 34);
             this.txtLote.SubrayadoEstilo = true;
-            this.txtLote.TabIndex = 56;
+            this.txtLote.TabIndex = 30;
+            this.txtLote.TamañoMaximo = 30000;
             this.txtLote.Texto = "";
             // 
             // cbCategoria
@@ -346,7 +357,7 @@
             this.cbCategoria.Name = "cbCategoria";
             this.cbCategoria.Padding = new System.Windows.Forms.Padding(1);
             this.cbCategoria.Size = new System.Drawing.Size(271, 30);
-            this.cbCategoria.TabIndex = 57;
+            this.cbCategoria.TabIndex = 35;
             this.cbCategoria.Textos = "";
             // 
             // cbAlmacen
@@ -368,7 +379,7 @@
             this.cbAlmacen.Name = "cbAlmacen";
             this.cbAlmacen.Padding = new System.Windows.Forms.Padding(1);
             this.cbAlmacen.Size = new System.Drawing.Size(200, 30);
-            this.cbAlmacen.TabIndex = 58;
+            this.cbAlmacen.TabIndex = 40;
             this.cbAlmacen.Textos = "";
             // 
             // mcCaducidad
@@ -385,7 +396,7 @@
             this.mcCaducidad.MinimumSize = new System.Drawing.Size(4, 35);
             this.mcCaducidad.Name = "mcCaducidad";
             this.mcCaducidad.Size = new System.Drawing.Size(271, 35);
-            this.mcCaducidad.TabIndex = 59;
+            this.mcCaducidad.TabIndex = 25;
             this.mcCaducidad.TextoColor = System.Drawing.Color.White;
             this.mcCaducidad.Value = new System.DateTime(2022, 10, 9, 17, 56, 50, 302);
             // 
@@ -407,7 +418,7 @@
             this.btnLimpiarCampos.Location = new System.Drawing.Point(453, 645);
             this.btnLimpiarCampos.Name = "btnLimpiarCampos";
             this.btnLimpiarCampos.Size = new System.Drawing.Size(256, 34);
-            this.btnLimpiarCampos.TabIndex = 61;
+            this.btnLimpiarCampos.TabIndex = 50;
             this.btnLimpiarCampos.Text = "Limpiar Campos";
             this.btnLimpiarCampos.TextoColor = System.Drawing.Color.White;
             this.btnLimpiarCampos.UseVisualStyleBackColor = false;
@@ -431,7 +442,7 @@
             this.btnGuardarProducto.Location = new System.Drawing.Point(138, 645);
             this.btnGuardarProducto.Name = "btnGuardarProducto";
             this.btnGuardarProducto.Size = new System.Drawing.Size(256, 34);
-            this.btnGuardarProducto.TabIndex = 60;
+            this.btnGuardarProducto.TabIndex = 45;
             this.btnGuardarProducto.Text = "Guardar Producto";
             this.btnGuardarProducto.TextoColor = System.Drawing.Color.White;
             this.btnGuardarProducto.UseVisualStyleBackColor = false;
@@ -572,12 +583,23 @@
             this.lblErrorCaducidad.Text = "Mensaje Error";
             this.lblErrorCaducidad.Visible = false;
             // 
+            // lblEuro
+            // 
+            this.lblEuro.AutoSize = true;
+            this.lblEuro.Font = new System.Drawing.Font("Roboto", 14F);
+            this.lblEuro.Location = new System.Drawing.Point(675, 371);
+            this.lblEuro.Name = "lblEuro";
+            this.lblEuro.Size = new System.Drawing.Size(21, 23);
+            this.lblEuro.TabIndex = 93;
+            this.lblEuro.Text = "€";
+            // 
             // NuevoProducto
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 14F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(236)))), ((int)(((byte)(236)))), ((int)(((byte)(236)))));
             this.ClientSize = new System.Drawing.Size(790, 719);
+            this.Controls.Add(this.lblEuro);
             this.Controls.Add(this.lblErrorGuardar);
             this.Controls.Add(this.lblErrorCaducidad);
             this.Controls.Add(this.lblErrorDescripcion);
@@ -608,6 +630,7 @@
             this.Controls.Add(this.pnlCabecera);
             this.Font = new System.Drawing.Font("Roboto", 9.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
             this.Name = "NuevoProducto";
             this.Text = "NuevoProducto";
@@ -656,5 +679,6 @@
         private System.Windows.Forms.Label lblErrorDescripcion;
         private System.Windows.Forms.Label lblErrorGuardar;
         private System.Windows.Forms.Label lblErrorCaducidad;
+        private System.Windows.Forms.Label lblEuro;
     }
 }

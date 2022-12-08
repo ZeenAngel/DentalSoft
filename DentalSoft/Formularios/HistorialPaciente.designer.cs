@@ -133,7 +133,7 @@
             this.txtAlergias.Location = new System.Drawing.Point(110, 213);
             this.txtAlergias.Name = "txtAlergias";
             this.txtAlergias.Size = new System.Drawing.Size(512, 236);
-            this.txtAlergias.TabIndex = 85;
+            this.txtAlergias.TabIndex = 0;
             this.txtAlergias.Text = "";
             // 
             // txtMedicacion
@@ -144,7 +144,7 @@
             this.txtMedicacion.Location = new System.Drawing.Point(712, 213);
             this.txtMedicacion.Name = "txtMedicacion";
             this.txtMedicacion.Size = new System.Drawing.Size(512, 236);
-            this.txtMedicacion.TabIndex = 86;
+            this.txtMedicacion.TabIndex = 5;
             this.txtMedicacion.Text = "";
             // 
             // txtObservaciones
@@ -153,7 +153,7 @@
             this.txtObservaciones.Location = new System.Drawing.Point(114, 522);
             this.txtObservaciones.Name = "txtObservaciones";
             this.txtObservaciones.Size = new System.Drawing.Size(508, 168);
-            this.txtObservaciones.TabIndex = 87;
+            this.txtObservaciones.TabIndex = 10;
             this.txtObservaciones.Text = "";
             // 
             // btnEpisodios

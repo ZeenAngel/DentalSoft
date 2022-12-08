@@ -30,6 +30,7 @@
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(NuevaReserva));
             this.gbFechaReserva = new System.Windows.Forms.GroupBox();
+            this.lblErrorHoras = new System.Windows.Forms.Label();
             this.lblErrorOdontologoNuevaReserva = new System.Windows.Forms.Label();
             this.lblErrorPacienteNuevaReserva = new System.Windows.Forms.Label();
             this.btnBuscarOdontologoNuevaReserva = new DentalSoft.ControlesPersonalizados.BotonPersonalizado();
@@ -54,6 +55,7 @@
             this.gbFechaReserva.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
+            this.gbFechaReserva.Controls.Add(this.lblErrorHoras);
             this.gbFechaReserva.Controls.Add(this.lblErrorOdontologoNuevaReserva);
             this.gbFechaReserva.Controls.Add(this.lblErrorPacienteNuevaReserva);
             this.gbFechaReserva.Controls.Add(this.btnBuscarOdontologoNuevaReserva);
@@ -77,6 +79,20 @@
             this.gbFechaReserva.TabStop = false;
             this.gbFechaReserva.Text = "Nueva Reserva";
             // 
+            // lblErrorHoras
+            // 
+            this.lblErrorHoras.AutoSize = true;
+            this.lblErrorHoras.Font = new System.Drawing.Font("Roboto", 9.5F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblErrorHoras.ForeColor = System.Drawing.Color.IndianRed;
+            this.lblErrorHoras.Image = ((System.Drawing.Image)(resources.GetObject("lblErrorHoras.Image")));
+            this.lblErrorHoras.ImageAlign = System.Drawing.ContentAlignment.TopLeft;
+            this.lblErrorHoras.Location = new System.Drawing.Point(665, 380);
+            this.lblErrorHoras.Name = "lblErrorHoras";
+            this.lblErrorHoras.Size = new System.Drawing.Size(85, 15);
+            this.lblErrorHoras.TabIndex = 36;
+            this.lblErrorHoras.Text = "Mensaje Error";
+            this.lblErrorHoras.Visible = false;
+            // 
             // lblErrorOdontologoNuevaReserva
             // 
             this.lblErrorOdontologoNuevaReserva.AutoSize = true;
@@ -84,7 +100,7 @@
             this.lblErrorOdontologoNuevaReserva.ForeColor = System.Drawing.Color.IndianRed;
             this.lblErrorOdontologoNuevaReserva.Image = ((System.Drawing.Image)(resources.GetObject("lblErrorOdontologoNuevaReserva.Image")));
             this.lblErrorOdontologoNuevaReserva.ImageAlign = System.Drawing.ContentAlignment.TopLeft;
-            this.lblErrorOdontologoNuevaReserva.Location = new System.Drawing.Point(650, 433);
+            this.lblErrorOdontologoNuevaReserva.Location = new System.Drawing.Point(665, 281);
             this.lblErrorOdontologoNuevaReserva.Name = "lblErrorOdontologoNuevaReserva";
             this.lblErrorOdontologoNuevaReserva.Size = new System.Drawing.Size(85, 15);
             this.lblErrorOdontologoNuevaReserva.TabIndex = 32;
@@ -98,7 +114,7 @@
             this.lblErrorPacienteNuevaReserva.ForeColor = System.Drawing.Color.IndianRed;
             this.lblErrorPacienteNuevaReserva.Image = ((System.Drawing.Image)(resources.GetObject("lblErrorPacienteNuevaReserva.Image")));
             this.lblErrorPacienteNuevaReserva.ImageAlign = System.Drawing.ContentAlignment.TopLeft;
-            this.lblErrorPacienteNuevaReserva.Location = new System.Drawing.Point(650, 299);
+            this.lblErrorPacienteNuevaReserva.Location = new System.Drawing.Point(665, 147);
             this.lblErrorPacienteNuevaReserva.Name = "lblErrorPacienteNuevaReserva";
             this.lblErrorPacienteNuevaReserva.Size = new System.Drawing.Size(85, 15);
             this.lblErrorPacienteNuevaReserva.TabIndex = 31;
@@ -117,10 +133,10 @@
             this.btnBuscarOdontologoNuevaReserva.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnBuscarOdontologoNuevaReserva.FondoColor = System.Drawing.Color.FromArgb(((int)(((byte)(16)))), ((int)(((byte)(110)))), ((int)(((byte)(196)))));
             this.btnBuscarOdontologoNuevaReserva.ForeColor = System.Drawing.Color.White;
-            this.btnBuscarOdontologoNuevaReserva.Location = new System.Drawing.Point(932, 374);
+            this.btnBuscarOdontologoNuevaReserva.Location = new System.Drawing.Point(947, 222);
             this.btnBuscarOdontologoNuevaReserva.Name = "btnBuscarOdontologoNuevaReserva";
             this.btnBuscarOdontologoNuevaReserva.Size = new System.Drawing.Size(115, 34);
-            this.btnBuscarOdontologoNuevaReserva.TabIndex = 30;
+            this.btnBuscarOdontologoNuevaReserva.TabIndex = 25;
             this.btnBuscarOdontologoNuevaReserva.Text = "Buscar";
             this.btnBuscarOdontologoNuevaReserva.TextoColor = System.Drawing.Color.White;
             this.btnBuscarOdontologoNuevaReserva.UseVisualStyleBackColor = false;
@@ -138,10 +154,10 @@
             this.btnBuscarPacienteNuevaReserva.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnBuscarPacienteNuevaReserva.FondoColor = System.Drawing.Color.FromArgb(((int)(((byte)(16)))), ((int)(((byte)(110)))), ((int)(((byte)(196)))));
             this.btnBuscarPacienteNuevaReserva.ForeColor = System.Drawing.Color.White;
-            this.btnBuscarPacienteNuevaReserva.Location = new System.Drawing.Point(932, 242);
+            this.btnBuscarPacienteNuevaReserva.Location = new System.Drawing.Point(947, 90);
             this.btnBuscarPacienteNuevaReserva.Name = "btnBuscarPacienteNuevaReserva";
             this.btnBuscarPacienteNuevaReserva.Size = new System.Drawing.Size(115, 34);
-            this.btnBuscarPacienteNuevaReserva.TabIndex = 29;
+            this.btnBuscarPacienteNuevaReserva.TabIndex = 15;
             this.btnBuscarPacienteNuevaReserva.Text = "Buscar";
             this.btnBuscarPacienteNuevaReserva.TextoColor = System.Drawing.Color.White;
             this.btnBuscarPacienteNuevaReserva.UseVisualStyleBackColor = false;
@@ -152,7 +168,7 @@
             this.lblOdontologoNuevaReserva.AutoSize = true;
             this.lblOdontologoNuevaReserva.Font = new System.Drawing.Font("Roboto", 12F);
             this.lblOdontologoNuevaReserva.ForeColor = System.Drawing.Color.Black;
-            this.lblOdontologoNuevaReserva.Location = new System.Drawing.Point(554, 383);
+            this.lblOdontologoNuevaReserva.Location = new System.Drawing.Point(569, 231);
             this.lblOdontologoNuevaReserva.Name = "lblOdontologoNuevaReserva";
             this.lblOdontologoNuevaReserva.Size = new System.Drawing.Size(92, 19);
             this.lblOdontologoNuevaReserva.TabIndex = 28;
@@ -163,7 +179,7 @@
             this.lblPacienteNuevaReserva.AutoSize = true;
             this.lblPacienteNuevaReserva.Font = new System.Drawing.Font("Roboto", 12F);
             this.lblPacienteNuevaReserva.ForeColor = System.Drawing.Color.Black;
-            this.lblPacienteNuevaReserva.Location = new System.Drawing.Point(554, 251);
+            this.lblPacienteNuevaReserva.Location = new System.Drawing.Point(569, 99);
             this.lblPacienteNuevaReserva.Name = "lblPacienteNuevaReserva";
             this.lblPacienteNuevaReserva.Size = new System.Drawing.Size(70, 19);
             this.lblPacienteNuevaReserva.TabIndex = 27;
@@ -184,7 +200,7 @@
             this.btnLimpiarDatosNuevaReserva.Location = new System.Drawing.Point(534, 534);
             this.btnLimpiarDatosNuevaReserva.Name = "btnLimpiarDatosNuevaReserva";
             this.btnLimpiarDatosNuevaReserva.Size = new System.Drawing.Size(196, 34);
-            this.btnLimpiarDatosNuevaReserva.TabIndex = 26;
+            this.btnLimpiarDatosNuevaReserva.TabIndex = 35;
             this.btnLimpiarDatosNuevaReserva.Text = "Limpiar Datos";
             this.btnLimpiarDatosNuevaReserva.TextoColor = System.Drawing.Color.White;
             this.btnLimpiarDatosNuevaReserva.UseVisualStyleBackColor = false;
@@ -195,7 +211,7 @@
             this.lblHoraNuevaReserva.AutoSize = true;
             this.lblHoraNuevaReserva.Font = new System.Drawing.Font("Roboto", 12F);
             this.lblHoraNuevaReserva.ForeColor = System.Drawing.Color.Black;
-            this.lblHoraNuevaReserva.Location = new System.Drawing.Point(554, 132);
+            this.lblHoraNuevaReserva.Location = new System.Drawing.Point(569, 343);
             this.lblHoraNuevaReserva.Name = "lblHoraNuevaReserva";
             this.lblHoraNuevaReserva.Size = new System.Drawing.Size(43, 19);
             this.lblHoraNuevaReserva.TabIndex = 25;
@@ -211,16 +227,18 @@
             this.txtPacienteNuevaReserva.Contraseña = false;
             this.txtPacienteNuevaReserva.Font = new System.Drawing.Font("Roboto", 9.5F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtPacienteNuevaReserva.ForeColor = System.Drawing.Color.Black;
-            this.txtPacienteNuevaReserva.Location = new System.Drawing.Point(653, 244);
+            this.txtPacienteNuevaReserva.Location = new System.Drawing.Point(668, 92);
             this.txtPacienteNuevaReserva.MarcadorPosicionColor = System.Drawing.Color.DarkGray;
             this.txtPacienteNuevaReserva.MarcadorPosicionTexto = "";
             this.txtPacienteNuevaReserva.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
             this.txtPacienteNuevaReserva.Multilinea = false;
             this.txtPacienteNuevaReserva.Name = "txtPacienteNuevaReserva";
             this.txtPacienteNuevaReserva.Padding = new System.Windows.Forms.Padding(10, 7, 10, 7);
+            this.txtPacienteNuevaReserva.PosicionSeleccion = 0;
             this.txtPacienteNuevaReserva.Size = new System.Drawing.Size(250, 30);
             this.txtPacienteNuevaReserva.SubrayadoEstilo = true;
-            this.txtPacienteNuevaReserva.TabIndex = 2;
+            this.txtPacienteNuevaReserva.TabIndex = 10;
+            this.txtPacienteNuevaReserva.TamañoMaximo = 30000;
             this.txtPacienteNuevaReserva.Texto = "";
             // 
             // txtOdontologoNuevaReserva
@@ -233,17 +251,20 @@
             this.txtOdontologoNuevaReserva.Contraseña = false;
             this.txtOdontologoNuevaReserva.Font = new System.Drawing.Font("Roboto", 9.5F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtOdontologoNuevaReserva.ForeColor = System.Drawing.Color.Black;
-            this.txtOdontologoNuevaReserva.Location = new System.Drawing.Point(653, 377);
+            this.txtOdontologoNuevaReserva.Location = new System.Drawing.Point(668, 225);
             this.txtOdontologoNuevaReserva.MarcadorPosicionColor = System.Drawing.Color.DarkGray;
             this.txtOdontologoNuevaReserva.MarcadorPosicionTexto = "";
             this.txtOdontologoNuevaReserva.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
             this.txtOdontologoNuevaReserva.Multilinea = false;
             this.txtOdontologoNuevaReserva.Name = "txtOdontologoNuevaReserva";
             this.txtOdontologoNuevaReserva.Padding = new System.Windows.Forms.Padding(10, 7, 10, 7);
+            this.txtOdontologoNuevaReserva.PosicionSeleccion = 0;
             this.txtOdontologoNuevaReserva.Size = new System.Drawing.Size(250, 30);
             this.txtOdontologoNuevaReserva.SubrayadoEstilo = true;
-            this.txtOdontologoNuevaReserva.TabIndex = 3;
+            this.txtOdontologoNuevaReserva.TabIndex = 20;
+            this.txtOdontologoNuevaReserva.TamañoMaximo = 30000;
             this.txtOdontologoNuevaReserva.Texto = "";
+            this.txtOdontologoNuevaReserva.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtOdontologoNuevaReserva_KeyPress);
             // 
             // btnGuardarNuevaReserva
             // 
@@ -260,7 +281,7 @@
             this.btnGuardarNuevaReserva.Location = new System.Drawing.Point(312, 534);
             this.btnGuardarNuevaReserva.Name = "btnGuardarNuevaReserva";
             this.btnGuardarNuevaReserva.Size = new System.Drawing.Size(196, 34);
-            this.btnGuardarNuevaReserva.TabIndex = 20;
+            this.btnGuardarNuevaReserva.TabIndex = 30;
             this.btnGuardarNuevaReserva.Text = "Guardar";
             this.btnGuardarNuevaReserva.TextoColor = System.Drawing.Color.White;
             this.btnGuardarNuevaReserva.UseVisualStyleBackColor = false;
@@ -280,9 +301,10 @@
             this.mcCalendarioNuevaReserva.MinimumSize = new System.Drawing.Size(4, 35);
             this.mcCalendarioNuevaReserva.Name = "mcCalendarioNuevaReserva";
             this.mcCalendarioNuevaReserva.Size = new System.Drawing.Size(270, 35);
-            this.mcCalendarioNuevaReserva.TabIndex = 19;
+            this.mcCalendarioNuevaReserva.TabIndex = 0;
             this.mcCalendarioNuevaReserva.TextoColor = System.Drawing.Color.White;
             this.mcCalendarioNuevaReserva.Value = new System.DateTime(2022, 10, 9, 17, 56, 50, 302);
+            this.mcCalendarioNuevaReserva.ValueChanged += new System.EventHandler(this.mcCalendarioNuevaReserva_ValueChanged);
             // 
             // cbHoraNuevaReserva
             // 
@@ -295,12 +317,12 @@
             this.cbHoraNuevaReserva.ForeColor = System.Drawing.Color.Black;
             this.cbHoraNuevaReserva.ListaColorFondo = System.Drawing.Color.WhiteSmoke;
             this.cbHoraNuevaReserva.ListColorTexto = System.Drawing.Color.Black;
-            this.cbHoraNuevaReserva.Location = new System.Drawing.Point(653, 124);
+            this.cbHoraNuevaReserva.Location = new System.Drawing.Point(668, 335);
             this.cbHoraNuevaReserva.MinimumSize = new System.Drawing.Size(200, 30);
             this.cbHoraNuevaReserva.Name = "cbHoraNuevaReserva";
             this.cbHoraNuevaReserva.Padding = new System.Windows.Forms.Padding(1);
             this.cbHoraNuevaReserva.Size = new System.Drawing.Size(200, 30);
-            this.cbHoraNuevaReserva.TabIndex = 1;
+            this.cbHoraNuevaReserva.TabIndex = 5;
             this.cbHoraNuevaReserva.Textos = "";
             // 
             // lblSeleccionarFechaNuevaReserva
@@ -365,5 +387,6 @@
         private System.Windows.Forms.Label lblSeleccionarFechaNuevaReserva;
         private System.Windows.Forms.Label lblErrorOdontologoNuevaReserva;
         private System.Windows.Forms.Label lblErrorPacienteNuevaReserva;
+        private System.Windows.Forms.Label lblErrorHoras;
     }
 }

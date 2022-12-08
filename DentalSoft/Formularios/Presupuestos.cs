@@ -155,6 +155,8 @@ namespace DentalSoft.Formularios
         #region -> Eventos
         private void Facturas_Load(object sender, EventArgs e)
         {
+            // TODO: esta línea de código carga datos en la tabla 'dataSetPresupuestos.DetallePresupuesto' Puede moverla o quitarla según sea necesario.
+            this.detallePresupuestoTableAdapter.Fill(this.dataSetPresupuestos.DetallePresupuesto);
             OcultarInformes();
             FormatearListview();
             CargarListView("");

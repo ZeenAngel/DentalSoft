@@ -92,12 +92,9 @@ namespace DentalSoft
         {
             if (empleado.Puesto == 3 || empleado.Puesto == 4)
             {
-                btnNuevoPaciente.Enabled = false;
                 btnNuevoPaciente.Visible = false;
-                btnEditarPacientes.Enabled = false;
-                btnEditarPacientes.Enabled = false;
-                btnEliminarPacientes.Enabled = false;
-                btnEliminarPacientes.Enabled = false;
+                btnEditarPacientes.Visible = false;
+                btnEliminarPacientes.Visible = false;
             }
         }
         #endregion
@@ -134,7 +131,7 @@ namespace DentalSoft
             if (dgvPacientes.SelectedRows.Count > 0)
             {
                 string dni = dgvPacientes.Rows[dgvPacientes.CurrentRow.Index].Cells[0].Value.ToString();
-                MenuPrincipalPaciente menuPaciente = new MenuPrincipalPaciente(dni);
+                MenuPrincipalPaciente menuPaciente = new MenuPrincipalPaciente(dni, this.empleado);
                 menuPaciente.Show();
             }
             else

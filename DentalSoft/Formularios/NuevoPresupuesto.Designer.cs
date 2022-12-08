@@ -39,8 +39,11 @@
             this.lblPaciente = new System.Windows.Forms.Label();
             this.pnlContenedorDetalle = new System.Windows.Forms.Panel();
             this.lblErrorTratamiento = new System.Windows.Forms.Label();
+            this.btnAñadir = new DentalSoft.ControlesPersonalizados.BotonPersonalizado();
             this.lblErrorCantidad = new System.Windows.Forms.Label();
+            this.txtCantidad = new DentalSoft.TextboxPersonalizado();
             this.label1 = new System.Windows.Forms.Label();
+            this.cbTratamientos = new DentalSoft.ControlesPersonalizados.ComboBoxPersonalizado();
             this.lblTratamiento = new System.Windows.Forms.Label();
             this.pnlContenedorDgv = new System.Windows.Forms.Panel();
             this.dgvDetalles = new System.Windows.Forms.DataGridView();
@@ -58,9 +61,6 @@
             this.cbCentros = new DentalSoft.ControlesPersonalizados.ComboBoxPersonalizado();
             this.btnEliminar = new DentalSoft.ControlesPersonalizados.BotonPersonalizado();
             this.btnGuardar = new DentalSoft.ControlesPersonalizados.BotonPersonalizado();
-            this.btnAñadir = new DentalSoft.ControlesPersonalizados.BotonPersonalizado();
-            this.txtCantidad = new DentalSoft.TextboxPersonalizado();
-            this.cbTratamientos = new DentalSoft.ControlesPersonalizados.ComboBoxPersonalizado();
             this.btnBuscarPaciente = new DentalSoft.ControlesPersonalizados.BotonPersonalizado();
             this.txtPaciente = new DentalSoft.TextboxPersonalizado();
             this.pnlCabecera.SuspendLayout();
@@ -195,6 +195,28 @@
             this.lblErrorTratamiento.Text = "Mensaje Error";
             this.lblErrorTratamiento.Visible = false;
             // 
+            // btnAñadir
+            // 
+            this.btnAñadir.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(16)))), ((int)(((byte)(110)))), ((int)(((byte)(196)))));
+            this.btnAñadir.BordeColor = System.Drawing.Color.FromArgb(((int)(((byte)(16)))), ((int)(((byte)(110)))), ((int)(((byte)(196)))));
+            this.btnAñadir.BordeRadio = 30;
+            this.btnAñadir.BordeTamaño = 0;
+            this.btnAñadir.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnAñadir.FlatAppearance.BorderSize = 0;
+            this.btnAñadir.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(195)))), ((int)(((byte)(165)))));
+            this.btnAñadir.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnAñadir.FondoColor = System.Drawing.Color.FromArgb(((int)(((byte)(16)))), ((int)(((byte)(110)))), ((int)(((byte)(196)))));
+            this.btnAñadir.Font = new System.Drawing.Font("Roboto", 12F);
+            this.btnAñadir.ForeColor = System.Drawing.Color.White;
+            this.btnAñadir.Location = new System.Drawing.Point(470, 53);
+            this.btnAñadir.Name = "btnAñadir";
+            this.btnAñadir.Size = new System.Drawing.Size(163, 30);
+            this.btnAñadir.TabIndex = 25;
+            this.btnAñadir.Text = "Añadir";
+            this.btnAñadir.TextoColor = System.Drawing.Color.White;
+            this.btnAñadir.UseVisualStyleBackColor = false;
+            this.btnAñadir.Click += new System.EventHandler(this.btnAñadir_Click);
+            // 
             // lblErrorCantidad
             // 
             this.lblErrorCantidad.AutoSize = true;
@@ -209,6 +231,30 @@
             this.lblErrorCantidad.Text = "Mensaje Error";
             this.lblErrorCantidad.Visible = false;
             // 
+            // txtCantidad
+            // 
+            this.txtCantidad.BackColor = System.Drawing.SystemColors.Window;
+            this.txtCantidad.BordeColor = System.Drawing.Color.FromArgb(((int)(((byte)(16)))), ((int)(((byte)(110)))), ((int)(((byte)(196)))));
+            this.txtCantidad.BordeColorFoco = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(195)))), ((int)(((byte)(165)))));
+            this.txtCantidad.BordeRadio = 0;
+            this.txtCantidad.BordeTamaño = 2;
+            this.txtCantidad.Contraseña = false;
+            this.txtCantidad.Font = new System.Drawing.Font("Roboto", 9.5F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtCantidad.ForeColor = System.Drawing.Color.Black;
+            this.txtCantidad.Location = new System.Drawing.Point(297, 53);
+            this.txtCantidad.MarcadorPosicionColor = System.Drawing.Color.DarkGray;
+            this.txtCantidad.MarcadorPosicionTexto = "";
+            this.txtCantidad.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
+            this.txtCantidad.Multilinea = false;
+            this.txtCantidad.Name = "txtCantidad";
+            this.txtCantidad.Padding = new System.Windows.Forms.Padding(10, 7, 10, 7);
+            this.txtCantidad.PosicionSeleccion = 0;
+            this.txtCantidad.Size = new System.Drawing.Size(119, 30);
+            this.txtCantidad.SubrayadoEstilo = true;
+            this.txtCantidad.TabIndex = 20;
+            this.txtCantidad.TamañoMaximo = 30000;
+            this.txtCantidad.Texto = "";
+            // 
             // label1
             // 
             this.label1.AutoSize = true;
@@ -218,6 +264,27 @@
             this.label1.Size = new System.Drawing.Size(85, 23);
             this.label1.TabIndex = 8;
             this.label1.Text = "Cantidad";
+            // 
+            // cbTratamientos
+            // 
+            this.cbTratamientos.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.cbTratamientos.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(16)))), ((int)(((byte)(110)))), ((int)(((byte)(196)))));
+            this.cbTratamientos.BordeColor = System.Drawing.Color.FromArgb(((int)(((byte)(16)))), ((int)(((byte)(110)))), ((int)(((byte)(196)))));
+            this.cbTratamientos.BordeTamaño = 1;
+            this.cbTratamientos.ColorFondo = System.Drawing.Color.WhiteSmoke;
+            this.cbTratamientos.ColorIcono = System.Drawing.Color.FromArgb(((int)(((byte)(16)))), ((int)(((byte)(110)))), ((int)(((byte)(196)))));
+            this.cbTratamientos.Cursor = System.Windows.Forms.Cursors.SizeAll;
+            this.cbTratamientos.EstiloListaDesplegable = System.Windows.Forms.ComboBoxStyle.DropDown;
+            this.cbTratamientos.ForeColor = System.Drawing.Color.Black;
+            this.cbTratamientos.ListaColorFondo = System.Drawing.Color.WhiteSmoke;
+            this.cbTratamientos.ListColorTexto = System.Drawing.Color.Black;
+            this.cbTratamientos.Location = new System.Drawing.Point(3, 53);
+            this.cbTratamientos.MinimumSize = new System.Drawing.Size(200, 30);
+            this.cbTratamientos.Name = "cbTratamientos";
+            this.cbTratamientos.Padding = new System.Windows.Forms.Padding(1);
+            this.cbTratamientos.Size = new System.Drawing.Size(250, 30);
+            this.cbTratamientos.TabIndex = 15;
+            this.cbTratamientos.Textos = "";
             // 
             // lblTratamiento
             // 
@@ -379,7 +446,7 @@
             this.cbCentros.Name = "cbCentros";
             this.cbCentros.Padding = new System.Windows.Forms.Padding(1);
             this.cbCentros.Size = new System.Drawing.Size(200, 30);
-            this.cbCentros.TabIndex = 98;
+            this.cbCentros.TabIndex = 0;
             this.cbCentros.Textos = "";
             // 
             // btnEliminar
@@ -398,7 +465,7 @@
             this.btnEliminar.Location = new System.Drawing.Point(32, 648);
             this.btnEliminar.Name = "btnEliminar";
             this.btnEliminar.Size = new System.Drawing.Size(163, 30);
-            this.btnEliminar.TabIndex = 95;
+            this.btnEliminar.TabIndex = 30;
             this.btnEliminar.Text = "Eliminar tratamiento";
             this.btnEliminar.TextoColor = System.Drawing.Color.White;
             this.btnEliminar.UseVisualStyleBackColor = false;
@@ -420,76 +487,11 @@
             this.btnGuardar.Location = new System.Drawing.Point(275, 699);
             this.btnGuardar.Name = "btnGuardar";
             this.btnGuardar.Size = new System.Drawing.Size(173, 42);
-            this.btnGuardar.TabIndex = 90;
+            this.btnGuardar.TabIndex = 35;
             this.btnGuardar.Text = "Guardar Presupuesto";
             this.btnGuardar.TextoColor = System.Drawing.Color.White;
             this.btnGuardar.UseVisualStyleBackColor = false;
             this.btnGuardar.Click += new System.EventHandler(this.btnGuardar_Click);
-            // 
-            // btnAñadir
-            // 
-            this.btnAñadir.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(16)))), ((int)(((byte)(110)))), ((int)(((byte)(196)))));
-            this.btnAñadir.BordeColor = System.Drawing.Color.FromArgb(((int)(((byte)(16)))), ((int)(((byte)(110)))), ((int)(((byte)(196)))));
-            this.btnAñadir.BordeRadio = 30;
-            this.btnAñadir.BordeTamaño = 0;
-            this.btnAñadir.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.btnAñadir.FlatAppearance.BorderSize = 0;
-            this.btnAñadir.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(195)))), ((int)(((byte)(165)))));
-            this.btnAñadir.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnAñadir.FondoColor = System.Drawing.Color.FromArgb(((int)(((byte)(16)))), ((int)(((byte)(110)))), ((int)(((byte)(196)))));
-            this.btnAñadir.Font = new System.Drawing.Font("Roboto", 12F);
-            this.btnAñadir.ForeColor = System.Drawing.Color.White;
-            this.btnAñadir.Location = new System.Drawing.Point(470, 53);
-            this.btnAñadir.Name = "btnAñadir";
-            this.btnAñadir.Size = new System.Drawing.Size(163, 30);
-            this.btnAñadir.TabIndex = 89;
-            this.btnAñadir.Text = "Añadir";
-            this.btnAñadir.TextoColor = System.Drawing.Color.White;
-            this.btnAñadir.UseVisualStyleBackColor = false;
-            this.btnAñadir.Click += new System.EventHandler(this.btnAñadir_Click);
-            // 
-            // txtCantidad
-            // 
-            this.txtCantidad.BackColor = System.Drawing.SystemColors.Window;
-            this.txtCantidad.BordeColor = System.Drawing.Color.FromArgb(((int)(((byte)(16)))), ((int)(((byte)(110)))), ((int)(((byte)(196)))));
-            this.txtCantidad.BordeColorFoco = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(195)))), ((int)(((byte)(165)))));
-            this.txtCantidad.BordeRadio = 0;
-            this.txtCantidad.BordeTamaño = 2;
-            this.txtCantidad.Contraseña = false;
-            this.txtCantidad.Font = new System.Drawing.Font("Roboto", 9.5F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtCantidad.ForeColor = System.Drawing.Color.Black;
-            this.txtCantidad.Location = new System.Drawing.Point(297, 53);
-            this.txtCantidad.MarcadorPosicionColor = System.Drawing.Color.DarkGray;
-            this.txtCantidad.MarcadorPosicionTexto = "";
-            this.txtCantidad.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
-            this.txtCantidad.Multilinea = false;
-            this.txtCantidad.Name = "txtCantidad";
-            this.txtCantidad.Padding = new System.Windows.Forms.Padding(10, 7, 10, 7);
-            this.txtCantidad.Size = new System.Drawing.Size(119, 30);
-            this.txtCantidad.SubrayadoEstilo = true;
-            this.txtCantidad.TabIndex = 89;
-            this.txtCantidad.Texto = "";
-            // 
-            // cbTratamientos
-            // 
-            this.cbTratamientos.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.cbTratamientos.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(16)))), ((int)(((byte)(110)))), ((int)(((byte)(196)))));
-            this.cbTratamientos.BordeColor = System.Drawing.Color.FromArgb(((int)(((byte)(16)))), ((int)(((byte)(110)))), ((int)(((byte)(196)))));
-            this.cbTratamientos.BordeTamaño = 1;
-            this.cbTratamientos.ColorFondo = System.Drawing.Color.WhiteSmoke;
-            this.cbTratamientos.ColorIcono = System.Drawing.Color.FromArgb(((int)(((byte)(16)))), ((int)(((byte)(110)))), ((int)(((byte)(196)))));
-            this.cbTratamientos.Cursor = System.Windows.Forms.Cursors.SizeAll;
-            this.cbTratamientos.EstiloListaDesplegable = System.Windows.Forms.ComboBoxStyle.DropDown;
-            this.cbTratamientos.ForeColor = System.Drawing.Color.Black;
-            this.cbTratamientos.ListaColorFondo = System.Drawing.Color.WhiteSmoke;
-            this.cbTratamientos.ListColorTexto = System.Drawing.Color.Black;
-            this.cbTratamientos.Location = new System.Drawing.Point(3, 53);
-            this.cbTratamientos.MinimumSize = new System.Drawing.Size(200, 30);
-            this.cbTratamientos.Name = "cbTratamientos";
-            this.cbTratamientos.Padding = new System.Windows.Forms.Padding(1);
-            this.cbTratamientos.Size = new System.Drawing.Size(250, 30);
-            this.cbTratamientos.TabIndex = 7;
-            this.cbTratamientos.Textos = "";
             // 
             // btnBuscarPaciente
             // 
@@ -507,7 +509,7 @@
             this.btnBuscarPaciente.Location = new System.Drawing.Point(479, 175);
             this.btnBuscarPaciente.Name = "btnBuscarPaciente";
             this.btnBuscarPaciente.Size = new System.Drawing.Size(173, 35);
-            this.btnBuscarPaciente.TabIndex = 87;
+            this.btnBuscarPaciente.TabIndex = 10;
             this.btnBuscarPaciente.Text = "Buscar Paciente";
             this.btnBuscarPaciente.TextoColor = System.Drawing.Color.White;
             this.btnBuscarPaciente.UseVisualStyleBackColor = false;
@@ -530,9 +532,11 @@
             this.txtPaciente.Multilinea = false;
             this.txtPaciente.Name = "txtPaciente";
             this.txtPaciente.Padding = new System.Windows.Forms.Padding(10, 7, 10, 7);
+            this.txtPaciente.PosicionSeleccion = 0;
             this.txtPaciente.Size = new System.Drawing.Size(266, 30);
             this.txtPaciente.SubrayadoEstilo = true;
-            this.txtPaciente.TabIndex = 8;
+            this.txtPaciente.TabIndex = 5;
+            this.txtPaciente.TamañoMaximo = 30000;
             this.txtPaciente.Texto = "";
             // 
             // NuevoPresupuesto
@@ -561,6 +565,7 @@
             this.Controls.Add(this.pnlCabecera);
             this.Font = new System.Drawing.Font("Roboto", 9.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
             this.Name = "NuevoPresupuesto";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;

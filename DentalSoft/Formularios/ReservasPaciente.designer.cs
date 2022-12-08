@@ -87,7 +87,7 @@
             this.mcFiltroFecha.MinimumSize = new System.Drawing.Size(4, 35);
             this.mcFiltroFecha.Name = "mcFiltroFecha";
             this.mcFiltroFecha.Size = new System.Drawing.Size(252, 35);
-            this.mcFiltroFecha.TabIndex = 78;
+            this.mcFiltroFecha.TabIndex = 0;
             this.mcFiltroFecha.TextoColor = System.Drawing.Color.White;
             this.mcFiltroFecha.Value = new System.DateTime(2022, 10, 23, 17, 7, 12, 419);
             this.mcFiltroFecha.CloseUp += new System.EventHandler(this.mcFiltroFecha_CloseUp);

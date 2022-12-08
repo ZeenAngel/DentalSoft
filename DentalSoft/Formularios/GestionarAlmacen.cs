@@ -76,9 +76,7 @@ namespace DentalSoft.Formularios
         {
             if (conexion.EstablecerConexion())
             {
-                string sentencia = "SELECT producto.Referencia, producto.Descripcion, producto.Cantidad, producto.Coste, producto.fecha_caducidad AS Caducidad, producto.Lote, " +
-                    "categoria_producto.Descripcion, almacen.Nombre FROM Producto INNER JOIN categoria_producto ON categoria_producto.Id = producto.Categoria " +
-                    "INNER JOIN almacen ON almacen.Id = producto.Almacen WHERE " + cbFiltros.Textos + " LIKE '" + txtAlmacen.Texto + "%'";
+                string sentencia = "SELECT Nombre, ubicacion AS Ubicación FROM Almacen WHERE " + cbFiltros.Textos + " LIKE '" + txtAlmacen.Texto + "%'";
                 MySqlCommand comando = new MySqlCommand(sentencia, conexion.conexionSql);
                 MySqlDataAdapter datos = new MySqlDataAdapter(comando);
                 DataTable tabla = new DataTable();
@@ -221,12 +219,21 @@ namespace DentalSoft.Formularios
 
         private void btnNuevoAlmacen_Click(object sender, EventArgs e)
         {
-            // TODO: Abrir el formulario NuevoAlmacen SIN parámetros
+            NuevoAlmacen nuevoAlmacen = new NuevoAlmacen();
+            nuevoAlmacen.ShowDialog();
+            CargarDgv();
         }
 
         private void btnEditarAlmacen_Click(object sender, EventArgs e)
         {
-            // TODO: Abrir el formulario NuevoAlmacen CON parámetros
+            if (dgvAlmacen.SelectedRows.Count > 0)
+            {
+                NuevoAlmacen nuevoAlmacen = new NuevoAlmacen(GetIdAlmacen(dgvAlmacen.Rows[dgvAlmacen.CurrentRow.Index].Cells[0].Value.ToString()));
+                nuevoAlmacen.ShowDialog();
+                CargarDgv();
+            }
+            else
+                MostrarMensaje("Debe seleccionar un almacén de la lista");
         }
 
         private void btnEliminarAlmacen_Click(object sender, EventArgs e)
@@ -235,7 +242,7 @@ namespace DentalSoft.Formularios
             DialogResult mensaje;
             if (dgvAlmacen.SelectedRows.Count > 0) // Comprobar si hay seleccionada alguna fila
             {
-                int idAlmacen = GetIdAlmacen(dgvAlmacen.Rows[dgvAlmacen.CurrentRow.Index].Cells[7].Value.ToString());
+                int idAlmacen = GetIdAlmacen(dgvAlmacen.Rows[dgvAlmacen.CurrentRow.Index].Cells[0].Value.ToString());
                 if (! ComprobarProductosAlmacen())
                 {
                     mensaje = MessageBoxPersonalizadoControl.Show("¿Seguro que quiere eliminar este almacen y los productos asociados a el?", datosGlobales.TituloAplicacion, MessageBoxButtons.YesNo, MessageBoxIcon.Warning);
@@ -267,6 +274,8 @@ namespace DentalSoft.Formularios
 
         private void GestionarAlmacen_Load(object sender, EventArgs e)
         {
+            Estilo estilo = new Estilo();
+            estilo.EstiloDataGridView(dgvAlmacen);
             CargarDgv();
             CargarFiltros();
         }

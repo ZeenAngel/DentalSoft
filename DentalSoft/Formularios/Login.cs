@@ -10,6 +10,7 @@ using System.Windows.Forms;
 using System.Runtime.InteropServices;
 using MySql.Data.MySqlClient;
 using DentalSoft.Clases;
+using DentalSoft.Formularios;
 
 namespace DentalSoft
 {
@@ -69,7 +70,7 @@ namespace DentalSoft
         {
             if(txtUsuarioLogin.Texto != "" && txtContraseñaLogin.Texto != "")
             {
-                Clases.ConexionBD conexion = new Clases.ConexionBD();
+                ConexionBD conexion = new ConexionBD();
                 string usuario = txtUsuarioLogin.Texto;
                 string password = txtContraseñaLogin.Texto;
                 string sentencia = "SELECT * FROM identificacion_empleado WHERE Usuario='" + usuario + "'";
@@ -120,7 +121,6 @@ namespace DentalSoft
                             else
                             {
                                 DialogResult mensaje = MessageBoxPersonalizadoControl.Show("Ha superado el límite de intentos, por favor pongase en contacto con el administrador", datosGlobales.TituloAplicacion, MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
-                                // MessageBox.Show("Ha superado el límite de intentos, por favor pongase en contacto con el administrador", "DentalSoft", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
                                 Application.Exit();
                             }
                         }
@@ -163,8 +163,13 @@ namespace DentalSoft
                 btnAccederLogin_Click(sender, e);
             }
         }
+
         #endregion
 
-
+        private void linkRecuperarContraseña_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
+        {
+            LoginRecuperacionContraseña loginRecuperacionContraseña = new LoginRecuperacionContraseña();
+            loginRecuperacionContraseña.ShowDialog();
+        }
     }
 }

@@ -29,6 +29,7 @@ namespace DentalSoft.Clases
         #endregion
 
         // Constructores
+        #region -> Constructores
         public Paciente() 
         {
             odontograma = new List<Pieza>();
@@ -40,6 +41,7 @@ namespace DentalSoft.Clases
             odontograma = new List<Pieza>();
             CargarOdontograma();
         }
+        #endregion
 
         // Getters y Setters
         #region -> Getters y Setters
@@ -105,6 +107,7 @@ namespace DentalSoft.Clases
 
         public bool CargarPaciente(string dni)
         {
+            bool sw = false;
             ConexionBD conexion = new ConexionBD();
             if (conexion.EstablecerConexion())
             {
@@ -127,22 +130,21 @@ namespace DentalSoft.Clases
                     this.edad = reader.GetInt32(8);
                     this.genero = reader.GetString(9);
                     this.consentimiento = reader.GetBoolean(10);
-                    reader.Close();
-                    conexion.CerrarConexion();
-                    return true; // Todo OK
+                    sw = true; // Todo OK
                 }
                 else
                 {
                     DialogResult mensaje = MessageBoxPersonalizadoControl.Show("No se ha encontrado ningún paciente con ese DNI", datosGlobales.TituloAplicacion, MessageBoxButtons.OK, MessageBoxIcon.Warning);
-                    conexion.CerrarConexion();
-                    return false; // No se encuentra
                 }
+                reader.Close();
+                comando.Dispose();
+                conexion.CerrarConexion();
             }
             else
             {
                 DialogResult mensaje = MessageBoxPersonalizadoControl.Show("No se ha podido establecer conexión con la base de datos", datosGlobales.TituloAplicacion, MessageBoxButtons.OK, MessageBoxIcon.Warning);;
-                return false; // No se ha conectado
             }
+            return sw;
         }
         #endregion
     }

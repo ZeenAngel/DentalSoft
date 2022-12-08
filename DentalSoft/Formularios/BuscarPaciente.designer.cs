@@ -128,9 +128,11 @@
             this.txtPacienteBuscarPaciente.Multilinea = false;
             this.txtPacienteBuscarPaciente.Name = "txtPacienteBuscarPaciente";
             this.txtPacienteBuscarPaciente.Padding = new System.Windows.Forms.Padding(10, 7, 10, 7);
+            this.txtPacienteBuscarPaciente.PosicionSeleccion = 0;
             this.txtPacienteBuscarPaciente.Size = new System.Drawing.Size(464, 30);
             this.txtPacienteBuscarPaciente.SubrayadoEstilo = true;
-            this.txtPacienteBuscarPaciente.TabIndex = 2;
+            this.txtPacienteBuscarPaciente.TabIndex = 0;
+            this.txtPacienteBuscarPaciente.TamañoMaximo = 30000;
             this.txtPacienteBuscarPaciente.Texto = "";
             this.txtPacienteBuscarPaciente._TextChanged += new System.EventHandler(this.txtPacienteBuscarPaciente__TextChanged);
             // 
@@ -152,7 +154,7 @@
             this.cbFiltrosBuscarPaciente.Name = "cbFiltrosBuscarPaciente";
             this.cbFiltrosBuscarPaciente.Padding = new System.Windows.Forms.Padding(1);
             this.cbFiltrosBuscarPaciente.Size = new System.Drawing.Size(200, 30);
-            this.cbFiltrosBuscarPaciente.TabIndex = 3;
+            this.cbFiltrosBuscarPaciente.TabIndex = 5;
             this.cbFiltrosBuscarPaciente.Textos = "";
             this.cbFiltrosBuscarPaciente.OnSelectedIndexChanged += new System.EventHandler(this.cbFiltrosBuscarPaciente_OnSelectedIndexChanged);
             // 
@@ -189,6 +191,7 @@
             this.Controls.Add(this.pnlCabecera);
             this.Font = new System.Drawing.Font("Roboto", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "BuscarPaciente";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "BuscarPaciente";

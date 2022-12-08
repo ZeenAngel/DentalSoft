@@ -32,6 +32,7 @@ namespace DentalSoft
         #endregion
 
         // Constructores
+        #region -> Constructores
         public MenuPrincipalPaciente()
         {
             InitializeComponent();
@@ -43,6 +44,15 @@ namespace DentalSoft
             this.dni = dni;
             paciente = new Paciente();
         }
+
+        public MenuPrincipalPaciente(string dni, Empleado empleado)
+        {
+            InitializeComponent();
+            this.dni = dni;
+            paciente = new Paciente();
+            this.empleado = empleado;
+        }
+        #endregion
 
         // Métodos privados
         public void AbrirFormularioHijo(Form formularioHijo)
@@ -129,7 +139,7 @@ namespace DentalSoft
 
         private void btnOdontograma_Click(object sender, EventArgs e)
         {
-            Odontograma odontograma = new Odontograma(paciente);
+            Odontograma odontograma = new Odontograma(this.paciente, this.empleado);
             AbrirFormularioHijo(odontograma);
         }
     }

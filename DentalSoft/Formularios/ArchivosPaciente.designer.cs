@@ -60,7 +60,7 @@
             this.lvCargarFicheros.Location = new System.Drawing.Point(153, 152);
             this.lvCargarFicheros.Name = "lvCargarFicheros";
             this.lvCargarFicheros.Size = new System.Drawing.Size(517, 492);
-            this.lvCargarFicheros.TabIndex = 78;
+            this.lvCargarFicheros.TabIndex = 0;
             this.lvCargarFicheros.UseCompatibleStateImageBehavior = false;
             // 
             // lblCargarFicheros
@@ -105,7 +105,7 @@
             this.btnNuevo.Location = new System.Drawing.Point(812, 465);
             this.btnNuevo.Name = "btnNuevo";
             this.btnNuevo.Size = new System.Drawing.Size(163, 40);
-            this.btnNuevo.TabIndex = 89;
+            this.btnNuevo.TabIndex = 15;
             this.btnNuevo.Text = "Nuevo...";
             this.btnNuevo.TextoColor = System.Drawing.Color.White;
             this.btnNuevo.UseVisualStyleBackColor = false;
@@ -128,7 +128,7 @@
             this.btnEliminar.Location = new System.Drawing.Point(812, 342);
             this.btnEliminar.Name = "btnEliminar";
             this.btnEliminar.Size = new System.Drawing.Size(163, 40);
-            this.btnEliminar.TabIndex = 88;
+            this.btnEliminar.TabIndex = 10;
             this.btnEliminar.Text = "Eliminar";
             this.btnEliminar.TextoColor = System.Drawing.Color.White;
             this.btnEliminar.UseVisualStyleBackColor = false;
@@ -151,7 +151,7 @@
             this.btnVisualizar.Location = new System.Drawing.Point(812, 218);
             this.btnVisualizar.Name = "btnVisualizar";
             this.btnVisualizar.Size = new System.Drawing.Size(163, 40);
-            this.btnVisualizar.TabIndex = 87;
+            this.btnVisualizar.TabIndex = 5;
             this.btnVisualizar.Text = "Visualizar";
             this.btnVisualizar.TextoColor = System.Drawing.Color.White;
             this.btnVisualizar.UseVisualStyleBackColor = false;

@@ -20,8 +20,6 @@ namespace DentalSoft
         private MenuPrincipal formPadre;
         private ConexionBD conexion = new ConexionBD();
         private DatosGlobales datosGlobales = new DatosGlobales();
-        const string txtPaciente = "paciente";
-        const string txtOdontologo = "odontologo";
 
         // Constructores
         #region -> Constructores
@@ -40,17 +38,31 @@ namespace DentalSoft
 
         // Métodos privados
         #region -> Métodos privados
+        private void OcultarMensajesError()
+        {
+            lblErrorHoras.Visible = false;
+            lblErrorOdontologoNuevaReserva.Visible = false;
+            lblErrorPacienteNuevaReserva.Visible = false;
+        }
+
         private void CargarHoras()
         {
-            
+            cbHoraNuevaReserva.Items.Clear();
             if (conexion.EstablecerConexion())
             {
-                string sentencia = "SELECT Hora FROM Horas_Consulta";
+                string sentencia = "SELECT Hora FROM agenda WHERE odontologo = '" + txtOdontologoNuevaReserva.Texto + "' " +
+                    "AND fecha = '" + mcCalendarioNuevaReserva.Value.ToString("yyyy-MM-dd") + "'";
                 MySqlCommand comando = new MySqlCommand(sentencia, conexion.conexionSql);
                 MySqlDataReader reader = comando.ExecuteReader();
-                while (reader.Read())
-                    cbHoraNuevaReserva.Items.Add(reader.GetString(0));
+                if (reader.HasRows)
+                {
+                    while (reader.Read())
+                        cbHoraNuevaReserva.Items.Add(reader.GetString(0));
+                }
+                else
+                    cbHoraNuevaReserva.Items.Add("Sin horas");
                 reader.Close();
+                comando.Dispose();
                 conexion.CerrarConexion();
                 cbHoraNuevaReserva.SelectedIndex = 0;
             }
@@ -71,13 +83,17 @@ namespace DentalSoft
         {
             switch (etiqueta)
             {
-                case txtPaciente:
+                case "paciente":
                     lblErrorPacienteNuevaReserva.Text = "      " + cadena; // Los espacios iniciales es para dar espacio al mensaje de advertencia
                     lblErrorPacienteNuevaReserva.Visible = true;
                     break;
-                case txtOdontologo:
+                case "odontologo":
                     lblErrorOdontologoNuevaReserva.Text = "      " + cadena; // Los espacios iniciales es para dar espacio al mensaje de advertencia
                     lblErrorOdontologoNuevaReserva.Visible = true;
+                    break;
+                case "horas":
+                    lblErrorHoras.Text = "     " + cadena;
+                    lblErrorHoras.Visible = true;
                     break;
             }
         }
@@ -96,52 +112,52 @@ namespace DentalSoft
         private bool ComprobarDni(string etiqueta)
         {
             bool sw = false;
-            if(!txtPacienteNuevaReserva.Texto.Equals(""))
+            if (!txtPacienteNuevaReserva.Texto.Equals(""))
             {
                 string dni, numeros, letra;
                 bool isNumero = false;
                 switch (etiqueta)
                 {
-                    case txtPaciente:
+                    case "paciente":
                         dni = txtPacienteNuevaReserva.Texto.ToUpper();
                         numeros = dni.Substring(0, dni.Length - 1);
                         letra = dni.Substring(dni.Length - 1, 1);
                         if (dni.Length != 9)
                         {
-                            MostrarMensajeError("El Dni debe tener una longitud de 9 caracteres", txtPaciente);
+                            MostrarMensajeError("El Dni debe tener una longitud de 9 caracteres", "paciente");
                             break;
                         }
                         isNumero = int.TryParse(numeros, out int dniNumeros);
                         if (!isNumero)
                         {
-                            MostrarMensajeError("El Dni debe comenzar por 8 dígitos", txtPaciente);
+                            MostrarMensajeError("El Dni debe comenzar por 8 dígitos", "paciente");
                             break;
                         }
                         if (!ComprobarLetraDni(dniNumeros, letra))
                         {
-                            MostrarMensajeError("La letra del Dni no es correcta", txtPaciente);
+                            MostrarMensajeError("La letra del Dni no es correcta", "paciente");
                             break;
                         }
                         sw = true;
                         break;
-                    case txtOdontologo:
+                    case "odontologo":
                         dni = txtOdontologoNuevaReserva.Texto.ToUpper();
                         numeros = dni.Substring(0, dni.Length - 1);
                         letra = dni.Substring(dni.Length - 1, 1);
                         if (dni.Length != 9)
                         {
-                            MostrarMensajeError("El Dni debe tener una longitud de 9 caracteres", txtOdontologo);
+                            MostrarMensajeError("El Dni debe tener una longitud de 9 caracteres", "odontologo");
                             break;
                         }
                         isNumero = int.TryParse(numeros, out int dniNumero);
                         if (!isNumero)
                         {
-                            MostrarMensajeError("El Dni debe comenzar por 8 dígitos", txtOdontologo);
+                            MostrarMensajeError("El Dni debe comenzar por 8 dígitos", "odontologo");
                             break;
                         }
                         if (!ComprobarLetraDni(dniNumero, letra))
                         {
-                            MostrarMensajeError("La letra del Dni no es correcta", txtOdontologo);
+                            MostrarMensajeError("La letra del Dni no es correcta", "odontologo");
                             break;
                         }
                         sw = true;
@@ -150,10 +166,10 @@ namespace DentalSoft
             }
             else
             {
-                if (etiqueta.Equals(txtPaciente))
-                    MostrarMensajeError("Debe introducir un Paciente", txtPaciente);
+                if (etiqueta.Equals("paciente"))
+                    MostrarMensajeError("Debe introducir un Paciente", "paciente");
                 else
-                    MostrarMensajeError("Debe introducir un Odontologo", txtOdontologo);
+                    MostrarMensajeError("Debe introducir un Odontologo", "odontologo");
             }
             return sw;
         }
@@ -164,10 +180,10 @@ namespace DentalSoft
             string sentencia = "";
             switch (etiqueta)
             {
-                case txtPaciente:
+                case "paciente":
                     sentencia = "SELECT Dni FROM Paciente WHERE Dni='" + txtPacienteNuevaReserva.Texto.ToUpper() + "'";
                     break;
-                case txtOdontologo:
+                case "odontologo":
                     sentencia = "SELECT Dni FROM Empleado WHERE Dni='" + txtOdontologoNuevaReserva.Texto.ToUpper() + "' AND Puesto=3 AND Activo=1";
                     break;
             }
@@ -196,18 +212,15 @@ namespace DentalSoft
                 {
                     LimpiarCampos();
                     mensaje = MessageBoxPersonalizadoControl.Show("Reserva creada correctamente", datosGlobales.TituloAplicacion, MessageBoxButtons.OK);
-                    Agenda agenda = new Agenda(formPadre);
+                    Cita agenda = new Cita(formPadre);
                     agenda.MdiParent = this.MdiParent;
                     formPadre.AbrirFormularioHijo(agenda);
                     this.Close();
                 }
                 else
                     mensaje = MessageBoxPersonalizadoControl.Show("No se ha guardado la reserva", datosGlobales.TituloAplicacion, MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                comando.Dispose();
                 conexion.CerrarConexion();
-            }
-            else
-            {
-                mensaje = MessageBoxPersonalizadoControl.Show("No se ha podido conectar a la base de datos", datosGlobales.TituloAplicacion, MessageBoxButtons.OK, MessageBoxIcon.Warning);
             }
         }
         #endregion
@@ -221,8 +234,8 @@ namespace DentalSoft
 
         private void NuevaReserva_Load(object sender, EventArgs e)
         {
+            OcultarMensajesError();
             mcCalendarioNuevaReserva.MinDate = DateTime.Now;
-            CargarHoras();
         }
 
         private void btnBuscarPacienteNuevaReserva_Click(object sender, EventArgs e)
@@ -235,26 +248,33 @@ namespace DentalSoft
         {
             BuscarOdontologo buscarO = new BuscarOdontologo(ref this.txtOdontologoNuevaReserva);
             buscarO.ShowDialog();
+            if (ExisteDni("odontologo"))
+                CargarHoras();
+            else
+                MostrarMensajeError("No existe el odontologo seleccionado", "odontologo");
         }
 
         private void btnGuardarNuevaReserva_Click(object sender, EventArgs e)
         {
             DialogResult mensaje;
-            if (ComprobarDni(txtPaciente))
+            if (ComprobarDni("paciente"))
             {
                 lblErrorPacienteNuevaReserva.Visible = false;
-                if (ComprobarDni(txtOdontologo))
+                if (ComprobarDni("odontologo"))
                 {
                     lblErrorOdontologoNuevaReserva.Visible = false;
-                    if (ExisteDni(txtPaciente))
+                    if (ExisteDni("paciente"))
                     {
-                        if (ExisteDni(txtOdontologo))
+                        if (ExisteDni("odontologo"))
                         {
-                            GuardarRegistro();
+                            if (!cbHoraNuevaReserva.SelectedItem.ToString().Equals("Sin horas"))
+                                GuardarRegistro();
+                            else
+                                MostrarMensajeError("No hay disponible ninguna hora en esta fecha", "hora");
                         }
                         else
                         {
-                            lblErrorOdontologoNuevaReserva.Text = "El Odontologo introducido no existe";
+                            MostrarMensajeError("El Odontologo introducido no existe", "odontologo");
                         }
                     }
                     else
@@ -267,9 +287,9 @@ namespace DentalSoft
                             GuardarRegistro();
                         }
                         else
-                            MostrarMensajeError("El paciente no existe", txtPaciente);
+                            MostrarMensajeError("El paciente no existe", "paciente");
                     }
-                } 
+                }
             }
         }
 
@@ -277,6 +297,26 @@ namespace DentalSoft
         {
             this.Close();
         }
+
+        private void txtOdontologoNuevaReserva_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            if (e.KeyChar == Convert.ToChar(Keys.Return))
+            {
+                if (ComprobarDni("odontologo"))
+                {
+                    if (ExisteDni("odontologo"))
+                    {
+                        CargarHoras();
+                    }
+                }
+            }
+        }
         #endregion
+
+        private void mcCalendarioNuevaReserva_ValueChanged(object sender, EventArgs e)
+        {
+            if (ExisteDni("odontologo"))
+                CargarHoras();
+        }
     }
 }

@@ -42,11 +42,6 @@
             this.chConsentimiento = new System.Windows.Forms.CheckBox();
             this.lblCodigoPostal = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
-            this.lblErrorNombre = new System.Windows.Forms.Label();
-            this.lblErrorDni = new System.Windows.Forms.Label();
-            this.lblErrorApellido = new System.Windows.Forms.Label();
-            this.lblErrorCp = new System.Windows.Forms.Label();
-            this.lblErrorTelefono = new System.Windows.Forms.Label();
             this.txtDni = new DentalSoft.TextboxPersonalizado();
             this.btnLimpiarCampos = new DentalSoft.ControlesPersonalizados.BotonPersonalizado();
             this.btnGuardarPaciente = new DentalSoft.ControlesPersonalizados.BotonPersonalizado();
@@ -56,17 +51,22 @@
             this.txtTelefono = new DentalSoft.TextboxPersonalizado();
             this.txtApellido1 = new DentalSoft.TextboxPersonalizado();
             this.txtNombre = new DentalSoft.TextboxPersonalizado();
-            this.lblErrorEmail = new System.Windows.Forms.Label();
             this.gbGenero = new System.Windows.Forms.GroupBox();
+            this.lblErrorGenero = new System.Windows.Forms.Label();
             this.rbFemenino = new System.Windows.Forms.RadioButton();
             this.rbMasculino = new System.Windows.Forms.RadioButton();
             this.txtDireccion = new DentalSoft.TextboxPersonalizado();
             this.label4 = new System.Windows.Forms.Label();
             this.txtEdad = new DentalSoft.TextboxPersonalizado();
             this.lblEdad = new System.Windows.Forms.Label();
-            this.lblErrorDireccion = new System.Windows.Forms.Label();
             this.lblErrorEdad = new System.Windows.Forms.Label();
-            this.lblErrorGenero = new System.Windows.Forms.Label();
+            this.lblErrorDireccion = new System.Windows.Forms.Label();
+            this.lblErrorEmail = new System.Windows.Forms.Label();
+            this.lblErrorTelefono = new System.Windows.Forms.Label();
+            this.lblErrorCp = new System.Windows.Forms.Label();
+            this.lblErrorApellido = new System.Windows.Forms.Label();
+            this.lblErrorDni = new System.Windows.Forms.Label();
+            this.lblErrorNombre = new System.Windows.Forms.Label();
             this.pnlCabecera.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.btnRedimensionar)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.btnMinimizar)).BeginInit();
@@ -212,7 +212,7 @@
             this.chConsentimiento.Location = new System.Drawing.Point(199, 565);
             this.chConsentimiento.Name = "chConsentimiento";
             this.chConsentimiento.Size = new System.Drawing.Size(486, 23);
-            this.chConsentimiento.TabIndex = 35;
+            this.chConsentimiento.TabIndex = 55;
             this.chConsentimiento.Text = "El paciente ha aceptado el consentimiento de contacto comercial";
             this.chConsentimiento.UseVisualStyleBackColor = true;
             // 
@@ -240,77 +240,6 @@
             this.label2.TabIndex = 28;
             this.label2.Text = "DNI";
             // 
-            // lblErrorNombre
-            // 
-            this.lblErrorNombre.AutoSize = true;
-            this.lblErrorNombre.Font = new System.Drawing.Font("Roboto", 9.5F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblErrorNombre.ForeColor = System.Drawing.Color.IndianRed;
-            this.lblErrorNombre.Image = ((System.Drawing.Image)(resources.GetObject("lblErrorNombre.Image")));
-            this.lblErrorNombre.ImageAlign = System.Drawing.ContentAlignment.TopLeft;
-            this.lblErrorNombre.Location = new System.Drawing.Point(658, 128);
-            this.lblErrorNombre.Name = "lblErrorNombre";
-            this.lblErrorNombre.Size = new System.Drawing.Size(85, 15);
-            this.lblErrorNombre.TabIndex = 46;
-            this.lblErrorNombre.Text = "Mensaje Error";
-            this.lblErrorNombre.Visible = false;
-            // 
-            // lblErrorDni
-            // 
-            this.lblErrorDni.AutoSize = true;
-            this.lblErrorDni.Font = new System.Drawing.Font("Roboto", 9.5F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblErrorDni.ForeColor = System.Drawing.Color.IndianRed;
-            this.lblErrorDni.Image = ((System.Drawing.Image)(resources.GetObject("lblErrorDni.Image")));
-            this.lblErrorDni.ImageAlign = System.Drawing.ContentAlignment.TopLeft;
-            this.lblErrorDni.Location = new System.Drawing.Point(200, 128);
-            this.lblErrorDni.Name = "lblErrorDni";
-            this.lblErrorDni.Size = new System.Drawing.Size(85, 15);
-            this.lblErrorDni.TabIndex = 47;
-            this.lblErrorDni.Text = "Mensaje Error";
-            this.lblErrorDni.Visible = false;
-            // 
-            // lblErrorApellido
-            // 
-            this.lblErrorApellido.AutoSize = true;
-            this.lblErrorApellido.Font = new System.Drawing.Font("Roboto", 9.5F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblErrorApellido.ForeColor = System.Drawing.Color.IndianRed;
-            this.lblErrorApellido.Image = ((System.Drawing.Image)(resources.GetObject("lblErrorApellido.Image")));
-            this.lblErrorApellido.ImageAlign = System.Drawing.ContentAlignment.TopLeft;
-            this.lblErrorApellido.Location = new System.Drawing.Point(196, 226);
-            this.lblErrorApellido.Name = "lblErrorApellido";
-            this.lblErrorApellido.Size = new System.Drawing.Size(85, 15);
-            this.lblErrorApellido.TabIndex = 48;
-            this.lblErrorApellido.Text = "Mensaje Error";
-            this.lblErrorApellido.Visible = false;
-            // 
-            // lblErrorCp
-            // 
-            this.lblErrorCp.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
-            this.lblErrorCp.AutoSize = true;
-            this.lblErrorCp.Font = new System.Drawing.Font("Roboto", 9.5F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblErrorCp.ForeColor = System.Drawing.Color.IndianRed;
-            this.lblErrorCp.Image = ((System.Drawing.Image)(resources.GetObject("lblErrorCp.Image")));
-            this.lblErrorCp.ImageAlign = System.Drawing.ContentAlignment.TopLeft;
-            this.lblErrorCp.Location = new System.Drawing.Point(200, 420);
-            this.lblErrorCp.Name = "lblErrorCp";
-            this.lblErrorCp.Size = new System.Drawing.Size(85, 15);
-            this.lblErrorCp.TabIndex = 49;
-            this.lblErrorCp.Text = "Mensaje Error";
-            this.lblErrorCp.Visible = false;
-            // 
-            // lblErrorTelefono
-            // 
-            this.lblErrorTelefono.AutoSize = true;
-            this.lblErrorTelefono.Font = new System.Drawing.Font("Roboto", 9.5F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblErrorTelefono.ForeColor = System.Drawing.Color.IndianRed;
-            this.lblErrorTelefono.Image = ((System.Drawing.Image)(resources.GetObject("lblErrorTelefono.Image")));
-            this.lblErrorTelefono.ImageAlign = System.Drawing.ContentAlignment.TopLeft;
-            this.lblErrorTelefono.Location = new System.Drawing.Point(200, 324);
-            this.lblErrorTelefono.Name = "lblErrorTelefono";
-            this.lblErrorTelefono.Size = new System.Drawing.Size(85, 15);
-            this.lblErrorTelefono.TabIndex = 50;
-            this.lblErrorTelefono.Text = "Mensaje Error";
-            this.lblErrorTelefono.Visible = false;
-            // 
             // txtDni
             // 
             this.txtDni.BackColor = System.Drawing.SystemColors.Window;
@@ -328,9 +257,11 @@
             this.txtDni.Multilinea = false;
             this.txtDni.Name = "txtDni";
             this.txtDni.Padding = new System.Windows.Forms.Padding(10, 7, 10, 7);
+            this.txtDni.PosicionSeleccion = 0;
             this.txtDni.Size = new System.Drawing.Size(250, 34);
             this.txtDni.SubrayadoEstilo = true;
-            this.txtDni.TabIndex = 51;
+            this.txtDni.TabIndex = 0;
+            this.txtDni.TamañoMaximo = 30000;
             this.txtDni.Texto = "";
             // 
             // btnLimpiarCampos
@@ -351,7 +282,7 @@
             this.btnLimpiarCampos.Location = new System.Drawing.Point(554, 638);
             this.btnLimpiarCampos.Name = "btnLimpiarCampos";
             this.btnLimpiarCampos.Size = new System.Drawing.Size(281, 34);
-            this.btnLimpiarCampos.TabIndex = 45;
+            this.btnLimpiarCampos.TabIndex = 65;
             this.btnLimpiarCampos.Text = "Limpiar Campos";
             this.btnLimpiarCampos.TextoColor = System.Drawing.Color.White;
             this.btnLimpiarCampos.UseVisualStyleBackColor = false;
@@ -375,7 +306,7 @@
             this.btnGuardarPaciente.Location = new System.Drawing.Point(243, 638);
             this.btnGuardarPaciente.Name = "btnGuardarPaciente";
             this.btnGuardarPaciente.Size = new System.Drawing.Size(281, 34);
-            this.btnGuardarPaciente.TabIndex = 40;
+            this.btnGuardarPaciente.TabIndex = 60;
             this.btnGuardarPaciente.Text = "Guardar Paciente";
             this.btnGuardarPaciente.TextoColor = System.Drawing.Color.White;
             this.btnGuardarPaciente.UseVisualStyleBackColor = false;
@@ -401,9 +332,11 @@
             this.txtEmail.Multilinea = false;
             this.txtEmail.Name = "txtEmail";
             this.txtEmail.Padding = new System.Windows.Forms.Padding(10, 7, 10, 7);
+            this.txtEmail.PosicionSeleccion = 0;
             this.txtEmail.Size = new System.Drawing.Size(369, 34);
             this.txtEmail.SubrayadoEstilo = true;
             this.txtEmail.TabIndex = 25;
+            this.txtEmail.TamañoMaximo = 30000;
             this.txtEmail.Texto = "";
             // 
             // txtApellido2
@@ -426,9 +359,11 @@
             this.txtApellido2.Multilinea = false;
             this.txtApellido2.Name = "txtApellido2";
             this.txtApellido2.Padding = new System.Windows.Forms.Padding(10, 7, 10, 7);
+            this.txtApellido2.PosicionSeleccion = 0;
             this.txtApellido2.Size = new System.Drawing.Size(261, 34);
             this.txtApellido2.SubrayadoEstilo = true;
             this.txtApellido2.TabIndex = 15;
+            this.txtApellido2.TamañoMaximo = 30000;
             this.txtApellido2.Texto = "";
             // 
             // txtCp
@@ -449,9 +384,11 @@
             this.txtCp.Multilinea = false;
             this.txtCp.Name = "txtCp";
             this.txtCp.Padding = new System.Windows.Forms.Padding(10, 7, 10, 7);
+            this.txtCp.PosicionSeleccion = 0;
             this.txtCp.Size = new System.Drawing.Size(136, 34);
             this.txtCp.SubrayadoEstilo = true;
             this.txtCp.TabIndex = 30;
+            this.txtCp.TamañoMaximo = 30000;
             this.txtCp.Texto = "";
             // 
             // txtTelefono
@@ -474,9 +411,11 @@
             this.txtTelefono.Multilinea = false;
             this.txtTelefono.Name = "txtTelefono";
             this.txtTelefono.Padding = new System.Windows.Forms.Padding(10, 7, 10, 7);
+            this.txtTelefono.PosicionSeleccion = 0;
             this.txtTelefono.Size = new System.Drawing.Size(261, 34);
             this.txtTelefono.SubrayadoEstilo = true;
             this.txtTelefono.TabIndex = 20;
+            this.txtTelefono.TamañoMaximo = 30000;
             this.txtTelefono.Texto = "";
             // 
             // txtApellido1
@@ -499,9 +438,11 @@
             this.txtApellido1.Multilinea = false;
             this.txtApellido1.Name = "txtApellido1";
             this.txtApellido1.Padding = new System.Windows.Forms.Padding(10, 7, 10, 7);
+            this.txtApellido1.PosicionSeleccion = 0;
             this.txtApellido1.Size = new System.Drawing.Size(261, 34);
             this.txtApellido1.SubrayadoEstilo = true;
             this.txtApellido1.TabIndex = 10;
+            this.txtApellido1.TamañoMaximo = 30000;
             this.txtApellido1.Texto = "";
             // 
             // txtNombre
@@ -521,24 +462,12 @@
             this.txtNombre.Multilinea = false;
             this.txtNombre.Name = "txtNombre";
             this.txtNombre.Padding = new System.Windows.Forms.Padding(10, 7, 10, 7);
+            this.txtNombre.PosicionSeleccion = 0;
             this.txtNombre.Size = new System.Drawing.Size(250, 34);
             this.txtNombre.SubrayadoEstilo = true;
-            this.txtNombre.TabIndex = 52;
+            this.txtNombre.TabIndex = 5;
+            this.txtNombre.TamañoMaximo = 30000;
             this.txtNombre.Texto = "";
-            // 
-            // lblErrorEmail
-            // 
-            this.lblErrorEmail.AutoSize = true;
-            this.lblErrorEmail.Font = new System.Drawing.Font("Roboto", 9.5F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblErrorEmail.ForeColor = System.Drawing.Color.IndianRed;
-            this.lblErrorEmail.Image = ((System.Drawing.Image)(resources.GetObject("lblErrorEmail.Image")));
-            this.lblErrorEmail.ImageAlign = System.Drawing.ContentAlignment.TopLeft;
-            this.lblErrorEmail.Location = new System.Drawing.Point(658, 324);
-            this.lblErrorEmail.Name = "lblErrorEmail";
-            this.lblErrorEmail.Size = new System.Drawing.Size(85, 15);
-            this.lblErrorEmail.TabIndex = 53;
-            this.lblErrorEmail.Text = "Mensaje Error";
-            this.lblErrorEmail.Visible = false;
             // 
             // gbGenero
             // 
@@ -550,9 +479,23 @@
             this.gbGenero.Location = new System.Drawing.Point(487, 445);
             this.gbGenero.Name = "gbGenero";
             this.gbGenero.Size = new System.Drawing.Size(348, 90);
-            this.gbGenero.TabIndex = 77;
+            this.gbGenero.TabIndex = 45;
             this.gbGenero.TabStop = false;
             this.gbGenero.Text = "Género";
+            // 
+            // lblErrorGenero
+            // 
+            this.lblErrorGenero.AutoSize = true;
+            this.lblErrorGenero.Font = new System.Drawing.Font("Roboto", 9.5F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblErrorGenero.ForeColor = System.Drawing.Color.IndianRed;
+            this.lblErrorGenero.Image = ((System.Drawing.Image)(resources.GetObject("lblErrorGenero.Image")));
+            this.lblErrorGenero.ImageAlign = System.Drawing.ContentAlignment.TopLeft;
+            this.lblErrorGenero.Location = new System.Drawing.Point(6, 65);
+            this.lblErrorGenero.Name = "lblErrorGenero";
+            this.lblErrorGenero.Size = new System.Drawing.Size(85, 15);
+            this.lblErrorGenero.TabIndex = 84;
+            this.lblErrorGenero.Text = "Mensaje Error";
+            this.lblErrorGenero.Visible = false;
             // 
             // rbFemenino
             // 
@@ -560,7 +503,7 @@
             this.rbFemenino.Location = new System.Drawing.Point(189, 30);
             this.rbFemenino.Name = "rbFemenino";
             this.rbFemenino.Size = new System.Drawing.Size(97, 23);
-            this.rbFemenino.TabIndex = 1;
+            this.rbFemenino.TabIndex = 47;
             this.rbFemenino.TabStop = true;
             this.rbFemenino.Text = "Femenino";
             this.rbFemenino.UseVisualStyleBackColor = true;
@@ -571,7 +514,7 @@
             this.rbMasculino.Location = new System.Drawing.Point(32, 30);
             this.rbMasculino.Name = "rbMasculino";
             this.rbMasculino.Size = new System.Drawing.Size(101, 23);
-            this.rbMasculino.TabIndex = 0;
+            this.rbMasculino.TabIndex = 46;
             this.rbMasculino.TabStop = true;
             this.rbMasculino.Text = "Masculino";
             this.rbMasculino.UseVisualStyleBackColor = true;
@@ -594,9 +537,11 @@
             this.txtDireccion.Multilinea = false;
             this.txtDireccion.Name = "txtDireccion";
             this.txtDireccion.Padding = new System.Windows.Forms.Padding(10, 7, 10, 7);
+            this.txtDireccion.PosicionSeleccion = 0;
             this.txtDireccion.Size = new System.Drawing.Size(369, 34);
             this.txtDireccion.SubrayadoEstilo = true;
-            this.txtDireccion.TabIndex = 79;
+            this.txtDireccion.TabIndex = 35;
+            this.txtDireccion.TamañoMaximo = 30000;
             this.txtDireccion.Texto = "";
             // 
             // label4
@@ -628,9 +573,11 @@
             this.txtEdad.Multilinea = false;
             this.txtEdad.Name = "txtEdad";
             this.txtEdad.Padding = new System.Windows.Forms.Padding(10, 7, 10, 7);
+            this.txtEdad.PosicionSeleccion = 0;
             this.txtEdad.Size = new System.Drawing.Size(136, 34);
             this.txtEdad.SubrayadoEstilo = true;
-            this.txtEdad.TabIndex = 81;
+            this.txtEdad.TabIndex = 40;
+            this.txtEdad.TamañoMaximo = 30000;
             this.txtEdad.Texto = "";
             // 
             // lblEdad
@@ -643,21 +590,6 @@
             this.lblEdad.Size = new System.Drawing.Size(53, 23);
             this.lblEdad.TabIndex = 80;
             this.lblEdad.Text = "Edad";
-            // 
-            // lblErrorDireccion
-            // 
-            this.lblErrorDireccion.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
-            this.lblErrorDireccion.AutoSize = true;
-            this.lblErrorDireccion.Font = new System.Drawing.Font("Roboto", 9.5F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblErrorDireccion.ForeColor = System.Drawing.Color.IndianRed;
-            this.lblErrorDireccion.Image = ((System.Drawing.Image)(resources.GetObject("lblErrorDireccion.Image")));
-            this.lblErrorDireccion.ImageAlign = System.Drawing.ContentAlignment.TopLeft;
-            this.lblErrorDireccion.Location = new System.Drawing.Point(658, 417);
-            this.lblErrorDireccion.Name = "lblErrorDireccion";
-            this.lblErrorDireccion.Size = new System.Drawing.Size(85, 15);
-            this.lblErrorDireccion.TabIndex = 82;
-            this.lblErrorDireccion.Text = "Mensaje Error";
-            this.lblErrorDireccion.Visible = false;
             // 
             // lblErrorEdad
             // 
@@ -674,24 +606,111 @@
             this.lblErrorEdad.Text = "Mensaje Error";
             this.lblErrorEdad.Visible = false;
             // 
-            // lblErrorGenero
+            // lblErrorDireccion
             // 
-            this.lblErrorGenero.AutoSize = true;
-            this.lblErrorGenero.Font = new System.Drawing.Font("Roboto", 9.5F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblErrorGenero.ForeColor = System.Drawing.Color.IndianRed;
-            this.lblErrorGenero.Image = ((System.Drawing.Image)(resources.GetObject("lblErrorGenero.Image")));
-            this.lblErrorGenero.ImageAlign = System.Drawing.ContentAlignment.TopLeft;
-            this.lblErrorGenero.Location = new System.Drawing.Point(6, 65);
-            this.lblErrorGenero.Name = "lblErrorGenero";
-            this.lblErrorGenero.Size = new System.Drawing.Size(85, 15);
-            this.lblErrorGenero.TabIndex = 84;
-            this.lblErrorGenero.Text = "Mensaje Error";
-            this.lblErrorGenero.Visible = false;
+            this.lblErrorDireccion.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
+            this.lblErrorDireccion.AutoSize = true;
+            this.lblErrorDireccion.Font = new System.Drawing.Font("Roboto", 9.5F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblErrorDireccion.ForeColor = System.Drawing.Color.IndianRed;
+            this.lblErrorDireccion.Image = ((System.Drawing.Image)(resources.GetObject("lblErrorDireccion.Image")));
+            this.lblErrorDireccion.ImageAlign = System.Drawing.ContentAlignment.TopLeft;
+            this.lblErrorDireccion.Location = new System.Drawing.Point(658, 417);
+            this.lblErrorDireccion.Name = "lblErrorDireccion";
+            this.lblErrorDireccion.Size = new System.Drawing.Size(85, 15);
+            this.lblErrorDireccion.TabIndex = 82;
+            this.lblErrorDireccion.Text = "Mensaje Error";
+            this.lblErrorDireccion.Visible = false;
+            // 
+            // lblErrorEmail
+            // 
+            this.lblErrorEmail.AutoSize = true;
+            this.lblErrorEmail.Font = new System.Drawing.Font("Roboto", 9.5F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblErrorEmail.ForeColor = System.Drawing.Color.IndianRed;
+            this.lblErrorEmail.Image = ((System.Drawing.Image)(resources.GetObject("lblErrorEmail.Image")));
+            this.lblErrorEmail.ImageAlign = System.Drawing.ContentAlignment.TopLeft;
+            this.lblErrorEmail.Location = new System.Drawing.Point(658, 324);
+            this.lblErrorEmail.Name = "lblErrorEmail";
+            this.lblErrorEmail.Size = new System.Drawing.Size(85, 15);
+            this.lblErrorEmail.TabIndex = 53;
+            this.lblErrorEmail.Text = "Mensaje Error";
+            this.lblErrorEmail.Visible = false;
+            // 
+            // lblErrorTelefono
+            // 
+            this.lblErrorTelefono.AutoSize = true;
+            this.lblErrorTelefono.Font = new System.Drawing.Font("Roboto", 9.5F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblErrorTelefono.ForeColor = System.Drawing.Color.IndianRed;
+            this.lblErrorTelefono.Image = ((System.Drawing.Image)(resources.GetObject("lblErrorTelefono.Image")));
+            this.lblErrorTelefono.ImageAlign = System.Drawing.ContentAlignment.TopLeft;
+            this.lblErrorTelefono.Location = new System.Drawing.Point(200, 324);
+            this.lblErrorTelefono.Name = "lblErrorTelefono";
+            this.lblErrorTelefono.Size = new System.Drawing.Size(85, 15);
+            this.lblErrorTelefono.TabIndex = 50;
+            this.lblErrorTelefono.Text = "Mensaje Error";
+            this.lblErrorTelefono.Visible = false;
+            // 
+            // lblErrorCp
+            // 
+            this.lblErrorCp.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
+            this.lblErrorCp.AutoSize = true;
+            this.lblErrorCp.Font = new System.Drawing.Font("Roboto", 9.5F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblErrorCp.ForeColor = System.Drawing.Color.IndianRed;
+            this.lblErrorCp.Image = ((System.Drawing.Image)(resources.GetObject("lblErrorCp.Image")));
+            this.lblErrorCp.ImageAlign = System.Drawing.ContentAlignment.TopLeft;
+            this.lblErrorCp.Location = new System.Drawing.Point(200, 420);
+            this.lblErrorCp.Name = "lblErrorCp";
+            this.lblErrorCp.Size = new System.Drawing.Size(85, 15);
+            this.lblErrorCp.TabIndex = 49;
+            this.lblErrorCp.Text = "Mensaje Error";
+            this.lblErrorCp.Visible = false;
+            // 
+            // lblErrorApellido
+            // 
+            this.lblErrorApellido.AutoSize = true;
+            this.lblErrorApellido.Font = new System.Drawing.Font("Roboto", 9.5F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblErrorApellido.ForeColor = System.Drawing.Color.IndianRed;
+            this.lblErrorApellido.Image = ((System.Drawing.Image)(resources.GetObject("lblErrorApellido.Image")));
+            this.lblErrorApellido.ImageAlign = System.Drawing.ContentAlignment.TopLeft;
+            this.lblErrorApellido.Location = new System.Drawing.Point(196, 226);
+            this.lblErrorApellido.Name = "lblErrorApellido";
+            this.lblErrorApellido.Size = new System.Drawing.Size(85, 15);
+            this.lblErrorApellido.TabIndex = 48;
+            this.lblErrorApellido.Text = "Mensaje Error";
+            this.lblErrorApellido.Visible = false;
+            // 
+            // lblErrorDni
+            // 
+            this.lblErrorDni.AutoSize = true;
+            this.lblErrorDni.Font = new System.Drawing.Font("Roboto", 9.5F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblErrorDni.ForeColor = System.Drawing.Color.IndianRed;
+            this.lblErrorDni.Image = ((System.Drawing.Image)(resources.GetObject("lblErrorDni.Image")));
+            this.lblErrorDni.ImageAlign = System.Drawing.ContentAlignment.TopLeft;
+            this.lblErrorDni.Location = new System.Drawing.Point(200, 128);
+            this.lblErrorDni.Name = "lblErrorDni";
+            this.lblErrorDni.Size = new System.Drawing.Size(85, 15);
+            this.lblErrorDni.TabIndex = 47;
+            this.lblErrorDni.Text = "Mensaje Error";
+            this.lblErrorDni.Visible = false;
+            // 
+            // lblErrorNombre
+            // 
+            this.lblErrorNombre.AutoSize = true;
+            this.lblErrorNombre.Font = new System.Drawing.Font("Roboto", 9.5F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblErrorNombre.ForeColor = System.Drawing.Color.IndianRed;
+            this.lblErrorNombre.Image = ((System.Drawing.Image)(resources.GetObject("lblErrorNombre.Image")));
+            this.lblErrorNombre.ImageAlign = System.Drawing.ContentAlignment.TopLeft;
+            this.lblErrorNombre.Location = new System.Drawing.Point(658, 128);
+            this.lblErrorNombre.Name = "lblErrorNombre";
+            this.lblErrorNombre.Size = new System.Drawing.Size(85, 15);
+            this.lblErrorNombre.TabIndex = 46;
+            this.lblErrorNombre.Text = "Mensaje Error";
+            this.lblErrorNombre.Visible = false;
             // 
             // NuevoPaciente
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(236)))), ((int)(((byte)(236)))), ((int)(((byte)(236)))));
             this.ClientSize = new System.Drawing.Size(1083, 722);
             this.Controls.Add(this.lblErrorEdad);
             this.Controls.Add(this.lblErrorDireccion);
@@ -726,6 +745,7 @@
             this.Controls.Add(this.pnlCabecera);
             this.Font = new System.Drawing.Font("Roboto", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "NuevoPaciente";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "NuevoPaciente";

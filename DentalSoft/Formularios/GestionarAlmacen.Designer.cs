@@ -73,10 +73,10 @@
             this.btnEliminarAlmacen.FondoColor = System.Drawing.Color.FromArgb(((int)(((byte)(16)))), ((int)(((byte)(110)))), ((int)(((byte)(196)))));
             this.btnEliminarAlmacen.Font = new System.Drawing.Font("Roboto", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnEliminarAlmacen.ForeColor = System.Drawing.Color.White;
-            this.btnEliminarAlmacen.Location = new System.Drawing.Point(795, 617);
+            this.btnEliminarAlmacen.Location = new System.Drawing.Point(864, 617);
             this.btnEliminarAlmacen.Name = "btnEliminarAlmacen";
             this.btnEliminarAlmacen.Size = new System.Drawing.Size(270, 34);
-            this.btnEliminarAlmacen.TabIndex = 55;
+            this.btnEliminarAlmacen.TabIndex = 20;
             this.btnEliminarAlmacen.Text = "Eliminar Almacen";
             this.btnEliminarAlmacen.TextoColor = System.Drawing.Color.White;
             this.btnEliminarAlmacen.UseVisualStyleBackColor = false;
@@ -97,10 +97,10 @@
             this.btnEditarAlmacen.FondoColor = System.Drawing.Color.FromArgb(((int)(((byte)(16)))), ((int)(((byte)(110)))), ((int)(((byte)(196)))));
             this.btnEditarAlmacen.Font = new System.Drawing.Font("Roboto", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnEditarAlmacen.ForeColor = System.Drawing.Color.White;
-            this.btnEditarAlmacen.Location = new System.Drawing.Point(439, 617);
+            this.btnEditarAlmacen.Location = new System.Drawing.Point(454, 617);
             this.btnEditarAlmacen.Name = "btnEditarAlmacen";
             this.btnEditarAlmacen.Size = new System.Drawing.Size(270, 34);
-            this.btnEditarAlmacen.TabIndex = 54;
+            this.btnEditarAlmacen.TabIndex = 15;
             this.btnEditarAlmacen.Text = "Editar Almacen";
             this.btnEditarAlmacen.TextoColor = System.Drawing.Color.White;
             this.btnEditarAlmacen.UseVisualStyleBackColor = false;
@@ -120,10 +120,10 @@
             this.btnNuevoAlmacen.FondoColor = System.Drawing.Color.FromArgb(((int)(((byte)(16)))), ((int)(((byte)(110)))), ((int)(((byte)(196)))));
             this.btnNuevoAlmacen.Font = new System.Drawing.Font("Roboto", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnNuevoAlmacen.ForeColor = System.Drawing.Color.White;
-            this.btnNuevoAlmacen.Location = new System.Drawing.Point(99, 617);
+            this.btnNuevoAlmacen.Location = new System.Drawing.Point(25, 617);
             this.btnNuevoAlmacen.Name = "btnNuevoAlmacen";
             this.btnNuevoAlmacen.Size = new System.Drawing.Size(270, 34);
-            this.btnNuevoAlmacen.TabIndex = 53;
+            this.btnNuevoAlmacen.TabIndex = 10;
             this.btnNuevoAlmacen.Text = "Nuevo Almacen";
             this.btnNuevoAlmacen.TextoColor = System.Drawing.Color.White;
             this.btnNuevoAlmacen.UseVisualStyleBackColor = false;
@@ -135,7 +135,7 @@
             this.lblFiltrosPacientes.AutoSize = true;
             this.lblFiltrosPacientes.Font = new System.Drawing.Font("Roboto", 12F);
             this.lblFiltrosPacientes.ForeColor = System.Drawing.Color.Black;
-            this.lblFiltrosPacientes.Location = new System.Drawing.Point(808, 120);
+            this.lblFiltrosPacientes.Location = new System.Drawing.Point(877, 117);
             this.lblFiltrosPacientes.Name = "lblFiltrosPacientes";
             this.lblFiltrosPacientes.Size = new System.Drawing.Size(50, 19);
             this.lblFiltrosPacientes.TabIndex = 52;
@@ -147,9 +147,9 @@
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.pnlDgvBuscarPaciente.Controls.Add(this.dgvAlmacen);
-            this.pnlDgvBuscarPaciente.Location = new System.Drawing.Point(99, 184);
+            this.pnlDgvBuscarPaciente.Location = new System.Drawing.Point(25, 184);
             this.pnlDgvBuscarPaciente.Name = "pnlDgvBuscarPaciente";
-            this.pnlDgvBuscarPaciente.Size = new System.Drawing.Size(966, 384);
+            this.pnlDgvBuscarPaciente.Size = new System.Drawing.Size(1109, 384);
             this.pnlDgvBuscarPaciente.TabIndex = 51;
             // 
             // dgvAlmacen
@@ -158,7 +158,7 @@
             this.dgvAlmacen.Dock = System.Windows.Forms.DockStyle.Fill;
             this.dgvAlmacen.Location = new System.Drawing.Point(0, 0);
             this.dgvAlmacen.Name = "dgvAlmacen";
-            this.dgvAlmacen.Size = new System.Drawing.Size(966, 384);
+            this.dgvAlmacen.Size = new System.Drawing.Size(1109, 384);
             this.dgvAlmacen.TabIndex = 0;
             // 
             // cbFiltros
@@ -175,12 +175,12 @@
             this.cbFiltros.ForeColor = System.Drawing.Color.Black;
             this.cbFiltros.ListaColorFondo = System.Drawing.Color.WhiteSmoke;
             this.cbFiltros.ListColorTexto = System.Drawing.Color.Black;
-            this.cbFiltros.Location = new System.Drawing.Point(865, 114);
+            this.cbFiltros.Location = new System.Drawing.Point(934, 111);
             this.cbFiltros.MinimumSize = new System.Drawing.Size(200, 30);
             this.cbFiltros.Name = "cbFiltros";
             this.cbFiltros.Padding = new System.Windows.Forms.Padding(1);
             this.cbFiltros.Size = new System.Drawing.Size(200, 30);
-            this.cbFiltros.TabIndex = 50;
+            this.cbFiltros.TabIndex = 5;
             this.cbFiltros.Textos = "";
             this.cbFiltros.OnSelectedIndexChanged += new System.EventHandler(this.cbFiltros_OnSelectedIndexChanged);
             // 
@@ -194,7 +194,7 @@
             this.txtAlmacen.Contraseña = false;
             this.txtAlmacen.Font = new System.Drawing.Font("Roboto", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtAlmacen.ForeColor = System.Drawing.Color.Black;
-            this.txtAlmacen.Location = new System.Drawing.Point(99, 111);
+            this.txtAlmacen.Location = new System.Drawing.Point(25, 111);
             this.txtAlmacen.MarcadorPosicionColor = System.Drawing.Color.DarkGray;
             this.txtAlmacen.MarcadorPosicionTexto = "Introduce el almacen a buscar";
             this.txtAlmacen.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
@@ -203,7 +203,7 @@
             this.txtAlmacen.Padding = new System.Windows.Forms.Padding(10, 7, 10, 7);
             this.txtAlmacen.Size = new System.Drawing.Size(591, 34);
             this.txtAlmacen.SubrayadoEstilo = true;
-            this.txtAlmacen.TabIndex = 49;
+            this.txtAlmacen.TabIndex = 0;
             this.txtAlmacen.Texto = "";
             this.txtAlmacen._TextChanged += new System.EventHandler(this.txtAlmacen__TextChanged);
             // 

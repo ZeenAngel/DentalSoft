@@ -207,7 +207,7 @@
             this.cbActivos.Location = new System.Drawing.Point(327, 372);
             this.cbActivos.Name = "cbActivos";
             this.cbActivos.Size = new System.Drawing.Size(207, 19);
-            this.cbActivos.TabIndex = 24;
+            this.cbActivos.TabIndex = 20;
             this.cbActivos.Text = "Mostrar solo empleados activos";
             this.cbActivos.UseVisualStyleBackColor = true;
             this.cbActivos.CheckedChanged += new System.EventHandler(this.cbActivos_CheckedChanged);
@@ -229,7 +229,7 @@
             this.cbOdontologos.Location = new System.Drawing.Point(809, 372);
             this.cbOdontologos.Name = "cbOdontologos";
             this.cbOdontologos.Size = new System.Drawing.Size(170, 19);
-            this.cbOdontologos.TabIndex = 26;
+            this.cbOdontologos.TabIndex = 30;
             this.cbOdontologos.Text = "Mostrar solo odontologos";
             this.cbOdontologos.UseVisualStyleBackColor = true;
             this.cbOdontologos.CheckedChanged += new System.EventHandler(this.cbOdontologos_CheckedChanged);
@@ -303,12 +303,12 @@
             this.mcFecha.FondoColor = System.Drawing.Color.FromArgb(((int)(((byte)(16)))), ((int)(((byte)(110)))), ((int)(((byte)(196)))));
             this.mcFecha.Font = new System.Drawing.Font("Roboto", 9.5F);
             this.mcFecha.IsDesplegado = false;
-            this.mcFecha.Location = new System.Drawing.Point(546, 362);
-            this.mcFecha.MinDate = new System.DateTime(2022, 11, 5, 13, 26, 37, 263);
+            this.mcFecha.Location = new System.Drawing.Point(540, 364);
+            this.mcFecha.MinDate = new System.DateTime(2000, 1, 1, 13, 26, 0, 0);
             this.mcFecha.MinimumSize = new System.Drawing.Size(4, 35);
             this.mcFecha.Name = "mcFecha";
             this.mcFecha.Size = new System.Drawing.Size(264, 35);
-            this.mcFecha.TabIndex = 28;
+            this.mcFecha.TabIndex = 35;
             this.mcFecha.TextoColor = System.Drawing.Color.White;
             this.mcFecha.Value = new System.DateTime(2022, 11, 5, 13, 26, 37, 263);
             this.mcFecha.CloseUp += new System.EventHandler(this.mcFecha_CloseUp);
@@ -329,7 +329,7 @@
             this.btnControlHorario.Location = new System.Drawing.Point(890, 306);
             this.btnControlHorario.Name = "btnControlHorario";
             this.btnControlHorario.Size = new System.Drawing.Size(171, 40);
-            this.btnControlHorario.TabIndex = 21;
+            this.btnControlHorario.TabIndex = 10;
             this.btnControlHorario.Text = "Control Horario";
             this.btnControlHorario.TextoColor = System.Drawing.Color.White;
             this.btnControlHorario.UseVisualStyleBackColor = false;
@@ -351,7 +351,7 @@
             this.btnNuevoEmpleado.Location = new System.Drawing.Point(890, 214);
             this.btnNuevoEmpleado.Name = "btnNuevoEmpleado";
             this.btnNuevoEmpleado.Size = new System.Drawing.Size(171, 40);
-            this.btnNuevoEmpleado.TabIndex = 18;
+            this.btnNuevoEmpleado.TabIndex = 5;
             this.btnNuevoEmpleado.Text = "Nuevo Empleado";
             this.btnNuevoEmpleado.TextoColor = System.Drawing.Color.White;
             this.btnNuevoEmpleado.UseVisualStyleBackColor = false;
@@ -373,7 +373,7 @@
             this.btnFichar.Location = new System.Drawing.Point(890, 112);
             this.btnFichar.Name = "btnFichar";
             this.btnFichar.Size = new System.Drawing.Size(150, 40);
-            this.btnFichar.TabIndex = 14;
+            this.btnFichar.TabIndex = 0;
             this.btnFichar.Text = "Fichar Entrada";
             this.btnFichar.TextoColor = System.Drawing.Color.White;
             this.btnFichar.UseVisualStyleBackColor = false;
@@ -395,7 +395,7 @@
             this.btnTodasFechas.Location = new System.Drawing.Point(844, 369);
             this.btnTodasFechas.Name = "btnTodasFechas";
             this.btnTodasFechas.Size = new System.Drawing.Size(150, 26);
-            this.btnTodasFechas.TabIndex = 30;
+            this.btnTodasFechas.TabIndex = 40;
             this.btnTodasFechas.Text = "Mostrar todas las fechas";
             this.btnTodasFechas.TextoColor = System.Drawing.Color.White;
             this.btnTodasFechas.UseVisualStyleBackColor = false;

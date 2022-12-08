@@ -26,6 +26,8 @@ namespace DentalSoft
         private string marcadorPosicionTexto = "";
         private bool isMarcadorPosicion = false;
         private bool isContraseña = false;
+        private int tamañoMaximo = 30000;
+        private int posicionSeleccion = 0;
 
         // Constructor
         public TextboxPersonalizado()
@@ -222,6 +224,29 @@ namespace DentalSoft
                 textBox1.Text = "";
                 SetMarcadorPosicion();
             }
+        }
+
+        [Category("Propiedades Avanzadas TextBox")]
+        public int TamañoMaximo {
+            get
+            {
+                return tamañoMaximo;
+            }
+            set
+            {
+                textBox1.MaxLength = value;
+            }
+        }
+
+        public int PosicionSeleccion {
+            get
+            {
+                return posicionSeleccion;
+            }
+            set
+            {
+                textBox1.Select(value, 0);
+            } 
         }
         #endregion
 

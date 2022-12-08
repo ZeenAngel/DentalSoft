@@ -95,6 +95,7 @@
             this.linkRecuperarContraseña.TabIndex = 15;
             this.linkRecuperarContraseña.TabStop = true;
             this.linkRecuperarContraseña.Text = "Recuperar contraseña";
+            this.linkRecuperarContraseña.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.linkRecuperarContraseña_LinkClicked);
             // 
             // btnCerrarLogin
             // 
@@ -161,9 +162,11 @@
             this.txtContraseñaLogin.Multilinea = false;
             this.txtContraseñaLogin.Name = "txtContraseñaLogin";
             this.txtContraseñaLogin.Padding = new System.Windows.Forms.Padding(10, 7, 10, 7);
+            this.txtContraseñaLogin.PosicionSeleccion = 0;
             this.txtContraseñaLogin.Size = new System.Drawing.Size(337, 34);
             this.txtContraseñaLogin.SubrayadoEstilo = true;
             this.txtContraseñaLogin.TabIndex = 10;
+            this.txtContraseñaLogin.TamañoMaximo = 30000;
             this.txtContraseñaLogin.Texto = "";
             this.txtContraseñaLogin.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtContraseñaLogin_KeyPress);
             // 
@@ -184,9 +187,11 @@
             this.txtUsuarioLogin.Multilinea = false;
             this.txtUsuarioLogin.Name = "txtUsuarioLogin";
             this.txtUsuarioLogin.Padding = new System.Windows.Forms.Padding(10, 7, 10, 7);
+            this.txtUsuarioLogin.PosicionSeleccion = 0;
             this.txtUsuarioLogin.Size = new System.Drawing.Size(337, 34);
             this.txtUsuarioLogin.SubrayadoEstilo = true;
             this.txtUsuarioLogin.TabIndex = 5;
+            this.txtUsuarioLogin.TamañoMaximo = 30000;
             this.txtUsuarioLogin.Texto = "";
             this.txtUsuarioLogin.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtUsuarioLogin_KeyPress);
             // 
@@ -206,6 +211,7 @@
             this.Controls.Add(this.txtUsuarioLogin);
             this.Controls.Add(this.panelImagen);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "Login";
             this.Opacity = 0.9D;
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;

@@ -37,6 +37,7 @@
             this.pnlHistorialPieza = new System.Windows.Forms.Panel();
             this.dgvHistorial = new System.Windows.Forms.DataGridView();
             this.gbPaciente = new System.Windows.Forms.GroupBox();
+            this.btnConsentimiento = new DentalSoft.ControlesPersonalizados.BotonPersonalizado();
             this.lblTituloGenero = new System.Windows.Forms.Label();
             this.lblTituloEdad = new System.Windows.Forms.Label();
             this.lblTituloNombre = new System.Windows.Forms.Label();
@@ -156,6 +157,7 @@
             // 
             // gbPaciente
             // 
+            this.gbPaciente.Controls.Add(this.btnConsentimiento);
             this.gbPaciente.Controls.Add(this.lblTituloGenero);
             this.gbPaciente.Controls.Add(this.lblTituloEdad);
             this.gbPaciente.Controls.Add(this.lblTituloNombre);
@@ -169,6 +171,28 @@
             this.gbPaciente.TabIndex = 7;
             this.gbPaciente.TabStop = false;
             this.gbPaciente.Text = "Paciente";
+            // 
+            // btnConsentimiento
+            // 
+            this.btnConsentimiento.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(16)))), ((int)(((byte)(110)))), ((int)(((byte)(196)))));
+            this.btnConsentimiento.BordeColor = System.Drawing.Color.FromArgb(((int)(((byte)(16)))), ((int)(((byte)(110)))), ((int)(((byte)(196)))));
+            this.btnConsentimiento.BordeRadio = 29;
+            this.btnConsentimiento.BordeTamaño = 0;
+            this.btnConsentimiento.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnConsentimiento.FlatAppearance.BorderSize = 0;
+            this.btnConsentimiento.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(195)))), ((int)(((byte)(165)))));
+            this.btnConsentimiento.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnConsentimiento.FondoColor = System.Drawing.Color.FromArgb(((int)(((byte)(16)))), ((int)(((byte)(110)))), ((int)(((byte)(196)))));
+            this.btnConsentimiento.Font = new System.Drawing.Font("Roboto", 12F, System.Drawing.FontStyle.Bold);
+            this.btnConsentimiento.ForeColor = System.Drawing.Color.White;
+            this.btnConsentimiento.Location = new System.Drawing.Point(447, 165);
+            this.btnConsentimiento.Name = "btnConsentimiento";
+            this.btnConsentimiento.Size = new System.Drawing.Size(200, 40);
+            this.btnConsentimiento.TabIndex = 61;
+            this.btnConsentimiento.Text = "Imprimir consentimiento";
+            this.btnConsentimiento.TextoColor = System.Drawing.Color.White;
+            this.btnConsentimiento.UseVisualStyleBackColor = false;
+            this.btnConsentimiento.Click += new System.EventHandler(this.btnConsentimiento_Click);
             // 
             // lblTituloGenero
             // 
@@ -243,6 +267,7 @@
             this.cbTratamiento.Size = new System.Drawing.Size(200, 30);
             this.cbTratamiento.TabIndex = 10;
             this.cbTratamiento.Textos = "";
+            this.cbTratamiento.OnSelectedIndexChanged += new System.EventHandler(this.cbTratamiento_OnSelectedIndexChanged);
             // 
             // cbDiagnostico
             // 
@@ -383,10 +408,10 @@
             // btnRaiz
             // 
             this.btnRaiz.Font = new System.Drawing.Font("Roboto", 14F);
-            this.btnRaiz.Location = new System.Drawing.Point(213, 79);
+            this.btnRaiz.Location = new System.Drawing.Point(213, 81);
             this.btnRaiz.Name = "btnRaiz";
             this.btnRaiz.Size = new System.Drawing.Size(45, 129);
-            this.btnRaiz.TabIndex = 8;
+            this.btnRaiz.TabIndex = 50;
             this.btnRaiz.Tag = "Raiz";
             this.btnRaiz.UseVisualStyleBackColor = true;
             this.btnRaiz.Click += new System.EventHandler(this.btnRaiz_Click);
@@ -397,7 +422,7 @@
             this.btnRaizDerecha.Location = new System.Drawing.Point(264, 79);
             this.btnRaizDerecha.Name = "btnRaizDerecha";
             this.btnRaizDerecha.Size = new System.Drawing.Size(33, 129);
-            this.btnRaizDerecha.TabIndex = 7;
+            this.btnRaizDerecha.TabIndex = 65;
             this.btnRaizDerecha.Tag = "Raiz derecha";
             this.btnRaizDerecha.UseVisualStyleBackColor = true;
             this.btnRaizDerecha.Click += new System.EventHandler(this.btnRaizDerecha_Click);
@@ -408,7 +433,7 @@
             this.btnRaizCentral.Location = new System.Drawing.Point(225, 79);
             this.btnRaizCentral.Name = "btnRaizCentral";
             this.btnRaizCentral.Size = new System.Drawing.Size(33, 129);
-            this.btnRaizCentral.TabIndex = 6;
+            this.btnRaizCentral.TabIndex = 60;
             this.btnRaizCentral.Tag = "Raiz central";
             this.btnRaizCentral.UseVisualStyleBackColor = true;
             this.btnRaizCentral.Click += new System.EventHandler(this.btnRaizCentral_Click_1);
@@ -419,7 +444,7 @@
             this.btnRaizIzquierda.Location = new System.Drawing.Point(186, 79);
             this.btnRaizIzquierda.Name = "btnRaizIzquierda";
             this.btnRaizIzquierda.Size = new System.Drawing.Size(33, 129);
-            this.btnRaizIzquierda.TabIndex = 5;
+            this.btnRaizIzquierda.TabIndex = 55;
             this.btnRaizIzquierda.Tag = "Raiz izquierda";
             this.btnRaizIzquierda.UseVisualStyleBackColor = true;
             this.btnRaizIzquierda.Click += new System.EventHandler(this.btnRaizIzquierda_Click);
@@ -430,7 +455,7 @@
             this.btnLingual.Location = new System.Drawing.Point(69, 165);
             this.btnLingual.Name = "btnLingual";
             this.btnLingual.Size = new System.Drawing.Size(46, 43);
-            this.btnLingual.TabIndex = 4;
+            this.btnLingual.TabIndex = 45;
             this.btnLingual.Tag = "Lingual";
             this.btnLingual.UseVisualStyleBackColor = true;
             this.btnLingual.Click += new System.EventHandler(this.btnLingual_Click);
@@ -441,7 +466,7 @@
             this.btnOclusal.Location = new System.Drawing.Point(69, 121);
             this.btnOclusal.Name = "btnOclusal";
             this.btnOclusal.Size = new System.Drawing.Size(46, 43);
-            this.btnOclusal.TabIndex = 3;
+            this.btnOclusal.TabIndex = 35;
             this.btnOclusal.Tag = "Oclusal";
             this.btnOclusal.UseVisualStyleBackColor = true;
             this.btnOclusal.Click += new System.EventHandler(this.btnOclusal_Click);
@@ -452,7 +477,7 @@
             this.btnMesial.Location = new System.Drawing.Point(117, 121);
             this.btnMesial.Name = "btnMesial";
             this.btnMesial.Size = new System.Drawing.Size(46, 43);
-            this.btnMesial.TabIndex = 2;
+            this.btnMesial.TabIndex = 40;
             this.btnMesial.Tag = "Mesial";
             this.btnMesial.UseVisualStyleBackColor = true;
             this.btnMesial.Click += new System.EventHandler(this.btnMesial_Click);
@@ -463,7 +488,7 @@
             this.btnDistal.Location = new System.Drawing.Point(21, 121);
             this.btnDistal.Name = "btnDistal";
             this.btnDistal.Size = new System.Drawing.Size(46, 43);
-            this.btnDistal.TabIndex = 1;
+            this.btnDistal.TabIndex = 30;
             this.btnDistal.Tag = "Distal";
             this.btnDistal.UseVisualStyleBackColor = true;
             this.btnDistal.Click += new System.EventHandler(this.btnDistal_Click);
@@ -474,7 +499,7 @@
             this.btnVestibular.Location = new System.Drawing.Point(69, 77);
             this.btnVestibular.Name = "btnVestibular";
             this.btnVestibular.Size = new System.Drawing.Size(46, 43);
-            this.btnVestibular.TabIndex = 0;
+            this.btnVestibular.TabIndex = 25;
             this.btnVestibular.Tag = "Vestibular";
             this.btnVestibular.UseVisualStyleBackColor = true;
             this.btnVestibular.Click += new System.EventHandler(this.btnVestibular_Click);
@@ -495,7 +520,7 @@
             this.btnGuardar.Location = new System.Drawing.Point(864, 313);
             this.btnGuardar.Name = "btnGuardar";
             this.btnGuardar.Size = new System.Drawing.Size(200, 40);
-            this.btnGuardar.TabIndex = 25;
+            this.btnGuardar.TabIndex = 60;
             this.btnGuardar.Text = "Guardar";
             this.btnGuardar.TextoColor = System.Drawing.Color.White;
             this.btnGuardar.UseVisualStyleBackColor = false;
@@ -529,6 +554,7 @@
             this.Controls.Add(this.cbPieza);
             this.Controls.Add(this.pnlCabecera);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "TratamientoPaciente";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "TratamientoPaciente";
@@ -584,5 +610,6 @@
         private System.Windows.Forms.Label lblTituloGenero;
         private System.Windows.Forms.Label lblTituloEdad;
         private System.Windows.Forms.Label lblTituloNombre;
+        private ControlesPersonalizados.BotonPersonalizado btnConsentimiento;
     }
 }

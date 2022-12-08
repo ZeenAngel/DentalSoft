@@ -4,6 +4,7 @@ using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
+using System.Diagnostics;
 using System.Drawing;
 using System.Linq;
 using System.Runtime.InteropServices;
@@ -17,9 +18,13 @@ namespace DentalSoft.Formularios
     {
         // Variables
         #region -> Variables
-        DatosGlobales datosGlobales = new DatosGlobales();
-        Paciente paciente;
+        private ConexionBD conexion = new ConexionBD();
+        private DatosGlobales datosGlobales = new DatosGlobales();
+        private Paciente paciente;
         private const int anchoMinimo = 150;
+        private bool consentimientoGeneral = false;
+        private bool consentimientoEndodoncia = false;
+        int reserva = 0;
         #endregion
 
         // Constructores
@@ -47,7 +52,7 @@ namespace DentalSoft.Formularios
         [DllImport("user32.dll", EntryPoint = "ReleaseCapture")]
         private extern static void ReleaseCapture();
         [DllImport("user32.dll", EntryPoint = "SendMessage")]
-        private extern static void SendMessage(System.IntPtr hWnd, int Msg, int wParam, int lParam);
+        private extern static void SendMessage(IntPtr hWnd, int Msg, int wParam, int lParam);
         #endregion
 
         // Métodos privados
@@ -147,9 +152,12 @@ namespace DentalSoft.Formularios
                 MySqlCommand comando = new MySqlCommand(sentencia, conexion.conexionSql);
                 MySqlDataReader reader = comando.ExecuteReader();
                 reader.Read();
+                this.reserva = reader.GetInt32(0);
                 paciente = new Paciente(reader.GetString(3));
                 paciente.CargarPaciente();
                 paciente.CargarOdontograma();
+                reader.Close();
+                comando.Dispose();
                 conexion.CerrarConexion();
             }
         }
@@ -296,6 +304,7 @@ namespace DentalSoft.Formularios
             reader.Read();
             clave = reader.GetInt32(0);
             reader.Close();
+            comando.Dispose();
             return clave;
         }
 
@@ -308,7 +317,33 @@ namespace DentalSoft.Formularios
             reader.Read();
             clave = reader.GetInt32(0);
             reader.Close();
+            comando.Dispose();
             return clave;
+        }
+
+        private void OcultarBotonConsentimiento()
+        {
+            btnConsentimiento.Visible = false;
+        }
+
+        private void MostrarBotonConsentimiento()
+        {
+            btnConsentimiento.Visible = true;
+        }
+
+        private void CambiarEstadoReserva()
+        {
+            if(this.reserva != 0)
+            {
+                if (conexion.EstablecerConexion())
+                {
+                    string sentencia = "UPDATE reserva SET estado = 3 WHERE id = " + this.reserva;
+                    MySqlCommand comando = new MySqlCommand(sentencia, conexion.conexionSql);
+                    comando.ExecuteNonQuery();
+                    comando.Dispose();
+                    conexion.CerrarConexion();
+                }
+            }
         }
         #endregion
 
@@ -340,6 +375,7 @@ namespace DentalSoft.Formularios
 
         private void TratamientoPaciente_Load(object sender, EventArgs e)
         {
+            OcultarBotonConsentimiento();
             CargarDatosPaciente();
             CargarComboBox();
             OcultarRaicesMolares();
@@ -396,7 +432,7 @@ namespace DentalSoft.Formularios
 
         private void btnGuardar_Click(object sender, EventArgs e)
         {
-            ConexionBD conexion = new ConexionBD();
+            
             string sentencia = "INSERT INTO Episodio_clinico(Historial, Fecha, Pieza, Seccion, Diagnostico, Tratamiento) VALUES ('" +
                 paciente.Dni + "', '" + DateTime.Now.ToString("yyyy-MM-dd") + "', " + cbPieza.SelectedItem.ToString() + ", ";
             if (conexion.EstablecerConexion())
@@ -406,6 +442,7 @@ namespace DentalSoft.Formularios
                     sentencia += "1, " + ClaveDiagnostico(conexion) + ", " + ClaveTratamiento(conexion) + ")";
                     MySqlCommand comando = new MySqlCommand(sentencia, conexion.conexionSql);
                     comando.ExecuteNonQuery();
+                    comando.Dispose();
                 }
                 else
                 {
@@ -420,14 +457,16 @@ namespace DentalSoft.Formularios
                                 ClaveSeccion(conexion, boton.Tag.ToString()) + ", " + ClaveDiagnostico(conexion) + ", " + ClaveTratamiento(conexion) + ")";
                                 MySqlCommand comando = new MySqlCommand(sentencia, conexion.conexionSql);
                                 comando.ExecuteNonQuery();
+                                comando.Dispose();
                             }
                         }
                     }
                 }
                 conexion.CerrarConexion();
                 CargarDgv();
-            }
-            
+                LimpiarSeleccion();
+                CambiarEstadoReserva();
+            } 
         }
 
         private void btnVestibular_Click(object sender, EventArgs e)
@@ -561,8 +600,31 @@ namespace DentalSoft.Formularios
             ReleaseCapture();
             SendMessage(this.Handle, 0x112, 0xf012, 0);
         }
+
+        private void cbTratamiento_OnSelectedIndexChanged(object sender, EventArgs e)
+        {
+            if (cbTratamiento.SelectedItem.ToString().Equals("Sin tratar") || cbTratamiento.SelectedItem.ToString().Equals("Limpieza"))
+                OcultarBotonConsentimiento();
+            else if ((cbTratamiento.SelectedItem.ToString().Equals("Endodoncia") && !consentimientoEndodoncia)
+                || (!cbTratamiento.SelectedItem.ToString().Equals("Endodoncia") && !consentimientoGeneral))
+                MostrarBotonConsentimiento();
+            else
+                OcultarBotonConsentimiento();
+        }
+
+        private void btnConsentimiento_Click(object sender, EventArgs e)
+        {
+            if (cbTratamiento.SelectedItem.ToString().Equals("Endodoncia"))
+            {
+                Process.Start("C:\\Dentalsoft\\Documentacion\\Consentimiento_informado_endodoncia.pdf");
+                consentimientoEndodoncia = true;
+            }
+            else
+            {
+                Process.Start("C:\\Dentalsoft\\Documentacion\\Consentimiento_informado_general.pdf");
+                consentimientoGeneral = true;
+            }
+        }
         #endregion
-
-
     }
 }

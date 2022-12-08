@@ -40,7 +40,8 @@ namespace DentalSoft.Clases
             estiloCeldas.Font = new Font(FUENTETEXTO, 14, FontStyle.Regular); // Asignar fuente por defecto
             this.dgv.CellBorderStyle = DataGridViewCellBorderStyle.None;
             this.dgv.DefaultCellStyle = estiloCeldas;  // Asignar el estilo al DGV
-            this.dgv.AutoResizeColumns(DataGridViewAutoSizeColumnsMode.AllCells); // Ajustar el tamaño de las filas automáticamente menos las de cabecera
+            this.dgv.AutoResizeColumns(DataGridViewAutoSizeColumnsMode.AllCells); // Ajustar el tamaño de las filas automáticamente
+            this.dgv.AutoSizeRowsMode = DataGridViewAutoSizeRowsMode.AllCells; // Ajustar el alto de las filas automáticamente
 
             // Establecer estilo cabecera
             this.dgv.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize; // Establecer alto de cabecera autoajustable

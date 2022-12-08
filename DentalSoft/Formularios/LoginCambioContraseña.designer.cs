@@ -46,7 +46,7 @@
             this.btnGuardarLoginCambioContraseña.Location = new System.Drawing.Point(82, 169);
             this.btnGuardarLoginCambioContraseña.Name = "btnGuardarLoginCambioContraseña";
             this.btnGuardarLoginCambioContraseña.Size = new System.Drawing.Size(337, 40);
-            this.btnGuardarLoginCambioContraseña.TabIndex = 11;
+            this.btnGuardarLoginCambioContraseña.TabIndex = 10;
             this.btnGuardarLoginCambioContraseña.Text = "GUARDAR";
             this.btnGuardarLoginCambioContraseña.UseVisualStyleBackColor = false;
             this.btnGuardarLoginCambioContraseña.Click += new System.EventHandler(this.btnGuardarLoginCambioContraseña_Click);
@@ -82,9 +82,11 @@
             this.txtContraseña2LoginCambioContraseña.Multilinea = false;
             this.txtContraseña2LoginCambioContraseña.Name = "txtContraseña2LoginCambioContraseña";
             this.txtContraseña2LoginCambioContraseña.Padding = new System.Windows.Forms.Padding(10, 7, 10, 7);
+            this.txtContraseña2LoginCambioContraseña.PosicionSeleccion = 0;
             this.txtContraseña2LoginCambioContraseña.Size = new System.Drawing.Size(337, 34);
             this.txtContraseña2LoginCambioContraseña.SubrayadoEstilo = true;
-            this.txtContraseña2LoginCambioContraseña.TabIndex = 13;
+            this.txtContraseña2LoginCambioContraseña.TabIndex = 5;
+            this.txtContraseña2LoginCambioContraseña.TamañoMaximo = 30000;
             this.txtContraseña2LoginCambioContraseña.Texto = "";
             this.txtContraseña2LoginCambioContraseña.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtContraseña2LoginCambioContraseña_KeyPress);
             // 
@@ -105,9 +107,11 @@
             this.txtContraseña1LoginCambioContraseña.Multilinea = false;
             this.txtContraseña1LoginCambioContraseña.Name = "txtContraseña1LoginCambioContraseña";
             this.txtContraseña1LoginCambioContraseña.Padding = new System.Windows.Forms.Padding(10, 7, 10, 7);
+            this.txtContraseña1LoginCambioContraseña.PosicionSeleccion = 0;
             this.txtContraseña1LoginCambioContraseña.Size = new System.Drawing.Size(337, 34);
             this.txtContraseña1LoginCambioContraseña.SubrayadoEstilo = true;
-            this.txtContraseña1LoginCambioContraseña.TabIndex = 12;
+            this.txtContraseña1LoginCambioContraseña.TabIndex = 0;
+            this.txtContraseña1LoginCambioContraseña.TamañoMaximo = 30000;
             this.txtContraseña1LoginCambioContraseña.Texto = "";
             this.txtContraseña1LoginCambioContraseña.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtContraseña1LoginCambioContraseña_KeyPress);
             // 
@@ -115,12 +119,14 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(236)))), ((int)(((byte)(236)))), ((int)(((byte)(236)))));
             this.ClientSize = new System.Drawing.Size(500, 250);
             this.Controls.Add(this.lblErrorLoginCambioContraseña);
             this.Controls.Add(this.btnGuardarLoginCambioContraseña);
             this.Controls.Add(this.txtContraseña2LoginCambioContraseña);
             this.Controls.Add(this.txtContraseña1LoginCambioContraseña);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "LoginCambioContraseña";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "LoginCambioContraseña";

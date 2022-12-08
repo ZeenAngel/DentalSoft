@@ -102,8 +102,6 @@ namespace DentalSoft.Formularios
         {
             string fechaAnterior = presupuesto.Substring(1, 2);
             presupuesto = presupuesto.Substring(3, (presupuesto.Length - 3));
-
-            // HAY QUE RELLENAR CON CEROS A LA IZQUIERDA, EL TOTAL CUANDO ES MENOR A 10 SON 7 CEROS
             int temporal = int.Parse(presupuesto) + 1;
             string cadenaPresupuesto = temporal.ToString();
             string numPresupuesto = "";
@@ -136,6 +134,7 @@ namespace DentalSoft.Formularios
                         cbTratamientos.Items.Add(tratamiento);
                 }
                 reader.Close();
+                comando.Dispose();
                 conexion.CerrarConexion();
 
             }
@@ -158,6 +157,7 @@ namespace DentalSoft.Formularios
                         cbCentros.Items.Add(centro);
                 }
                 reader.Close();
+                comando.Dispose();
                 conexion.CerrarConexion();
             }
         }

@@ -31,22 +31,24 @@
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(ControlHorario));
             this.pnlCabecera = new System.Windows.Forms.Panel();
             this.lblTitulo = new System.Windows.Forms.Label();
+            this.pnlContenedor = new System.Windows.Forms.Panel();
+            this.dgvFichajes = new System.Windows.Forms.DataGridView();
+            this.lblTituloBuscar = new System.Windows.Forms.Label();
+            this.label1 = new System.Windows.Forms.Label();
+            this.lblErrorIncidencias = new System.Windows.Forms.Label();
             this.btnRedimensionar = new System.Windows.Forms.PictureBox();
             this.btnMinimizar = new System.Windows.Forms.PictureBox();
             this.btnCerrar = new System.Windows.Forms.PictureBox();
-            this.pnlContenedor = new System.Windows.Forms.Panel();
-            this.txtBuscar = new DentalSoft.TextboxPersonalizado();
-            this.lblTituloBuscar = new System.Windows.Forms.Label();
-            this.dgvFichajes = new System.Windows.Forms.DataGridView();
-            this.selectorFecha1 = new DentalSoft.ControlesPersonalizados.SelectorFecha();
-            this.label1 = new System.Windows.Forms.Label();
+            this.btnIncidencias = new DentalSoft.ControlesPersonalizados.BotonPersonalizado();
             this.btnLimpiarFecha = new DentalSoft.ControlesPersonalizados.BotonPersonalizado();
+            this.selectorFecha1 = new DentalSoft.ControlesPersonalizados.SelectorFecha();
+            this.txtBuscar = new DentalSoft.TextboxPersonalizado();
             this.pnlCabecera.SuspendLayout();
+            this.pnlContenedor.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvFichajes)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.btnRedimensionar)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.btnMinimizar)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.btnCerrar)).BeginInit();
-            this.pnlContenedor.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dgvFichajes)).BeginInit();
             this.SuspendLayout();
             // 
             // pnlCabecera
@@ -74,6 +76,63 @@
             this.lblTitulo.TabIndex = 41;
             this.lblTitulo.Text = "DentalSoft";
             this.lblTitulo.MouseDown += new System.Windows.Forms.MouseEventHandler(this.lblTitulo_MouseDown);
+            // 
+            // pnlContenedor
+            // 
+            this.pnlContenedor.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.pnlContenedor.Controls.Add(this.dgvFichajes);
+            this.pnlContenedor.Location = new System.Drawing.Point(16, 160);
+            this.pnlContenedor.Name = "pnlContenedor";
+            this.pnlContenedor.Size = new System.Drawing.Size(1062, 437);
+            this.pnlContenedor.TabIndex = 4;
+            // 
+            // dgvFichajes
+            // 
+            this.dgvFichajes.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dgvFichajes.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.dgvFichajes.Location = new System.Drawing.Point(0, 0);
+            this.dgvFichajes.Name = "dgvFichajes";
+            this.dgvFichajes.Size = new System.Drawing.Size(1062, 437);
+            this.dgvFichajes.TabIndex = 0;
+            this.dgvFichajes.CellContentDoubleClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvFichajes_CellContentDoubleClick);
+            this.dgvFichajes.CellFormatting += new System.Windows.Forms.DataGridViewCellFormattingEventHandler(this.dgvFichajes_CellFormatting);
+            // 
+            // lblTituloBuscar
+            // 
+            this.lblTituloBuscar.AutoSize = true;
+            this.lblTituloBuscar.Font = new System.Drawing.Font("Roboto", 12F);
+            this.lblTituloBuscar.Location = new System.Drawing.Point(24, 100);
+            this.lblTituloBuscar.Name = "lblTituloBuscar";
+            this.lblTituloBuscar.Size = new System.Drawing.Size(62, 19);
+            this.lblTituloBuscar.TabIndex = 7;
+            this.lblTituloBuscar.Text = "Buscar:";
+            // 
+            // label1
+            // 
+            this.label1.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.label1.AutoSize = true;
+            this.label1.Font = new System.Drawing.Font("Roboto", 12F);
+            this.label1.Location = new System.Drawing.Point(480, 101);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(125, 19);
+            this.label1.TabIndex = 9;
+            this.label1.Text = "Filtrar por fecha:";
+            // 
+            // lblErrorIncidencias
+            // 
+            this.lblErrorIncidencias.AutoSize = true;
+            this.lblErrorIncidencias.Font = new System.Drawing.Font("Roboto", 12F);
+            this.lblErrorIncidencias.ForeColor = System.Drawing.Color.IndianRed;
+            this.lblErrorIncidencias.Image = ((System.Drawing.Image)(resources.GetObject("lblErrorIncidencias.Image")));
+            this.lblErrorIncidencias.ImageAlign = System.Drawing.ContentAlignment.TopLeft;
+            this.lblErrorIncidencias.Location = new System.Drawing.Point(325, 138);
+            this.lblErrorIncidencias.Name = "lblErrorIncidencias";
+            this.lblErrorIncidencias.Size = new System.Drawing.Size(106, 19);
+            this.lblErrorIncidencias.TabIndex = 49;
+            this.lblErrorIncidencias.Text = "Mensaje Error";
+            this.lblErrorIncidencias.Visible = false;
             // 
             // btnRedimensionar
             // 
@@ -114,16 +173,63 @@
             this.btnCerrar.TabStop = false;
             this.btnCerrar.Click += new System.EventHandler(this.btnCerrar_Click);
             // 
-            // pnlContenedor
+            // btnIncidencias
             // 
-            this.pnlContenedor.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.pnlContenedor.Controls.Add(this.dgvFichajes);
-            this.pnlContenedor.Location = new System.Drawing.Point(16, 160);
-            this.pnlContenedor.Name = "pnlContenedor";
-            this.pnlContenedor.Size = new System.Drawing.Size(1062, 437);
-            this.pnlContenedor.TabIndex = 4;
+            this.btnIncidencias.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(16)))), ((int)(((byte)(110)))), ((int)(((byte)(196)))));
+            this.btnIncidencias.BordeColor = System.Drawing.Color.FromArgb(((int)(((byte)(16)))), ((int)(((byte)(110)))), ((int)(((byte)(196)))));
+            this.btnIncidencias.BordeRadio = 31;
+            this.btnIncidencias.BordeTamaño = 0;
+            this.btnIncidencias.FlatAppearance.BorderSize = 0;
+            this.btnIncidencias.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(195)))), ((int)(((byte)(165)))));
+            this.btnIncidencias.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnIncidencias.FondoColor = System.Drawing.Color.FromArgb(((int)(((byte)(16)))), ((int)(((byte)(110)))), ((int)(((byte)(196)))));
+            this.btnIncidencias.ForeColor = System.Drawing.Color.White;
+            this.btnIncidencias.Location = new System.Drawing.Point(941, 110);
+            this.btnIncidencias.Name = "btnIncidencias";
+            this.btnIncidencias.Size = new System.Drawing.Size(116, 31);
+            this.btnIncidencias.TabIndex = 11;
+            this.btnIncidencias.Text = "Ver incidencias";
+            this.btnIncidencias.TextoColor = System.Drawing.Color.White;
+            this.btnIncidencias.UseVisualStyleBackColor = false;
+            this.btnIncidencias.Click += new System.EventHandler(this.btnIncidencias_Click);
+            // 
+            // btnLimpiarFecha
+            // 
+            this.btnLimpiarFecha.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(16)))), ((int)(((byte)(110)))), ((int)(((byte)(196)))));
+            this.btnLimpiarFecha.BordeColor = System.Drawing.Color.FromArgb(((int)(((byte)(16)))), ((int)(((byte)(110)))), ((int)(((byte)(196)))));
+            this.btnLimpiarFecha.BordeRadio = 31;
+            this.btnLimpiarFecha.BordeTamaño = 0;
+            this.btnLimpiarFecha.FlatAppearance.BorderSize = 0;
+            this.btnLimpiarFecha.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(195)))), ((int)(((byte)(165)))));
+            this.btnLimpiarFecha.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnLimpiarFecha.FondoColor = System.Drawing.Color.FromArgb(((int)(((byte)(16)))), ((int)(((byte)(110)))), ((int)(((byte)(196)))));
+            this.btnLimpiarFecha.ForeColor = System.Drawing.Color.White;
+            this.btnLimpiarFecha.Location = new System.Drawing.Point(941, 61);
+            this.btnLimpiarFecha.Name = "btnLimpiarFecha";
+            this.btnLimpiarFecha.Size = new System.Drawing.Size(116, 31);
+            this.btnLimpiarFecha.TabIndex = 10;
+            this.btnLimpiarFecha.Text = "Todas las fechas";
+            this.btnLimpiarFecha.TextoColor = System.Drawing.Color.White;
+            this.btnLimpiarFecha.UseVisualStyleBackColor = false;
+            this.btnLimpiarFecha.Click += new System.EventHandler(this.btnLimpiarFecha_Click);
+            // 
+            // selectorFecha1
+            // 
+            this.selectorFecha1.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.selectorFecha1.BordeColor = System.Drawing.Color.FromArgb(((int)(((byte)(16)))), ((int)(((byte)(110)))), ((int)(((byte)(196)))));
+            this.selectorFecha1.BordeTamaño = 0;
+            this.selectorFecha1.FondoColor = System.Drawing.Color.FromArgb(((int)(((byte)(16)))), ((int)(((byte)(110)))), ((int)(((byte)(196)))));
+            this.selectorFecha1.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.5F);
+            this.selectorFecha1.IsDesplegado = false;
+            this.selectorFecha1.Location = new System.Drawing.Point(634, 91);
+            this.selectorFecha1.MinDate = new System.DateTime(2022, 11, 7, 20, 1, 22, 400);
+            this.selectorFecha1.MinimumSize = new System.Drawing.Size(4, 35);
+            this.selectorFecha1.Name = "selectorFecha1";
+            this.selectorFecha1.Size = new System.Drawing.Size(271, 35);
+            this.selectorFecha1.TabIndex = 5;
+            this.selectorFecha1.TextoColor = System.Drawing.Color.White;
+            this.selectorFecha1.Value = new System.DateTime(2022, 12, 8, 12, 44, 53, 478);
+            this.selectorFecha1.CloseUp += new System.EventHandler(this.selectorFecha1_CloseUp);
             // 
             // txtBuscar
             // 
@@ -142,84 +248,21 @@
             this.txtBuscar.Multilinea = false;
             this.txtBuscar.Name = "txtBuscar";
             this.txtBuscar.Padding = new System.Windows.Forms.Padding(10, 7, 10, 7);
+            this.txtBuscar.PosicionSeleccion = 0;
             this.txtBuscar.Size = new System.Drawing.Size(338, 30);
             this.txtBuscar.SubrayadoEstilo = true;
             this.txtBuscar.TabIndex = 0;
+            this.txtBuscar.TamañoMaximo = 30000;
             this.txtBuscar.Texto = "";
             this.txtBuscar._TextChanged += new System.EventHandler(this.txtBuscar__TextChanged);
-            // 
-            // lblTituloBuscar
-            // 
-            this.lblTituloBuscar.AutoSize = true;
-            this.lblTituloBuscar.Font = new System.Drawing.Font("Roboto", 12F);
-            this.lblTituloBuscar.Location = new System.Drawing.Point(24, 100);
-            this.lblTituloBuscar.Name = "lblTituloBuscar";
-            this.lblTituloBuscar.Size = new System.Drawing.Size(62, 19);
-            this.lblTituloBuscar.TabIndex = 7;
-            this.lblTituloBuscar.Text = "Buscar:";
-            // 
-            // dgvFichajes
-            // 
-            this.dgvFichajes.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dgvFichajes.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.dgvFichajes.Location = new System.Drawing.Point(0, 0);
-            this.dgvFichajes.Name = "dgvFichajes";
-            this.dgvFichajes.Size = new System.Drawing.Size(1062, 437);
-            this.dgvFichajes.TabIndex = 0;
-            // 
-            // selectorFecha1
-            // 
-            this.selectorFecha1.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.selectorFecha1.BordeColor = System.Drawing.Color.FromArgb(((int)(((byte)(16)))), ((int)(((byte)(110)))), ((int)(((byte)(196)))));
-            this.selectorFecha1.BordeTamaño = 0;
-            this.selectorFecha1.FondoColor = System.Drawing.Color.FromArgb(((int)(((byte)(16)))), ((int)(((byte)(110)))), ((int)(((byte)(196)))));
-            this.selectorFecha1.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.5F);
-            this.selectorFecha1.IsDesplegado = false;
-            this.selectorFecha1.Location = new System.Drawing.Point(634, 91);
-            this.selectorFecha1.MinDate = new System.DateTime(2022, 11, 7, 20, 1, 22, 400);
-            this.selectorFecha1.MinimumSize = new System.Drawing.Size(0, 35);
-            this.selectorFecha1.Name = "selectorFecha1";
-            this.selectorFecha1.Size = new System.Drawing.Size(271, 35);
-            this.selectorFecha1.TabIndex = 8;
-            this.selectorFecha1.TextoColor = System.Drawing.Color.White;
-            this.selectorFecha1.CloseUp += new System.EventHandler(this.selectorFecha1_CloseUp);
-            // 
-            // label1
-            // 
-            this.label1.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Roboto", 12F);
-            this.label1.Location = new System.Drawing.Point(480, 101);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(125, 19);
-            this.label1.TabIndex = 9;
-            this.label1.Text = "Filtrar por fecha:";
-            // 
-            // btnLimpiarFecha
-            // 
-            this.btnLimpiarFecha.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(16)))), ((int)(((byte)(110)))), ((int)(((byte)(196)))));
-            this.btnLimpiarFecha.BordeColor = System.Drawing.Color.FromArgb(((int)(((byte)(16)))), ((int)(((byte)(110)))), ((int)(((byte)(196)))));
-            this.btnLimpiarFecha.BordeRadio = 31;
-            this.btnLimpiarFecha.BordeTamaño = 0;
-            this.btnLimpiarFecha.FlatAppearance.BorderSize = 0;
-            this.btnLimpiarFecha.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(195)))), ((int)(((byte)(165)))));
-            this.btnLimpiarFecha.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnLimpiarFecha.FondoColor = System.Drawing.Color.FromArgb(((int)(((byte)(16)))), ((int)(((byte)(110)))), ((int)(((byte)(196)))));
-            this.btnLimpiarFecha.ForeColor = System.Drawing.Color.White;
-            this.btnLimpiarFecha.Location = new System.Drawing.Point(936, 92);
-            this.btnLimpiarFecha.Name = "btnLimpiarFecha";
-            this.btnLimpiarFecha.Size = new System.Drawing.Size(116, 31);
-            this.btnLimpiarFecha.TabIndex = 10;
-            this.btnLimpiarFecha.Text = "Todas las fechas";
-            this.btnLimpiarFecha.TextoColor = System.Drawing.Color.White;
-            this.btnLimpiarFecha.UseVisualStyleBackColor = false;
-            this.btnLimpiarFecha.Click += new System.EventHandler(this.btnLimpiarFecha_Click);
             // 
             // ControlHorario
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 14F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1090, 609);
+            this.Controls.Add(this.lblErrorIncidencias);
+            this.Controls.Add(this.btnIncidencias);
             this.Controls.Add(this.btnLimpiarFecha);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.selectorFecha1);
@@ -229,6 +272,7 @@
             this.Controls.Add(this.pnlCabecera);
             this.Font = new System.Drawing.Font("Roboto", 9.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
             this.Name = "ControlHorario";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
@@ -236,11 +280,11 @@
             this.Load += new System.EventHandler(this.ControlHorario_Load);
             this.pnlCabecera.ResumeLayout(false);
             this.pnlCabecera.PerformLayout();
+            this.pnlContenedor.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.dgvFichajes)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.btnRedimensionar)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.btnMinimizar)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.btnCerrar)).EndInit();
-            this.pnlContenedor.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.dgvFichajes)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -260,5 +304,7 @@
         private ControlesPersonalizados.SelectorFecha selectorFecha1;
         private System.Windows.Forms.Label label1;
         private ControlesPersonalizados.BotonPersonalizado btnLimpiarFecha;
+        private ControlesPersonalizados.BotonPersonalizado btnIncidencias;
+        private System.Windows.Forms.Label lblErrorIncidencias;
     }
 }

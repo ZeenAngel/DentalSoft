@@ -32,15 +32,17 @@
             this.lblFiltrosPacientes = new System.Windows.Forms.Label();
             this.pnlDgvBuscarPaciente = new System.Windows.Forms.Panel();
             this.dgvProductos = new System.Windows.Forms.DataGridView();
+            this.lblErrorCaducado = new System.Windows.Forms.Label();
+            this.btnAtras = new System.Windows.Forms.PictureBox();
+            this.lblFecha = new System.Windows.Forms.Label();
+            this.mcFiltrarFecha = new DentalSoft.ControlesPersonalizados.SelectorFecha();
+            this.btnInventario = new DentalSoft.ControlesPersonalizados.BotonPersonalizado();
             this.btnGestionarAlmacenes = new DentalSoft.ControlesPersonalizados.BotonPersonalizado();
             this.btnEliminarProducto = new DentalSoft.ControlesPersonalizados.BotonPersonalizado();
             this.btnEditarProducto = new DentalSoft.ControlesPersonalizados.BotonPersonalizado();
             this.btnNuevoProducto = new DentalSoft.ControlesPersonalizados.BotonPersonalizado();
             this.cbFiltros = new DentalSoft.ControlesPersonalizados.ComboBoxPersonalizado();
             this.txtProducto = new DentalSoft.TextboxPersonalizado();
-            this.lblErrorCaducado = new System.Windows.Forms.Label();
-            this.btnAtras = new System.Windows.Forms.PictureBox();
-            this.btnInventario = new DentalSoft.ControlesPersonalizados.BotonPersonalizado();
             this.pnlDgvBuscarPaciente.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvProductos)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.btnAtras)).BeginInit();
@@ -52,7 +54,7 @@
             this.lblFiltrosPacientes.AutoSize = true;
             this.lblFiltrosPacientes.Font = new System.Drawing.Font("Roboto", 12F);
             this.lblFiltrosPacientes.ForeColor = System.Drawing.Color.Black;
-            this.lblFiltrosPacientes.Location = new System.Drawing.Point(807, 111);
+            this.lblFiltrosPacientes.Location = new System.Drawing.Point(883, 115);
             this.lblFiltrosPacientes.Name = "lblFiltrosPacientes";
             this.lblFiltrosPacientes.Size = new System.Drawing.Size(50, 19);
             this.lblFiltrosPacientes.TabIndex = 32;
@@ -64,9 +66,9 @@
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.pnlDgvBuscarPaciente.Controls.Add(this.dgvProductos);
-            this.pnlDgvBuscarPaciente.Location = new System.Drawing.Point(98, 175);
+            this.pnlDgvBuscarPaciente.Location = new System.Drawing.Point(25, 210);
             this.pnlDgvBuscarPaciente.Name = "pnlDgvBuscarPaciente";
-            this.pnlDgvBuscarPaciente.Size = new System.Drawing.Size(966, 335);
+            this.pnlDgvBuscarPaciente.Size = new System.Drawing.Size(1115, 335);
             this.pnlDgvBuscarPaciente.TabIndex = 31;
             // 
             // dgvProductos
@@ -75,8 +77,89 @@
             this.dgvProductos.Dock = System.Windows.Forms.DockStyle.Fill;
             this.dgvProductos.Location = new System.Drawing.Point(0, 0);
             this.dgvProductos.Name = "dgvProductos";
-            this.dgvProductos.Size = new System.Drawing.Size(966, 335);
+            this.dgvProductos.Size = new System.Drawing.Size(1115, 335);
             this.dgvProductos.TabIndex = 0;
+            this.dgvProductos.CellFormatting += new System.Windows.Forms.DataGridViewCellFormattingEventHandler(this.dgvProductos_CellFormatting);
+            // 
+            // lblErrorCaducado
+            // 
+            this.lblErrorCaducado.AutoSize = true;
+            this.lblErrorCaducado.Font = new System.Drawing.Font("Roboto", 12F);
+            this.lblErrorCaducado.ForeColor = System.Drawing.Color.IndianRed;
+            this.lblErrorCaducado.Image = ((System.Drawing.Image)(resources.GetObject("lblErrorCaducado.Image")));
+            this.lblErrorCaducado.ImageAlign = System.Drawing.ContentAlignment.TopLeft;
+            this.lblErrorCaducado.Location = new System.Drawing.Point(409, 179);
+            this.lblErrorCaducado.Name = "lblErrorCaducado";
+            this.lblErrorCaducado.Size = new System.Drawing.Size(106, 19);
+            this.lblErrorCaducado.TabIndex = 48;
+            this.lblErrorCaducado.Text = "Mensaje Error";
+            this.lblErrorCaducado.Visible = false;
+            // 
+            // btnAtras
+            // 
+            this.btnAtras.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.btnAtras.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnAtras.Image = ((System.Drawing.Image)(resources.GetObject("btnAtras.Image")));
+            this.btnAtras.Location = new System.Drawing.Point(25, 23);
+            this.btnAtras.Name = "btnAtras";
+            this.btnAtras.Size = new System.Drawing.Size(100, 50);
+            this.btnAtras.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.btnAtras.TabIndex = 12;
+            this.btnAtras.TabStop = false;
+            this.btnAtras.Click += new System.EventHandler(this.btnAtras_Click);
+            // 
+            // lblFecha
+            // 
+            this.lblFecha.AutoSize = true;
+            this.lblFecha.Font = new System.Drawing.Font("Roboto", 12F);
+            this.lblFecha.Location = new System.Drawing.Point(94, 114);
+            this.lblFecha.Name = "lblFecha";
+            this.lblFecha.Size = new System.Drawing.Size(170, 19);
+            this.lblFecha.TabIndex = 85;
+            this.lblFecha.Text = "Seleccionar una fecha:";
+            // 
+            // mcFiltrarFecha
+            // 
+            this.mcFiltrarFecha.BordeColor = System.Drawing.Color.FromArgb(((int)(((byte)(16)))), ((int)(((byte)(110)))), ((int)(((byte)(196)))));
+            this.mcFiltrarFecha.BordeTamaño = 0;
+            this.mcFiltrarFecha.FondoColor = System.Drawing.Color.FromArgb(((int)(((byte)(16)))), ((int)(((byte)(110)))), ((int)(((byte)(196)))));
+            this.mcFiltrarFecha.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.5F);
+            this.mcFiltrarFecha.IsDesplegado = false;
+            this.mcFiltrarFecha.Location = new System.Drawing.Point(270, 104);
+            this.mcFiltrarFecha.MinDate = new System.DateTime(2022, 11, 8, 12, 50, 6, 969);
+            this.mcFiltrarFecha.MinimumSize = new System.Drawing.Size(4, 35);
+            this.mcFiltrarFecha.Name = "mcFiltrarFecha";
+            this.mcFiltrarFecha.Size = new System.Drawing.Size(292, 35);
+            this.mcFiltrarFecha.TabIndex = 5;
+            this.mcFiltrarFecha.TextoColor = System.Drawing.Color.White;
+            this.mcFiltrarFecha.Value = new System.DateTime(2022, 11, 8, 12, 50, 6, 969);
+            this.mcFiltrarFecha.CloseUp += new System.EventHandler(this.mcFiltrarFecha_CloseUp);
+            // 
+            // btnInventario
+            // 
+            this.btnInventario.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.btnInventario.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(16)))), ((int)(((byte)(110)))), ((int)(((byte)(196)))));
+            this.btnInventario.BordeColor = System.Drawing.Color.PaleVioletRed;
+            this.btnInventario.BordeRadio = 32;
+            this.btnInventario.BordeTamaño = 0;
+            this.btnInventario.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnInventario.FlatAppearance.BorderSize = 0;
+            this.btnInventario.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(195)))), ((int)(((byte)(165)))));
+            this.btnInventario.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnInventario.FondoColor = System.Drawing.Color.FromArgb(((int)(((byte)(16)))), ((int)(((byte)(110)))), ((int)(((byte)(196)))));
+            this.btnInventario.Font = new System.Drawing.Font("Roboto", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnInventario.ForeColor = System.Drawing.Color.White;
+            this.btnInventario.Location = new System.Drawing.Point(710, 638);
+            this.btnInventario.Name = "btnInventario";
+            this.btnInventario.Size = new System.Drawing.Size(430, 34);
+            this.btnInventario.TabIndex = 35;
+            this.btnInventario.Text = "Inventario";
+            this.btnInventario.TextoColor = System.Drawing.Color.White;
+            this.btnInventario.UseVisualStyleBackColor = false;
+            this.btnInventario.Click += new System.EventHandler(this.btnInventario_Click);
             // 
             // btnGestionarAlmacenes
             // 
@@ -93,10 +176,10 @@
             this.btnGestionarAlmacenes.FondoColor = System.Drawing.Color.FromArgb(((int)(((byte)(16)))), ((int)(((byte)(110)))), ((int)(((byte)(196)))));
             this.btnGestionarAlmacenes.Font = new System.Drawing.Font("Roboto", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnGestionarAlmacenes.ForeColor = System.Drawing.Color.White;
-            this.btnGestionarAlmacenes.Location = new System.Drawing.Point(98, 638);
+            this.btnGestionarAlmacenes.Location = new System.Drawing.Point(25, 638);
             this.btnGestionarAlmacenes.Name = "btnGestionarAlmacenes";
             this.btnGestionarAlmacenes.Size = new System.Drawing.Size(430, 34);
-            this.btnGestionarAlmacenes.TabIndex = 36;
+            this.btnGestionarAlmacenes.TabIndex = 30;
             this.btnGestionarAlmacenes.Text = "Gestionar Almacenes";
             this.btnGestionarAlmacenes.TextoColor = System.Drawing.Color.White;
             this.btnGestionarAlmacenes.UseVisualStyleBackColor = false;
@@ -116,10 +199,10 @@
             this.btnEliminarProducto.FondoColor = System.Drawing.Color.FromArgb(((int)(((byte)(16)))), ((int)(((byte)(110)))), ((int)(((byte)(196)))));
             this.btnEliminarProducto.Font = new System.Drawing.Font("Roboto", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnEliminarProducto.ForeColor = System.Drawing.Color.White;
-            this.btnEliminarProducto.Location = new System.Drawing.Point(794, 561);
+            this.btnEliminarProducto.Location = new System.Drawing.Point(870, 561);
             this.btnEliminarProducto.Name = "btnEliminarProducto";
             this.btnEliminarProducto.Size = new System.Drawing.Size(270, 34);
-            this.btnEliminarProducto.TabIndex = 35;
+            this.btnEliminarProducto.TabIndex = 25;
             this.btnEliminarProducto.Text = "Eliminar Producto";
             this.btnEliminarProducto.TextoColor = System.Drawing.Color.White;
             this.btnEliminarProducto.UseVisualStyleBackColor = false;
@@ -143,7 +226,7 @@
             this.btnEditarProducto.Location = new System.Drawing.Point(438, 561);
             this.btnEditarProducto.Name = "btnEditarProducto";
             this.btnEditarProducto.Size = new System.Drawing.Size(270, 34);
-            this.btnEditarProducto.TabIndex = 34;
+            this.btnEditarProducto.TabIndex = 20;
             this.btnEditarProducto.Text = "Editar Producto";
             this.btnEditarProducto.TextoColor = System.Drawing.Color.White;
             this.btnEditarProducto.UseVisualStyleBackColor = false;
@@ -163,10 +246,10 @@
             this.btnNuevoProducto.FondoColor = System.Drawing.Color.FromArgb(((int)(((byte)(16)))), ((int)(((byte)(110)))), ((int)(((byte)(196)))));
             this.btnNuevoProducto.Font = new System.Drawing.Font("Roboto", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnNuevoProducto.ForeColor = System.Drawing.Color.White;
-            this.btnNuevoProducto.Location = new System.Drawing.Point(98, 561);
+            this.btnNuevoProducto.Location = new System.Drawing.Point(25, 561);
             this.btnNuevoProducto.Name = "btnNuevoProducto";
             this.btnNuevoProducto.Size = new System.Drawing.Size(270, 34);
-            this.btnNuevoProducto.TabIndex = 33;
+            this.btnNuevoProducto.TabIndex = 15;
             this.btnNuevoProducto.Text = "Nuevo Producto";
             this.btnNuevoProducto.TextoColor = System.Drawing.Color.White;
             this.btnNuevoProducto.UseVisualStyleBackColor = false;
@@ -186,12 +269,12 @@
             this.cbFiltros.ForeColor = System.Drawing.Color.Black;
             this.cbFiltros.ListaColorFondo = System.Drawing.Color.WhiteSmoke;
             this.cbFiltros.ListColorTexto = System.Drawing.Color.Black;
-            this.cbFiltros.Location = new System.Drawing.Point(864, 105);
+            this.cbFiltros.Location = new System.Drawing.Point(940, 109);
             this.cbFiltros.MinimumSize = new System.Drawing.Size(200, 30);
             this.cbFiltros.Name = "cbFiltros";
             this.cbFiltros.Padding = new System.Windows.Forms.Padding(1);
             this.cbFiltros.Size = new System.Drawing.Size(200, 30);
-            this.cbFiltros.TabIndex = 30;
+            this.cbFiltros.TabIndex = 10;
             this.cbFiltros.Textos = "";
             this.cbFiltros.OnSelectedIndexChanged += new System.EventHandler(this.cbFiltros_OnSelectedIndexChanged);
             // 
@@ -205,71 +288,21 @@
             this.txtProducto.Contraseña = false;
             this.txtProducto.Font = new System.Drawing.Font("Roboto", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtProducto.ForeColor = System.Drawing.Color.Black;
-            this.txtProducto.Location = new System.Drawing.Point(98, 102);
+            this.txtProducto.Location = new System.Drawing.Point(25, 105);
             this.txtProducto.MarcadorPosicionColor = System.Drawing.Color.DarkGray;
             this.txtProducto.MarcadorPosicionTexto = "Introduce el producto a buscar";
             this.txtProducto.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
             this.txtProducto.Multilinea = false;
             this.txtProducto.Name = "txtProducto";
             this.txtProducto.Padding = new System.Windows.Forms.Padding(10, 7, 10, 7);
+            this.txtProducto.PosicionSeleccion = 0;
             this.txtProducto.Size = new System.Drawing.Size(591, 34);
             this.txtProducto.SubrayadoEstilo = true;
-            this.txtProducto.TabIndex = 29;
+            this.txtProducto.TabIndex = 0;
+            this.txtProducto.TamañoMaximo = 30000;
             this.txtProducto.Texto = "";
             this.txtProducto._TextChanged += new System.EventHandler(this.txtProducto__TextChanged);
-            // 
-            // lblErrorCaducado
-            // 
-            this.lblErrorCaducado.AutoSize = true;
-            this.lblErrorCaducado.Font = new System.Drawing.Font("Roboto", 12F);
-            this.lblErrorCaducado.ForeColor = System.Drawing.Color.IndianRed;
-            this.lblErrorCaducado.Image = ((System.Drawing.Image)(resources.GetObject("lblErrorCaducado.Image")));
-            this.lblErrorCaducado.ImageAlign = System.Drawing.ContentAlignment.TopLeft;
-            this.lblErrorCaducado.Location = new System.Drawing.Point(279, 525);
-            this.lblErrorCaducado.Name = "lblErrorCaducado";
-            this.lblErrorCaducado.Size = new System.Drawing.Size(106, 19);
-            this.lblErrorCaducado.TabIndex = 48;
-            this.lblErrorCaducado.Text = "Mensaje Error";
-            this.lblErrorCaducado.Visible = false;
-            // 
-            // btnAtras
-            // 
-            this.btnAtras.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.btnAtras.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.btnAtras.Image = ((System.Drawing.Image)(resources.GetObject("btnAtras.Image")));
-            this.btnAtras.Location = new System.Drawing.Point(25, 23);
-            this.btnAtras.Name = "btnAtras";
-            this.btnAtras.Size = new System.Drawing.Size(100, 50);
-            this.btnAtras.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.btnAtras.TabIndex = 12;
-            this.btnAtras.TabStop = false;
-            this.btnAtras.Click += new System.EventHandler(this.btnAtras_Click);
-            // 
-            // btnInventario
-            // 
-            this.btnInventario.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.btnInventario.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(16)))), ((int)(((byte)(110)))), ((int)(((byte)(196)))));
-            this.btnInventario.BordeColor = System.Drawing.Color.PaleVioletRed;
-            this.btnInventario.BordeRadio = 32;
-            this.btnInventario.BordeTamaño = 0;
-            this.btnInventario.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.btnInventario.FlatAppearance.BorderSize = 0;
-            this.btnInventario.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(195)))), ((int)(((byte)(165)))));
-            this.btnInventario.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnInventario.FondoColor = System.Drawing.Color.FromArgb(((int)(((byte)(16)))), ((int)(((byte)(110)))), ((int)(((byte)(196)))));
-            this.btnInventario.Font = new System.Drawing.Font("Roboto", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnInventario.ForeColor = System.Drawing.Color.White;
-            this.btnInventario.Location = new System.Drawing.Point(634, 638);
-            this.btnInventario.Name = "btnInventario";
-            this.btnInventario.Size = new System.Drawing.Size(430, 34);
-            this.btnInventario.TabIndex = 49;
-            this.btnInventario.Text = "Inventario";
-            this.btnInventario.TextoColor = System.Drawing.Color.White;
-            this.btnInventario.UseVisualStyleBackColor = false;
-            this.btnInventario.Click += new System.EventHandler(this.btnInventario_Click);
+            this.txtProducto.KeyUp += new System.Windows.Forms.KeyEventHandler(this.txtProducto_KeyUp);
             // 
             // Almacen
             // 
@@ -277,6 +310,8 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(236)))), ((int)(((byte)(236)))), ((int)(((byte)(236)))));
             this.ClientSize = new System.Drawing.Size(1164, 715);
+            this.Controls.Add(this.lblFecha);
+            this.Controls.Add(this.mcFiltrarFecha);
             this.Controls.Add(this.btnInventario);
             this.Controls.Add(this.lblErrorCaducado);
             this.Controls.Add(this.btnGestionarAlmacenes);
@@ -316,5 +351,7 @@
         private TextboxPersonalizado txtProducto;
         private System.Windows.Forms.Label lblErrorCaducado;
         private ControlesPersonalizados.BotonPersonalizado btnInventario;
+        private ControlesPersonalizados.SelectorFecha mcFiltrarFecha;
+        private System.Windows.Forms.Label lblFecha;
     }
 }
