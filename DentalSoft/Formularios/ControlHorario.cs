@@ -61,7 +61,7 @@ namespace DentalSoft.Formularios
             if (conexion.EstablecerConexion())
             {
                 string empleado = txtBuscar.Texto;
-                string sentencia = "SELECT Empleado, Fecha, Hora FROM Fichaje_Empleado";
+                string sentencia = "SELECT Empleado, Fecha, Hora FROM Fichaje_Empleado WHERE empleado != 'admin'";
                 MySqlCommand comando = new MySqlCommand(sentencia, conexion.conexionSql);
                 MySqlDataAdapter datos = new MySqlDataAdapter(comando);
                 DataTable tabla = new DataTable();
@@ -190,7 +190,7 @@ namespace DentalSoft.Formularios
         {
             if (dgvFichajes.Columns[e.ColumnIndex].Name.Equals("Hora"))
             {
-                if (e.Value.ToString().Contains("00:"))
+                if (e.Value.ToString().StartsWith("00:"))
                 {
                     e.CellStyle.BackColor = Color.IndianRed;
                     MostrarMensaje("Hay incidencias en los fichajes");

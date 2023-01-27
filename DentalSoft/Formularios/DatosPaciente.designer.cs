@@ -55,9 +55,6 @@
             // 
             // pictureBox1
             // 
-            this.pictureBox1.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
             this.pictureBox1.Cursor = System.Windows.Forms.Cursors.Hand;
             this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
             this.pictureBox1.Location = new System.Drawing.Point(40, 28);
@@ -70,129 +67,128 @@
             // 
             // label5
             // 
-            this.label5.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
+            this.label5.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left)));
             this.label5.AutoSize = true;
             this.label5.Font = new System.Drawing.Font("Roboto", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label5.Location = new System.Drawing.Point(56, 532);
             this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(53, 23);
+            this.label5.Size = new System.Drawing.Size(68, 29);
             this.label5.TabIndex = 108;
             this.label5.Text = "Edad";
             // 
             // label4
             // 
-            this.label4.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
+            this.label4.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.label4.AutoSize = true;
             this.label4.Font = new System.Drawing.Font("Roboto", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label4.Location = new System.Drawing.Point(553, 442);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(89, 23);
+            this.label4.Size = new System.Drawing.Size(115, 29);
             this.label4.TabIndex = 106;
             this.label4.Text = "Dirección";
             // 
             // label2
             // 
-            this.label2.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
+            this.label2.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left)));
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("Roboto", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label2.Location = new System.Drawing.Point(56, 161);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(41, 23);
+            this.label2.Size = new System.Drawing.Size(53, 29);
             this.label2.TabIndex = 94;
             this.label2.Text = "DNI";
             // 
             // lblCodigoPostal
             // 
-            this.lblCodigoPostal.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
+            this.lblCodigoPostal.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left)));
             this.lblCodigoPostal.AutoSize = true;
             this.lblCodigoPostal.Font = new System.Drawing.Font("Roboto", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblCodigoPostal.Location = new System.Drawing.Point(56, 441);
             this.lblCodigoPostal.Name = "lblCodigoPostal";
-            this.lblCodigoPostal.Size = new System.Drawing.Size(130, 23);
+            this.lblCodigoPostal.Size = new System.Drawing.Size(164, 29);
             this.lblCodigoPostal.TabIndex = 92;
             this.lblCodigoPostal.Text = "Código Postal";
             // 
             // lblEmail
             // 
-            this.lblEmail.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left) 
+            this.lblEmail.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.lblEmail.AutoSize = true;
             this.lblEmail.Font = new System.Drawing.Font("Roboto", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblEmail.Location = new System.Drawing.Point(553, 346);
             this.lblEmail.Name = "lblEmail";
-            this.lblEmail.Size = new System.Drawing.Size(166, 23);
+            this.lblEmail.Size = new System.Drawing.Size(214, 29);
             this.lblEmail.TabIndex = 89;
             this.lblEmail.Text = "Correo Electrónico";
             // 
             // lblTelefono
             // 
-            this.lblTelefono.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
+            this.lblTelefono.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left)));
             this.lblTelefono.AutoSize = true;
             this.lblTelefono.Font = new System.Drawing.Font("Roboto", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblTelefono.Location = new System.Drawing.Point(56, 349);
             this.lblTelefono.Name = "lblTelefono";
-            this.lblTelefono.Size = new System.Drawing.Size(84, 23);
+            this.lblTelefono.Size = new System.Drawing.Size(107, 29);
             this.lblTelefono.TabIndex = 88;
             this.lblTelefono.Text = "Teléfono";
             // 
             // lblApellido2
             // 
-            this.lblApellido2.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left) 
+            this.lblApellido2.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.lblApellido2.AutoSize = true;
             this.lblApellido2.Font = new System.Drawing.Font("Roboto", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblApellido2.Location = new System.Drawing.Point(553, 249);
             this.lblApellido2.Name = "lblApellido2";
-            this.lblApellido2.Size = new System.Drawing.Size(159, 23);
+            this.lblApellido2.Size = new System.Drawing.Size(201, 29);
             this.lblApellido2.TabIndex = 87;
             this.lblApellido2.Text = "Segundo Apellido";
             // 
             // lblApellido1
             // 
-            this.lblApellido1.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
+            this.lblApellido1.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left)));
             this.lblApellido1.AutoSize = true;
             this.lblApellido1.Font = new System.Drawing.Font("Roboto", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblApellido1.Location = new System.Drawing.Point(56, 249);
             this.lblApellido1.Name = "lblApellido1";
-            this.lblApellido1.Size = new System.Drawing.Size(141, 23);
+            this.lblApellido1.Size = new System.Drawing.Size(178, 29);
             this.lblApellido1.TabIndex = 86;
             this.lblApellido1.Text = "Primer Apellido";
             // 
             // lblNombre
             // 
-            this.lblNombre.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left) 
+            this.lblNombre.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.lblNombre.AutoSize = true;
             this.lblNombre.Font = new System.Drawing.Font("Roboto", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblNombre.Location = new System.Drawing.Point(553, 161);
             this.lblNombre.Name = "lblNombre";
-            this.lblNombre.Size = new System.Drawing.Size(79, 23);
+            this.lblNombre.Size = new System.Drawing.Size(99, 29);
             this.lblNombre.TabIndex = 85;
             this.lblNombre.Text = "Nombre";
             // 
             // lblGenero
             // 
-            this.lblGenero.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
+            this.lblGenero.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.lblGenero.AutoSize = true;
             this.lblGenero.Font = new System.Drawing.Font("Roboto", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblGenero.Location = new System.Drawing.Point(553, 532);
             this.lblGenero.Name = "lblGenero";
-            this.lblGenero.Size = new System.Drawing.Size(70, 23);
+            this.lblGenero.Size = new System.Drawing.Size(90, 29);
             this.lblGenero.TabIndex = 110;
             this.lblGenero.Text = "Genero";
             // 
             // textboxPersonalizado2
             // 
-            this.textboxPersonalizado2.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
+            this.textboxPersonalizado2.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.textboxPersonalizado2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(236)))), ((int)(((byte)(236)))), ((int)(((byte)(236)))));
             this.textboxPersonalizado2.BordeColor = System.Drawing.Color.FromArgb(((int)(((byte)(16)))), ((int)(((byte)(110)))), ((int)(((byte)(196)))));
             this.textboxPersonalizado2.BordeColorFoco = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(195)))), ((int)(((byte)(165)))));
@@ -209,14 +205,17 @@
             this.textboxPersonalizado2.Multilinea = false;
             this.textboxPersonalizado2.Name = "textboxPersonalizado2";
             this.textboxPersonalizado2.Padding = new System.Windows.Forms.Padding(10, 7, 10, 7);
-            this.textboxPersonalizado2.Size = new System.Drawing.Size(157, 34);
+            this.textboxPersonalizado2.PosicionSeleccion = 0;
+            this.textboxPersonalizado2.Size = new System.Drawing.Size(157, 39);
             this.textboxPersonalizado2.SubrayadoEstilo = true;
             this.textboxPersonalizado2.TabIndex = 45;
+            this.textboxPersonalizado2.TamañoMaximo = 30000;
             this.textboxPersonalizado2.Texto = "";
             // 
             // textboxPersonalizado1
             // 
-            this.textboxPersonalizado1.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
+            this.textboxPersonalizado1.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left)));
             this.textboxPersonalizado1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(236)))), ((int)(((byte)(236)))), ((int)(((byte)(236)))));
             this.textboxPersonalizado1.BordeColor = System.Drawing.Color.FromArgb(((int)(((byte)(16)))), ((int)(((byte)(110)))), ((int)(((byte)(196)))));
             this.textboxPersonalizado1.BordeColorFoco = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(195)))), ((int)(((byte)(165)))));
@@ -233,14 +232,17 @@
             this.textboxPersonalizado1.Multilinea = false;
             this.textboxPersonalizado1.Name = "textboxPersonalizado1";
             this.textboxPersonalizado1.Padding = new System.Windows.Forms.Padding(10, 7, 10, 7);
-            this.textboxPersonalizado1.Size = new System.Drawing.Size(74, 34);
+            this.textboxPersonalizado1.PosicionSeleccion = 0;
+            this.textboxPersonalizado1.Size = new System.Drawing.Size(74, 39);
             this.textboxPersonalizado1.SubrayadoEstilo = true;
             this.textboxPersonalizado1.TabIndex = 40;
+            this.textboxPersonalizado1.TamañoMaximo = 30000;
             this.textboxPersonalizado1.Texto = "";
             // 
             // txtDireccion
             // 
-            this.txtDireccion.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
+            this.txtDireccion.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.txtDireccion.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(236)))), ((int)(((byte)(236)))), ((int)(((byte)(236)))));
             this.txtDireccion.BordeColor = System.Drawing.Color.FromArgb(((int)(((byte)(16)))), ((int)(((byte)(110)))), ((int)(((byte)(196)))));
             this.txtDireccion.BordeColorFoco = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(195)))), ((int)(((byte)(165)))));
@@ -257,13 +259,17 @@
             this.txtDireccion.Multilinea = false;
             this.txtDireccion.Name = "txtDireccion";
             this.txtDireccion.Padding = new System.Windows.Forms.Padding(10, 7, 10, 7);
-            this.txtDireccion.Size = new System.Drawing.Size(518, 34);
+            this.txtDireccion.PosicionSeleccion = 0;
+            this.txtDireccion.Size = new System.Drawing.Size(518, 39);
             this.txtDireccion.SubrayadoEstilo = true;
             this.txtDireccion.TabIndex = 35;
+            this.txtDireccion.TamañoMaximo = 30000;
             this.txtDireccion.Texto = "";
             // 
             // txtNombre
             // 
+            this.txtNombre.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.txtNombre.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(236)))), ((int)(((byte)(236)))), ((int)(((byte)(236)))));
             this.txtNombre.BordeColor = System.Drawing.Color.FromArgb(((int)(((byte)(16)))), ((int)(((byte)(110)))), ((int)(((byte)(196)))));
             this.txtNombre.BordeColorFoco = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(195)))), ((int)(((byte)(165)))));
@@ -280,13 +286,17 @@
             this.txtNombre.Multilinea = false;
             this.txtNombre.Name = "txtNombre";
             this.txtNombre.Padding = new System.Windows.Forms.Padding(10, 7, 10, 7);
-            this.txtNombre.Size = new System.Drawing.Size(250, 34);
+            this.txtNombre.PosicionSeleccion = 0;
+            this.txtNombre.Size = new System.Drawing.Size(250, 39);
             this.txtNombre.SubrayadoEstilo = true;
             this.txtNombre.TabIndex = 5;
+            this.txtNombre.TamañoMaximo = 30000;
             this.txtNombre.Texto = "";
             // 
             // txtDni
             // 
+            this.txtDni.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left)));
             this.txtDni.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(236)))), ((int)(((byte)(236)))), ((int)(((byte)(236)))));
             this.txtDni.BordeColor = System.Drawing.Color.FromArgb(((int)(((byte)(16)))), ((int)(((byte)(110)))), ((int)(((byte)(196)))));
             this.txtDni.BordeColorFoco = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(195)))), ((int)(((byte)(165)))));
@@ -303,15 +313,16 @@
             this.txtDni.Multilinea = false;
             this.txtDni.Name = "txtDni";
             this.txtDni.Padding = new System.Windows.Forms.Padding(10, 7, 10, 7);
-            this.txtDni.Size = new System.Drawing.Size(250, 34);
+            this.txtDni.PosicionSeleccion = 0;
+            this.txtDni.Size = new System.Drawing.Size(250, 39);
             this.txtDni.SubrayadoEstilo = true;
             this.txtDni.TabIndex = 0;
+            this.txtDni.TamañoMaximo = 30000;
             this.txtDni.Texto = "";
             // 
             // txtEmail
             // 
-            this.txtEmail.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left) 
+            this.txtEmail.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.txtEmail.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(236)))), ((int)(((byte)(236)))), ((int)(((byte)(236)))));
             this.txtEmail.BordeColor = System.Drawing.Color.FromArgb(((int)(((byte)(16)))), ((int)(((byte)(110)))), ((int)(((byte)(196)))));
@@ -329,15 +340,16 @@
             this.txtEmail.Multilinea = false;
             this.txtEmail.Name = "txtEmail";
             this.txtEmail.Padding = new System.Windows.Forms.Padding(10, 7, 10, 7);
-            this.txtEmail.Size = new System.Drawing.Size(369, 34);
+            this.txtEmail.PosicionSeleccion = 0;
+            this.txtEmail.Size = new System.Drawing.Size(369, 39);
             this.txtEmail.SubrayadoEstilo = true;
             this.txtEmail.TabIndex = 25;
+            this.txtEmail.TamañoMaximo = 30000;
             this.txtEmail.Texto = "";
             // 
             // txtApellido2
             // 
-            this.txtApellido2.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left) 
+            this.txtApellido2.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.txtApellido2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(236)))), ((int)(((byte)(236)))), ((int)(((byte)(236)))));
             this.txtApellido2.BordeColor = System.Drawing.Color.FromArgb(((int)(((byte)(16)))), ((int)(((byte)(110)))), ((int)(((byte)(196)))));
@@ -355,14 +367,17 @@
             this.txtApellido2.Multilinea = false;
             this.txtApellido2.Name = "txtApellido2";
             this.txtApellido2.Padding = new System.Windows.Forms.Padding(10, 7, 10, 7);
-            this.txtApellido2.Size = new System.Drawing.Size(261, 34);
+            this.txtApellido2.PosicionSeleccion = 0;
+            this.txtApellido2.Size = new System.Drawing.Size(261, 39);
             this.txtApellido2.SubrayadoEstilo = true;
             this.txtApellido2.TabIndex = 15;
+            this.txtApellido2.TamañoMaximo = 30000;
             this.txtApellido2.Texto = "";
             // 
             // txtCp
             // 
-            this.txtCp.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
+            this.txtCp.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left)));
             this.txtCp.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(236)))), ((int)(((byte)(236)))), ((int)(((byte)(236)))));
             this.txtCp.BordeColor = System.Drawing.Color.FromArgb(((int)(((byte)(16)))), ((int)(((byte)(110)))), ((int)(((byte)(196)))));
             this.txtCp.BordeColorFoco = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(195)))), ((int)(((byte)(165)))));
@@ -379,16 +394,17 @@
             this.txtCp.Multilinea = false;
             this.txtCp.Name = "txtCp";
             this.txtCp.Padding = new System.Windows.Forms.Padding(10, 7, 10, 7);
-            this.txtCp.Size = new System.Drawing.Size(136, 34);
+            this.txtCp.PosicionSeleccion = 0;
+            this.txtCp.Size = new System.Drawing.Size(136, 39);
             this.txtCp.SubrayadoEstilo = true;
             this.txtCp.TabIndex = 30;
+            this.txtCp.TamañoMaximo = 30000;
             this.txtCp.Texto = "";
             // 
             // txtTelefono
             // 
-            this.txtTelefono.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
+            this.txtTelefono.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left)));
             this.txtTelefono.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(236)))), ((int)(((byte)(236)))), ((int)(((byte)(236)))));
             this.txtTelefono.BordeColor = System.Drawing.Color.FromArgb(((int)(((byte)(16)))), ((int)(((byte)(110)))), ((int)(((byte)(196)))));
             this.txtTelefono.BordeColorFoco = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(195)))), ((int)(((byte)(165)))));
@@ -405,16 +421,17 @@
             this.txtTelefono.Multilinea = false;
             this.txtTelefono.Name = "txtTelefono";
             this.txtTelefono.Padding = new System.Windows.Forms.Padding(10, 7, 10, 7);
-            this.txtTelefono.Size = new System.Drawing.Size(261, 34);
+            this.txtTelefono.PosicionSeleccion = 0;
+            this.txtTelefono.Size = new System.Drawing.Size(261, 39);
             this.txtTelefono.SubrayadoEstilo = true;
             this.txtTelefono.TabIndex = 20;
+            this.txtTelefono.TamañoMaximo = 30000;
             this.txtTelefono.Texto = "";
             // 
             // txtApellido1
             // 
-            this.txtApellido1.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
+            this.txtApellido1.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left)));
             this.txtApellido1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(236)))), ((int)(((byte)(236)))), ((int)(((byte)(236)))));
             this.txtApellido1.BordeColor = System.Drawing.Color.FromArgb(((int)(((byte)(16)))), ((int)(((byte)(110)))), ((int)(((byte)(196)))));
             this.txtApellido1.BordeColorFoco = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(195)))), ((int)(((byte)(165)))));
@@ -431,14 +448,16 @@
             this.txtApellido1.Multilinea = false;
             this.txtApellido1.Name = "txtApellido1";
             this.txtApellido1.Padding = new System.Windows.Forms.Padding(10, 7, 10, 7);
-            this.txtApellido1.Size = new System.Drawing.Size(261, 34);
+            this.txtApellido1.PosicionSeleccion = 0;
+            this.txtApellido1.Size = new System.Drawing.Size(261, 39);
             this.txtApellido1.SubrayadoEstilo = true;
             this.txtApellido1.TabIndex = 10;
+            this.txtApellido1.TamañoMaximo = 30000;
             this.txtApellido1.Texto = "";
             // 
             // DatosPaciente
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 14F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 18F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(236)))), ((int)(((byte)(236)))), ((int)(((byte)(236)))));
             this.ClientSize = new System.Drawing.Size(1275, 715);

@@ -38,12 +38,14 @@
             this.btnRedimensionar = new System.Windows.Forms.PictureBox();
             this.btnMinimizar = new System.Windows.Forms.PictureBox();
             this.btnCerrar = new System.Windows.Forms.PictureBox();
+            this.panel1 = new System.Windows.Forms.Panel();
             this.pnlDgvBuscarPaciente.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvOdontologoBuscarOdontologo)).BeginInit();
             this.pnlCabecera.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.btnRedimensionar)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.btnMinimizar)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.btnCerrar)).BeginInit();
+            this.panel1.SuspendLayout();
             this.SuspendLayout();
             // 
             // pnlDgvBuscarPaciente
@@ -63,13 +65,14 @@
             this.dgvOdontologoBuscarOdontologo.Dock = System.Windows.Forms.DockStyle.Fill;
             this.dgvOdontologoBuscarOdontologo.Location = new System.Drawing.Point(0, 0);
             this.dgvOdontologoBuscarOdontologo.Name = "dgvOdontologoBuscarOdontologo";
+            this.dgvOdontologoBuscarOdontologo.RowHeadersWidth = 51;
             this.dgvOdontologoBuscarOdontologo.Size = new System.Drawing.Size(706, 316);
             this.dgvOdontologoBuscarOdontologo.TabIndex = 0;
             this.dgvOdontologoBuscarOdontologo.CellContentDoubleClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvOdontologoBuscarOdontologo_CellContentDoubleClick);
             // 
             // cbFiltrosBuscarOdontologo
             // 
-            this.cbFiltrosBuscarOdontologo.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.cbFiltrosBuscarOdontologo.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.cbFiltrosBuscarOdontologo.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(16)))), ((int)(((byte)(110)))), ((int)(((byte)(196)))));
             this.cbFiltrosBuscarOdontologo.BordeColor = System.Drawing.Color.FromArgb(((int)(((byte)(16)))), ((int)(((byte)(110)))), ((int)(((byte)(196)))));
             this.cbFiltrosBuscarOdontologo.BordeTamaño = 1;
@@ -79,7 +82,7 @@
             this.cbFiltrosBuscarOdontologo.ForeColor = System.Drawing.Color.Black;
             this.cbFiltrosBuscarOdontologo.ListaColorFondo = System.Drawing.Color.WhiteSmoke;
             this.cbFiltrosBuscarOdontologo.ListColorTexto = System.Drawing.Color.Black;
-            this.cbFiltrosBuscarOdontologo.Location = new System.Drawing.Point(560, 85);
+            this.cbFiltrosBuscarOdontologo.Location = new System.Drawing.Point(526, 12);
             this.cbFiltrosBuscarOdontologo.MinimumSize = new System.Drawing.Size(200, 30);
             this.cbFiltrosBuscarOdontologo.Name = "cbFiltrosBuscarOdontologo";
             this.cbFiltrosBuscarOdontologo.Padding = new System.Windows.Forms.Padding(1);
@@ -89,6 +92,7 @@
             // 
             // txtOdontologoBuscarOdontologo
             // 
+            this.txtOdontologoBuscarOdontologo.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.txtOdontologoBuscarOdontologo.BackColor = System.Drawing.Color.White;
             this.txtOdontologoBuscarOdontologo.BordeColor = System.Drawing.Color.FromArgb(((int)(((byte)(16)))), ((int)(((byte)(110)))), ((int)(((byte)(196)))));
             this.txtOdontologoBuscarOdontologo.BordeColorFoco = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(195)))), ((int)(((byte)(165)))));
@@ -97,7 +101,7 @@
             this.txtOdontologoBuscarOdontologo.Contraseña = false;
             this.txtOdontologoBuscarOdontologo.Font = new System.Drawing.Font("Roboto", 9.5F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtOdontologoBuscarOdontologo.ForeColor = System.Drawing.Color.Black;
-            this.txtOdontologoBuscarOdontologo.Location = new System.Drawing.Point(54, 85);
+            this.txtOdontologoBuscarOdontologo.Location = new System.Drawing.Point(20, 12);
             this.txtOdontologoBuscarOdontologo.MarcadorPosicionColor = System.Drawing.Color.DarkGray;
             this.txtOdontologoBuscarOdontologo.MarcadorPosicionTexto = "Introduce el odontologo a buscar";
             this.txtOdontologoBuscarOdontologo.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
@@ -105,7 +109,7 @@
             this.txtOdontologoBuscarOdontologo.Name = "txtOdontologoBuscarOdontologo";
             this.txtOdontologoBuscarOdontologo.Padding = new System.Windows.Forms.Padding(10, 7, 10, 7);
             this.txtOdontologoBuscarOdontologo.PosicionSeleccion = 0;
-            this.txtOdontologoBuscarOdontologo.Size = new System.Drawing.Size(464, 30);
+            this.txtOdontologoBuscarOdontologo.Size = new System.Drawing.Size(464, 34);
             this.txtOdontologoBuscarOdontologo.SubrayadoEstilo = true;
             this.txtOdontologoBuscarOdontologo.TabIndex = 0;
             this.txtOdontologoBuscarOdontologo.TamañoMaximo = 30000;
@@ -133,7 +137,7 @@
             this.label1.ForeColor = System.Drawing.Color.White;
             this.label1.Location = new System.Drawing.Point(12, 6);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(98, 23);
+            this.label1.Size = new System.Drawing.Size(126, 29);
             this.label1.TabIndex = 41;
             this.label1.Text = "DentalSoft";
             this.label1.MouseDown += new System.Windows.Forms.MouseEventHandler(this.label1_MouseDown);
@@ -177,16 +181,26 @@
             this.btnCerrar.TabStop = false;
             this.btnCerrar.Click += new System.EventHandler(this.btnCerrar_Click);
             // 
+            // panel1
+            // 
+            this.panel1.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.panel1.Controls.Add(this.cbFiltrosBuscarOdontologo);
+            this.panel1.Controls.Add(this.txtOdontologoBuscarOdontologo);
+            this.panel1.Location = new System.Drawing.Point(17, 66);
+            this.panel1.Name = "panel1";
+            this.panel1.Size = new System.Drawing.Size(772, 56);
+            this.panel1.TabIndex = 10;
+            // 
             // BuscarOdontologo
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 17F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(236)))), ((int)(((byte)(236)))), ((int)(((byte)(236)))));
             this.ClientSize = new System.Drawing.Size(816, 490);
+            this.Controls.Add(this.panel1);
             this.Controls.Add(this.pnlCabecera);
             this.Controls.Add(this.pnlDgvBuscarPaciente);
-            this.Controls.Add(this.cbFiltrosBuscarOdontologo);
-            this.Controls.Add(this.txtOdontologoBuscarOdontologo);
             this.Font = new System.Drawing.Font("Roboto", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
@@ -201,6 +215,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.btnRedimensionar)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.btnMinimizar)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.btnCerrar)).EndInit();
+            this.panel1.ResumeLayout(false);
             this.ResumeLayout(false);
 
         }
@@ -216,5 +231,6 @@
         private System.Windows.Forms.PictureBox btnRedimensionar;
         private System.Windows.Forms.PictureBox btnMinimizar;
         private System.Windows.Forms.PictureBox btnCerrar;
+        private System.Windows.Forms.Panel panel1;
     }
 }

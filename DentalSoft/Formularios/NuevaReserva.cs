@@ -51,7 +51,7 @@ namespace DentalSoft
             if (conexion.EstablecerConexion())
             {
                 string sentencia = "SELECT Hora FROM agenda WHERE odontologo = '" + txtOdontologoNuevaReserva.Texto + "' " +
-                    "AND fecha = '" + mcCalendarioNuevaReserva.Value.ToString("yyyy-MM-dd") + "'";
+                    "AND fecha = '" + mcCalendarioNuevaReserva.Value.ToString("yyyy-MM-dd") + "' AND reservada = 0";
                 MySqlCommand comando = new MySqlCommand(sentencia, conexion.conexionSql);
                 MySqlDataReader reader = comando.ExecuteReader();
                 if (reader.HasRows)
@@ -199,6 +199,21 @@ namespace DentalSoft
             return sw;
         }
 
+        private void ReservarHoraAgenda()
+        {
+            if(conexion.EstablecerConexion())
+            {
+                string sentencia = "UPDATE agenda SET reservada = 1 WHERE odontologo = '" + 
+                    txtOdontologoNuevaReserva.Texto + "' AND fecha = '" + 
+                    mcCalendarioNuevaReserva.Value.ToString("yyyy-MM-dd") + "' AND hora = '" + 
+                    cbHoraNuevaReserva.SelectedItem.ToString() + "'";
+                MySqlCommand comando = new MySqlCommand(sentencia, conexion.conexionSql);
+                comando.ExecuteNonQuery();
+                comando.Dispose();
+                conexion.CerrarConexion();
+            }
+        }
+
         private void GuardarRegistro()
         {
             DialogResult mensaje;
@@ -208,8 +223,11 @@ namespace DentalSoft
                                     cbHoraNuevaReserva.SelectedItem.ToString() + "', '" + txtPacienteNuevaReserva.Texto.ToUpper() + "', '" + txtOdontologoNuevaReserva.Texto + "')";
                 MySqlCommand comando = new MySqlCommand(sentencia, conexion.conexionSql);
                 int resultado = comando.ExecuteNonQuery();
+                comando.Dispose();
+                conexion.CerrarConexion();
                 if (resultado > 0)
                 {
+                    ReservarHoraAgenda();
                     LimpiarCampos();
                     mensaje = MessageBoxPersonalizadoControl.Show("Reserva creada correctamente", datosGlobales.TituloAplicacion, MessageBoxButtons.OK);
                     Cita agenda = new Cita(formPadre);
@@ -219,8 +237,6 @@ namespace DentalSoft
                 }
                 else
                     mensaje = MessageBoxPersonalizadoControl.Show("No se ha guardado la reserva", datosGlobales.TituloAplicacion, MessageBoxButtons.OK, MessageBoxIcon.Warning);
-                comando.Dispose();
-                conexion.CerrarConexion();
             }
         }
         #endregion
@@ -311,12 +327,12 @@ namespace DentalSoft
                 }
             }
         }
-        #endregion
 
         private void mcCalendarioNuevaReserva_ValueChanged(object sender, EventArgs e)
         {
             if (ExisteDni("odontologo"))
                 CargarHoras();
         }
+        #endregion
     }
 }

@@ -40,10 +40,12 @@
             this.episodio_clinicoTableAdapter = new DentalSoft.Datos.DataSetEpisodioClinicoTableAdapters.episodio_clinicoTableAdapter();
             this.btnFiltrarTodos = new DentalSoft.ControlesPersonalizados.BotonPersonalizado();
             this.mcFiltrarFecha = new DentalSoft.ControlesPersonalizados.SelectorFecha();
+            this.panel1 = new System.Windows.Forms.Panel();
             ((System.ComponentModel.ISupportInitialize)(this.episodioclinicoBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataSetEpisodioClinico)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.btnAtras)).BeginInit();
             this.pnlContenedor.SuspendLayout();
+            this.panel1.SuspendLayout();
             this.SuspendLayout();
             // 
             // episodioclinicoBindingSource
@@ -58,9 +60,6 @@
             // 
             // btnAtras
             // 
-            this.btnAtras.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
             this.btnAtras.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnAtras.Image = ((System.Drawing.Image)(resources.GetObject("btnAtras.Image")));
             this.btnAtras.Location = new System.Drawing.Point(40, 28);
@@ -81,7 +80,8 @@
             // 
             // reportViewer1
             // 
-            this.reportViewer1.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.reportViewer1.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left)));
             reportDataSource1.Name = "DataSetEpisodiosCompletos";
             reportDataSource1.Value = this.episodioclinicoBindingSource;
             this.reportViewer1.LocalReport.DataSources.Add(reportDataSource1);
@@ -94,11 +94,12 @@
             // 
             // lblFiltrar
             // 
+            this.lblFiltrar.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.lblFiltrar.AutoSize = true;
             this.lblFiltrar.Font = new System.Drawing.Font("Roboto", 14F);
-            this.lblFiltrar.Location = new System.Drawing.Point(941, 243);
+            this.lblFiltrar.Location = new System.Drawing.Point(26, 22);
             this.lblFiltrar.Name = "lblFiltrar";
-            this.lblFiltrar.Size = new System.Drawing.Size(149, 23);
+            this.lblFiltrar.Size = new System.Drawing.Size(188, 29);
             this.lblFiltrar.TabIndex = 82;
             this.lblFiltrar.Text = "Filtrar por fecha:";
             // 
@@ -108,6 +109,7 @@
             // 
             // btnFiltrarTodos
             // 
+            this.btnFiltrarTodos.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.btnFiltrarTodos.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(16)))), ((int)(((byte)(110)))), ((int)(((byte)(196)))));
             this.btnFiltrarTodos.BordeColor = System.Drawing.Color.PaleVioletRed;
             this.btnFiltrarTodos.BordeRadio = 40;
@@ -118,7 +120,7 @@
             this.btnFiltrarTodos.FondoColor = System.Drawing.Color.FromArgb(((int)(((byte)(16)))), ((int)(((byte)(110)))), ((int)(((byte)(196)))));
             this.btnFiltrarTodos.Font = new System.Drawing.Font("Roboto", 12F);
             this.btnFiltrarTodos.ForeColor = System.Drawing.Color.White;
-            this.btnFiltrarTodos.Location = new System.Drawing.Point(999, 454);
+            this.btnFiltrarTodos.Location = new System.Drawing.Point(84, 233);
             this.btnFiltrarTodos.Name = "btnFiltrarTodos";
             this.btnFiltrarTodos.Size = new System.Drawing.Size(150, 40);
             this.btnFiltrarTodos.TabIndex = 5;
@@ -129,12 +131,13 @@
             // 
             // mcFiltrarFecha
             // 
+            this.mcFiltrarFecha.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.mcFiltrarFecha.BordeColor = System.Drawing.Color.FromArgb(((int)(((byte)(16)))), ((int)(((byte)(110)))), ((int)(((byte)(196)))));
             this.mcFiltrarFecha.BordeTamaño = 0;
             this.mcFiltrarFecha.FondoColor = System.Drawing.Color.FromArgb(((int)(((byte)(16)))), ((int)(((byte)(110)))), ((int)(((byte)(196)))));
             this.mcFiltrarFecha.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.5F);
             this.mcFiltrarFecha.IsDesplegado = false;
-            this.mcFiltrarFecha.Location = new System.Drawing.Point(945, 283);
+            this.mcFiltrarFecha.Location = new System.Drawing.Point(30, 62);
             this.mcFiltrarFecha.MinDate = new System.DateTime(2000, 1, 1, 13, 26, 0, 0);
             this.mcFiltrarFecha.MinimumSize = new System.Drawing.Size(4, 35);
             this.mcFiltrarFecha.Name = "mcFiltrarFecha";
@@ -144,15 +147,25 @@
             this.mcFiltrarFecha.Value = new System.DateTime(2022, 10, 29, 13, 46, 1, 999);
             this.mcFiltrarFecha.CloseUp += new System.EventHandler(this.mcFiltrarFecha_CloseUp);
             // 
+            // panel1
+            // 
+            this.panel1.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.panel1.Controls.Add(this.lblFiltrar);
+            this.panel1.Controls.Add(this.mcFiltrarFecha);
+            this.panel1.Controls.Add(this.btnFiltrarTodos);
+            this.panel1.Location = new System.Drawing.Point(855, 219);
+            this.panel1.Name = "panel1";
+            this.panel1.Size = new System.Drawing.Size(373, 303);
+            this.panel1.TabIndex = 83;
+            // 
             // EpisodiosClinicos
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 14F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 18F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(236)))), ((int)(((byte)(236)))), ((int)(((byte)(236)))));
             this.ClientSize = new System.Drawing.Size(1275, 715);
-            this.Controls.Add(this.lblFiltrar);
-            this.Controls.Add(this.btnFiltrarTodos);
-            this.Controls.Add(this.mcFiltrarFecha);
+            this.Controls.Add(this.panel1);
             this.Controls.Add(this.pnlContenedor);
             this.Controls.Add(this.btnAtras);
             this.Font = new System.Drawing.Font("Roboto", 9.25F);
@@ -165,8 +178,9 @@
             ((System.ComponentModel.ISupportInitialize)(this.dataSetEpisodioClinico)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.btnAtras)).EndInit();
             this.pnlContenedor.ResumeLayout(false);
+            this.panel1.ResumeLayout(false);
+            this.panel1.PerformLayout();
             this.ResumeLayout(false);
-            this.PerformLayout();
 
         }
 
@@ -181,5 +195,6 @@
         private System.Windows.Forms.BindingSource episodioclinicoBindingSource;
         private Datos.DataSetEpisodioClinico dataSetEpisodioClinico;
         private Datos.DataSetEpisodioClinicoTableAdapters.episodio_clinicoTableAdapter episodio_clinicoTableAdapter;
+        private System.Windows.Forms.Panel panel1;
     }
 }

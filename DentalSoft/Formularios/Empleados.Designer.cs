@@ -88,7 +88,7 @@
             this.lblColegiado.AutoSize = true;
             this.lblColegiado.Location = new System.Drawing.Point(497, 197);
             this.lblColegiado.Name = "lblColegiado";
-            this.lblColegiado.Size = new System.Drawing.Size(102, 19);
+            this.lblColegiado.Size = new System.Drawing.Size(127, 24);
             this.lblColegiado.TabIndex = 6;
             this.lblColegiado.Text = "Nº Colegiado";
             // 
@@ -97,7 +97,7 @@
             this.lblEspecialidad.AutoSize = true;
             this.lblEspecialidad.Location = new System.Drawing.Point(264, 197);
             this.lblEspecialidad.Name = "lblEspecialidad";
-            this.lblEspecialidad.Size = new System.Drawing.Size(99, 19);
+            this.lblEspecialidad.Size = new System.Drawing.Size(122, 24);
             this.lblEspecialidad.TabIndex = 5;
             this.lblEspecialidad.Text = "Especialidad";
             // 
@@ -106,7 +106,7 @@
             this.lblPuesto.AutoSize = true;
             this.lblPuesto.Location = new System.Drawing.Point(35, 197);
             this.lblPuesto.Name = "lblPuesto";
-            this.lblPuesto.Size = new System.Drawing.Size(58, 19);
+            this.lblPuesto.Size = new System.Drawing.Size(73, 24);
             this.lblPuesto.TabIndex = 4;
             this.lblPuesto.Text = "Puesto";
             // 
@@ -115,7 +115,7 @@
             this.lblEmail.AutoSize = true;
             this.lblEmail.Location = new System.Drawing.Point(35, 150);
             this.lblEmail.Name = "lblEmail";
-            this.lblEmail.Size = new System.Drawing.Size(49, 19);
+            this.lblEmail.Size = new System.Drawing.Size(60, 24);
             this.lblEmail.TabIndex = 3;
             this.lblEmail.Text = "Email";
             // 
@@ -124,7 +124,7 @@
             this.lblTelefono.AutoSize = true;
             this.lblTelefono.Location = new System.Drawing.Point(497, 102);
             this.lblTelefono.Name = "lblTelefono";
-            this.lblTelefono.Size = new System.Drawing.Size(71, 19);
+            this.lblTelefono.Size = new System.Drawing.Size(88, 24);
             this.lblTelefono.TabIndex = 2;
             this.lblTelefono.Text = "Telefono";
             // 
@@ -133,7 +133,7 @@
             this.lblDni.AutoSize = true;
             this.lblDni.Location = new System.Drawing.Point(35, 54);
             this.lblDni.Name = "lblDni";
-            this.lblDni.Size = new System.Drawing.Size(33, 19);
+            this.lblDni.Size = new System.Drawing.Size(39, 24);
             this.lblDni.TabIndex = 1;
             this.lblDni.Text = "Dni";
             // 
@@ -142,12 +142,14 @@
             this.lblNombre.AutoSize = true;
             this.lblNombre.Location = new System.Drawing.Point(35, 102);
             this.lblNombre.Name = "lblNombre";
-            this.lblNombre.Size = new System.Drawing.Size(65, 19);
+            this.lblNombre.Size = new System.Drawing.Size(82, 24);
             this.lblNombre.TabIndex = 0;
             this.lblNombre.Text = "Nombre";
             // 
             // pnlContenedorEmpleados
             // 
+            this.pnlContenedorEmpleados.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.pnlContenedorEmpleados.Controls.Add(this.dgvEmpleados);
             this.pnlContenedorEmpleados.Location = new System.Drawing.Point(25, 409);
             this.pnlContenedorEmpleados.Name = "pnlContenedorEmpleados";
@@ -160,12 +162,16 @@
             this.dgvEmpleados.Dock = System.Windows.Forms.DockStyle.Fill;
             this.dgvEmpleados.Location = new System.Drawing.Point(0, 0);
             this.dgvEmpleados.Name = "dgvEmpleados";
+            this.dgvEmpleados.RowHeadersWidth = 51;
             this.dgvEmpleados.Size = new System.Drawing.Size(1096, 270);
             this.dgvEmpleados.TabIndex = 0;
             this.dgvEmpleados.CellContentDoubleClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvEmpleados_CellContentDoubleClick);
             // 
             // pnlContenedorFichajes
             // 
+            this.pnlContenedorFichajes.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.pnlContenedorFichajes.Controls.Add(this.dgvFichajes);
             this.pnlContenedorFichajes.Location = new System.Drawing.Point(25, 409);
             this.pnlContenedorFichajes.Name = "pnlContenedorFichajes";
@@ -178,35 +184,42 @@
             this.dgvFichajes.Dock = System.Windows.Forms.DockStyle.Fill;
             this.dgvFichajes.Location = new System.Drawing.Point(0, 0);
             this.dgvFichajes.Name = "dgvFichajes";
+            this.dgvFichajes.RowHeadersWidth = 51;
             this.dgvFichajes.Size = new System.Drawing.Size(1096, 283);
             this.dgvFichajes.TabIndex = 0;
             // 
             // lblFichajes
             // 
+            this.lblFichajes.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.lblFichajes.AutoSize = true;
             this.lblFichajes.Font = new System.Drawing.Font("Roboto", 12F);
             this.lblFichajes.Location = new System.Drawing.Point(25, 369);
             this.lblFichajes.Name = "lblFichajes";
-            this.lblFichajes.Size = new System.Drawing.Size(131, 19);
+            this.lblFichajes.Size = new System.Drawing.Size(164, 24);
             this.lblFichajes.TabIndex = 22;
             this.lblFichajes.Text = "Historial Fichajes";
             // 
             // lblEmpleados
             // 
+            this.lblEmpleados.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.lblEmpleados.AutoSize = true;
             this.lblEmpleados.Font = new System.Drawing.Font("Roboto", 12F);
             this.lblEmpleados.Location = new System.Drawing.Point(25, 368);
             this.lblEmpleados.Name = "lblEmpleados";
-            this.lblEmpleados.Size = new System.Drawing.Size(145, 19);
+            this.lblEmpleados.Size = new System.Drawing.Size(180, 24);
             this.lblEmpleados.TabIndex = 23;
             this.lblEmpleados.Text = "Listado Empleados";
             // 
             // cbActivos
             // 
+            this.cbActivos.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.cbActivos.AutoSize = true;
             this.cbActivos.Location = new System.Drawing.Point(327, 372);
             this.cbActivos.Name = "cbActivos";
-            this.cbActivos.Size = new System.Drawing.Size(207, 19);
+            this.cbActivos.Size = new System.Drawing.Size(257, 23);
             this.cbActivos.TabIndex = 20;
             this.cbActivos.Text = "Mostrar solo empleados activos";
             this.cbActivos.UseVisualStyleBackColor = true;
@@ -214,10 +227,12 @@
             // 
             // cbVacaciones
             // 
+            this.cbVacaciones.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.cbVacaciones.AutoSize = true;
             this.cbVacaciones.Location = new System.Drawing.Point(564, 372);
             this.cbVacaciones.Name = "cbVacaciones";
-            this.cbVacaciones.Size = new System.Drawing.Size(221, 19);
+            this.cbVacaciones.Size = new System.Drawing.Size(273, 23);
             this.cbVacaciones.TabIndex = 25;
             this.cbVacaciones.Text = "Mostrar empleados en vacaciones";
             this.cbVacaciones.UseVisualStyleBackColor = true;
@@ -225,10 +240,12 @@
             // 
             // cbOdontologos
             // 
+            this.cbOdontologos.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.cbOdontologos.AutoSize = true;
             this.cbOdontologos.Location = new System.Drawing.Point(809, 372);
             this.cbOdontologos.Name = "cbOdontologos";
-            this.cbOdontologos.Size = new System.Drawing.Size(170, 19);
+            this.cbOdontologos.Size = new System.Drawing.Size(213, 23);
             this.cbOdontologos.TabIndex = 30;
             this.cbOdontologos.Text = "Mostrar solo odontologos";
             this.cbOdontologos.UseVisualStyleBackColor = true;
@@ -236,24 +253,29 @@
             // 
             // lblFiltros
             // 
+            this.lblFiltros.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.lblFiltros.AutoSize = true;
             this.lblFiltros.Location = new System.Drawing.Point(264, 372);
             this.lblFiltros.Name = "lblFiltros";
-            this.lblFiltros.Size = new System.Drawing.Size(45, 15);
+            this.lblFiltros.Size = new System.Drawing.Size(57, 19);
             this.lblFiltros.TabIndex = 27;
             this.lblFiltros.Text = "Filtros:";
             // 
             // lblFecha
             // 
+            this.lblFecha.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.lblFecha.AutoSize = true;
             this.lblFecha.Location = new System.Drawing.Point(440, 373);
             this.lblFecha.Name = "lblFecha";
-            this.lblFecha.Size = new System.Drawing.Size(99, 15);
+            this.lblFecha.Size = new System.Drawing.Size(125, 19);
             this.lblFecha.TabIndex = 0;
             this.lblFecha.Text = "Filtrar por fecha:";
             // 
             // lblErrorFichar
             // 
+            this.lblErrorFichar.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.lblErrorFichar.AutoSize = true;
             this.lblErrorFichar.Font = new System.Drawing.Font("Roboto", 9.5F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblErrorFichar.ForeColor = System.Drawing.Color.IndianRed;
@@ -261,16 +283,13 @@
             this.lblErrorFichar.ImageAlign = System.Drawing.ContentAlignment.TopLeft;
             this.lblErrorFichar.Location = new System.Drawing.Point(898, 169);
             this.lblErrorFichar.Name = "lblErrorFichar";
-            this.lblErrorFichar.Size = new System.Drawing.Size(85, 15);
+            this.lblErrorFichar.Size = new System.Drawing.Size(106, 19);
             this.lblErrorFichar.TabIndex = 17;
             this.lblErrorFichar.Text = "Mensaje Error";
             this.lblErrorFichar.Visible = false;
             // 
             // btnAtras
             // 
-            this.btnAtras.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
             this.btnAtras.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnAtras.Image = ((System.Drawing.Image)(resources.GetObject("btnAtras.Image")));
             this.btnAtras.Location = new System.Drawing.Point(25, 23);
@@ -283,10 +302,11 @@
             // 
             // lblFichajeCorrecto
             // 
+            this.lblFichajeCorrecto.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.lblFichajeCorrecto.AutoSize = true;
             this.lblFichajeCorrecto.Location = new System.Drawing.Point(901, 169);
             this.lblFichajeCorrecto.Name = "lblFichajeCorrecto";
-            this.lblFichajeCorrecto.Size = new System.Drawing.Size(41, 15);
+            this.lblFichajeCorrecto.Size = new System.Drawing.Size(52, 19);
             this.lblFichajeCorrecto.TabIndex = 29;
             this.lblFichajeCorrecto.Text = "label1";
             // 
@@ -297,6 +317,8 @@
             // 
             // mcFecha
             // 
+            this.mcFecha.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.mcFecha.BordeColor = System.Drawing.Color.FromArgb(((int)(((byte)(16)))), ((int)(((byte)(110)))), ((int)(((byte)(196)))));
             this.mcFecha.BordeTamaño = 0;
             this.mcFecha.Cursor = System.Windows.Forms.Cursors.Hand;
@@ -315,6 +337,7 @@
             // 
             // btnControlHorario
             // 
+            this.btnControlHorario.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.btnControlHorario.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(16)))), ((int)(((byte)(110)))), ((int)(((byte)(196)))));
             this.btnControlHorario.BordeColor = System.Drawing.Color.FromArgb(((int)(((byte)(16)))), ((int)(((byte)(110)))), ((int)(((byte)(196)))));
             this.btnControlHorario.BordeRadio = 40;
@@ -337,6 +360,7 @@
             // 
             // btnNuevoEmpleado
             // 
+            this.btnNuevoEmpleado.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.btnNuevoEmpleado.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(16)))), ((int)(((byte)(110)))), ((int)(((byte)(196)))));
             this.btnNuevoEmpleado.BordeColor = System.Drawing.Color.FromArgb(((int)(((byte)(16)))), ((int)(((byte)(110)))), ((int)(((byte)(196)))));
             this.btnNuevoEmpleado.BordeRadio = 40;
@@ -359,6 +383,7 @@
             // 
             // btnFichar
             // 
+            this.btnFichar.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.btnFichar.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(16)))), ((int)(((byte)(110)))), ((int)(((byte)(196)))));
             this.btnFichar.BordeColor = System.Drawing.Color.FromArgb(((int)(((byte)(16)))), ((int)(((byte)(110)))), ((int)(((byte)(196)))));
             this.btnFichar.BordeRadio = 40;
@@ -381,6 +406,8 @@
             // 
             // btnTodasFechas
             // 
+            this.btnTodasFechas.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.btnTodasFechas.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(16)))), ((int)(((byte)(110)))), ((int)(((byte)(196)))));
             this.btnTodasFechas.BordeColor = System.Drawing.Color.FromArgb(((int)(((byte)(16)))), ((int)(((byte)(110)))), ((int)(((byte)(196)))));
             this.btnTodasFechas.BordeRadio = 25;
@@ -403,7 +430,7 @@
             // 
             // Empleados
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 14F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 18F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(236)))), ((int)(((byte)(236)))), ((int)(((byte)(236)))));
             this.ClientSize = new System.Drawing.Size(1164, 715);

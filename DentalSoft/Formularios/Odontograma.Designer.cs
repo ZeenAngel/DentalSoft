@@ -268,19 +268,18 @@
             this.lblImagenFractura = new System.Windows.Forms.Label();
             this.lblImagenCaries = new System.Windows.Forms.Label();
             this.btnCrearOdontograma = new DentalSoft.ControlesPersonalizados.BotonPersonalizado();
+            this.panel1 = new System.Windows.Forms.Panel();
             ((System.ComponentModel.ISupportInitialize)(this.btnAtras)).BeginInit();
             this.pnlArcadaSuperiorIzquierda.SuspendLayout();
             this.pnlArcadaSuperiorDerecha.SuspendLayout();
             this.pnlArcadaInferiorIzquierda.SuspendLayout();
             this.pnlArcadaInferiorDerecha.SuspendLayout();
             this.groupBox1.SuspendLayout();
+            this.panel1.SuspendLayout();
             this.SuspendLayout();
             // 
             // btnAtras
             // 
-            this.btnAtras.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
             this.btnAtras.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnAtras.Image = ((System.Drawing.Image)(resources.GetObject("btnAtras.Image")));
             this.btnAtras.Location = new System.Drawing.Point(40, 28);
@@ -293,6 +292,7 @@
             // 
             // pnlArcadaSuperiorIzquierda
             // 
+            this.pnlArcadaSuperiorIzquierda.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.pnlArcadaSuperiorIzquierda.Controls.Add(this.lbl11Raiz);
             this.pnlArcadaSuperiorIzquierda.Controls.Add(this.lbl12Raiz);
             this.pnlArcadaSuperiorIzquierda.Controls.Add(this.lbl13Raiz);
@@ -348,7 +348,7 @@
             this.pnlArcadaSuperiorIzquierda.Controls.Add(this.lbl18Oclusal);
             this.pnlArcadaSuperiorIzquierda.Controls.Add(this.lbl18Distal);
             this.pnlArcadaSuperiorIzquierda.Controls.Add(this.panel2);
-            this.pnlArcadaSuperiorIzquierda.Location = new System.Drawing.Point(10, 106);
+            this.pnlArcadaSuperiorIzquierda.Location = new System.Drawing.Point(3, 13);
             this.pnlArcadaSuperiorIzquierda.Name = "pnlArcadaSuperiorIzquierda";
             this.pnlArcadaSuperiorIzquierda.Size = new System.Drawing.Size(618, 200);
             this.pnlArcadaSuperiorIzquierda.TabIndex = 80;
@@ -1064,6 +1064,7 @@
             // 
             // pnlArcadaSuperiorDerecha
             // 
+            this.pnlArcadaSuperiorDerecha.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.pnlArcadaSuperiorDerecha.Controls.Add(this.lbl25Raiz);
             this.pnlArcadaSuperiorDerecha.Controls.Add(this.lbl24Raiz);
             this.pnlArcadaSuperiorDerecha.Controls.Add(this.lbl23Raiz);
@@ -1118,7 +1119,7 @@
             this.pnlArcadaSuperiorDerecha.Controls.Add(this.lbl26Distal);
             this.pnlArcadaSuperiorDerecha.Controls.Add(this.lbl26Oclusal);
             this.pnlArcadaSuperiorDerecha.Controls.Add(this.lbl26Mesial);
-            this.pnlArcadaSuperiorDerecha.Location = new System.Drawing.Point(636, 106);
+            this.pnlArcadaSuperiorDerecha.Location = new System.Drawing.Point(629, 13);
             this.pnlArcadaSuperiorDerecha.Name = "pnlArcadaSuperiorDerecha";
             this.pnlArcadaSuperiorDerecha.Size = new System.Drawing.Size(627, 200);
             this.pnlArcadaSuperiorDerecha.TabIndex = 81;
@@ -1827,6 +1828,7 @@
             // 
             // pnlArcadaInferiorIzquierda
             // 
+            this.pnlArcadaInferiorIzquierda.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.pnlArcadaInferiorIzquierda.Controls.Add(this.lbl41Raiz);
             this.pnlArcadaInferiorIzquierda.Controls.Add(this.lbl42Raiz);
             this.pnlArcadaInferiorIzquierda.Controls.Add(this.lbl43Raiz);
@@ -1878,7 +1880,7 @@
             this.pnlArcadaInferiorIzquierda.Controls.Add(this.lbl48Mesial);
             this.pnlArcadaInferiorIzquierda.Controls.Add(this.lbl48Oclusal);
             this.pnlArcadaInferiorIzquierda.Controls.Add(this.lbl48Distal);
-            this.pnlArcadaInferiorIzquierda.Location = new System.Drawing.Point(12, 316);
+            this.pnlArcadaInferiorIzquierda.Location = new System.Drawing.Point(5, 223);
             this.pnlArcadaInferiorIzquierda.Name = "pnlArcadaInferiorIzquierda";
             this.pnlArcadaInferiorIzquierda.Size = new System.Drawing.Size(618, 200);
             this.pnlArcadaInferiorIzquierda.TabIndex = 82;
@@ -2548,6 +2550,7 @@
             // 
             // pnlArcadaInferiorDerecha
             // 
+            this.pnlArcadaInferiorDerecha.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.pnlArcadaInferiorDerecha.Controls.Add(this.lbl35Raiz);
             this.pnlArcadaInferiorDerecha.Controls.Add(this.lbl34Raiz);
             this.pnlArcadaInferiorDerecha.Controls.Add(this.lbl33Raiz);
@@ -2599,7 +2602,7 @@
             this.pnlArcadaInferiorDerecha.Controls.Add(this.lbl36Distal);
             this.pnlArcadaInferiorDerecha.Controls.Add(this.lbl36Oclusal);
             this.pnlArcadaInferiorDerecha.Controls.Add(this.lbl36Mesial);
-            this.pnlArcadaInferiorDerecha.Location = new System.Drawing.Point(639, 316);
+            this.pnlArcadaInferiorDerecha.Location = new System.Drawing.Point(632, 223);
             this.pnlArcadaInferiorDerecha.Name = "pnlArcadaInferiorDerecha";
             this.pnlArcadaInferiorDerecha.Size = new System.Drawing.Size(624, 200);
             this.pnlArcadaInferiorDerecha.TabIndex = 83;
@@ -3269,9 +3272,10 @@
             // 
             // lblSeparadorHorizontal
             // 
+            this.lblSeparadorHorizontal.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.lblSeparadorHorizontal.AutoSize = true;
             this.lblSeparadorHorizontal.BackColor = System.Drawing.Color.Black;
-            this.lblSeparadorHorizontal.Location = new System.Drawing.Point(7, 309);
+            this.lblSeparadorHorizontal.Location = new System.Drawing.Point(0, 216);
             this.lblSeparadorHorizontal.MaximumSize = new System.Drawing.Size(0, 5);
             this.lblSeparadorHorizontal.MinimumSize = new System.Drawing.Size(1265, 0);
             this.lblSeparadorHorizontal.Name = "lblSeparadorHorizontal";
@@ -3280,9 +3284,10 @@
             // 
             // lblSeparadorVertical
             // 
+            this.lblSeparadorVertical.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.lblSeparadorVertical.AutoSize = true;
             this.lblSeparadorVertical.BackColor = System.Drawing.Color.Black;
-            this.lblSeparadorVertical.Location = new System.Drawing.Point(630, 145);
+            this.lblSeparadorVertical.Location = new System.Drawing.Point(623, 52);
             this.lblSeparadorVertical.MinimumSize = new System.Drawing.Size(5, 350);
             this.lblSeparadorVertical.Name = "lblSeparadorVertical";
             this.lblSeparadorVertical.Size = new System.Drawing.Size(5, 350);
@@ -3290,20 +3295,22 @@
             // 
             // lblError
             // 
+            this.lblError.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.lblError.AutoSize = true;
             this.lblError.Font = new System.Drawing.Font("Roboto", 9.5F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblError.ForeColor = System.Drawing.Color.IndianRed;
             this.lblError.Image = ((System.Drawing.Image)(resources.GetObject("lblError.Image")));
             this.lblError.ImageAlign = System.Drawing.ContentAlignment.TopLeft;
-            this.lblError.Location = new System.Drawing.Point(550, 563);
+            this.lblError.Location = new System.Drawing.Point(543, 470);
             this.lblError.Name = "lblError";
-            this.lblError.Size = new System.Drawing.Size(85, 15);
+            this.lblError.Size = new System.Drawing.Size(106, 19);
             this.lblError.TabIndex = 86;
             this.lblError.Text = "Mensaje Error";
             this.lblError.Visible = false;
             // 
             // groupBox1
             // 
+            this.groupBox1.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.groupBox1.Controls.Add(this.lblDescripcionErupcion);
             this.groupBox1.Controls.Add(this.lblDescripcionCariesRadiografia);
             this.groupBox1.Controls.Add(this.lblDescripcionPuente);
@@ -3322,7 +3329,7 @@
             this.groupBox1.Controls.Add(this.lblImagenObturacion);
             this.groupBox1.Controls.Add(this.lblImagenFractura);
             this.groupBox1.Controls.Add(this.lblImagenCaries);
-            this.groupBox1.Location = new System.Drawing.Point(917, 531);
+            this.groupBox1.Location = new System.Drawing.Point(910, 438);
             this.groupBox1.Name = "groupBox1";
             this.groupBox1.Size = new System.Drawing.Size(330, 162);
             this.groupBox1.TabIndex = 88;
@@ -3334,7 +3341,7 @@
             this.lblDescripcionErupcion.AutoSize = true;
             this.lblDescripcionErupcion.Location = new System.Drawing.Point(212, 107);
             this.lblDescripcionErupcion.Name = "lblDescripcionErupcion";
-            this.lblDescripcionErupcion.Size = new System.Drawing.Size(56, 15);
+            this.lblDescripcionErupcion.Size = new System.Drawing.Size(71, 19);
             this.lblDescripcionErupcion.TabIndex = 17;
             this.lblDescripcionErupcion.Text = "Erupción";
             // 
@@ -3343,7 +3350,7 @@
             this.lblDescripcionCariesRadiografia.AutoSize = true;
             this.lblDescripcionCariesRadiografia.Location = new System.Drawing.Point(212, 83);
             this.lblDescripcionCariesRadiografia.Name = "lblDescripcionCariesRadiografia";
-            this.lblDescripcionCariesRadiografia.Size = new System.Drawing.Size(106, 15);
+            this.lblDescripcionCariesRadiografia.Size = new System.Drawing.Size(134, 19);
             this.lblDescripcionCariesRadiografia.TabIndex = 16;
             this.lblDescripcionCariesRadiografia.Text = "Caries radiografia";
             // 
@@ -3352,7 +3359,7 @@
             this.lblDescripcionPuente.AutoSize = true;
             this.lblDescripcionPuente.Location = new System.Drawing.Point(212, 56);
             this.lblDescripcionPuente.Name = "lblDescripcionPuente";
-            this.lblDescripcionPuente.Size = new System.Drawing.Size(47, 15);
+            this.lblDescripcionPuente.Size = new System.Drawing.Size(58, 19);
             this.lblDescripcionPuente.TabIndex = 15;
             this.lblDescripcionPuente.Text = "Puente";
             // 
@@ -3361,7 +3368,7 @@
             this.lblDescripcionCorona.AutoSize = true;
             this.lblDescripcionCorona.Location = new System.Drawing.Point(212, 31);
             this.lblDescripcionCorona.Name = "lblDescripcionCorona";
-            this.lblDescripcionCorona.Size = new System.Drawing.Size(47, 15);
+            this.lblDescripcionCorona.Size = new System.Drawing.Size(60, 19);
             this.lblDescripcionCorona.TabIndex = 14;
             this.lblDescripcionCorona.Text = "Corona";
             // 
@@ -3373,7 +3380,7 @@
             this.lblImagenErupcion.Location = new System.Drawing.Point(179, 107);
             this.lblImagenErupcion.MinimumSize = new System.Drawing.Size(16, 16);
             this.lblImagenErupcion.Name = "lblImagenErupcion";
-            this.lblImagenErupcion.Size = new System.Drawing.Size(16, 16);
+            this.lblImagenErupcion.Size = new System.Drawing.Size(16, 19);
             this.lblImagenErupcion.TabIndex = 13;
             // 
             // lblImagenCariesRadiografia
@@ -3383,7 +3390,7 @@
             this.lblImagenCariesRadiografia.Location = new System.Drawing.Point(179, 82);
             this.lblImagenCariesRadiografia.MinimumSize = new System.Drawing.Size(16, 16);
             this.lblImagenCariesRadiografia.Name = "lblImagenCariesRadiografia";
-            this.lblImagenCariesRadiografia.Size = new System.Drawing.Size(16, 16);
+            this.lblImagenCariesRadiografia.Size = new System.Drawing.Size(16, 19);
             this.lblImagenCariesRadiografia.TabIndex = 12;
             // 
             // lblImagenPuente
@@ -3394,7 +3401,7 @@
             this.lblImagenPuente.Location = new System.Drawing.Point(179, 56);
             this.lblImagenPuente.MinimumSize = new System.Drawing.Size(16, 16);
             this.lblImagenPuente.Name = "lblImagenPuente";
-            this.lblImagenPuente.Size = new System.Drawing.Size(16, 16);
+            this.lblImagenPuente.Size = new System.Drawing.Size(16, 19);
             this.lblImagenPuente.TabIndex = 11;
             // 
             // lblImagenCorona
@@ -3405,7 +3412,7 @@
             this.lblImagenCorona.Location = new System.Drawing.Point(179, 31);
             this.lblImagenCorona.MinimumSize = new System.Drawing.Size(16, 16);
             this.lblImagenCorona.Name = "lblImagenCorona";
-            this.lblImagenCorona.Size = new System.Drawing.Size(16, 16);
+            this.lblImagenCorona.Size = new System.Drawing.Size(16, 19);
             this.lblImagenCorona.TabIndex = 10;
             // 
             // lblDescripcionAusencia
@@ -3413,7 +3420,7 @@
             this.lblDescripcionAusencia.AutoSize = true;
             this.lblDescripcionAusencia.Location = new System.Drawing.Point(55, 134);
             this.lblDescripcionAusencia.Name = "lblDescripcionAusencia";
-            this.lblDescripcionAusencia.Size = new System.Drawing.Size(60, 15);
+            this.lblDescripcionAusencia.Size = new System.Drawing.Size(74, 19);
             this.lblDescripcionAusencia.TabIndex = 9;
             this.lblDescripcionAusencia.Text = "Ausencia";
             // 
@@ -3422,7 +3429,7 @@
             this.lblDescripcionEndodoncia.AutoSize = true;
             this.lblDescripcionEndodoncia.Location = new System.Drawing.Point(55, 106);
             this.lblDescripcionEndodoncia.Name = "lblDescripcionEndodoncia";
-            this.lblDescripcionEndodoncia.Size = new System.Drawing.Size(73, 15);
+            this.lblDescripcionEndodoncia.Size = new System.Drawing.Size(93, 19);
             this.lblDescripcionEndodoncia.TabIndex = 8;
             this.lblDescripcionEndodoncia.Text = "Endodoncia";
             // 
@@ -3431,7 +3438,7 @@
             this.lblDescripcionObturacion.AutoSize = true;
             this.lblDescripcionObturacion.Location = new System.Drawing.Point(55, 82);
             this.lblDescripcionObturacion.Name = "lblDescripcionObturacion";
-            this.lblDescripcionObturacion.Size = new System.Drawing.Size(69, 15);
+            this.lblDescripcionObturacion.Size = new System.Drawing.Size(87, 19);
             this.lblDescripcionObturacion.TabIndex = 7;
             this.lblDescripcionObturacion.Text = "Obturacion";
             // 
@@ -3440,7 +3447,7 @@
             this.lblDescripcionFractura.AutoSize = true;
             this.lblDescripcionFractura.Location = new System.Drawing.Point(55, 55);
             this.lblDescripcionFractura.Name = "lblDescripcionFractura";
-            this.lblDescripcionFractura.Size = new System.Drawing.Size(54, 15);
+            this.lblDescripcionFractura.Size = new System.Drawing.Size(68, 19);
             this.lblDescripcionFractura.TabIndex = 6;
             this.lblDescripcionFractura.Text = "Fractura";
             // 
@@ -3449,7 +3456,7 @@
             this.lblDescripcionCaries.AutoSize = true;
             this.lblDescripcionCaries.Location = new System.Drawing.Point(55, 30);
             this.lblDescripcionCaries.Name = "lblDescripcionCaries";
-            this.lblDescripcionCaries.Size = new System.Drawing.Size(43, 15);
+            this.lblDescripcionCaries.Size = new System.Drawing.Size(53, 19);
             this.lblDescripcionCaries.TabIndex = 5;
             this.lblDescripcionCaries.Text = "Caries";
             // 
@@ -3460,7 +3467,7 @@
             this.lblImagenAusencia.Location = new System.Drawing.Point(22, 133);
             this.lblImagenAusencia.MinimumSize = new System.Drawing.Size(16, 16);
             this.lblImagenAusencia.Name = "lblImagenAusencia";
-            this.lblImagenAusencia.Size = new System.Drawing.Size(16, 16);
+            this.lblImagenAusencia.Size = new System.Drawing.Size(16, 19);
             this.lblImagenAusencia.TabIndex = 4;
             // 
             // lblImagenEndodoncia
@@ -3471,7 +3478,7 @@
             this.lblImagenEndodoncia.Location = new System.Drawing.Point(22, 106);
             this.lblImagenEndodoncia.MinimumSize = new System.Drawing.Size(16, 16);
             this.lblImagenEndodoncia.Name = "lblImagenEndodoncia";
-            this.lblImagenEndodoncia.Size = new System.Drawing.Size(16, 16);
+            this.lblImagenEndodoncia.Size = new System.Drawing.Size(16, 19);
             this.lblImagenEndodoncia.TabIndex = 3;
             // 
             // lblImagenObturacion
@@ -3481,7 +3488,7 @@
             this.lblImagenObturacion.Location = new System.Drawing.Point(22, 81);
             this.lblImagenObturacion.MinimumSize = new System.Drawing.Size(16, 16);
             this.lblImagenObturacion.Name = "lblImagenObturacion";
-            this.lblImagenObturacion.Size = new System.Drawing.Size(16, 16);
+            this.lblImagenObturacion.Size = new System.Drawing.Size(16, 19);
             this.lblImagenObturacion.TabIndex = 2;
             // 
             // lblImagenFractura
@@ -3492,7 +3499,7 @@
             this.lblImagenFractura.Location = new System.Drawing.Point(22, 55);
             this.lblImagenFractura.MinimumSize = new System.Drawing.Size(16, 16);
             this.lblImagenFractura.Name = "lblImagenFractura";
-            this.lblImagenFractura.Size = new System.Drawing.Size(16, 16);
+            this.lblImagenFractura.Size = new System.Drawing.Size(16, 19);
             this.lblImagenFractura.TabIndex = 1;
             // 
             // lblImagenCaries
@@ -3502,11 +3509,12 @@
             this.lblImagenCaries.Location = new System.Drawing.Point(22, 30);
             this.lblImagenCaries.MinimumSize = new System.Drawing.Size(16, 16);
             this.lblImagenCaries.Name = "lblImagenCaries";
-            this.lblImagenCaries.Size = new System.Drawing.Size(16, 16);
+            this.lblImagenCaries.Size = new System.Drawing.Size(16, 19);
             this.lblImagenCaries.TabIndex = 0;
             // 
             // btnCrearOdontograma
             // 
+            this.btnCrearOdontograma.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.btnCrearOdontograma.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(16)))), ((int)(((byte)(110)))), ((int)(((byte)(196)))));
             this.btnCrearOdontograma.BordeColor = System.Drawing.Color.FromArgb(((int)(((byte)(16)))), ((int)(((byte)(110)))), ((int)(((byte)(196)))));
             this.btnCrearOdontograma.BordeRadio = 40;
@@ -3516,7 +3524,7 @@
             this.btnCrearOdontograma.FondoColor = System.Drawing.Color.FromArgb(((int)(((byte)(16)))), ((int)(((byte)(110)))), ((int)(((byte)(196)))));
             this.btnCrearOdontograma.Font = new System.Drawing.Font("Roboto", 12F);
             this.btnCrearOdontograma.ForeColor = System.Drawing.Color.White;
-            this.btnCrearOdontograma.Location = new System.Drawing.Point(485, 601);
+            this.btnCrearOdontograma.Location = new System.Drawing.Point(478, 508);
             this.btnCrearOdontograma.Name = "btnCrearOdontograma";
             this.btnCrearOdontograma.Size = new System.Drawing.Size(335, 40);
             this.btnCrearOdontograma.TabIndex = 0;
@@ -3525,21 +3533,32 @@
             this.btnCrearOdontograma.UseVisualStyleBackColor = false;
             this.btnCrearOdontograma.Click += new System.EventHandler(this.btnCrearOdontograma_Click);
             // 
+            // panel1
+            // 
+            this.panel1.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.panel1.Controls.Add(this.pnlArcadaSuperiorIzquierda);
+            this.panel1.Controls.Add(this.groupBox1);
+            this.panel1.Controls.Add(this.pnlArcadaSuperiorDerecha);
+            this.panel1.Controls.Add(this.btnCrearOdontograma);
+            this.panel1.Controls.Add(this.pnlArcadaInferiorIzquierda);
+            this.panel1.Controls.Add(this.lblError);
+            this.panel1.Controls.Add(this.pnlArcadaInferiorDerecha);
+            this.panel1.Controls.Add(this.lblSeparadorVertical);
+            this.panel1.Controls.Add(this.lblSeparadorHorizontal);
+            this.panel1.Location = new System.Drawing.Point(9, 84);
+            this.panel1.Name = "panel1";
+            this.panel1.Size = new System.Drawing.Size(1254, 613);
+            this.panel1.TabIndex = 89;
+            // 
             // Odontograma
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 14F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 18F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(236)))), ((int)(((byte)(236)))), ((int)(((byte)(236)))));
             this.ClientSize = new System.Drawing.Size(1275, 715);
-            this.Controls.Add(this.groupBox1);
-            this.Controls.Add(this.btnCrearOdontograma);
-            this.Controls.Add(this.lblError);
-            this.Controls.Add(this.lblSeparadorVertical);
-            this.Controls.Add(this.lblSeparadorHorizontal);
-            this.Controls.Add(this.pnlArcadaInferiorDerecha);
-            this.Controls.Add(this.pnlArcadaInferiorIzquierda);
-            this.Controls.Add(this.pnlArcadaSuperiorDerecha);
-            this.Controls.Add(this.pnlArcadaSuperiorIzquierda);
+            this.Controls.Add(this.panel1);
             this.Controls.Add(this.btnAtras);
             this.Font = new System.Drawing.Font("Roboto", 9.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
@@ -3558,8 +3577,9 @@
             this.pnlArcadaInferiorDerecha.PerformLayout();
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();
+            this.panel1.ResumeLayout(false);
+            this.panel1.PerformLayout();
             this.ResumeLayout(false);
-            this.PerformLayout();
 
         }
 
@@ -3804,5 +3824,6 @@
         private System.Windows.Forms.Label lblDescripcionObturacion;
         private System.Windows.Forms.Label lblDescripcionFractura;
         private System.Windows.Forms.Label lblDescripcionCaries;
+        private System.Windows.Forms.Panel panel1;
     }
 }

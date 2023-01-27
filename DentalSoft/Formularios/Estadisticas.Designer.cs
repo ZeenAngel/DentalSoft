@@ -115,9 +115,6 @@
             // 
             // btnAtras
             // 
-            this.btnAtras.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
             this.btnAtras.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnAtras.Image = ((System.Drawing.Image)(resources.GetObject("btnAtras.Image")));
             this.btnAtras.Location = new System.Drawing.Point(25, 23);
@@ -149,7 +146,7 @@
             legend1.Enabled = false;
             legend1.Name = "Legend1";
             this.chVentasPorMes.Legends.Add(legend1);
-            this.chVentasPorMes.Location = new System.Drawing.Point(3, 3);
+            this.chVentasPorMes.Location = new System.Drawing.Point(0, 0);
             this.chVentasPorMes.Name = "chVentasPorMes";
             this.chVentasPorMes.Palette = System.Windows.Forms.DataVisualization.Charting.ChartColorPalette.Light;
             series1.ChartArea = "ChartArea1";
@@ -178,6 +175,7 @@
             // 
             // pnlVarios
             // 
+            this.pnlVarios.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.pnlVarios.Controls.Add(this.panelPresupuestosConvertidosFacturas);
             this.pnlVarios.Controls.Add(this.pnlProductos);
             this.pnlVarios.Controls.Add(this.pnlNuevosClientesMes);
@@ -209,7 +207,7 @@
             this.lblRatioPresupuestosFacturas.AutoSize = true;
             this.lblRatioPresupuestosFacturas.Location = new System.Drawing.Point(67, 39);
             this.lblRatioPresupuestosFacturas.Name = "lblRatioPresupuestosFacturas";
-            this.lblRatioPresupuestosFacturas.Size = new System.Drawing.Size(52, 19);
+            this.lblRatioPresupuestosFacturas.Size = new System.Drawing.Size(64, 24);
             this.lblRatioPresupuestosFacturas.TabIndex = 11;
             this.lblRatioPresupuestosFacturas.Text = "label1";
             // 
@@ -220,7 +218,7 @@
             this.lblTituloRatioPresupuestosFacturas.Location = new System.Drawing.Point(67, 8);
             this.lblTituloRatioPresupuestosFacturas.MaximumSize = new System.Drawing.Size(100, 0);
             this.lblTituloRatioPresupuestosFacturas.Name = "lblTituloRatioPresupuestosFacturas";
-            this.lblTituloRatioPresupuestosFacturas.Size = new System.Drawing.Size(91, 28);
+            this.lblTituloRatioPresupuestosFacturas.Size = new System.Drawing.Size(100, 36);
             this.lblTituloRatioPresupuestosFacturas.TabIndex = 10;
             this.lblTituloRatioPresupuestosFacturas.Text = "Presupuestos / Facturas";
             // 
@@ -251,7 +249,7 @@
             this.lblProductosTotal.AutoSize = true;
             this.lblProductosTotal.Location = new System.Drawing.Point(67, 39);
             this.lblProductosTotal.Name = "lblProductosTotal";
-            this.lblProductosTotal.Size = new System.Drawing.Size(52, 19);
+            this.lblProductosTotal.Size = new System.Drawing.Size(64, 24);
             this.lblProductosTotal.TabIndex = 10;
             this.lblProductosTotal.Text = "label1";
             // 
@@ -261,7 +259,7 @@
             this.lblTituloTotalProductos.Font = new System.Drawing.Font("Roboto", 9F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Underline))));
             this.lblTituloTotalProductos.Location = new System.Drawing.Point(67, 8);
             this.lblTituloTotalProductos.Name = "lblTituloTotalProductos";
-            this.lblTituloTotalProductos.Size = new System.Drawing.Size(79, 14);
+            this.lblTituloTotalProductos.Size = new System.Drawing.Size(98, 18);
             this.lblTituloTotalProductos.TabIndex = 9;
             this.lblTituloTotalProductos.Text = "Nº Productos";
             // 
@@ -292,7 +290,7 @@
             this.lblPacientesNuevosMes.AutoSize = true;
             this.lblPacientesNuevosMes.Location = new System.Drawing.Point(66, 38);
             this.lblPacientesNuevosMes.Name = "lblPacientesNuevosMes";
-            this.lblPacientesNuevosMes.Size = new System.Drawing.Size(52, 19);
+            this.lblPacientesNuevosMes.Size = new System.Drawing.Size(64, 24);
             this.lblPacientesNuevosMes.TabIndex = 8;
             this.lblPacientesNuevosMes.Text = "label1";
             // 
@@ -302,7 +300,7 @@
             this.lblTituloNuevosPacientesMes.Font = new System.Drawing.Font("Roboto", 9F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Underline))));
             this.lblTituloNuevosPacientesMes.Location = new System.Drawing.Point(67, 7);
             this.lblTituloNuevosPacientesMes.Name = "lblTituloNuevosPacientesMes";
-            this.lblTituloNuevosPacientesMes.Size = new System.Drawing.Size(102, 14);
+            this.lblTituloNuevosPacientesMes.Size = new System.Drawing.Size(130, 18);
             this.lblTituloNuevosPacientesMes.TabIndex = 6;
             this.lblTituloNuevosPacientesMes.Text = "Nuevos Pacientes";
             // 
@@ -333,7 +331,7 @@
             this.lblPacientesTotal.AutoSize = true;
             this.lblPacientesTotal.Location = new System.Drawing.Point(67, 38);
             this.lblPacientesTotal.Name = "lblPacientesTotal";
-            this.lblPacientesTotal.Size = new System.Drawing.Size(52, 19);
+            this.lblPacientesTotal.Size = new System.Drawing.Size(64, 24);
             this.lblPacientesTotal.TabIndex = 6;
             this.lblPacientesTotal.Text = "label1";
             // 
@@ -343,7 +341,7 @@
             this.lblTituloTotalPacientes.Font = new System.Drawing.Font("Roboto", 9F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Underline))));
             this.lblTituloTotalPacientes.Location = new System.Drawing.Point(67, 7);
             this.lblTituloTotalPacientes.Name = "lblTituloTotalPacientes";
-            this.lblTituloTotalPacientes.Size = new System.Drawing.Size(75, 14);
+            this.lblTituloTotalPacientes.Size = new System.Drawing.Size(97, 18);
             this.lblTituloTotalPacientes.TabIndex = 5;
             this.lblTituloTotalPacientes.Text = "Nº Pacientes";
             // 
@@ -374,7 +372,7 @@
             this.lblVentasSemana.AutoSize = true;
             this.lblVentasSemana.Location = new System.Drawing.Point(67, 40);
             this.lblVentasSemana.Name = "lblVentasSemana";
-            this.lblVentasSemana.Size = new System.Drawing.Size(52, 19);
+            this.lblVentasSemana.Size = new System.Drawing.Size(64, 24);
             this.lblVentasSemana.TabIndex = 4;
             this.lblVentasSemana.Text = "label1";
             // 
@@ -384,7 +382,7 @@
             this.lblTituloVentasSemana.Font = new System.Drawing.Font("Roboto", 9F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Underline))));
             this.lblTituloVentasSemana.Location = new System.Drawing.Point(67, 6);
             this.lblTituloVentasSemana.Name = "lblTituloVentasSemana";
-            this.lblTituloVentasSemana.Size = new System.Drawing.Size(88, 14);
+            this.lblTituloVentasSemana.Size = new System.Drawing.Size(112, 18);
             this.lblTituloVentasSemana.TabIndex = 3;
             this.lblTituloVentasSemana.Text = "Ventas semana";
             // 
@@ -415,7 +413,7 @@
             this.lblVentasMes.AutoSize = true;
             this.lblVentasMes.Location = new System.Drawing.Point(67, 40);
             this.lblVentasMes.Name = "lblVentasMes";
-            this.lblVentasMes.Size = new System.Drawing.Size(52, 19);
+            this.lblVentasMes.Size = new System.Drawing.Size(64, 24);
             this.lblVentasMes.TabIndex = 3;
             this.lblVentasMes.Text = "label1";
             // 
@@ -425,7 +423,7 @@
             this.lblTituloVentasMes.Font = new System.Drawing.Font("Roboto", 9F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Underline))));
             this.lblTituloVentasMes.Location = new System.Drawing.Point(67, 6);
             this.lblTituloVentasMes.Name = "lblTituloVentasMes";
-            this.lblTituloVentasMes.Size = new System.Drawing.Size(70, 14);
+            this.lblTituloVentasMes.Size = new System.Drawing.Size(88, 18);
             this.lblTituloVentasMes.TabIndex = 2;
             this.lblTituloVentasMes.Text = "Ventas Mes";
             // 
@@ -456,7 +454,7 @@
             this.lblEmpleadosTotal.AutoSize = true;
             this.lblEmpleadosTotal.Location = new System.Drawing.Point(67, 39);
             this.lblEmpleadosTotal.Name = "lblEmpleadosTotal";
-            this.lblEmpleadosTotal.Size = new System.Drawing.Size(52, 19);
+            this.lblEmpleadosTotal.Size = new System.Drawing.Size(64, 24);
             this.lblEmpleadosTotal.TabIndex = 9;
             this.lblEmpleadosTotal.Text = "label1";
             // 
@@ -466,7 +464,7 @@
             this.lblTituloTotalEmpleados.Font = new System.Drawing.Font("Roboto", 9F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Underline))));
             this.lblTituloTotalEmpleados.Location = new System.Drawing.Point(67, 8);
             this.lblTituloTotalEmpleados.Name = "lblTituloTotalEmpleados";
-            this.lblTituloTotalEmpleados.Size = new System.Drawing.Size(82, 14);
+            this.lblTituloTotalEmpleados.Size = new System.Drawing.Size(103, 18);
             this.lblTituloTotalEmpleados.TabIndex = 8;
             this.lblTituloTotalEmpleados.Text = "Nº Empleados";
             // 
@@ -497,7 +495,7 @@
             this.lblCaja.AutoSize = true;
             this.lblCaja.Location = new System.Drawing.Point(67, 38);
             this.lblCaja.Name = "lblCaja";
-            this.lblCaja.Size = new System.Drawing.Size(52, 19);
+            this.lblCaja.Size = new System.Drawing.Size(64, 24);
             this.lblCaja.TabIndex = 5;
             this.lblCaja.Text = "label1";
             // 
@@ -507,7 +505,7 @@
             this.lblTituloCaja.Font = new System.Drawing.Font("Roboto", 9F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Underline))));
             this.lblTituloCaja.Location = new System.Drawing.Point(67, 7);
             this.lblTituloCaja.Name = "lblTituloCaja";
-            this.lblTituloCaja.Size = new System.Drawing.Size(30, 14);
+            this.lblTituloCaja.Size = new System.Drawing.Size(38, 18);
             this.lblTituloCaja.TabIndex = 4;
             this.lblTituloCaja.Text = "Caja";
             // 
@@ -538,7 +536,7 @@
             this.lblVentasTotal.AutoSize = true;
             this.lblVentasTotal.Location = new System.Drawing.Point(67, 40);
             this.lblVentasTotal.Name = "lblVentasTotal";
-            this.lblVentasTotal.Size = new System.Drawing.Size(52, 19);
+            this.lblVentasTotal.Size = new System.Drawing.Size(64, 24);
             this.lblVentasTotal.TabIndex = 2;
             this.lblVentasTotal.Text = "label1";
             // 
@@ -548,7 +546,7 @@
             this.lblTituloTotalVentas.Font = new System.Drawing.Font("Roboto", 9F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Underline))));
             this.lblTituloTotalVentas.Location = new System.Drawing.Point(67, 6);
             this.lblTituloTotalVentas.Name = "lblTituloTotalVentas";
-            this.lblTituloTotalVentas.Size = new System.Drawing.Size(73, 14);
+            this.lblTituloTotalVentas.Size = new System.Drawing.Size(91, 18);
             this.lblTituloTotalVentas.TabIndex = 1;
             this.lblTituloTotalVentas.Text = "Total Ventas";
             // 
@@ -564,6 +562,7 @@
             // 
             // pnlTratamientos
             // 
+            this.pnlTratamientos.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
             this.pnlTratamientos.Controls.Add(this.chTratamientos);
             this.pnlTratamientos.Location = new System.Drawing.Point(575, 402);
             this.pnlTratamientos.Name = "pnlTratamientos";
@@ -572,6 +571,7 @@
             // 
             // chTratamientos
             // 
+            this.chTratamientos.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
             this.chTratamientos.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(16)))), ((int)(((byte)(110)))), ((int)(((byte)(196)))));
             chartArea2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(16)))), ((int)(((byte)(110)))), ((int)(((byte)(196)))));
             chartArea2.Name = "ChartArea1";
@@ -580,7 +580,7 @@
             legend2.ForeColor = System.Drawing.Color.White;
             legend2.Name = "Legend1";
             this.chTratamientos.Legends.Add(legend2);
-            this.chTratamientos.Location = new System.Drawing.Point(0, 3);
+            this.chTratamientos.Location = new System.Drawing.Point(3, 6);
             this.chTratamientos.Name = "chTratamientos";
             series2.ChartArea = "ChartArea1";
             series2.ChartType = System.Windows.Forms.DataVisualization.Charting.SeriesChartType.Doughnut;
@@ -601,6 +601,7 @@
             // 
             // pnlPacientesPorEdad
             // 
+            this.pnlPacientesPorEdad.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
             this.pnlPacientesPorEdad.Controls.Add(this.chPacientesPorEdad);
             this.pnlPacientesPorEdad.Location = new System.Drawing.Point(25, 402);
             this.pnlPacientesPorEdad.Name = "pnlPacientesPorEdad";
@@ -651,7 +652,7 @@
             // 
             // Estadisticas
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 19F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(11F, 24F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1150, 715);
             this.Controls.Add(this.pnlPacientesPorEdad);

@@ -31,6 +31,8 @@
             this.components = new System.ComponentModel.Container();
             Microsoft.Reporting.WinForms.ReportDataSource reportDataSource1 = new Microsoft.Reporting.WinForms.ReportDataSource();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Presupuestos));
+            this.detallePresupuestoBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.dataSetPresupuestos = new DentalSoft.Datos.DataSetPresupuestos();
             this.rvPresupuesto = new Microsoft.Reporting.WinForms.ReportViewer();
             this.lblFiltroPaciente = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
@@ -46,16 +48,28 @@
             this.btnFiltrarPaciente = new DentalSoft.ControlesPersonalizados.BotonPersonalizado();
             this.mcFiltrarFecha = new DentalSoft.ControlesPersonalizados.SelectorFecha();
             this.txtFiltroPaciente = new DentalSoft.TextboxPersonalizado();
-            this.dataSetPresupuestos = new DentalSoft.Datos.DataSetPresupuestos();
-            this.detallePresupuestoBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.detallePresupuestoTableAdapter = new DentalSoft.Datos.DataSetPresupuestosTableAdapters.DetallePresupuestoTableAdapter();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.dataSetPresupuestos)).BeginInit();
+            this.panel1 = new System.Windows.Forms.Panel();
             ((System.ComponentModel.ISupportInitialize)(this.detallePresupuestoBindingSource)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dataSetPresupuestos)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
+            this.panel1.SuspendLayout();
             this.SuspendLayout();
+            // 
+            // detallePresupuestoBindingSource
+            // 
+            this.detallePresupuestoBindingSource.DataMember = "DetallePresupuesto";
+            this.detallePresupuestoBindingSource.DataSource = this.dataSetPresupuestos;
+            // 
+            // dataSetPresupuestos
+            // 
+            this.dataSetPresupuestos.DataSetName = "DataSetPresupuestos";
+            this.dataSetPresupuestos.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
             // 
             // rvPresupuesto
             // 
+            this.rvPresupuesto.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left)));
             reportDataSource1.Name = "DataSetPresupuesto";
             reportDataSource1.Value = this.detallePresupuestoBindingSource;
             this.rvPresupuesto.LocalReport.DataSources.Add(reportDataSource1);
@@ -68,31 +82,34 @@
             // 
             // lblFiltroPaciente
             // 
+            this.lblFiltroPaciente.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.lblFiltroPaciente.AutoSize = true;
             this.lblFiltroPaciente.Font = new System.Drawing.Font("Roboto", 12F);
-            this.lblFiltroPaciente.Location = new System.Drawing.Point(834, 257);
+            this.lblFiltroPaciente.Location = new System.Drawing.Point(5, 130);
             this.lblFiltroPaciente.Name = "lblFiltroPaciente";
-            this.lblFiltroPaciente.Size = new System.Drawing.Size(141, 19);
+            this.lblFiltroPaciente.Size = new System.Drawing.Size(179, 24);
             this.lblFiltroPaciente.TabIndex = 83;
             this.lblFiltroPaciente.Text = "Filtrar por paciente";
             // 
             // label2
             // 
+            this.label2.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("Roboto", 12F);
-            this.label2.Location = new System.Drawing.Point(834, 360);
+            this.label2.Location = new System.Drawing.Point(5, 233);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(121, 19);
+            this.label2.Size = new System.Drawing.Size(152, 24);
             this.label2.TabIndex = 84;
             this.label2.Text = "Filtrar por fecha";
             // 
             // lblFiltroPresupuesto
             // 
+            this.lblFiltroPresupuesto.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.lblFiltroPresupuesto.AutoSize = true;
             this.lblFiltroPresupuesto.Font = new System.Drawing.Font("Roboto", 12F);
-            this.lblFiltroPresupuesto.Location = new System.Drawing.Point(834, 140);
+            this.lblFiltroPresupuesto.Location = new System.Drawing.Point(5, 13);
             this.lblFiltroPresupuesto.Name = "lblFiltroPresupuesto";
-            this.lblFiltroPresupuesto.Size = new System.Drawing.Size(168, 19);
+            this.lblFiltroPresupuesto.Size = new System.Drawing.Size(213, 24);
             this.lblFiltroPresupuesto.TabIndex = 89;
             this.lblFiltroPresupuesto.Text = "Filtrar por presupuesto";
             // 
@@ -108,37 +125,36 @@
             // 
             // lblErrorFactura
             // 
+            this.lblErrorFactura.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.lblErrorFactura.AutoSize = true;
             this.lblErrorFactura.Font = new System.Drawing.Font("Roboto", 9.5F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblErrorFactura.ForeColor = System.Drawing.Color.IndianRed;
             this.lblErrorFactura.Image = ((System.Drawing.Image)(resources.GetObject("lblErrorFactura.Image")));
             this.lblErrorFactura.ImageAlign = System.Drawing.ContentAlignment.TopLeft;
-            this.lblErrorFactura.Location = new System.Drawing.Point(835, 211);
+            this.lblErrorFactura.Location = new System.Drawing.Point(6, 84);
             this.lblErrorFactura.Name = "lblErrorFactura";
-            this.lblErrorFactura.Size = new System.Drawing.Size(85, 15);
+            this.lblErrorFactura.Size = new System.Drawing.Size(106, 19);
             this.lblErrorFactura.TabIndex = 91;
             this.lblErrorFactura.Text = "Mensaje Error";
             this.lblErrorFactura.Visible = false;
             // 
             // lblErrorPaciente
             // 
+            this.lblErrorPaciente.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.lblErrorPaciente.AutoSize = true;
             this.lblErrorPaciente.Font = new System.Drawing.Font("Roboto", 9.5F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblErrorPaciente.ForeColor = System.Drawing.Color.IndianRed;
             this.lblErrorPaciente.Image = ((System.Drawing.Image)(resources.GetObject("lblErrorPaciente.Image")));
             this.lblErrorPaciente.ImageAlign = System.Drawing.ContentAlignment.TopLeft;
-            this.lblErrorPaciente.Location = new System.Drawing.Point(835, 327);
+            this.lblErrorPaciente.Location = new System.Drawing.Point(6, 200);
             this.lblErrorPaciente.Name = "lblErrorPaciente";
-            this.lblErrorPaciente.Size = new System.Drawing.Size(85, 15);
+            this.lblErrorPaciente.Size = new System.Drawing.Size(106, 19);
             this.lblErrorPaciente.TabIndex = 87;
             this.lblErrorPaciente.Text = "Mensaje Error";
             this.lblErrorPaciente.Visible = false;
             // 
             // pictureBox1
             // 
-            this.pictureBox1.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
             this.pictureBox1.Cursor = System.Windows.Forms.Cursors.Hand;
             this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
             this.pictureBox1.Location = new System.Drawing.Point(25, 23);
@@ -151,6 +167,7 @@
             // 
             // btnNuevoPresupuesto
             // 
+            this.btnNuevoPresupuesto.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.btnNuevoPresupuesto.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(16)))), ((int)(((byte)(110)))), ((int)(((byte)(196)))));
             this.btnNuevoPresupuesto.BordeColor = System.Drawing.Color.FromArgb(((int)(((byte)(16)))), ((int)(((byte)(110)))), ((int)(((byte)(196)))));
             this.btnNuevoPresupuesto.BordeRadio = 40;
@@ -162,7 +179,7 @@
             this.btnNuevoPresupuesto.FondoColor = System.Drawing.Color.FromArgb(((int)(((byte)(16)))), ((int)(((byte)(110)))), ((int)(((byte)(196)))));
             this.btnNuevoPresupuesto.Font = new System.Drawing.Font("Roboto", 12F, System.Drawing.FontStyle.Bold);
             this.btnNuevoPresupuesto.ForeColor = System.Drawing.Color.White;
-            this.btnNuevoPresupuesto.Location = new System.Drawing.Point(874, 627);
+            this.btnNuevoPresupuesto.Location = new System.Drawing.Point(45, 500);
             this.btnNuevoPresupuesto.Name = "btnNuevoPresupuesto";
             this.btnNuevoPresupuesto.Size = new System.Drawing.Size(224, 40);
             this.btnNuevoPresupuesto.TabIndex = 30;
@@ -173,6 +190,7 @@
             // 
             // btnFiltroPresupuesto
             // 
+            this.btnFiltroPresupuesto.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.btnFiltroPresupuesto.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(16)))), ((int)(((byte)(110)))), ((int)(((byte)(196)))));
             this.btnFiltroPresupuesto.BordeColor = System.Drawing.Color.FromArgb(((int)(((byte)(16)))), ((int)(((byte)(110)))), ((int)(((byte)(196)))));
             this.btnFiltroPresupuesto.BordeRadio = 40;
@@ -184,7 +202,7 @@
             this.btnFiltroPresupuesto.FondoColor = System.Drawing.Color.FromArgb(((int)(((byte)(16)))), ((int)(((byte)(110)))), ((int)(((byte)(196)))));
             this.btnFiltroPresupuesto.Font = new System.Drawing.Font("Roboto", 12F);
             this.btnFiltroPresupuesto.ForeColor = System.Drawing.Color.White;
-            this.btnFiltroPresupuesto.Location = new System.Drawing.Point(1091, 164);
+            this.btnFiltroPresupuesto.Location = new System.Drawing.Point(277, 42);
             this.btnFiltroPresupuesto.Name = "btnFiltroPresupuesto";
             this.btnFiltroPresupuesto.Size = new System.Drawing.Size(39, 40);
             this.btnFiltroPresupuesto.TabIndex = 5;
@@ -195,6 +213,7 @@
             // 
             // txtFiltroPresupuesto
             // 
+            this.txtFiltroPresupuesto.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.txtFiltroPresupuesto.BackColor = System.Drawing.SystemColors.Window;
             this.txtFiltroPresupuesto.BordeColor = System.Drawing.Color.FromArgb(((int)(((byte)(16)))), ((int)(((byte)(110)))), ((int)(((byte)(196)))));
             this.txtFiltroPresupuesto.BordeColorFoco = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(195)))), ((int)(((byte)(165)))));
@@ -203,20 +222,23 @@
             this.txtFiltroPresupuesto.Contraseña = false;
             this.txtFiltroPresupuesto.Font = new System.Drawing.Font("Roboto", 9.5F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtFiltroPresupuesto.ForeColor = System.Drawing.Color.Black;
-            this.txtFiltroPresupuesto.Location = new System.Drawing.Point(838, 169);
+            this.txtFiltroPresupuesto.Location = new System.Drawing.Point(9, 42);
             this.txtFiltroPresupuesto.MarcadorPosicionColor = System.Drawing.Color.DarkGray;
             this.txtFiltroPresupuesto.MarcadorPosicionTexto = "Introduce el número de presupuesto";
             this.txtFiltroPresupuesto.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
             this.txtFiltroPresupuesto.Multilinea = false;
             this.txtFiltroPresupuesto.Name = "txtFiltroPresupuesto";
             this.txtFiltroPresupuesto.Padding = new System.Windows.Forms.Padding(10, 7, 10, 7);
-            this.txtFiltroPresupuesto.Size = new System.Drawing.Size(250, 30);
+            this.txtFiltroPresupuesto.PosicionSeleccion = 0;
+            this.txtFiltroPresupuesto.Size = new System.Drawing.Size(250, 34);
             this.txtFiltroPresupuesto.SubrayadoEstilo = true;
             this.txtFiltroPresupuesto.TabIndex = 0;
+            this.txtFiltroPresupuesto.TamañoMaximo = 30000;
             this.txtFiltroPresupuesto.Texto = "";
             // 
             // btnTodos
             // 
+            this.btnTodos.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.btnTodos.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(16)))), ((int)(((byte)(110)))), ((int)(((byte)(196)))));
             this.btnTodos.BordeColor = System.Drawing.Color.FromArgb(((int)(((byte)(16)))), ((int)(((byte)(110)))), ((int)(((byte)(196)))));
             this.btnTodos.BordeRadio = 40;
@@ -228,7 +250,7 @@
             this.btnTodos.FondoColor = System.Drawing.Color.FromArgb(((int)(((byte)(16)))), ((int)(((byte)(110)))), ((int)(((byte)(196)))));
             this.btnTodos.Font = new System.Drawing.Font("Roboto", 12F);
             this.btnTodos.ForeColor = System.Drawing.Color.White;
-            this.btnTodos.Location = new System.Drawing.Point(874, 564);
+            this.btnTodos.Location = new System.Drawing.Point(45, 437);
             this.btnTodos.Name = "btnTodos";
             this.btnTodos.Size = new System.Drawing.Size(224, 40);
             this.btnTodos.TabIndex = 25;
@@ -239,6 +261,7 @@
             // 
             // btnFiltrarPaciente
             // 
+            this.btnFiltrarPaciente.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.btnFiltrarPaciente.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(16)))), ((int)(((byte)(110)))), ((int)(((byte)(196)))));
             this.btnFiltrarPaciente.BordeColor = System.Drawing.Color.FromArgb(((int)(((byte)(16)))), ((int)(((byte)(110)))), ((int)(((byte)(196)))));
             this.btnFiltrarPaciente.BordeRadio = 40;
@@ -250,7 +273,7 @@
             this.btnFiltrarPaciente.FondoColor = System.Drawing.Color.FromArgb(((int)(((byte)(16)))), ((int)(((byte)(110)))), ((int)(((byte)(196)))));
             this.btnFiltrarPaciente.Font = new System.Drawing.Font("Roboto", 12F);
             this.btnFiltrarPaciente.ForeColor = System.Drawing.Color.White;
-            this.btnFiltrarPaciente.Location = new System.Drawing.Point(1091, 279);
+            this.btnFiltrarPaciente.Location = new System.Drawing.Point(277, 157);
             this.btnFiltrarPaciente.Name = "btnFiltrarPaciente";
             this.btnFiltrarPaciente.Size = new System.Drawing.Size(39, 40);
             this.btnFiltrarPaciente.TabIndex = 15;
@@ -261,12 +284,13 @@
             // 
             // mcFiltrarFecha
             // 
+            this.mcFiltrarFecha.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.mcFiltrarFecha.BordeColor = System.Drawing.Color.FromArgb(((int)(((byte)(16)))), ((int)(((byte)(110)))), ((int)(((byte)(196)))));
             this.mcFiltrarFecha.BordeTamaño = 0;
             this.mcFiltrarFecha.FondoColor = System.Drawing.Color.FromArgb(((int)(((byte)(16)))), ((int)(((byte)(110)))), ((int)(((byte)(196)))));
             this.mcFiltrarFecha.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.5F);
             this.mcFiltrarFecha.IsDesplegado = false;
-            this.mcFiltrarFecha.Location = new System.Drawing.Point(838, 396);
+            this.mcFiltrarFecha.Location = new System.Drawing.Point(9, 269);
             this.mcFiltrarFecha.MinDate = new System.DateTime(2022, 11, 8, 12, 50, 6, 969);
             this.mcFiltrarFecha.MinimumSize = new System.Drawing.Size(4, 35);
             this.mcFiltrarFecha.Name = "mcFiltrarFecha";
@@ -278,6 +302,7 @@
             // 
             // txtFiltroPaciente
             // 
+            this.txtFiltroPaciente.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.txtFiltroPaciente.BackColor = System.Drawing.SystemColors.Window;
             this.txtFiltroPaciente.BordeColor = System.Drawing.Color.FromArgb(((int)(((byte)(16)))), ((int)(((byte)(110)))), ((int)(((byte)(196)))));
             this.txtFiltroPaciente.BordeColorFoco = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(195)))), ((int)(((byte)(165)))));
@@ -286,52 +311,54 @@
             this.txtFiltroPaciente.Contraseña = false;
             this.txtFiltroPaciente.Font = new System.Drawing.Font("Roboto", 9.5F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtFiltroPaciente.ForeColor = System.Drawing.Color.Black;
-            this.txtFiltroPaciente.Location = new System.Drawing.Point(838, 285);
+            this.txtFiltroPaciente.Location = new System.Drawing.Point(9, 158);
             this.txtFiltroPaciente.MarcadorPosicionColor = System.Drawing.Color.DarkGray;
             this.txtFiltroPaciente.MarcadorPosicionTexto = "Introduce el Dni del paciente";
             this.txtFiltroPaciente.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
             this.txtFiltroPaciente.Multilinea = false;
             this.txtFiltroPaciente.Name = "txtFiltroPaciente";
             this.txtFiltroPaciente.Padding = new System.Windows.Forms.Padding(10, 7, 10, 7);
-            this.txtFiltroPaciente.Size = new System.Drawing.Size(250, 30);
+            this.txtFiltroPaciente.PosicionSeleccion = 0;
+            this.txtFiltroPaciente.Size = new System.Drawing.Size(250, 34);
             this.txtFiltroPaciente.SubrayadoEstilo = true;
             this.txtFiltroPaciente.TabIndex = 10;
+            this.txtFiltroPaciente.TamañoMaximo = 30000;
             this.txtFiltroPaciente.Texto = "";
-            // 
-            // dataSetPresupuestos
-            // 
-            this.dataSetPresupuestos.DataSetName = "DataSetPresupuestos";
-            this.dataSetPresupuestos.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
-            // 
-            // detallePresupuestoBindingSource
-            // 
-            this.detallePresupuestoBindingSource.DataMember = "DetallePresupuesto";
-            this.detallePresupuestoBindingSource.DataSource = this.dataSetPresupuestos;
             // 
             // detallePresupuestoTableAdapter
             // 
             this.detallePresupuestoTableAdapter.ClearBeforeFill = true;
             // 
+            // panel1
+            // 
+            this.panel1.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.panel1.Controls.Add(this.lblFiltroPresupuesto);
+            this.panel1.Controls.Add(this.txtFiltroPaciente);
+            this.panel1.Controls.Add(this.mcFiltrarFecha);
+            this.panel1.Controls.Add(this.btnFiltroPresupuesto);
+            this.panel1.Controls.Add(this.btnFiltrarPaciente);
+            this.panel1.Controls.Add(this.btnNuevoPresupuesto);
+            this.panel1.Controls.Add(this.lblFiltroPaciente);
+            this.panel1.Controls.Add(this.lblErrorFactura);
+            this.panel1.Controls.Add(this.label2);
+            this.panel1.Controls.Add(this.btnTodos);
+            this.panel1.Controls.Add(this.lblErrorPaciente);
+            this.panel1.Controls.Add(this.txtFiltroPresupuesto);
+            this.panel1.Location = new System.Drawing.Point(825, 126);
+            this.panel1.Name = "panel1";
+            this.panel1.Size = new System.Drawing.Size(327, 552);
+            this.panel1.TabIndex = 92;
+            // 
             // Presupuestos
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 14F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 18F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(236)))), ((int)(((byte)(236)))), ((int)(((byte)(236)))));
             this.ClientSize = new System.Drawing.Size(1164, 715);
+            this.Controls.Add(this.panel1);
             this.Controls.Add(this.rvPresupuesto);
             this.Controls.Add(this.lvPresupuestos);
-            this.Controls.Add(this.btnNuevoPresupuesto);
-            this.Controls.Add(this.lblErrorFactura);
-            this.Controls.Add(this.btnFiltroPresupuesto);
-            this.Controls.Add(this.lblFiltroPresupuesto);
-            this.Controls.Add(this.txtFiltroPresupuesto);
-            this.Controls.Add(this.lblErrorPaciente);
-            this.Controls.Add(this.btnTodos);
-            this.Controls.Add(this.btnFiltrarPaciente);
-            this.Controls.Add(this.label2);
-            this.Controls.Add(this.lblFiltroPaciente);
-            this.Controls.Add(this.mcFiltrarFecha);
-            this.Controls.Add(this.txtFiltroPaciente);
             this.Controls.Add(this.pictureBox1);
             this.Font = new System.Drawing.Font("Roboto", 9.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
@@ -339,11 +366,12 @@
             this.Name = "Presupuestos";
             this.Text = "Facturas";
             this.Load += new System.EventHandler(this.Facturas_Load);
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.dataSetPresupuestos)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.detallePresupuestoBindingSource)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dataSetPresupuestos)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
+            this.panel1.ResumeLayout(false);
+            this.panel1.PerformLayout();
             this.ResumeLayout(false);
-            this.PerformLayout();
 
         }
 
@@ -367,5 +395,6 @@
         private Datos.DataSetPresupuestos dataSetPresupuestos;
         private System.Windows.Forms.BindingSource detallePresupuestoBindingSource;
         private Datos.DataSetPresupuestosTableAdapters.DetallePresupuestoTableAdapter detallePresupuestoTableAdapter;
+        private System.Windows.Forms.Panel panel1;
     }
 }

@@ -71,7 +71,7 @@
             this.lblNuevaHora.AutoSize = true;
             this.lblNuevaHora.Location = new System.Drawing.Point(155, 191);
             this.lblNuevaHora.Name = "lblNuevaHora";
-            this.lblNuevaHora.Size = new System.Drawing.Size(90, 19);
+            this.lblNuevaHora.Size = new System.Drawing.Size(112, 24);
             this.lblNuevaHora.TabIndex = 17;
             this.lblNuevaHora.Text = "Nueva hora";
             // 
@@ -84,16 +84,13 @@
             this.lblErrorHora.ImageAlign = System.Drawing.ContentAlignment.TopLeft;
             this.lblErrorHora.Location = new System.Drawing.Point(160, 248);
             this.lblErrorHora.Name = "lblErrorHora";
-            this.lblErrorHora.Size = new System.Drawing.Size(85, 15);
+            this.lblErrorHora.Size = new System.Drawing.Size(106, 19);
             this.lblErrorHora.TabIndex = 48;
             this.lblErrorHora.Text = "Mensaje Error";
             this.lblErrorHora.Visible = false;
             // 
             // pictureBox1
             // 
-            this.pictureBox1.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
             this.pictureBox1.Cursor = System.Windows.Forms.Cursors.Hand;
             this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
             this.pictureBox1.Location = new System.Drawing.Point(25, 23);
@@ -106,6 +103,8 @@
             // 
             // gbHorasConsulta
             // 
+            this.gbHorasConsulta.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left)));
             this.gbHorasConsulta.Controls.Add(this.lvHorasConsulta);
             this.gbHorasConsulta.Controls.Add(this.btnNuevaHora);
             this.gbHorasConsulta.Controls.Add(this.txtNuevaHora);
@@ -158,7 +157,7 @@
             this.txtNuevaHora.Name = "txtNuevaHora";
             this.txtNuevaHora.Padding = new System.Windows.Forms.Padding(10, 7, 10, 7);
             this.txtNuevaHora.PosicionSeleccion = 0;
-            this.txtNuevaHora.Size = new System.Drawing.Size(111, 30);
+            this.txtNuevaHora.Size = new System.Drawing.Size(111, 34);
             this.txtNuevaHora.SubrayadoEstilo = true;
             this.txtNuevaHora.TabIndex = 50;
             this.txtNuevaHora.TamañoMaximo = 30000;
@@ -188,6 +187,8 @@
             // 
             // gbAgendar
             // 
+            this.gbAgendar.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.gbAgendar.Controls.Add(this.lblErrorGuardar);
             this.gbAgendar.Controls.Add(this.btnGuardarAgenda);
             this.gbAgendar.Controls.Add(this.lvHorasAsignadas);
@@ -218,7 +219,7 @@
             this.lblErrorGuardar.ImageAlign = System.Drawing.ContentAlignment.TopLeft;
             this.lblErrorGuardar.Location = new System.Drawing.Point(44, 569);
             this.lblErrorGuardar.Name = "lblErrorGuardar";
-            this.lblErrorGuardar.Size = new System.Drawing.Size(85, 15);
+            this.lblErrorGuardar.Size = new System.Drawing.Size(106, 19);
             this.lblErrorGuardar.TabIndex = 45;
             this.lblErrorGuardar.Text = "Mensaje Error";
             this.lblErrorGuardar.Visible = false;
@@ -357,7 +358,7 @@
             this.label1.ForeColor = System.Drawing.Color.Black;
             this.label1.Location = new System.Drawing.Point(37, 145);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(160, 19);
+            this.label1.Size = new System.Drawing.Size(200, 24);
             this.label1.TabIndex = 37;
             this.label1.Text = "Seleccione una fecha";
             // 
@@ -370,7 +371,7 @@
             this.lblErrorOdontologo.ImageAlign = System.Drawing.ContentAlignment.TopLeft;
             this.lblErrorOdontologo.Location = new System.Drawing.Point(38, 113);
             this.lblErrorOdontologo.Name = "lblErrorOdontologo";
-            this.lblErrorOdontologo.Size = new System.Drawing.Size(85, 15);
+            this.lblErrorOdontologo.Size = new System.Drawing.Size(106, 19);
             this.lblErrorOdontologo.TabIndex = 36;
             this.lblErrorOdontologo.Text = "Mensaje Error";
             this.lblErrorOdontologo.Visible = false;
@@ -403,7 +404,7 @@
             this.lblOdontologoNuevaReserva.ForeColor = System.Drawing.Color.Black;
             this.lblOdontologoNuevaReserva.Location = new System.Drawing.Point(37, 46);
             this.lblOdontologoNuevaReserva.Name = "lblOdontologoNuevaReserva";
-            this.lblOdontologoNuevaReserva.Size = new System.Drawing.Size(92, 19);
+            this.lblOdontologoNuevaReserva.Size = new System.Drawing.Size(113, 24);
             this.lblOdontologoNuevaReserva.TabIndex = 35;
             this.lblOdontologoNuevaReserva.Text = "Odontologo";
             // 
@@ -425,7 +426,7 @@
             this.txtOdontologo.Name = "txtOdontologo";
             this.txtOdontologo.Padding = new System.Windows.Forms.Padding(10, 7, 10, 7);
             this.txtOdontologo.PosicionSeleccion = 0;
-            this.txtOdontologo.Size = new System.Drawing.Size(250, 30);
+            this.txtOdontologo.Size = new System.Drawing.Size(250, 34);
             this.txtOdontologo.SubrayadoEstilo = true;
             this.txtOdontologo.TabIndex = 33;
             this.txtOdontologo.TamañoMaximo = 30000;
@@ -453,7 +454,7 @@
             // 
             // Agenda
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 19F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(11F, 24F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(236)))), ((int)(((byte)(236)))), ((int)(((byte)(236)))));
             this.ClientSize = new System.Drawing.Size(1164, 715);

@@ -46,9 +46,6 @@
             // 
             // btnAtras
             // 
-            this.btnAtras.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
             this.btnAtras.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnAtras.Image = ((System.Drawing.Image)(resources.GetObject("btnAtras.Image")));
             this.btnAtras.Location = new System.Drawing.Point(25, 23);
@@ -137,7 +134,7 @@
             this.lblFiltrosPacientes.ForeColor = System.Drawing.Color.Black;
             this.lblFiltrosPacientes.Location = new System.Drawing.Point(877, 117);
             this.lblFiltrosPacientes.Name = "lblFiltrosPacientes";
-            this.lblFiltrosPacientes.Size = new System.Drawing.Size(50, 19);
+            this.lblFiltrosPacientes.Size = new System.Drawing.Size(63, 24);
             this.lblFiltrosPacientes.TabIndex = 52;
             this.lblFiltrosPacientes.Text = "Filtrar";
             // 
@@ -154,10 +151,13 @@
             // 
             // dgvAlmacen
             // 
+            this.dgvAlmacen.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.dgvAlmacen.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dgvAlmacen.Dock = System.Windows.Forms.DockStyle.Fill;
             this.dgvAlmacen.Location = new System.Drawing.Point(0, 0);
             this.dgvAlmacen.Name = "dgvAlmacen";
+            this.dgvAlmacen.RowHeadersWidth = 51;
             this.dgvAlmacen.Size = new System.Drawing.Size(1109, 384);
             this.dgvAlmacen.TabIndex = 0;
             // 
@@ -201,14 +201,19 @@
             this.txtAlmacen.Multilinea = false;
             this.txtAlmacen.Name = "txtAlmacen";
             this.txtAlmacen.Padding = new System.Windows.Forms.Padding(10, 7, 10, 7);
-            this.txtAlmacen.Size = new System.Drawing.Size(591, 34);
+            this.txtAlmacen.PosicionSeleccion = 0;
+            this.txtAlmacen.Size = new System.Drawing.Size(591, 39);
             this.txtAlmacen.SubrayadoEstilo = true;
             this.txtAlmacen.TabIndex = 0;
+            this.txtAlmacen.TamañoMaximo = 30000;
             this.txtAlmacen.Texto = "";
             this.txtAlmacen._TextChanged += new System.EventHandler(this.txtAlmacen__TextChanged);
             // 
             // lblErrorAlmacen
             // 
+            this.lblErrorAlmacen.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.lblErrorAlmacen.AutoSize = true;
             this.lblErrorAlmacen.Font = new System.Drawing.Font("Roboto", 12F);
             this.lblErrorAlmacen.ForeColor = System.Drawing.Color.IndianRed;
@@ -216,14 +221,14 @@
             this.lblErrorAlmacen.ImageAlign = System.Drawing.ContentAlignment.TopLeft;
             this.lblErrorAlmacen.Location = new System.Drawing.Point(318, 571);
             this.lblErrorAlmacen.Name = "lblErrorAlmacen";
-            this.lblErrorAlmacen.Size = new System.Drawing.Size(106, 19);
+            this.lblErrorAlmacen.Size = new System.Drawing.Size(134, 24);
             this.lblErrorAlmacen.TabIndex = 56;
             this.lblErrorAlmacen.Text = "Mensaje Error";
             this.lblErrorAlmacen.Visible = false;
             // 
             // GestionarAlmacen
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 19F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(11F, 24F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(236)))), ((int)(((byte)(236)))), ((int)(((byte)(236)))));
             this.ClientSize = new System.Drawing.Size(1164, 715);

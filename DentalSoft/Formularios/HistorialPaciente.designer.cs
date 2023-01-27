@@ -51,7 +51,7 @@
             this.lblTitutloPaciente.Font = new System.Drawing.Font("Roboto", 14F);
             this.lblTitutloPaciente.Location = new System.Drawing.Point(106, 126);
             this.lblTitutloPaciente.Name = "lblTitutloPaciente";
-            this.lblTitutloPaciente.Size = new System.Drawing.Size(88, 23);
+            this.lblTitutloPaciente.Size = new System.Drawing.Size(113, 29);
             this.lblTitutloPaciente.TabIndex = 78;
             this.lblTitutloPaciente.Text = "Paciente:";
             // 
@@ -62,7 +62,7 @@
             this.lblTituloFechaCreacion.Font = new System.Drawing.Font("Roboto", 14F);
             this.lblTituloFechaCreacion.Location = new System.Drawing.Point(708, 126);
             this.lblTituloFechaCreacion.Name = "lblTituloFechaCreacion";
-            this.lblTituloFechaCreacion.Size = new System.Drawing.Size(143, 23);
+            this.lblTituloFechaCreacion.Size = new System.Drawing.Size(183, 29);
             this.lblTituloFechaCreacion.TabIndex = 79;
             this.lblTituloFechaCreacion.Text = "Fecha creación:";
             // 
@@ -75,7 +75,7 @@
             this.lblTituloAlergias.Font = new System.Drawing.Font("Roboto", 14F);
             this.lblTituloAlergias.Location = new System.Drawing.Point(106, 187);
             this.lblTituloAlergias.Name = "lblTituloAlergias";
-            this.lblTituloAlergias.Size = new System.Drawing.Size(84, 23);
+            this.lblTituloAlergias.Size = new System.Drawing.Size(106, 29);
             this.lblTituloAlergias.TabIndex = 80;
             this.lblTituloAlergias.Text = "Alergias:";
             // 
@@ -88,7 +88,7 @@
             this.lblTituloMedicacion.Font = new System.Drawing.Font("Roboto", 14F);
             this.lblTituloMedicacion.Location = new System.Drawing.Point(708, 187);
             this.lblTituloMedicacion.Name = "lblTituloMedicacion";
-            this.lblTituloMedicacion.Size = new System.Drawing.Size(114, 23);
+            this.lblTituloMedicacion.Size = new System.Drawing.Size(145, 29);
             this.lblTituloMedicacion.TabIndex = 81;
             this.lblTituloMedicacion.Text = "Medicación:";
             // 
@@ -99,7 +99,7 @@
             this.lblTituloObservaciones.Font = new System.Drawing.Font("Roboto", 14F);
             this.lblTituloObservaciones.Location = new System.Drawing.Point(110, 486);
             this.lblTituloObservaciones.Name = "lblTituloObservaciones";
-            this.lblTituloObservaciones.Size = new System.Drawing.Size(140, 23);
+            this.lblTituloObservaciones.Size = new System.Drawing.Size(178, 29);
             this.lblTituloObservaciones.TabIndex = 82;
             this.lblTituloObservaciones.Text = "Observaciones:";
             // 
@@ -110,7 +110,7 @@
             this.lblPaciente.Location = new System.Drawing.Point(216, 126);
             this.lblPaciente.MaximumSize = new System.Drawing.Size(408, 23);
             this.lblPaciente.Name = "lblPaciente";
-            this.lblPaciente.Size = new System.Drawing.Size(284, 23);
+            this.lblPaciente.Size = new System.Drawing.Size(356, 23);
             this.lblPaciente.TabIndex = 83;
             this.lblPaciente.Text = "Nombre y apellidos del paciente";
             // 
@@ -121,7 +121,7 @@
             this.lblFechaCreacion.Font = new System.Drawing.Font("Roboto", 14F);
             this.lblFechaCreacion.Location = new System.Drawing.Point(867, 126);
             this.lblFechaCreacion.Name = "lblFechaCreacion";
-            this.lblFechaCreacion.Size = new System.Drawing.Size(61, 23);
+            this.lblFechaCreacion.Size = new System.Drawing.Size(78, 29);
             this.lblFechaCreacion.TabIndex = 84;
             this.lblFechaCreacion.Text = "Fecha";
             // 
@@ -204,9 +204,6 @@
             // 
             // btnAtras
             // 
-            this.btnAtras.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
             this.btnAtras.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnAtras.Image = ((System.Drawing.Image)(resources.GetObject("btnAtras.Image")));
             this.btnAtras.Location = new System.Drawing.Point(40, 28);
@@ -219,7 +216,7 @@
             // 
             // HistorialPaciente
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 18F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(236)))), ((int)(((byte)(236)))), ((int)(((byte)(236)))));
             this.ClientSize = new System.Drawing.Size(1275, 715);

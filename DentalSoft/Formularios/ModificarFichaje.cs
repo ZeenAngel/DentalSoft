@@ -151,20 +151,6 @@ namespace DentalSoft.Formularios
             this.WindowState = FormWindowState.Minimized;
         }
 
-        private void btnRedimensionar_Click(object sender, EventArgs e)
-        {
-            if (this.WindowState == FormWindowState.Normal)
-            {
-                this.WindowState ^= FormWindowState.Maximized;
-                btnRedimensionar.Image = Image.FromFile(datosGlobales.PathBotonRedimensionar);
-            }
-            else
-            {
-                this.WindowState = FormWindowState.Normal;
-                btnRedimensionar.Image = Image.FromFile(datosGlobales.PathBotonMaximizar);
-            }
-        }
-
         private void btnCerrar_Click(object sender, EventArgs e)
         {
             this.Close();

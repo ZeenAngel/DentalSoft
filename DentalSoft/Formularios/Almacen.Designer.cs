@@ -56,7 +56,7 @@
             this.lblFiltrosPacientes.ForeColor = System.Drawing.Color.Black;
             this.lblFiltrosPacientes.Location = new System.Drawing.Point(883, 115);
             this.lblFiltrosPacientes.Name = "lblFiltrosPacientes";
-            this.lblFiltrosPacientes.Size = new System.Drawing.Size(50, 19);
+            this.lblFiltrosPacientes.Size = new System.Drawing.Size(63, 24);
             this.lblFiltrosPacientes.TabIndex = 32;
             this.lblFiltrosPacientes.Text = "Filtrar";
             // 
@@ -73,10 +73,13 @@
             // 
             // dgvProductos
             // 
+            this.dgvProductos.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.dgvProductos.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dgvProductos.Dock = System.Windows.Forms.DockStyle.Fill;
             this.dgvProductos.Location = new System.Drawing.Point(0, 0);
             this.dgvProductos.Name = "dgvProductos";
+            this.dgvProductos.RowHeadersWidth = 51;
             this.dgvProductos.Size = new System.Drawing.Size(1115, 335);
             this.dgvProductos.TabIndex = 0;
             this.dgvProductos.CellFormatting += new System.Windows.Forms.DataGridViewCellFormattingEventHandler(this.dgvProductos_CellFormatting);
@@ -90,16 +93,13 @@
             this.lblErrorCaducado.ImageAlign = System.Drawing.ContentAlignment.TopLeft;
             this.lblErrorCaducado.Location = new System.Drawing.Point(409, 179);
             this.lblErrorCaducado.Name = "lblErrorCaducado";
-            this.lblErrorCaducado.Size = new System.Drawing.Size(106, 19);
+            this.lblErrorCaducado.Size = new System.Drawing.Size(134, 24);
             this.lblErrorCaducado.TabIndex = 48;
             this.lblErrorCaducado.Text = "Mensaje Error";
             this.lblErrorCaducado.Visible = false;
             // 
             // btnAtras
             // 
-            this.btnAtras.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
             this.btnAtras.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnAtras.Image = ((System.Drawing.Image)(resources.GetObject("btnAtras.Image")));
             this.btnAtras.Location = new System.Drawing.Point(25, 23);
@@ -116,7 +116,7 @@
             this.lblFecha.Font = new System.Drawing.Font("Roboto", 12F);
             this.lblFecha.Location = new System.Drawing.Point(94, 114);
             this.lblFecha.Name = "lblFecha";
-            this.lblFecha.Size = new System.Drawing.Size(170, 19);
+            this.lblFecha.Size = new System.Drawing.Size(212, 24);
             this.lblFecha.TabIndex = 85;
             this.lblFecha.Text = "Seleccionar una fecha:";
             // 
@@ -139,8 +139,7 @@
             // 
             // btnInventario
             // 
-            this.btnInventario.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
+            this.btnInventario.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
             this.btnInventario.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(16)))), ((int)(((byte)(110)))), ((int)(((byte)(196)))));
             this.btnInventario.BordeColor = System.Drawing.Color.PaleVioletRed;
             this.btnInventario.BordeRadio = 32;
@@ -163,8 +162,7 @@
             // 
             // btnGestionarAlmacenes
             // 
-            this.btnGestionarAlmacenes.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
+            this.btnGestionarAlmacenes.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
             this.btnGestionarAlmacenes.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(16)))), ((int)(((byte)(110)))), ((int)(((byte)(196)))));
             this.btnGestionarAlmacenes.BordeColor = System.Drawing.Color.PaleVioletRed;
             this.btnGestionarAlmacenes.BordeRadio = 32;
@@ -296,7 +294,7 @@
             this.txtProducto.Name = "txtProducto";
             this.txtProducto.Padding = new System.Windows.Forms.Padding(10, 7, 10, 7);
             this.txtProducto.PosicionSeleccion = 0;
-            this.txtProducto.Size = new System.Drawing.Size(591, 34);
+            this.txtProducto.Size = new System.Drawing.Size(591, 39);
             this.txtProducto.SubrayadoEstilo = true;
             this.txtProducto.TabIndex = 0;
             this.txtProducto.TamañoMaximo = 30000;
@@ -306,7 +304,7 @@
             // 
             // Almacen
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 14F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 18F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(236)))), ((int)(((byte)(236)))), ((int)(((byte)(236)))));
             this.ClientSize = new System.Drawing.Size(1164, 715);

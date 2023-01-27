@@ -39,6 +39,8 @@ namespace DentalSoft.Formularios
         private void LimpiarCampos()
         {
             dgvDetalles.Rows.Clear();
+            cbCentros.Items.Clear();
+            cbTratamientos.Items.Clear();
             CargarDatosPresupuesto();
             cbCentros.SelectedIndex = 0;
             cbTratamientos.SelectedIndex = 0;
@@ -100,21 +102,26 @@ namespace DentalSoft.Formularios
 
         private void GenerarNumeroPresupuesto(string presupuesto)
         {
-            string fechaAnterior = presupuesto.Substring(1, 2);
-            presupuesto = presupuesto.Substring(3, (presupuesto.Length - 3));
-            int temporal = int.Parse(presupuesto) + 1;
-            string cadenaPresupuesto = temporal.ToString();
-            string numPresupuesto = "";
-            string fecha = DateTime.Now.ToString("yy"); // De esta forma cuando se cambie de año, cambiará en el número de presupuesto
-            if (fechaAnterior.Equals(fecha))
-            {
-                for (int i = cadenaPresupuesto.Length - 1; i < 7; i++)
-                    numPresupuesto += "0";
-                numPresupuesto += cadenaPresupuesto;
-                lblPresupuesto.Text = datosGlobales.LetraPrespuesto + fecha + numPresupuesto;
-            }
+            if (presupuesto.Equals(""))
+                lblPresupuesto.Text = datosGlobales.LetraPrespuesto + DateTime.Now.ToString("yy") + datosGlobales.NumeroInicialPresupuesto;
             else
-                lblPresupuesto.Text = datosGlobales.LetraPrespuesto + fecha + datosGlobales.NumeroInicialPresupuesto;
+            {
+                string fechaAnterior = presupuesto.Substring(1, 2);
+                presupuesto = presupuesto.Substring(3, (presupuesto.Length - 3));
+                int temporal = int.Parse(presupuesto) + 1;
+                string cadenaPresupuesto = temporal.ToString();
+                string numPresupuesto = "";
+                string fecha = DateTime.Now.ToString("yy"); // De esta forma cuando se cambie de año, cambiará en el número de presupuesto
+                if (fechaAnterior.Equals(fecha))
+                {
+                    for (int i = cadenaPresupuesto.Length - 1; i < 7; i++)
+                        numPresupuesto += "0";
+                    numPresupuesto += cadenaPresupuesto;
+                    lblPresupuesto.Text = datosGlobales.LetraPrespuesto + fecha + numPresupuesto;
+                }
+                else
+                    lblPresupuesto.Text = datosGlobales.LetraPrespuesto + fecha + datosGlobales.NumeroInicialPresupuesto;
+            }
         }
 
         private void CargarTratamientos()
@@ -174,7 +181,10 @@ namespace DentalSoft.Formularios
                     reader.Read();
                     GenerarNumeroPresupuesto(reader.GetString(0));
                 }
+                else
+                    GenerarNumeroPresupuesto("");
                 reader.Close();
+                comando.Dispose();
                 conexion.CerrarConexion();
             }
             lblFecha.Text = "Fecha: " + DateTime.Now.ToString("dd-MM-yyyy");
@@ -429,7 +439,7 @@ namespace DentalSoft.Formularios
                                 transaccion.Commit();
                                 comando.Dispose();
                                 DialogResult mensaje = MessageBoxPersonalizadoControl.Show("Presupuesto guardado correctamente", datosGlobales.TituloAplicacion, MessageBoxButtons.OK, MessageBoxIcon.Information);
-                                LimpiarCampos();
+                                this.Close();
                             }
                             catch (Exception ex)
                             {

@@ -77,7 +77,7 @@
             this.label1.ForeColor = System.Drawing.Color.White;
             this.label1.Location = new System.Drawing.Point(12, 6);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(98, 23);
+            this.label1.Size = new System.Drawing.Size(126, 29);
             this.label1.TabIndex = 41;
             this.label1.Text = "DentalSoft";
             this.label1.MouseDown += new System.Windows.Forms.MouseEventHandler(this.label1_MouseDown);
@@ -123,6 +123,7 @@
             // 
             // txtFecha
             // 
+            this.txtFecha.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.txtFecha.BackColor = System.Drawing.SystemColors.Window;
             this.txtFecha.BordeColor = System.Drawing.Color.FromArgb(((int)(((byte)(16)))), ((int)(((byte)(110)))), ((int)(((byte)(196)))));
             this.txtFecha.BordeColorFoco = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(195)))), ((int)(((byte)(165)))));
@@ -139,7 +140,7 @@
             this.txtFecha.Name = "txtFecha";
             this.txtFecha.Padding = new System.Windows.Forms.Padding(10, 7, 10, 7);
             this.txtFecha.PosicionSeleccion = 0;
-            this.txtFecha.Size = new System.Drawing.Size(250, 34);
+            this.txtFecha.Size = new System.Drawing.Size(250, 39);
             this.txtFecha.SubrayadoEstilo = true;
             this.txtFecha.TabIndex = 30;
             this.txtFecha.TamañoMaximo = 30000;
@@ -163,7 +164,7 @@
             this.txtPaciente.Name = "txtPaciente";
             this.txtPaciente.Padding = new System.Windows.Forms.Padding(10, 7, 10, 7);
             this.txtPaciente.PosicionSeleccion = 0;
-            this.txtPaciente.Size = new System.Drawing.Size(250, 34);
+            this.txtPaciente.Size = new System.Drawing.Size(250, 39);
             this.txtPaciente.SubrayadoEstilo = true;
             this.txtPaciente.TabIndex = 29;
             this.txtPaciente.TamañoMaximo = 30000;
@@ -171,27 +172,22 @@
             // 
             // label2
             // 
-            this.label2.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("Roboto", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label2.Location = new System.Drawing.Point(55, 72);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(83, 23);
+            this.label2.Size = new System.Drawing.Size(107, 29);
             this.label2.TabIndex = 32;
             this.label2.Text = "Paciente";
             // 
             // lblNombre
             // 
-            this.lblNombre.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
+            this.lblNombre.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.lblNombre.AutoSize = true;
             this.lblNombre.Font = new System.Drawing.Font("Roboto", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblNombre.Location = new System.Drawing.Point(657, 72);
             this.lblNombre.Name = "lblNombre";
-            this.lblNombre.Size = new System.Drawing.Size(61, 23);
+            this.lblNombre.Size = new System.Drawing.Size(78, 29);
             this.lblNombre.TabIndex = 31;
             this.lblNombre.Text = "Fecha";
             // 
@@ -252,8 +248,7 @@
             // 
             // txtMedicacion
             // 
-            this.txtMedicacion.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left) 
+            this.txtMedicacion.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.txtMedicacion.Location = new System.Drawing.Point(661, 148);
             this.txtMedicacion.Name = "txtMedicacion";
@@ -263,9 +258,8 @@
             // 
             // txtAlergias
             // 
-            this.txtAlergias.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
+            this.txtAlergias.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left)));
             this.txtAlergias.Location = new System.Drawing.Point(59, 148);
             this.txtAlergias.Name = "txtAlergias";
             this.txtAlergias.Size = new System.Drawing.Size(521, 207);
@@ -279,38 +273,38 @@
             this.lblTituloObservaciones.Font = new System.Drawing.Font("Roboto", 14F);
             this.lblTituloObservaciones.Location = new System.Drawing.Point(59, 418);
             this.lblTituloObservaciones.Name = "lblTituloObservaciones";
-            this.lblTituloObservaciones.Size = new System.Drawing.Size(140, 23);
+            this.lblTituloObservaciones.Size = new System.Drawing.Size(178, 29);
             this.lblTituloObservaciones.TabIndex = 95;
             this.lblTituloObservaciones.Text = "Observaciones:";
             // 
             // lblTituloMedicacion
             // 
-            this.lblTituloMedicacion.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left) 
+            this.lblTituloMedicacion.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.lblTituloMedicacion.AutoSize = true;
             this.lblTituloMedicacion.Font = new System.Drawing.Font("Roboto", 14F);
             this.lblTituloMedicacion.Location = new System.Drawing.Point(657, 122);
             this.lblTituloMedicacion.Name = "lblTituloMedicacion";
-            this.lblTituloMedicacion.Size = new System.Drawing.Size(114, 23);
+            this.lblTituloMedicacion.Size = new System.Drawing.Size(145, 29);
             this.lblTituloMedicacion.TabIndex = 94;
             this.lblTituloMedicacion.Text = "Medicación:";
             // 
             // lblTituloAlergias
             // 
-            this.lblTituloAlergias.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
+            this.lblTituloAlergias.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left)));
             this.lblTituloAlergias.AutoSize = true;
             this.lblTituloAlergias.Font = new System.Drawing.Font("Roboto", 14F);
             this.lblTituloAlergias.Location = new System.Drawing.Point(55, 122);
             this.lblTituloAlergias.Name = "lblTituloAlergias";
-            this.lblTituloAlergias.Size = new System.Drawing.Size(84, 23);
+            this.lblTituloAlergias.Size = new System.Drawing.Size(106, 29);
             this.lblTituloAlergias.TabIndex = 93;
             this.lblTituloAlergias.Text = "Alergias:";
             // 
             // lblErrorAlergias
             // 
+            this.lblErrorAlergias.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left)));
             this.lblErrorAlergias.AutoSize = true;
             this.lblErrorAlergias.Font = new System.Drawing.Font("Roboto", 9.5F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblErrorAlergias.ForeColor = System.Drawing.Color.IndianRed;
@@ -318,13 +312,15 @@
             this.lblErrorAlergias.ImageAlign = System.Drawing.ContentAlignment.TopLeft;
             this.lblErrorAlergias.Location = new System.Drawing.Point(60, 358);
             this.lblErrorAlergias.Name = "lblErrorAlergias";
-            this.lblErrorAlergias.Size = new System.Drawing.Size(85, 15);
+            this.lblErrorAlergias.Size = new System.Drawing.Size(106, 19);
             this.lblErrorAlergias.TabIndex = 98;
             this.lblErrorAlergias.Text = "Mensaje Error";
             this.lblErrorAlergias.Visible = false;
             // 
             // lblErrorMedicacion
             // 
+            this.lblErrorMedicacion.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.lblErrorMedicacion.AutoSize = true;
             this.lblErrorMedicacion.Font = new System.Drawing.Font("Roboto", 9.5F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblErrorMedicacion.ForeColor = System.Drawing.Color.IndianRed;
@@ -332,13 +328,14 @@
             this.lblErrorMedicacion.ImageAlign = System.Drawing.ContentAlignment.TopLeft;
             this.lblErrorMedicacion.Location = new System.Drawing.Point(658, 358);
             this.lblErrorMedicacion.Name = "lblErrorMedicacion";
-            this.lblErrorMedicacion.Size = new System.Drawing.Size(85, 15);
+            this.lblErrorMedicacion.Size = new System.Drawing.Size(106, 19);
             this.lblErrorMedicacion.TabIndex = 99;
             this.lblErrorMedicacion.Text = "Mensaje Error";
             this.lblErrorMedicacion.Visible = false;
             // 
             // lblErrorGuardar
             // 
+            this.lblErrorGuardar.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
             this.lblErrorGuardar.AutoSize = true;
             this.lblErrorGuardar.Font = new System.Drawing.Font("Roboto", 9.5F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblErrorGuardar.ForeColor = System.Drawing.Color.IndianRed;
@@ -346,7 +343,7 @@
             this.lblErrorGuardar.ImageAlign = System.Drawing.ContentAlignment.TopLeft;
             this.lblErrorGuardar.Location = new System.Drawing.Point(809, 487);
             this.lblErrorGuardar.Name = "lblErrorGuardar";
-            this.lblErrorGuardar.Size = new System.Drawing.Size(85, 15);
+            this.lblErrorGuardar.Size = new System.Drawing.Size(106, 19);
             this.lblErrorGuardar.TabIndex = 101;
             this.lblErrorGuardar.Text = "Mensaje Error";
             this.lblErrorGuardar.Visible = false;
@@ -376,7 +373,7 @@
             // 
             // NuevoHistorial
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 19F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(11F, 24F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(236)))), ((int)(((byte)(236)))), ((int)(((byte)(236)))));
             this.ClientSize = new System.Drawing.Size(1207, 638);

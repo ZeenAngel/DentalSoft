@@ -38,12 +38,14 @@
             this.dgvPresupuestos = new System.Windows.Forms.DataGridView();
             this.cbFiltros = new DentalSoft.ControlesPersonalizados.ComboBoxPersonalizado();
             this.txtPresupuesto = new DentalSoft.TextboxPersonalizado();
+            this.panel1 = new System.Windows.Forms.Panel();
             this.pnlCabecera.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.btnRedimensionar)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.btnMinimizar)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.btnCerrar)).BeginInit();
             this.pnlDgvBuscarPaciente.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvPresupuestos)).BeginInit();
+            this.panel1.SuspendLayout();
             this.SuspendLayout();
             // 
             // pnlCabecera
@@ -67,7 +69,7 @@
             this.lblTitulo.ForeColor = System.Drawing.Color.White;
             this.lblTitulo.Location = new System.Drawing.Point(12, 6);
             this.lblTitulo.Name = "lblTitulo";
-            this.lblTitulo.Size = new System.Drawing.Size(98, 23);
+            this.lblTitulo.Size = new System.Drawing.Size(126, 29);
             this.lblTitulo.TabIndex = 41;
             this.lblTitulo.Text = "DentalSoft";
             this.lblTitulo.MouseDown += new System.Windows.Forms.MouseEventHandler(this.lblTitulo_MouseDown);
@@ -117,7 +119,7 @@
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.pnlDgvBuscarPaciente.Controls.Add(this.dgvPresupuestos);
-            this.pnlDgvBuscarPaciente.Location = new System.Drawing.Point(55, 116);
+            this.pnlDgvBuscarPaciente.Location = new System.Drawing.Point(55, 127);
             this.pnlDgvBuscarPaciente.Name = "pnlDgvBuscarPaciente";
             this.pnlDgvBuscarPaciente.Size = new System.Drawing.Size(706, 316);
             this.pnlDgvBuscarPaciente.TabIndex = 13;
@@ -128,13 +130,14 @@
             this.dgvPresupuestos.Dock = System.Windows.Forms.DockStyle.Fill;
             this.dgvPresupuestos.Location = new System.Drawing.Point(0, 0);
             this.dgvPresupuestos.Name = "dgvPresupuestos";
+            this.dgvPresupuestos.RowHeadersWidth = 51;
             this.dgvPresupuestos.Size = new System.Drawing.Size(706, 316);
             this.dgvPresupuestos.TabIndex = 0;
             this.dgvPresupuestos.CellContentDoubleClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvPresupuestos_CellContentDoubleClick);
             // 
             // cbFiltros
             // 
-            this.cbFiltros.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.cbFiltros.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.cbFiltros.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(16)))), ((int)(((byte)(110)))), ((int)(((byte)(196)))));
             this.cbFiltros.BordeColor = System.Drawing.Color.FromArgb(((int)(((byte)(16)))), ((int)(((byte)(110)))), ((int)(((byte)(196)))));
             this.cbFiltros.BordeTamaño = 1;
@@ -144,7 +147,7 @@
             this.cbFiltros.ForeColor = System.Drawing.Color.Black;
             this.cbFiltros.ListaColorFondo = System.Drawing.Color.WhiteSmoke;
             this.cbFiltros.ListColorTexto = System.Drawing.Color.Black;
-            this.cbFiltros.Location = new System.Drawing.Point(561, 58);
+            this.cbFiltros.Location = new System.Drawing.Point(534, 12);
             this.cbFiltros.MinimumSize = new System.Drawing.Size(200, 30);
             this.cbFiltros.Name = "cbFiltros";
             this.cbFiltros.Padding = new System.Windows.Forms.Padding(1);
@@ -154,6 +157,7 @@
             // 
             // txtPresupuesto
             // 
+            this.txtPresupuesto.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.txtPresupuesto.BackColor = System.Drawing.Color.White;
             this.txtPresupuesto.BordeColor = System.Drawing.Color.FromArgb(((int)(((byte)(16)))), ((int)(((byte)(110)))), ((int)(((byte)(196)))));
             this.txtPresupuesto.BordeColorFoco = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(195)))), ((int)(((byte)(165)))));
@@ -162,7 +166,7 @@
             this.txtPresupuesto.Contraseña = false;
             this.txtPresupuesto.Font = new System.Drawing.Font("Roboto", 9.5F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtPresupuesto.ForeColor = System.Drawing.Color.Black;
-            this.txtPresupuesto.Location = new System.Drawing.Point(55, 58);
+            this.txtPresupuesto.Location = new System.Drawing.Point(28, 12);
             this.txtPresupuesto.MarcadorPosicionColor = System.Drawing.Color.DarkGray;
             this.txtPresupuesto.MarcadorPosicionTexto = "Introduce el presupuesto a buscar";
             this.txtPresupuesto.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
@@ -170,22 +174,32 @@
             this.txtPresupuesto.Name = "txtPresupuesto";
             this.txtPresupuesto.Padding = new System.Windows.Forms.Padding(10, 7, 10, 7);
             this.txtPresupuesto.PosicionSeleccion = 0;
-            this.txtPresupuesto.Size = new System.Drawing.Size(464, 30);
+            this.txtPresupuesto.Size = new System.Drawing.Size(464, 34);
             this.txtPresupuesto.SubrayadoEstilo = true;
             this.txtPresupuesto.TabIndex = 11;
             this.txtPresupuesto.TamañoMaximo = 30000;
             this.txtPresupuesto.Texto = "";
             this.txtPresupuesto._TextChanged += new System.EventHandler(this.txtPresupuesto__TextChanged);
             // 
+            // panel1
+            // 
+            this.panel1.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.panel1.Controls.Add(this.txtPresupuesto);
+            this.panel1.Controls.Add(this.cbFiltros);
+            this.panel1.Location = new System.Drawing.Point(34, 60);
+            this.panel1.Name = "panel1";
+            this.panel1.Size = new System.Drawing.Size(770, 61);
+            this.panel1.TabIndex = 14;
+            // 
             // BuscarPresupuesto
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 19F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(11F, 24F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(236)))), ((int)(((byte)(236)))), ((int)(((byte)(236)))));
             this.ClientSize = new System.Drawing.Size(816, 490);
+            this.Controls.Add(this.panel1);
             this.Controls.Add(this.pnlDgvBuscarPaciente);
-            this.Controls.Add(this.cbFiltros);
-            this.Controls.Add(this.txtPresupuesto);
             this.Controls.Add(this.pnlCabecera);
             this.Font = new System.Drawing.Font("Roboto", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
@@ -201,6 +215,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.btnCerrar)).EndInit();
             this.pnlDgvBuscarPaciente.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.dgvPresupuestos)).EndInit();
+            this.panel1.ResumeLayout(false);
             this.ResumeLayout(false);
 
         }
@@ -216,5 +231,6 @@
         private System.Windows.Forms.DataGridView dgvPresupuestos;
         private ControlesPersonalizados.ComboBoxPersonalizado cbFiltros;
         private TextboxPersonalizado txtPresupuesto;
+        private System.Windows.Forms.Panel panel1;
     }
 }

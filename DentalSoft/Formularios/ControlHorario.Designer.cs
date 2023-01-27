@@ -31,24 +31,24 @@
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(ControlHorario));
             this.pnlCabecera = new System.Windows.Forms.Panel();
             this.lblTitulo = new System.Windows.Forms.Label();
+            this.btnRedimensionar = new System.Windows.Forms.PictureBox();
+            this.btnMinimizar = new System.Windows.Forms.PictureBox();
+            this.btnCerrar = new System.Windows.Forms.PictureBox();
             this.pnlContenedor = new System.Windows.Forms.Panel();
             this.dgvFichajes = new System.Windows.Forms.DataGridView();
             this.lblTituloBuscar = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
             this.lblErrorIncidencias = new System.Windows.Forms.Label();
-            this.btnRedimensionar = new System.Windows.Forms.PictureBox();
-            this.btnMinimizar = new System.Windows.Forms.PictureBox();
-            this.btnCerrar = new System.Windows.Forms.PictureBox();
             this.btnIncidencias = new DentalSoft.ControlesPersonalizados.BotonPersonalizado();
             this.btnLimpiarFecha = new DentalSoft.ControlesPersonalizados.BotonPersonalizado();
             this.selectorFecha1 = new DentalSoft.ControlesPersonalizados.SelectorFecha();
             this.txtBuscar = new DentalSoft.TextboxPersonalizado();
             this.pnlCabecera.SuspendLayout();
-            this.pnlContenedor.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dgvFichajes)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.btnRedimensionar)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.btnMinimizar)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.btnCerrar)).BeginInit();
+            this.pnlContenedor.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvFichajes)).BeginInit();
             this.SuspendLayout();
             // 
             // pnlCabecera
@@ -72,67 +72,10 @@
             this.lblTitulo.ForeColor = System.Drawing.Color.White;
             this.lblTitulo.Location = new System.Drawing.Point(12, 6);
             this.lblTitulo.Name = "lblTitulo";
-            this.lblTitulo.Size = new System.Drawing.Size(98, 23);
+            this.lblTitulo.Size = new System.Drawing.Size(126, 29);
             this.lblTitulo.TabIndex = 41;
             this.lblTitulo.Text = "DentalSoft";
             this.lblTitulo.MouseDown += new System.Windows.Forms.MouseEventHandler(this.lblTitulo_MouseDown);
-            // 
-            // pnlContenedor
-            // 
-            this.pnlContenedor.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.pnlContenedor.Controls.Add(this.dgvFichajes);
-            this.pnlContenedor.Location = new System.Drawing.Point(16, 160);
-            this.pnlContenedor.Name = "pnlContenedor";
-            this.pnlContenedor.Size = new System.Drawing.Size(1062, 437);
-            this.pnlContenedor.TabIndex = 4;
-            // 
-            // dgvFichajes
-            // 
-            this.dgvFichajes.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dgvFichajes.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.dgvFichajes.Location = new System.Drawing.Point(0, 0);
-            this.dgvFichajes.Name = "dgvFichajes";
-            this.dgvFichajes.Size = new System.Drawing.Size(1062, 437);
-            this.dgvFichajes.TabIndex = 0;
-            this.dgvFichajes.CellContentDoubleClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvFichajes_CellContentDoubleClick);
-            this.dgvFichajes.CellFormatting += new System.Windows.Forms.DataGridViewCellFormattingEventHandler(this.dgvFichajes_CellFormatting);
-            // 
-            // lblTituloBuscar
-            // 
-            this.lblTituloBuscar.AutoSize = true;
-            this.lblTituloBuscar.Font = new System.Drawing.Font("Roboto", 12F);
-            this.lblTituloBuscar.Location = new System.Drawing.Point(24, 100);
-            this.lblTituloBuscar.Name = "lblTituloBuscar";
-            this.lblTituloBuscar.Size = new System.Drawing.Size(62, 19);
-            this.lblTituloBuscar.TabIndex = 7;
-            this.lblTituloBuscar.Text = "Buscar:";
-            // 
-            // label1
-            // 
-            this.label1.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Roboto", 12F);
-            this.label1.Location = new System.Drawing.Point(480, 101);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(125, 19);
-            this.label1.TabIndex = 9;
-            this.label1.Text = "Filtrar por fecha:";
-            // 
-            // lblErrorIncidencias
-            // 
-            this.lblErrorIncidencias.AutoSize = true;
-            this.lblErrorIncidencias.Font = new System.Drawing.Font("Roboto", 12F);
-            this.lblErrorIncidencias.ForeColor = System.Drawing.Color.IndianRed;
-            this.lblErrorIncidencias.Image = ((System.Drawing.Image)(resources.GetObject("lblErrorIncidencias.Image")));
-            this.lblErrorIncidencias.ImageAlign = System.Drawing.ContentAlignment.TopLeft;
-            this.lblErrorIncidencias.Location = new System.Drawing.Point(325, 138);
-            this.lblErrorIncidencias.Name = "lblErrorIncidencias";
-            this.lblErrorIncidencias.Size = new System.Drawing.Size(106, 19);
-            this.lblErrorIncidencias.TabIndex = 49;
-            this.lblErrorIncidencias.Text = "Mensaje Error";
-            this.lblErrorIncidencias.Visible = false;
             // 
             // btnRedimensionar
             // 
@@ -173,8 +116,73 @@
             this.btnCerrar.TabStop = false;
             this.btnCerrar.Click += new System.EventHandler(this.btnCerrar_Click);
             // 
+            // pnlContenedor
+            // 
+            this.pnlContenedor.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.pnlContenedor.Controls.Add(this.dgvFichajes);
+            this.pnlContenedor.Location = new System.Drawing.Point(16, 160);
+            this.pnlContenedor.Name = "pnlContenedor";
+            this.pnlContenedor.Size = new System.Drawing.Size(1062, 437);
+            this.pnlContenedor.TabIndex = 4;
+            // 
+            // dgvFichajes
+            // 
+            this.dgvFichajes.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.dgvFichajes.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dgvFichajes.Location = new System.Drawing.Point(0, 0);
+            this.dgvFichajes.Name = "dgvFichajes";
+            this.dgvFichajes.RowHeadersWidth = 51;
+            this.dgvFichajes.Size = new System.Drawing.Size(1062, 437);
+            this.dgvFichajes.TabIndex = 0;
+            this.dgvFichajes.CellContentDoubleClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvFichajes_CellContentDoubleClick);
+            this.dgvFichajes.CellFormatting += new System.Windows.Forms.DataGridViewCellFormattingEventHandler(this.dgvFichajes_CellFormatting);
+            // 
+            // lblTituloBuscar
+            // 
+            this.lblTituloBuscar.AutoSize = true;
+            this.lblTituloBuscar.Font = new System.Drawing.Font("Roboto", 12F);
+            this.lblTituloBuscar.Location = new System.Drawing.Point(24, 100);
+            this.lblTituloBuscar.Name = "lblTituloBuscar";
+            this.lblTituloBuscar.Size = new System.Drawing.Size(76, 24);
+            this.lblTituloBuscar.TabIndex = 7;
+            this.lblTituloBuscar.Text = "Buscar:";
+            // 
+            // label1
+            // 
+            this.label1.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.label1.AutoSize = true;
+            this.label1.Font = new System.Drawing.Font("Roboto", 12F);
+            this.label1.Location = new System.Drawing.Point(480, 101);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(157, 24);
+            this.label1.TabIndex = 9;
+            this.label1.Text = "Filtrar por fecha:";
+            // 
+            // lblErrorIncidencias
+            // 
+            this.lblErrorIncidencias.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.lblErrorIncidencias.AutoSize = true;
+            this.lblErrorIncidencias.Font = new System.Drawing.Font("Roboto", 12F);
+            this.lblErrorIncidencias.ForeColor = System.Drawing.Color.IndianRed;
+            this.lblErrorIncidencias.Image = ((System.Drawing.Image)(resources.GetObject("lblErrorIncidencias.Image")));
+            this.lblErrorIncidencias.ImageAlign = System.Drawing.ContentAlignment.TopLeft;
+            this.lblErrorIncidencias.Location = new System.Drawing.Point(325, 138);
+            this.lblErrorIncidencias.Name = "lblErrorIncidencias";
+            this.lblErrorIncidencias.Size = new System.Drawing.Size(134, 24);
+            this.lblErrorIncidencias.TabIndex = 49;
+            this.lblErrorIncidencias.Text = "Mensaje Error";
+            this.lblErrorIncidencias.Visible = false;
+            // 
             // btnIncidencias
             // 
+            this.btnIncidencias.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.btnIncidencias.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(16)))), ((int)(((byte)(110)))), ((int)(((byte)(196)))));
             this.btnIncidencias.BordeColor = System.Drawing.Color.FromArgb(((int)(((byte)(16)))), ((int)(((byte)(110)))), ((int)(((byte)(196)))));
             this.btnIncidencias.BordeRadio = 31;
@@ -195,6 +203,7 @@
             // 
             // btnLimpiarFecha
             // 
+            this.btnLimpiarFecha.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.btnLimpiarFecha.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(16)))), ((int)(((byte)(110)))), ((int)(((byte)(196)))));
             this.btnLimpiarFecha.BordeColor = System.Drawing.Color.FromArgb(((int)(((byte)(16)))), ((int)(((byte)(110)))), ((int)(((byte)(196)))));
             this.btnLimpiarFecha.BordeRadio = 31;
@@ -215,7 +224,8 @@
             // 
             // selectorFecha1
             // 
-            this.selectorFecha1.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.selectorFecha1.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.selectorFecha1.BordeColor = System.Drawing.Color.FromArgb(((int)(((byte)(16)))), ((int)(((byte)(110)))), ((int)(((byte)(196)))));
             this.selectorFecha1.BordeTamaño = 0;
             this.selectorFecha1.FondoColor = System.Drawing.Color.FromArgb(((int)(((byte)(16)))), ((int)(((byte)(110)))), ((int)(((byte)(196)))));
@@ -249,7 +259,7 @@
             this.txtBuscar.Name = "txtBuscar";
             this.txtBuscar.Padding = new System.Windows.Forms.Padding(10, 7, 10, 7);
             this.txtBuscar.PosicionSeleccion = 0;
-            this.txtBuscar.Size = new System.Drawing.Size(338, 30);
+            this.txtBuscar.Size = new System.Drawing.Size(338, 34);
             this.txtBuscar.SubrayadoEstilo = true;
             this.txtBuscar.TabIndex = 0;
             this.txtBuscar.TamañoMaximo = 30000;
@@ -258,7 +268,7 @@
             // 
             // ControlHorario
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 14F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 18F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1090, 609);
             this.Controls.Add(this.lblErrorIncidencias);
@@ -280,11 +290,11 @@
             this.Load += new System.EventHandler(this.ControlHorario_Load);
             this.pnlCabecera.ResumeLayout(false);
             this.pnlCabecera.PerformLayout();
-            this.pnlContenedor.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.dgvFichajes)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.btnRedimensionar)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.btnMinimizar)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.btnCerrar)).EndInit();
+            this.pnlContenedor.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.dgvFichajes)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 

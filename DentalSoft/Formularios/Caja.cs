@@ -258,14 +258,13 @@ namespace DentalSoft.Formularios
                     reader = comando.ExecuteReader();
                     if (reader.HasRows)
                     {
+                        int posicion = 0;
                         while (reader.Read())
                         {
-                            foreach (DetalleCobro detalle in detalles)
-                            {
-                                detalle.Cantidad = reader.GetInt32(0);
-                                detalle.Subtotal = detalle.Cantidad * detalle.Precio;
-                                dgvCobro.Rows.Add(detalle.Tratamiento, detalle.Cantidad, detalle.Precio, detalle.Subtotal);
-                            }
+                            detalles[posicion].Cantidad = reader.GetInt32(0);
+                            detalles[posicion].Subtotal = detalles[posicion].Cantidad * detalles[posicion].Precio;
+                            dgvCobro.Rows.Add(detalles[posicion].Tratamiento, detalles[posicion].Cantidad, detalles[posicion].Precio, detalles[posicion].Subtotal);
+                            posicion++;
                         }
                     }
                     reader.Close();
@@ -312,6 +311,7 @@ namespace DentalSoft.Formularios
                         conexion.CerrarConexion();
                         foreach (DetalleCobro detalle in listaDetallesCobros)
                             dgvCobro.Rows.Add(detalle.Tratamiento, detalle.Cantidad, detalle.Precio, detalle.Subtotal);
+                        CargarNombrePaciente("presupuesto");
                     }
                 }
                 else
@@ -363,7 +363,7 @@ namespace DentalSoft.Formularios
         private bool ComprobarValidezPresupuesto()
         {
             bool sw = false;
-            TimeSpan validezPresupuesto = DateTime.Parse(this.presupuesto.Fecha) - DateTime.Now;
+            TimeSpan validezPresupuesto = DateTime.Now - DateTime.Parse(this.presupuesto.Fecha);
             if (validezPresupuesto.Days <= 30)
                 sw = true;
             return sw;
@@ -451,6 +451,7 @@ namespace DentalSoft.Formularios
 
         private void txtPaciente__TextChanged(object sender, EventArgs e)
         {
+            OcultarMensaje();
             if (txtPaciente.Texto.Equals(""))
                 MostrarBuscarPaciente();
             else
@@ -459,6 +460,7 @@ namespace DentalSoft.Formularios
 
         private void txtPresupuesto__TextChanged(object sender, EventArgs e)
         {
+            OcultarMensaje();
             if (txtPresupuesto.Texto.Equals(""))
                 MostrarBuscarPresupuesto();
             else
@@ -480,8 +482,9 @@ namespace DentalSoft.Formularios
         private void btnCargarPaciente_Click(object sender, EventArgs e)
         {
             OcultarMensaje();
-            if (!CargarTratamientoPaciente())
-                MostrarMensaje("El paciente no se ha realizado un tratamiento hoy", "paciente");
+            if(dgvCobro.Rows.Count == 0)
+                if (!CargarTratamientoPaciente())
+                    MostrarMensaje("El paciente no se ha realizado un tratamiento hoy", "paciente");
         }
 
         private void btnBuscarPaciente_Click(object sender, EventArgs e)
@@ -496,8 +499,9 @@ namespace DentalSoft.Formularios
         private void btnCargarPresupuesto_Click(object sender, EventArgs e)
         {
             OcultarMensaje();
-            if (! CargarTratamientoPresupuesto())
-                MostrarMensaje("El presupuesto no existe", "presupuesto");
+            if(dgvCobro.Rows.Count == 0)
+                if (! CargarTratamientoPresupuesto())
+                    MostrarMensaje("El presupuesto no existe", "presupuesto");
         }
 
         private void btnBuscarPresupuesto_Click(object sender, EventArgs e)
@@ -631,6 +635,11 @@ namespace DentalSoft.Formularios
                     }
                 }
             }
+        }
+
+        private void btnAtras_Click(object sender, EventArgs e)
+        {
+            this.Close();
         }
         #endregion
     }

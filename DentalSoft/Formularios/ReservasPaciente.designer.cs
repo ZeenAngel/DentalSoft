@@ -57,16 +57,20 @@
             this.dgvReservas.Dock = System.Windows.Forms.DockStyle.Fill;
             this.dgvReservas.Location = new System.Drawing.Point(0, 0);
             this.dgvReservas.Name = "dgvReservas";
+            this.dgvReservas.RowHeadersWidth = 51;
             this.dgvReservas.Size = new System.Drawing.Size(1202, 487);
             this.dgvReservas.TabIndex = 0;
             // 
             // lblFiltrar
             // 
+            this.lblFiltrar.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.lblFiltrar.AutoSize = true;
             this.lblFiltrar.Font = new System.Drawing.Font("Roboto", 14F);
             this.lblFiltrar.Location = new System.Drawing.Point(372, 129);
             this.lblFiltrar.Name = "lblFiltrar";
-            this.lblFiltrar.Size = new System.Drawing.Size(144, 23);
+            this.lblFiltrar.Size = new System.Drawing.Size(182, 29);
             this.lblFiltrar.TabIndex = 79;
             this.lblFiltrar.Text = "Filtrar por fecha";
             // 
@@ -76,6 +80,9 @@
             // 
             // mcFiltroFecha
             // 
+            this.mcFiltroFecha.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.mcFiltroFecha.BordeColor = System.Drawing.Color.FromArgb(((int)(((byte)(16)))), ((int)(((byte)(110)))), ((int)(((byte)(196)))));
             this.mcFiltroFecha.BordeTamaño = 0;
             this.mcFiltroFecha.CalendarFont = new System.Drawing.Font("Roboto", 9.5F);
@@ -94,9 +101,6 @@
             // 
             // btnAtras
             // 
-            this.btnAtras.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
             this.btnAtras.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnAtras.Image = ((System.Drawing.Image)(resources.GetObject("btnAtras.Image")));
             this.btnAtras.Location = new System.Drawing.Point(40, 28);
@@ -109,7 +113,7 @@
             // 
             // ReservasPaciente
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 14F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 18F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(236)))), ((int)(((byte)(236)))), ((int)(((byte)(236)))));
             this.ClientSize = new System.Drawing.Size(1275, 715);

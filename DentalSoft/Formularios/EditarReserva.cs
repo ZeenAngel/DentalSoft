@@ -77,9 +77,9 @@ namespace DentalSoft
             }
         }
 
-        private void EstablecerFecha() // MODIFICAR PARECE QUE NO FUNCIONA
+        private void EstablecerFecha()
         {
-            if(! this.fecha.Equals(""))
+            if(!this.fecha.Equals(""))
                 mcFechaEditarReserva.Value = DateTime.Parse(this.fecha);
         }
         #endregion
@@ -124,7 +124,7 @@ namespace DentalSoft
 
         private void EditarReserva_Load(object sender, EventArgs e)
         {
-            mcFechaEditarReserva.MinDate = DateTime.Now;
+            mcFechaEditarReserva.MinDate = DateTime.Now.AddDays(-1);
             if (conexion.EstablecerConexion())
             {
                 string sentencia = "SELECT DATE_FORMAT(r.Fecha, \"%d-%m-%Y\"), r.Hora, p.Nombre, p.Apellido1, p.Apellido2, e.Nombre, e.Apellido1, e.Apellido2 " +

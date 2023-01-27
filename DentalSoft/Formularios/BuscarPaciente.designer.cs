@@ -38,12 +38,14 @@
             this.cbFiltrosBuscarPaciente = new DentalSoft.ControlesPersonalizados.ComboBoxPersonalizado();
             this.pnlDgvBuscarPaciente = new System.Windows.Forms.Panel();
             this.dgvPacientesBuscarPaciente = new System.Windows.Forms.DataGridView();
+            this.panel1 = new System.Windows.Forms.Panel();
             this.pnlCabecera.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.btnRedimensionar)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.btnMinimizar)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.btnCerrar)).BeginInit();
             this.pnlDgvBuscarPaciente.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvPacientesBuscarPaciente)).BeginInit();
+            this.panel1.SuspendLayout();
             this.SuspendLayout();
             // 
             // pnlCabecera
@@ -67,7 +69,7 @@
             this.label1.ForeColor = System.Drawing.Color.White;
             this.label1.Location = new System.Drawing.Point(12, 6);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(98, 23);
+            this.label1.Size = new System.Drawing.Size(126, 29);
             this.label1.TabIndex = 41;
             this.label1.Text = "DentalSoft";
             this.label1.MouseDown += new System.Windows.Forms.MouseEventHandler(this.label1_MouseDown);
@@ -113,6 +115,7 @@
             // 
             // txtPacienteBuscarPaciente
             // 
+            this.txtPacienteBuscarPaciente.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.txtPacienteBuscarPaciente.BackColor = System.Drawing.Color.White;
             this.txtPacienteBuscarPaciente.BordeColor = System.Drawing.Color.FromArgb(((int)(((byte)(16)))), ((int)(((byte)(110)))), ((int)(((byte)(196)))));
             this.txtPacienteBuscarPaciente.BordeColorFoco = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(195)))), ((int)(((byte)(165)))));
@@ -121,7 +124,7 @@
             this.txtPacienteBuscarPaciente.Contraseña = false;
             this.txtPacienteBuscarPaciente.Font = new System.Drawing.Font("Roboto", 9.5F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtPacienteBuscarPaciente.ForeColor = System.Drawing.Color.Black;
-            this.txtPacienteBuscarPaciente.Location = new System.Drawing.Point(55, 85);
+            this.txtPacienteBuscarPaciente.Location = new System.Drawing.Point(24, 12);
             this.txtPacienteBuscarPaciente.MarcadorPosicionColor = System.Drawing.Color.DarkGray;
             this.txtPacienteBuscarPaciente.MarcadorPosicionTexto = "Introduce el paciente a buscar";
             this.txtPacienteBuscarPaciente.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
@@ -129,7 +132,7 @@
             this.txtPacienteBuscarPaciente.Name = "txtPacienteBuscarPaciente";
             this.txtPacienteBuscarPaciente.Padding = new System.Windows.Forms.Padding(10, 7, 10, 7);
             this.txtPacienteBuscarPaciente.PosicionSeleccion = 0;
-            this.txtPacienteBuscarPaciente.Size = new System.Drawing.Size(464, 30);
+            this.txtPacienteBuscarPaciente.Size = new System.Drawing.Size(464, 34);
             this.txtPacienteBuscarPaciente.SubrayadoEstilo = true;
             this.txtPacienteBuscarPaciente.TabIndex = 0;
             this.txtPacienteBuscarPaciente.TamañoMaximo = 30000;
@@ -138,7 +141,7 @@
             // 
             // cbFiltrosBuscarPaciente
             // 
-            this.cbFiltrosBuscarPaciente.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.cbFiltrosBuscarPaciente.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.cbFiltrosBuscarPaciente.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(16)))), ((int)(((byte)(110)))), ((int)(((byte)(196)))));
             this.cbFiltrosBuscarPaciente.BordeColor = System.Drawing.Color.FromArgb(((int)(((byte)(16)))), ((int)(((byte)(110)))), ((int)(((byte)(196)))));
             this.cbFiltrosBuscarPaciente.BordeTamaño = 1;
@@ -149,7 +152,7 @@
             this.cbFiltrosBuscarPaciente.ForeColor = System.Drawing.Color.Black;
             this.cbFiltrosBuscarPaciente.ListaColorFondo = System.Drawing.Color.WhiteSmoke;
             this.cbFiltrosBuscarPaciente.ListColorTexto = System.Drawing.Color.Black;
-            this.cbFiltrosBuscarPaciente.Location = new System.Drawing.Point(561, 85);
+            this.cbFiltrosBuscarPaciente.Location = new System.Drawing.Point(530, 12);
             this.cbFiltrosBuscarPaciente.MinimumSize = new System.Drawing.Size(200, 30);
             this.cbFiltrosBuscarPaciente.Name = "cbFiltrosBuscarPaciente";
             this.cbFiltrosBuscarPaciente.Padding = new System.Windows.Forms.Padding(1);
@@ -175,19 +178,30 @@
             this.dgvPacientesBuscarPaciente.Dock = System.Windows.Forms.DockStyle.Fill;
             this.dgvPacientesBuscarPaciente.Location = new System.Drawing.Point(0, 0);
             this.dgvPacientesBuscarPaciente.Name = "dgvPacientesBuscarPaciente";
+            this.dgvPacientesBuscarPaciente.RowHeadersWidth = 51;
             this.dgvPacientesBuscarPaciente.Size = new System.Drawing.Size(706, 316);
             this.dgvPacientesBuscarPaciente.TabIndex = 0;
             this.dgvPacientesBuscarPaciente.CellContentDoubleClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvPacientesBuscarPaciente_CellContentDoubleClick);
             // 
+            // panel1
+            // 
+            this.panel1.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.panel1.Controls.Add(this.cbFiltrosBuscarPaciente);
+            this.panel1.Controls.Add(this.txtPacienteBuscarPaciente);
+            this.panel1.Location = new System.Drawing.Point(22, 66);
+            this.panel1.Name = "panel1";
+            this.panel1.Size = new System.Drawing.Size(772, 56);
+            this.panel1.TabIndex = 1;
+            // 
             // BuscarPaciente
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 17F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(236)))), ((int)(((byte)(236)))), ((int)(((byte)(236)))));
             this.ClientSize = new System.Drawing.Size(816, 490);
+            this.Controls.Add(this.panel1);
             this.Controls.Add(this.pnlDgvBuscarPaciente);
-            this.Controls.Add(this.cbFiltrosBuscarPaciente);
-            this.Controls.Add(this.txtPacienteBuscarPaciente);
             this.Controls.Add(this.pnlCabecera);
             this.Font = new System.Drawing.Font("Roboto", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
@@ -203,6 +217,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.btnCerrar)).EndInit();
             this.pnlDgvBuscarPaciente.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.dgvPacientesBuscarPaciente)).EndInit();
+            this.panel1.ResumeLayout(false);
             this.ResumeLayout(false);
 
         }
@@ -218,5 +233,6 @@
         private ControlesPersonalizados.ComboBoxPersonalizado cbFiltrosBuscarPaciente;
         private System.Windows.Forms.Panel pnlDgvBuscarPaciente;
         private System.Windows.Forms.DataGridView dgvPacientesBuscarPaciente;
+        private System.Windows.Forms.Panel panel1;
     }
 }

@@ -36,14 +36,13 @@
             this.btnNuevo = new DentalSoft.ControlesPersonalizados.BotonPersonalizado();
             this.btnEliminar = new DentalSoft.ControlesPersonalizados.BotonPersonalizado();
             this.btnVisualizar = new DentalSoft.ControlesPersonalizados.BotonPersonalizado();
+            this.panel1 = new System.Windows.Forms.Panel();
             ((System.ComponentModel.ISupportInitialize)(this.btnAtras)).BeginInit();
+            this.panel1.SuspendLayout();
             this.SuspendLayout();
             // 
             // btnAtras
             // 
-            this.btnAtras.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
             this.btnAtras.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnAtras.Image = ((System.Drawing.Image)(resources.GetObject("btnAtras.Image")));
             this.btnAtras.Location = new System.Drawing.Point(40, 28);
@@ -56,6 +55,9 @@
             // 
             // lvCargarFicheros
             // 
+            this.lvCargarFicheros.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.lvCargarFicheros.HideSelection = false;
             this.lvCargarFicheros.Location = new System.Drawing.Point(153, 152);
             this.lvCargarFicheros.Name = "lvCargarFicheros";
@@ -65,11 +67,14 @@
             // 
             // lblCargarFicheros
             // 
+            this.lblCargarFicheros.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.lblCargarFicheros.AutoSize = true;
             this.lblCargarFicheros.Font = new System.Drawing.Font("Roboto", 14F);
             this.lblCargarFicheros.Location = new System.Drawing.Point(149, 112);
             this.lblCargarFicheros.Name = "lblCargarFicheros";
-            this.lblCargarFicheros.Size = new System.Drawing.Size(225, 23);
+            this.lblCargarFicheros.Size = new System.Drawing.Size(287, 29);
             this.lblCargarFicheros.TabIndex = 80;
             this.lblCargarFicheros.Text = "Documentos del paciente";
             // 
@@ -83,16 +88,14 @@
             this.lblErrorConexion.ImageAlign = System.Drawing.ContentAlignment.TopLeft;
             this.lblErrorConexion.Location = new System.Drawing.Point(150, 668);
             this.lblErrorConexion.Name = "lblErrorConexion";
-            this.lblErrorConexion.Size = new System.Drawing.Size(85, 15);
+            this.lblErrorConexion.Size = new System.Drawing.Size(106, 19);
             this.lblErrorConexion.TabIndex = 83;
             this.lblErrorConexion.Text = "Mensaje Error";
             this.lblErrorConexion.Visible = false;
             // 
             // btnNuevo
             // 
-            this.btnNuevo.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
+            this.btnNuevo.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.btnNuevo.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(16)))), ((int)(((byte)(110)))), ((int)(((byte)(196)))));
             this.btnNuevo.BordeColor = System.Drawing.Color.PaleVioletRed;
             this.btnNuevo.BordeRadio = 40;
@@ -102,7 +105,7 @@
             this.btnNuevo.FondoColor = System.Drawing.Color.FromArgb(((int)(((byte)(16)))), ((int)(((byte)(110)))), ((int)(((byte)(196)))));
             this.btnNuevo.Font = new System.Drawing.Font("Roboto", 12F);
             this.btnNuevo.ForeColor = System.Drawing.Color.White;
-            this.btnNuevo.Location = new System.Drawing.Point(812, 465);
+            this.btnNuevo.Location = new System.Drawing.Point(124, 327);
             this.btnNuevo.Name = "btnNuevo";
             this.btnNuevo.Size = new System.Drawing.Size(163, 40);
             this.btnNuevo.TabIndex = 15;
@@ -113,9 +116,7 @@
             // 
             // btnEliminar
             // 
-            this.btnEliminar.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
+            this.btnEliminar.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.btnEliminar.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(16)))), ((int)(((byte)(110)))), ((int)(((byte)(196)))));
             this.btnEliminar.BordeColor = System.Drawing.Color.PaleVioletRed;
             this.btnEliminar.BordeRadio = 40;
@@ -125,7 +126,7 @@
             this.btnEliminar.FondoColor = System.Drawing.Color.FromArgb(((int)(((byte)(16)))), ((int)(((byte)(110)))), ((int)(((byte)(196)))));
             this.btnEliminar.Font = new System.Drawing.Font("Roboto", 12F);
             this.btnEliminar.ForeColor = System.Drawing.Color.White;
-            this.btnEliminar.Location = new System.Drawing.Point(812, 342);
+            this.btnEliminar.Location = new System.Drawing.Point(124, 204);
             this.btnEliminar.Name = "btnEliminar";
             this.btnEliminar.Size = new System.Drawing.Size(163, 40);
             this.btnEliminar.TabIndex = 10;
@@ -136,9 +137,7 @@
             // 
             // btnVisualizar
             // 
-            this.btnVisualizar.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
+            this.btnVisualizar.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.btnVisualizar.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(16)))), ((int)(((byte)(110)))), ((int)(((byte)(196)))));
             this.btnVisualizar.BordeColor = System.Drawing.Color.PaleVioletRed;
             this.btnVisualizar.BordeRadio = 40;
@@ -148,7 +147,7 @@
             this.btnVisualizar.FondoColor = System.Drawing.Color.FromArgb(((int)(((byte)(16)))), ((int)(((byte)(110)))), ((int)(((byte)(196)))));
             this.btnVisualizar.Font = new System.Drawing.Font("Roboto", 12F);
             this.btnVisualizar.ForeColor = System.Drawing.Color.White;
-            this.btnVisualizar.Location = new System.Drawing.Point(812, 218);
+            this.btnVisualizar.Location = new System.Drawing.Point(124, 80);
             this.btnVisualizar.Name = "btnVisualizar";
             this.btnVisualizar.Size = new System.Drawing.Size(163, 40);
             this.btnVisualizar.TabIndex = 5;
@@ -157,15 +156,25 @@
             this.btnVisualizar.UseVisualStyleBackColor = false;
             this.btnVisualizar.Click += new System.EventHandler(this.btnVisualizar_Click);
             // 
+            // panel1
+            // 
+            this.panel1.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.panel1.Controls.Add(this.btnVisualizar);
+            this.panel1.Controls.Add(this.btnNuevo);
+            this.panel1.Controls.Add(this.btnEliminar);
+            this.panel1.Location = new System.Drawing.Point(709, 165);
+            this.panel1.Name = "panel1";
+            this.panel1.Size = new System.Drawing.Size(395, 469);
+            this.panel1.TabIndex = 84;
+            // 
             // ArchivosPaciente
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 14F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 18F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(236)))), ((int)(((byte)(236)))), ((int)(((byte)(236)))));
             this.ClientSize = new System.Drawing.Size(1275, 715);
-            this.Controls.Add(this.btnNuevo);
-            this.Controls.Add(this.btnEliminar);
-            this.Controls.Add(this.btnVisualizar);
+            this.Controls.Add(this.panel1);
             this.Controls.Add(this.lblErrorConexion);
             this.Controls.Add(this.lblCargarFicheros);
             this.Controls.Add(this.lvCargarFicheros);
@@ -177,6 +186,7 @@
             this.Text = "ArchivosPaciente";
             this.Load += new System.EventHandler(this.ArchivosPaciente_Load);
             ((System.ComponentModel.ISupportInitialize)(this.btnAtras)).EndInit();
+            this.panel1.ResumeLayout(false);
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -191,5 +201,6 @@
         private ControlesPersonalizados.BotonPersonalizado btnNuevo;
         private ControlesPersonalizados.BotonPersonalizado btnEliminar;
         private ControlesPersonalizados.BotonPersonalizado btnVisualizar;
+        private System.Windows.Forms.Panel panel1;
     }
 }

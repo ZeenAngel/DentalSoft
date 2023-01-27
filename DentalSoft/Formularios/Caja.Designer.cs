@@ -80,7 +80,7 @@
             this.lblNombrePaciente.Font = new System.Drawing.Font("Roboto", 14F);
             this.lblNombrePaciente.Location = new System.Drawing.Point(179, 38);
             this.lblNombrePaciente.Name = "lblNombrePaciente";
-            this.lblNombrePaciente.Size = new System.Drawing.Size(157, 23);
+            this.lblNombrePaciente.Size = new System.Drawing.Size(199, 29);
             this.lblNombrePaciente.TabIndex = 36;
             this.lblNombrePaciente.Text = "Nombre Paciente";
             // 
@@ -156,7 +156,7 @@
             this.lblErrorPresupuesto.ImageAlign = System.Drawing.ContentAlignment.TopLeft;
             this.lblErrorPresupuesto.Location = new System.Drawing.Point(713, 54);
             this.lblErrorPresupuesto.Name = "lblErrorPresupuesto";
-            this.lblErrorPresupuesto.Size = new System.Drawing.Size(85, 15);
+            this.lblErrorPresupuesto.Size = new System.Drawing.Size(106, 19);
             this.lblErrorPresupuesto.TabIndex = 47;
             this.lblErrorPresupuesto.Text = "Mensaje Error";
             this.lblErrorPresupuesto.Visible = false;
@@ -170,7 +170,7 @@
             this.lblErrorPaciente.ImageAlign = System.Drawing.ContentAlignment.TopLeft;
             this.lblErrorPaciente.Location = new System.Drawing.Point(155, 54);
             this.lblErrorPaciente.Name = "lblErrorPaciente";
-            this.lblErrorPaciente.Size = new System.Drawing.Size(85, 15);
+            this.lblErrorPaciente.Size = new System.Drawing.Size(106, 19);
             this.lblErrorPaciente.TabIndex = 46;
             this.lblErrorPaciente.Text = "Mensaje Error";
             this.lblErrorPaciente.Visible = false;
@@ -234,9 +234,11 @@
             this.txtPresupuesto.Multilinea = false;
             this.txtPresupuesto.Name = "txtPresupuesto";
             this.txtPresupuesto.Padding = new System.Windows.Forms.Padding(10, 7, 10, 7);
-            this.txtPresupuesto.Size = new System.Drawing.Size(250, 30);
+            this.txtPresupuesto.PosicionSeleccion = 0;
+            this.txtPresupuesto.Size = new System.Drawing.Size(250, 34);
             this.txtPresupuesto.SubrayadoEstilo = true;
             this.txtPresupuesto.TabIndex = 42;
+            this.txtPresupuesto.TamañoMaximo = 30000;
             this.txtPresupuesto.Texto = "";
             this.txtPresupuesto._TextChanged += new System.EventHandler(this.txtPresupuesto__TextChanged);
             this.txtPresupuesto.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtPresupuesto_KeyPress);
@@ -248,7 +250,7 @@
             this.label4.ForeColor = System.Drawing.Color.Black;
             this.label4.Location = new System.Drawing.Point(579, 25);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(116, 23);
+            this.label4.Size = new System.Drawing.Size(147, 29);
             this.label4.TabIndex = 45;
             this.label4.Text = "Presupuesto";
             // 
@@ -269,9 +271,11 @@
             this.txtPaciente.Multilinea = false;
             this.txtPaciente.Name = "txtPaciente";
             this.txtPaciente.Padding = new System.Windows.Forms.Padding(10, 7, 10, 7);
-            this.txtPaciente.Size = new System.Drawing.Size(250, 30);
+            this.txtPaciente.PosicionSeleccion = 0;
+            this.txtPaciente.Size = new System.Drawing.Size(250, 34);
             this.txtPaciente.SubrayadoEstilo = true;
             this.txtPaciente.TabIndex = 40;
+            this.txtPaciente.TamañoMaximo = 30000;
             this.txtPaciente.Texto = "";
             this.txtPaciente._TextChanged += new System.EventHandler(this.txtPaciente__TextChanged);
             this.txtPaciente.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtPaciente_KeyPress);
@@ -283,14 +287,15 @@
             this.lblPacienteNuevaReserva.ForeColor = System.Drawing.Color.Black;
             this.lblPacienteNuevaReserva.Location = new System.Drawing.Point(54, 25);
             this.lblPacienteNuevaReserva.Name = "lblPacienteNuevaReserva";
-            this.lblPacienteNuevaReserva.Size = new System.Drawing.Size(83, 23);
+            this.lblPacienteNuevaReserva.Size = new System.Drawing.Size(107, 29);
             this.lblPacienteNuevaReserva.TabIndex = 44;
             this.lblPacienteNuevaReserva.Text = "Paciente";
             // 
             // groupBox1
             // 
-            this.groupBox1.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left)));
+            this.groupBox1.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.groupBox1.Controls.Add(this.btnOtros);
             this.groupBox1.Controls.Add(this.btnImplante);
             this.groupBox1.Controls.Add(this.btnCuretaje);
@@ -483,7 +488,8 @@
             // 
             // groupBox2
             // 
-            this.groupBox2.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            this.groupBox2.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.groupBox2.Controls.Add(this.lblErrorEntrega);
             this.groupBox2.Controls.Add(this.btnCobrar);
@@ -511,7 +517,7 @@
             this.lblErrorEntrega.ImageAlign = System.Drawing.ContentAlignment.TopLeft;
             this.lblErrorEntrega.Location = new System.Drawing.Point(161, 424);
             this.lblErrorEntrega.Name = "lblErrorEntrega";
-            this.lblErrorEntrega.Size = new System.Drawing.Size(85, 15);
+            this.lblErrorEntrega.Size = new System.Drawing.Size(106, 19);
             this.lblErrorEntrega.TabIndex = 78;
             this.lblErrorEntrega.Text = "Mensaje Error";
             this.lblErrorEntrega.Visible = false;
@@ -544,7 +550,7 @@
             this.lblImporteCambio.Font = new System.Drawing.Font("Roboto", 14F);
             this.lblImporteCambio.Location = new System.Drawing.Point(399, 393);
             this.lblImporteCambio.Name = "lblImporteCambio";
-            this.lblImporteCambio.Size = new System.Drawing.Size(76, 23);
+            this.lblImporteCambio.Size = new System.Drawing.Size(98, 29);
             this.lblImporteCambio.TabIndex = 73;
             this.lblImporteCambio.Text = "Importe";
             // 
@@ -554,7 +560,7 @@
             this.lblCambio.Font = new System.Drawing.Font("Roboto", 14F);
             this.lblCambio.Location = new System.Drawing.Point(322, 393);
             this.lblCambio.Name = "lblCambio";
-            this.lblCambio.Size = new System.Drawing.Size(81, 23);
+            this.lblCambio.Size = new System.Drawing.Size(102, 29);
             this.lblCambio.TabIndex = 72;
             this.lblCambio.Text = "Cambio:";
             // 
@@ -575,9 +581,11 @@
             this.txtEntrega.Multilinea = false;
             this.txtEntrega.Name = "txtEntrega";
             this.txtEntrega.Padding = new System.Windows.Forms.Padding(10, 7, 10, 7);
-            this.txtEntrega.Size = new System.Drawing.Size(110, 30);
+            this.txtEntrega.PosicionSeleccion = 0;
+            this.txtEntrega.Size = new System.Drawing.Size(110, 34);
             this.txtEntrega.SubrayadoEstilo = true;
             this.txtEntrega.TabIndex = 76;
+            this.txtEntrega.TamañoMaximo = 30000;
             this.txtEntrega.Texto = "";
             this.txtEntrega.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtEntrega_KeyPress);
             // 
@@ -587,7 +595,7 @@
             this.lblEntrega.Font = new System.Drawing.Font("Roboto", 14F);
             this.lblEntrega.Location = new System.Drawing.Point(77, 393);
             this.lblEntrega.Name = "lblEntrega";
-            this.lblEntrega.Size = new System.Drawing.Size(79, 23);
+            this.lblEntrega.Size = new System.Drawing.Size(101, 29);
             this.lblEntrega.TabIndex = 71;
             this.lblEntrega.Text = "Entrega:";
             // 
@@ -597,7 +605,7 @@
             this.label1.Font = new System.Drawing.Font("Roboto", 14F);
             this.label1.Location = new System.Drawing.Point(3, 337);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(155, 23);
+            this.label1.Size = new System.Drawing.Size(195, 29);
             this.label1.TabIndex = 70;
             this.label1.Text = "Método de pago:";
             // 
@@ -629,7 +637,7 @@
             this.lblImporteTotal.Font = new System.Drawing.Font("Roboto", 14F);
             this.lblImporteTotal.Location = new System.Drawing.Point(463, 337);
             this.lblImporteTotal.Name = "lblImporteTotal";
-            this.lblImporteTotal.Size = new System.Drawing.Size(76, 23);
+            this.lblImporteTotal.Size = new System.Drawing.Size(98, 29);
             this.lblImporteTotal.TabIndex = 68;
             this.lblImporteTotal.Text = "Importe";
             // 
@@ -639,7 +647,7 @@
             this.lblTotal.Font = new System.Drawing.Font("Roboto", 14F);
             this.lblTotal.Location = new System.Drawing.Point(409, 337);
             this.lblTotal.Name = "lblTotal";
-            this.lblTotal.Size = new System.Drawing.Size(57, 23);
+            this.lblTotal.Size = new System.Drawing.Size(73, 29);
             this.lblTotal.TabIndex = 67;
             this.lblTotal.Text = "Total:";
             // 
@@ -653,6 +661,7 @@
             this.Subtotal});
             this.dgvCobro.Location = new System.Drawing.Point(3, 11);
             this.dgvCobro.Name = "dgvCobro";
+            this.dgvCobro.RowHeadersWidth = 51;
             this.dgvCobro.Size = new System.Drawing.Size(590, 309);
             this.dgvCobro.TabIndex = 66;
             // 
@@ -660,6 +669,7 @@
             // 
             this.Tratamiento.Frozen = true;
             this.Tratamiento.HeaderText = "Tratamiento";
+            this.Tratamiento.MinimumWidth = 6;
             this.Tratamiento.Name = "Tratamiento";
             this.Tratamiento.ReadOnly = true;
             this.Tratamiento.Width = 250;
@@ -668,21 +678,27 @@
             // 
             this.Cantidad.Frozen = true;
             this.Cantidad.HeaderText = "Cantidad";
+            this.Cantidad.MinimumWidth = 6;
             this.Cantidad.Name = "Cantidad";
             this.Cantidad.ReadOnly = true;
+            this.Cantidad.Width = 125;
             // 
             // Precio
             // 
             this.Precio.Frozen = true;
             this.Precio.HeaderText = "Precio";
+            this.Precio.MinimumWidth = 6;
             this.Precio.Name = "Precio";
             this.Precio.ReadOnly = true;
+            this.Precio.Width = 125;
             // 
             // Subtotal
             // 
             this.Subtotal.HeaderText = "Subtotal";
+            this.Subtotal.MinimumWidth = 6;
             this.Subtotal.Name = "Subtotal";
             this.Subtotal.ReadOnly = true;
+            this.Subtotal.Width = 125;
             // 
             // btnAtras
             // 
@@ -694,10 +710,11 @@
             this.btnAtras.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.btnAtras.TabIndex = 12;
             this.btnAtras.TabStop = false;
+            this.btnAtras.Click += new System.EventHandler(this.btnAtras_Click);
             // 
             // Caja
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 19F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(11F, 24F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(236)))), ((int)(((byte)(236)))), ((int)(((byte)(236)))));
             this.ClientSize = new System.Drawing.Size(1164, 715);

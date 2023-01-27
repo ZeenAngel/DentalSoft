@@ -31,6 +31,8 @@ namespace DentalSoft.Formularios
         }
         #endregion
 
+        // Eventos
+        #region -> Eventos
         private void btnAtras_Click(object sender, EventArgs e)
         {
             HistorialPaciente historialPaciente = new HistorialPaciente(this.dni, this.formPadre);
@@ -39,6 +41,7 @@ namespace DentalSoft.Formularios
 
         private void EpisodiosClinicos_Load(object sender, EventArgs e)
         {
+            mcFiltrarFecha.Value = DateTime.Now;
             this.episodio_clinicoTableAdapter.FillTodosEpisodios(this.dataSetEpisodioClinico.episodio_clinico, this.dni);
             this.reportViewer1.RefreshReport();
         }
@@ -54,5 +57,6 @@ namespace DentalSoft.Formularios
             this.episodio_clinicoTableAdapter.FillEpisodiosByFecha(this.dataSetEpisodioClinico.episodio_clinico, this.dni, mcFiltrarFecha.Value);
             this.reportViewer1.RefreshReport();
         }
+        #endregion
     }
 }

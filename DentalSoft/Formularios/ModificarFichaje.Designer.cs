@@ -31,7 +31,6 @@
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(ModificarFichaje));
             this.pnlCabecera = new System.Windows.Forms.Panel();
             this.lblTitulo = new System.Windows.Forms.Label();
-            this.btnRedimensionar = new System.Windows.Forms.PictureBox();
             this.btnMinimizar = new System.Windows.Forms.PictureBox();
             this.btnCerrar = new System.Windows.Forms.PictureBox();
             this.btnGuardarProducto = new DentalSoft.ControlesPersonalizados.BotonPersonalizado();
@@ -43,7 +42,6 @@
             this.lblEmpleado = new System.Windows.Forms.Label();
             this.lblErrorGuardar = new System.Windows.Forms.Label();
             this.pnlCabecera.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.btnRedimensionar)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.btnMinimizar)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.btnCerrar)).BeginInit();
             this.SuspendLayout();
@@ -52,7 +50,6 @@
             // 
             this.pnlCabecera.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(16)))), ((int)(((byte)(110)))), ((int)(((byte)(196)))));
             this.pnlCabecera.Controls.Add(this.lblTitulo);
-            this.pnlCabecera.Controls.Add(this.btnRedimensionar);
             this.pnlCabecera.Controls.Add(this.btnMinimizar);
             this.pnlCabecera.Controls.Add(this.btnCerrar);
             this.pnlCabecera.Dock = System.Windows.Forms.DockStyle.Top;
@@ -71,31 +68,17 @@
             this.lblTitulo.Location = new System.Drawing.Point(14, 6);
             this.lblTitulo.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lblTitulo.Name = "lblTitulo";
-            this.lblTitulo.Size = new System.Drawing.Size(98, 23);
+            this.lblTitulo.Size = new System.Drawing.Size(126, 29);
             this.lblTitulo.TabIndex = 41;
             this.lblTitulo.Text = "DentalSoft";
             this.lblTitulo.MouseDown += new System.Windows.Forms.MouseEventHandler(this.lblTitulo_MouseDown);
-            // 
-            // btnRedimensionar
-            // 
-            this.btnRedimensionar.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.btnRedimensionar.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.btnRedimensionar.Image = ((System.Drawing.Image)(resources.GetObject("btnRedimensionar.Image")));
-            this.btnRedimensionar.Location = new System.Drawing.Point(350, 3);
-            this.btnRedimensionar.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
-            this.btnRedimensionar.Name = "btnRedimensionar";
-            this.btnRedimensionar.Size = new System.Drawing.Size(29, 27);
-            this.btnRedimensionar.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.btnRedimensionar.TabIndex = 10;
-            this.btnRedimensionar.TabStop = false;
-            this.btnRedimensionar.Click += new System.EventHandler(this.btnRedimensionar_Click);
             // 
             // btnMinimizar
             // 
             this.btnMinimizar.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.btnMinimizar.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnMinimizar.Image = ((System.Drawing.Image)(resources.GetObject("btnMinimizar.Image")));
-            this.btnMinimizar.Location = new System.Drawing.Point(302, 3);
+            this.btnMinimizar.Location = new System.Drawing.Point(363, 4);
             this.btnMinimizar.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
             this.btnMinimizar.Name = "btnMinimizar";
             this.btnMinimizar.Size = new System.Drawing.Size(29, 27);
@@ -178,7 +161,7 @@
             this.txtHora.Name = "txtHora";
             this.txtHora.Padding = new System.Windows.Forms.Padding(10, 7, 10, 7);
             this.txtHora.PosicionSeleccion = 0;
-            this.txtHora.Size = new System.Drawing.Size(123, 34);
+            this.txtHora.Size = new System.Drawing.Size(123, 39);
             this.txtHora.SubrayadoEstilo = true;
             this.txtHora.TabIndex = 5;
             this.txtHora.TamañoMaximo = 30000;
@@ -191,7 +174,7 @@
             this.lblFecha.Font = new System.Drawing.Font("Roboto", 14F);
             this.lblFecha.Location = new System.Drawing.Point(24, 137);
             this.lblFecha.Name = "lblFecha";
-            this.lblFecha.Size = new System.Drawing.Size(66, 23);
+            this.lblFecha.Size = new System.Drawing.Size(84, 29);
             this.lblFecha.TabIndex = 49;
             this.lblFecha.Text = "Fecha:";
             // 
@@ -201,7 +184,7 @@
             this.lblTituloEmpleado.Font = new System.Drawing.Font("Roboto", 14F);
             this.lblTituloEmpleado.Location = new System.Drawing.Point(24, 61);
             this.lblTituloEmpleado.Name = "lblTituloEmpleado";
-            this.lblTituloEmpleado.Size = new System.Drawing.Size(101, 23);
+            this.lblTituloEmpleado.Size = new System.Drawing.Size(127, 29);
             this.lblTituloEmpleado.TabIndex = 50;
             this.lblTituloEmpleado.Text = "Empleado:";
             // 
@@ -211,7 +194,7 @@
             this.lblHora.Font = new System.Drawing.Font("Roboto", 14F);
             this.lblHora.Location = new System.Drawing.Point(24, 209);
             this.lblHora.Name = "lblHora";
-            this.lblHora.Size = new System.Drawing.Size(51, 23);
+            this.lblHora.Size = new System.Drawing.Size(65, 29);
             this.lblHora.TabIndex = 51;
             this.lblHora.Text = "Hora";
             // 
@@ -221,7 +204,7 @@
             this.lblEmpleado.Font = new System.Drawing.Font("Roboto", 14F);
             this.lblEmpleado.Location = new System.Drawing.Point(136, 61);
             this.lblEmpleado.Name = "lblEmpleado";
-            this.lblEmpleado.Size = new System.Drawing.Size(127, 23);
+            this.lblEmpleado.Size = new System.Drawing.Size(161, 29);
             this.lblEmpleado.TabIndex = 52;
             this.lblEmpleado.Text = "Dni empleado";
             // 
@@ -234,14 +217,14 @@
             this.lblErrorGuardar.ImageAlign = System.Drawing.ContentAlignment.TopLeft;
             this.lblErrorGuardar.Location = new System.Drawing.Point(109, 324);
             this.lblErrorGuardar.Name = "lblErrorGuardar";
-            this.lblErrorGuardar.Size = new System.Drawing.Size(94, 17);
+            this.lblErrorGuardar.Size = new System.Drawing.Size(115, 20);
             this.lblErrorGuardar.TabIndex = 53;
             this.lblErrorGuardar.Text = "Mensaje Error";
             this.lblErrorGuardar.Visible = false;
             // 
             // ModificarFichaje
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 19F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(11F, 24F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(236)))), ((int)(((byte)(236)))), ((int)(((byte)(236)))));
             this.ClientSize = new System.Drawing.Size(444, 405);
@@ -256,13 +239,12 @@
             this.Controls.Add(this.pnlCabecera);
             this.Font = new System.Drawing.Font("Roboto", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
-            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.Margin = new System.Windows.Forms.Padding(4);
             this.Name = "ModificarFichaje";
             this.Text = "ModificarFichaje";
             this.Load += new System.EventHandler(this.ModificarFichaje_Load);
             this.pnlCabecera.ResumeLayout(false);
             this.pnlCabecera.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.btnRedimensionar)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.btnMinimizar)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.btnCerrar)).EndInit();
             this.ResumeLayout(false);
@@ -274,7 +256,6 @@
 
         private System.Windows.Forms.Panel pnlCabecera;
         private System.Windows.Forms.Label lblTitulo;
-        private System.Windows.Forms.PictureBox btnRedimensionar;
         private System.Windows.Forms.PictureBox btnMinimizar;
         private System.Windows.Forms.PictureBox btnCerrar;
         private ControlesPersonalizados.BotonPersonalizado btnGuardarProducto;

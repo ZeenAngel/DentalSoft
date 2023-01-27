@@ -144,7 +144,7 @@
   <data name="lblImagenErupcion.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
         iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAABGdBTUEAALGPC/xhBQAAAAlwSFlzAAAO
-        vQAADr0BR/uQrQAAAL9JREFUOE+tj8EKwjAQRAtevAv9ylKKBxERQfy8HkspxQ/x4KHOxFnchhgiOPAg
+        vAAADrwBlbxySQAAAL9JREFUOE+tj8EKwjAQRAtevAv9ylKKBxERQfy8HkspxQ/x4KHOxFnchhgiOPAg
         O9kZkiqnzW45gKPG38QgWMRJdpkYcGHjrOu8uBgFPRetpYWFXNhIl/AiWsxxVewtGtECeX45GzcQwo0z
         jT2Y3XwHnZuNhgU1GJ3Z6VW+YJbXOm8ANX0rodEGA8J5AqsCCme++BM2wdjqGITZF0yyg+LdpLDkv7Uq
         KFJUMMouF0L8598KBtnlQqgHD9HLjlRVL5Ca6atE3h6CAAAAAElFTkSuQmCC
@@ -153,7 +153,7 @@
   <data name="lblImagenPuente.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
         iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAABGdBTUEAALGPC/xhBQAAAAlwSFlzAAAO
-        vQAADr0BR/uQrQAAARRJREFUOE+dk71qAkEURqcIIsGnCBKCiCzBxxMhWIQgS7AQyVP4AGItVhZWYmll
+        vAAADrwBlbxySQAAARRJREFUOE+dk71qAkEURqcIIsGnCBKCiCzBxxMhWIQgS7AQyVP4AGItVhZWYmll
         KSIpQticz72Ds7vRAT84xf2dmd17XVmZc88whBUcjDWMoGVpVRF8gA/4gewKvzCGupXlwqHiKSjpG3SD
         BOSvwQsM4AjKmcGlCca7BXbQNndFxJqwtdyv0Klr6+TO2XlD5DyBvoue0wlPTy0nKnL7VjORsTCja/Go
         yNUtVLORsTejYfGoyBV69ils8JiH4yK30GAJavCah+Mit/AE/xE/LR4VuT2rOX9Edbv3NybeqRFWx9gg
@@ -164,7 +164,7 @@
   <data name="lblImagenCorona.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
         iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAABGdBTUEAALGPC/xhBQAAAAlwSFlzAAAO
-        vQAADr0BR/uQrQAAARVJREFUOE+dk81KQkEYhs9CIsR7CCRCQkRE7y6EaCEhB2kR0lV4AdI6WrVwFS1b
+        vAAADrwBlbxySQAAARVJREFUOE+dk81KQkEYhs9CIsR7CCRCQkRE7y6EaCEhB2kR0lV4AdI6WrVwFS1b
         uYwIFxL6vKd3aOZYDfTCs/h+Z+ac7yvqOhntzmAKT/BmVnAD5047FMEGXMMWdr/wCbdw7LIv4VDxApS0
         Ad2gD/IfQQeu4B2Us4TvJhgTB16ha/eBiJ3Ci3PvYqeurZN7lfMPkdMGfRc9pxefXjonK3LHrpnLeLAx
         dDwrcnUL1TzLWNtoOZ4VuULP/ogbNB3PitykwSOowcDxrMhNnhA+4szxrMi9cE31EdXtv7+xH5waYXXM
@@ -175,7 +175,7 @@
   <data name="lblImagenEndodoncia.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
         iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAABGdBTUEAALGPC/xhBQAAAAlwSFlzAAAO
-        vQAADr0BR/uQrQAAAHFJREFUOE9jQAEu/zmA+DsBLABVjQVADPhPABNtwGsg7seCOaCqsQBUAy5CRUkA
+        vAAADrwBlbxySQAAAHFJREFUOE9jQAEu/zmA+DsBLABVjQVADPhPABNtwGsg7seCOaCqsQBUAy5CRUkA
         g82Ah0AchYTDoKrwAFQD0PFXqCo8gMoG3AZiEyRsBFWFB1A5EAfegI9AvBUL5oGqxgJQDcCFCWYmbFkY
         GSMZwMAAAKOm5V/zUiBWAAAAAElFTkSuQmCC
 </value>
@@ -183,7 +183,7 @@
   <data name="lblImagenFractura.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
         iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAABGdBTUEAALGPC/xhBQAAAAlwSFlzAAAO
-        vQAADr0BR/uQrQAAAE5JREFUOE9jQAM3gfg7AXwfiHECkOR/Avg5EOMEC4F4OxRfBWKYputQMRBeDsRE
+        vAAADrwBlbxySQAAAE5JREFUOE9jQAM3gfg7AXwfiHECkOR/Avg5EOMEC4F4OxRfBWKYputQMRBeDsRE
         gQwghhlQABIgFYwaMGoACAwDA1KAGJaFc0ACmICBAQBCKD/DDdRU4wAAAABJRU5ErkJggg==
 </value>
   </data>

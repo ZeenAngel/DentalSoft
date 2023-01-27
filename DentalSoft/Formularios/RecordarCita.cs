@@ -70,6 +70,8 @@ namespace DentalSoft.Formularios
 
         private void RecordarCita_Load(object sender, EventArgs e)
         {
+            mcFechaEnvio.MinDate = DateTime.Now;
+            mcFechaEnvio.Value = DateTime.Now;
             lblEnviado.Visible = false;
         }
 

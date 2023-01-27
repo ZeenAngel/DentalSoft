@@ -226,6 +226,7 @@ namespace DentalSoft.Formularios
 
         private bool ComprobarNulos()
         {
+            OcultarMensajesError();
             bool sw = false;
             if (!txtNombre.Texto.Equals(""))
                 if (!txtDni.Texto.Equals(""))
@@ -261,6 +262,7 @@ namespace DentalSoft.Formularios
         private void CargarPuestos()
         {
             cbPuesto.Items.Add("");
+            cbPuesto.SelectedIndex = 0;
             if (conexion.EstablecerConexion())
             {
                 string sentencia = "SELECT Descripcion FROM Puesto_Trabajo";
@@ -269,6 +271,7 @@ namespace DentalSoft.Formularios
                 while (reader.Read())
                     cbPuesto.Items.Add(reader.GetString(0));
                 reader.Close();
+                comando.Dispose();
                 conexion.CerrarConexion();
             }
         }
@@ -276,6 +279,7 @@ namespace DentalSoft.Formularios
         private void CargarEspecialidades()
         {
             cbEspecialidad.Items.Add("");
+            cbEspecialidad.SelectedIndex = 0;
             if (conexion.EstablecerConexion())
             {
                 string sentencia = "SELECT Descripcion FROM Especialidad";
@@ -284,6 +288,7 @@ namespace DentalSoft.Formularios
                 while (reader.Read())
                     cbEspecialidad.Items.Add(reader.GetString(0));
                 reader.Close();
+                comando.Dispose();
                 conexion.CerrarConexion();
             }
         }
@@ -291,6 +296,7 @@ namespace DentalSoft.Formularios
         private void CargarCentros()
         {
             cbCentro.Items.Add("");
+            cbCentro.SelectedIndex = 0;
             if (conexion.EstablecerConexion())
             {
                 string sentencia = "SELECT Nombre FROM Centro";
@@ -299,6 +305,7 @@ namespace DentalSoft.Formularios
                 while (reader.Read())
                     cbCentro.Items.Add(reader.GetString(0));
                 reader.Close();
+                comando.Dispose();
                 conexion.CerrarConexion();
             }
         }
@@ -318,6 +325,7 @@ namespace DentalSoft.Formularios
                         break;
                 }
                 reader.Close();
+                comando.Dispose();
                 conexion.CerrarConexion();
             }
             return posicion;
@@ -519,6 +527,7 @@ namespace DentalSoft.Formularios
                                     comando.ExecuteNonQuery();
                                     conexion.CerrarConexion();
                                     DialogResult mensaje = MessageBoxPersonalizadoControl.Show("Empleado dado de alta correctamente", datosGlobales.TituloAplicacion, MessageBoxButtons.OK, MessageBoxIcon.Information);
+                                    this.Close();
                                 }
                             } 
                         }
@@ -554,11 +563,10 @@ namespace DentalSoft.Formularios
                             comando.ExecuteNonQuery();
                             conexion.CerrarConexion();
                             DialogResult mensaje = MessageBoxPersonalizadoControl.Show("Empleado editado correctamente", datosGlobales.TituloAplicacion, MessageBoxButtons.OK, MessageBoxIcon.Information);
-
+                            this.Close();
                         }
                     }
                 }
-                this.Close();
             }
         }
 
